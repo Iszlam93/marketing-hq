@@ -1,0 +1,33 @@
+# dependencies
+node_modules/
+.pnpm-store/
+
+# builds
+.next/
+dist/
+build/
+out/
+*.tsbuildinfo
+
+# secrets (API keys, tokens)
+.env
+.env.*
+!.env.example
+
+# local data
+data/*.db
+data/*.db-journal
+*.sqlite
+
+# logs
+*.log
+npm-debug.log*
+pnpm-debug.log*
+
+# OS / editor
+.DS_Store
+Thumbs.db
+desktop.ini
+.vscode/*
+!.vscode/extensions.json
+.idea/
