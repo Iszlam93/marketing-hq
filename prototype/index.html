@@ -9,43 +9,44 @@
 <title>Marketing HQ</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700&family=Instrument+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap">
+<script>
+(function(){var t=null;try{t=localStorage.getItem('mhq-theme')}catch(e){}
+if(!t){t=(window.matchMedia&&matchMedia('(prefers-color-scheme: dark)').matches)?'dark':'light'}
+document.documentElement.setAttribute('data-theme',t)})();
+</script>
 <style>
 :root{
-  --bg:#F2F5F5; --surface:#FFFFFF; --surface-2:#F7F9F9; --sunk:#E8EEEE;
-  --ink:#132121; --ink-2:#344645; --muted:#667776; --line:#DCE3E3; --line-2:#C7D2D2;
-  --accent:#0A7470; --accent-ink:#FFFFFF; --accent-soft:#DCEFED;
-  --amber:#9A600E; --amber-soft:#FBEFD9;
-  --good:#1D7A45; --good-soft:#DFF1E6; --bad:#B23A32; --bad-soft:#FAE3E1;
-  --c1:#0A7470; --c2:#3A5FB5; --c3:#B7791F; --c4:#8A56A8;
-  --shadow:0 1px 2px rgba(19,33,33,.06),0 4px 14px rgba(19,33,33,.05);
+  --bg:#F5F7F7; --surface:#FFFFFF; --surface-2:#F9FAFA; --sunk:#EDF1F1;
+  --ink:#152222; --ink-2:#3A4A49; --muted:#6B7A79; --line:#E2E7E7; --line-2:#CFD7D7;
+  --accent:#0A7470; --accent-ink:#FFFFFF; --accent-soft:#E0F1EF;
+  --amber:#97600F; --amber-soft:#FBF0DC;
+  --good:#1D7A45; --good-soft:#E2F3E8; --bad:#B23A32; --bad-soft:#FBE6E4;
+  --c1:#0A7470; --c2:#3A5FB5; --c3:#B4761C; --c4:#8A56A8;
   --r:10px;
   --f-ui:"Instrument Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
-  --f-display:"Bricolage Grotesque","Instrument Sans",system-ui,sans-serif;
   --f-mono:"JetBrains Mono",ui-monospace,"Cascadia Mono",Consolas,monospace;
 }
 @media (prefers-color-scheme:dark){
   :root:not([data-theme="light"]){
-    --bg:#0B1313; --surface:#121C1C; --surface-2:#162222; --sunk:#0E1818;
-    --ink:#E2ECEB; --ink-2:#B9C8C7; --muted:#879998; --line:#223131; --line-2:#2F4141;
-    --accent:#3DB5AE; --accent-ink:#04211F; --accent-soft:#12302E;
-    --amber:#E3A84D; --amber-soft:#35280F;
-    --good:#55C485; --good-soft:#10301E; --bad:#F07C73; --bad-soft:#3A1615;
-    --c1:#3DB5AE; --c2:#7F9EF2; --c3:#E3A84D; --c4:#C197DE;
-    --shadow:none; color-scheme:dark;
+    --bg:#0D1414; --surface:#131C1C; --surface-2:#172121; --sunk:#0F1818;
+    --ink:#E3ECEB; --ink-2:#BCCAC9; --muted:#8A9B9A; --line:#223030; --line-2:#2F4040;
+    --accent:#3DB5AE; --accent-ink:#04211F; --accent-soft:#13302E;
+    --amber:#E3A84D; --amber-soft:#33270F;
+    --good:#55C485; --good-soft:#11301F; --bad:#F07C73; --bad-soft:#3A1716;
+    --c1:#3DB5AE; --c2:#86A3F2; --c3:#E3A84D; --c4:#C59BE0; color-scheme:dark;
   }
 }
 :root[data-theme="dark"]{
-  --bg:#0B1313; --surface:#121C1C; --surface-2:#162222; --sunk:#0E1818;
-  --ink:#E2ECEB; --ink-2:#B9C8C7; --muted:#879998; --line:#223131; --line-2:#2F4141;
-  --accent:#3DB5AE; --accent-ink:#04211F; --accent-soft:#12302E;
-  --amber:#E3A84D; --amber-soft:#35280F;
-  --good:#55C485; --good-soft:#10301E; --bad:#F07C73; --bad-soft:#3A1615;
-  --c1:#3DB5AE; --c2:#7F9EF2; --c3:#E3A84D; --c4:#C197DE;
-  --shadow:none; color-scheme:dark;
+  --bg:#0D1414; --surface:#131C1C; --surface-2:#172121; --sunk:#0F1818;
+  --ink:#E3ECEB; --ink-2:#BCCAC9; --muted:#8A9B9A; --line:#223030; --line-2:#2F4040;
+  --accent:#3DB5AE; --accent-ink:#04211F; --accent-soft:#13302E;
+  --amber:#E3A84D; --amber-soft:#33270F;
+  --good:#55C485; --good-soft:#11301F; --bad:#F07C73; --bad-soft:#3A1716;
+  --c1:#3DB5AE; --c2:#86A3F2; --c3:#E3A84D; --c4:#C59BE0; color-scheme:dark;
 }
 *{box-sizing:border-box}
-body{background:var(--bg);color:var(--ink);font:14px/1.5 var(--f-ui);-webkit-font-smoothing:antialiased}
+body{background:var(--bg);color:var(--ink);font:14px/1.5 var(--f-ui);-webkit-font-smoothing:antialiased;transition:background .25s,color .25s}
 button{font:inherit;color:inherit}
 h1,h2,h3,h4{margin:0;text-wrap:balance}
 p{margin:0}
@@ -53,43 +54,46 @@ p{margin:0}
 .muted{color:var(--muted)}
 .small{font-size:12px}
 
-/* ---------- shell ---------- */
-.app{display:grid;grid-template-columns:228px minmax(0,1fr);min-height:100vh}
-.side{background:var(--surface);border-right:1px solid var(--line);padding:18px 14px;position:sticky;top:0;height:100vh;display:flex;flex-direction:column;gap:18px}
+/* shell */
+.app{display:grid;grid-template-columns:232px minmax(0,1fr);min-height:100vh}
+.side{background:var(--surface);border-right:1px solid var(--line);padding:18px 14px;position:sticky;top:0;height:100vh;display:flex;flex-direction:column;gap:16px;overflow-y:auto}
 .logo{display:flex;align-items:center;gap:10px;padding:2px 6px}
-.logo-mark{width:30px;height:30px;border-radius:8px;background:var(--ink);color:var(--bg);display:grid;place-items:center;font:700 14px var(--f-display)}
-.logo b{font:700 16px var(--f-display);letter-spacing:-.01em}
-.logo span{display:block;font-size:11px;color:var(--muted);letter-spacing:.02em}
-.nav{display:flex;flex-direction:column;gap:2px}
-.nav-label{font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);padding:10px 8px 4px;font-weight:600}
-.nav button{display:flex;align-items:center;gap:10px;width:100%;text-align:left;border:0;background:transparent;padding:8px 10px;border-radius:8px;cursor:pointer;color:var(--ink-2);font-weight:500}
+.logo-mark{width:30px;height:30px;border-radius:8px;background:var(--accent);color:var(--accent-ink);display:grid;place-items:center;font:700 13px var(--f-ui)}
+.logo b{font-size:15.5px;font-weight:700;letter-spacing:-.01em}
+.logo span{display:block;font-size:11.5px;color:var(--muted)}
+.nav{display:flex;flex-direction:column;gap:1px}
+.nav-label{font-size:11px;letter-spacing:.07em;text-transform:uppercase;color:var(--muted);padding:12px 10px 4px;font-weight:600}
+.nav button{display:flex;align-items:center;gap:10px;width:100%;text-align:left;border:0;background:transparent;padding:7px 10px;border-radius:8px;cursor:pointer;color:var(--ink-2);font-weight:500}
 .nav button:hover{background:var(--sunk)}
 .nav button[aria-current="page"]{background:var(--accent-soft);color:var(--ink);font-weight:600}
 .nav button[aria-current="page"] .ico{color:var(--accent)}
-.nav button:disabled{cursor:default;opacity:.55}
-.nav button:disabled:hover{background:transparent}
 .ico{width:18px;height:18px;flex:none;color:var(--muted)}
+.lnum{width:18px;height:18px;flex:none;border-radius:5px;display:grid;place-items:center;font:600 10.5px var(--f-mono);color:#fff;background:var(--c)}
 .badge{margin-left:auto;font:600 11px var(--f-mono);background:var(--amber);color:var(--surface);border-radius:999px;padding:1px 7px}
 .badge:empty{display:none}
-.tag-later{margin-left:auto;font-size:10px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);border:1px solid var(--line-2);border-radius:4px;padding:0 5px}
-.side-foot{margin-top:auto;font-size:12px;color:var(--muted);padding:10px 8px;border-top:1px solid var(--line)}
+.side-foot{margin-top:auto;font-size:12px;color:var(--muted);padding:10px;border-top:1px solid var(--line)}
 
-.main{min-width:0;padding:20px 28px 48px}
-.topbar{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-bottom:18px}
-.topbar h1{font:700 24px/1.2 var(--f-display);letter-spacing:-.015em}
-.topbar .sub{color:var(--muted);font-size:13px;margin-top:2px}
+.main{min-width:0;padding:22px 28px 56px}
+.topbar{display:flex;align-items:flex-start;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-bottom:20px}
+.topbar h1{font-size:23px;font-weight:700;letter-spacing:-.015em;line-height:1.2}
+.topbar .sub{color:var(--muted);font-size:13px;margin-top:3px}
 .top-right{display:flex;gap:8px;align-items:center;flex-wrap:wrap}
 .live{display:inline-flex;align-items:center;gap:7px;font-size:12px;font-weight:600;color:var(--good);background:var(--good-soft);padding:4px 10px;border-radius:999px}
 .live i{width:7px;height:7px;border-radius:50%;background:var(--good);animation:pulse 1.8s infinite}
+@keyframes pulse{0%{box-shadow:0 0 0 0 color-mix(in srgb,var(--good) 55%,transparent)}70%{box-shadow:0 0 0 7px transparent}100%{box-shadow:0 0 0 0 transparent}}
 .proto{font-size:12px;color:var(--muted);border:1px dashed var(--line-2);padding:3px 9px;border-radius:999px}
-@keyframes pulse{0%{box-shadow:0 0 0 0 color-mix(in srgb,var(--good) 60%,transparent)}70%{box-shadow:0 0 0 7px transparent}100%{box-shadow:0 0 0 0 transparent}}
+.theme{display:inline-flex;border:1px solid var(--line-2);border-radius:999px;padding:2px;background:var(--surface)}
+.theme button{border:0;background:transparent;display:inline-flex;align-items:center;gap:6px;padding:4px 11px;border-radius:999px;font-size:12.5px;font-weight:600;color:var(--muted);cursor:pointer}
+.theme button[aria-pressed="true"]{background:var(--ink);color:var(--bg)}
+.theme svg{width:14px;height:14px}
 
-/* ---------- common ---------- */
+/* common */
 .stack{display:flex;flex-direction:column;gap:16px}
-.card{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:16px 18px;box-shadow:var(--shadow);min-width:0}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:16px 18px;min-width:0}
 .card-head{display:flex;align-items:baseline;justify-content:space-between;gap:10px;margin-bottom:12px;flex-wrap:wrap}
-.eyebrow{font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);font-weight:600}
+.eyebrow{font-size:11px;letter-spacing:.07em;text-transform:uppercase;color:var(--muted);font-weight:600}
 .grid-2{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);gap:16px}
+.grid-3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
 .btn{font-weight:600;font-size:13px;padding:7px 12px;border-radius:8px;border:1px solid var(--line-2);background:var(--surface);color:var(--ink);cursor:pointer;display:inline-flex;align-items:center;gap:6px;white-space:nowrap}
 .btn:hover{background:var(--sunk)}
 .btn.primary{background:var(--accent);border-color:var(--accent);color:var(--accent-ink)}
@@ -101,9 +105,9 @@ p{margin:0}
 .btn.sm{padding:4px 9px;font-size:12px}
 .btn:disabled{opacity:.5;cursor:not-allowed}
 :focus-visible{outline:2px solid var(--accent);outline-offset:2px;border-radius:6px}
-.link{border:0;background:none;color:var(--accent);font-weight:600;cursor:pointer;padding:0}
 .chip{display:inline-flex;align-items:center;gap:6px;font-size:12px;font-weight:500;padding:2px 9px 2px 7px;border-radius:999px;background:var(--sunk);color:var(--ink-2);white-space:nowrap}
 .chip i{width:8px;height:8px;border-radius:50%;background:var(--c,var(--muted));flex:none}
+.tagc{display:inline-flex;font-size:11.5px;padding:1px 7px;border-radius:4px;background:var(--sunk);color:var(--ink-2);white-space:nowrap}
 .pill{display:inline-flex;align-items:center;gap:5px;font-size:11.5px;font-weight:600;padding:2px 9px;border-radius:999px;white-space:nowrap}
 .pill.amber{background:var(--amber-soft);color:var(--amber)}
 .pill.good{background:var(--good-soft);color:var(--good)}
@@ -111,129 +115,159 @@ p{margin:0}
 .pill.neutral{background:var(--sunk);color:var(--ink-2)}
 .pill.accent{background:var(--accent-soft);color:var(--accent)}
 .row{display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+.empty{color:var(--muted);font-size:13px;padding:14px;border:1px dashed var(--line-2);border-radius:8px;text-align:center}
+.tbl-wrap{overflow-x:auto}
+table{width:100%;border-collapse:collapse;font-size:13px}
+th{text-align:left;font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);font-weight:600;padding:0 12px 8px 0;border-bottom:1px solid var(--line);white-space:nowrap}
+td{padding:10px 12px 10px 0;border-bottom:1px solid var(--line);vertical-align:middle}
+tr:last-child td{border-bottom:0}
+.prog{height:6px;border-radius:3px;background:var(--sunk);overflow:hidden;min-width:70px}
+.prog i{display:block;height:100%;background:var(--accent);transition:width .5s}
+.rag{width:9px;height:9px;border-radius:50%;display:inline-block;flex:none}
+.rag.g{background:var(--good)}.rag.a{background:var(--amber)}.rag.r{background:var(--bad)}
+.note{font-size:13px;padding:10px 12px;border-radius:8px;background:var(--accent-soft);color:var(--ink)}
+.tabs{display:flex;gap:2px;border-bottom:1px solid var(--line);margin-bottom:16px;overflow-x:auto}
+.tabs button{border:0;background:none;padding:9px 12px;font-weight:600;font-size:13px;color:var(--muted);cursor:pointer;border-bottom:2px solid transparent;margin-bottom:-1px;white-space:nowrap}
+.tabs button[aria-selected="true"]{color:var(--ink);border-bottom-color:var(--accent)}
+.vbadge{font:600 12px var(--f-mono);background:var(--ink);color:var(--bg);padding:2px 8px;border-radius:6px}
+.kv{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:12px 18px;margin:0}
+.kv div{display:flex;flex-direction:column;gap:2px}
+.kv dt{font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);font-weight:600}
+.kv dd{margin:0;font-weight:500}
 
-/* ---------- command center ---------- */
-.brief{display:grid;grid-template-columns:auto minmax(0,1fr) auto;gap:14px 16px;align-items:start;border-color:var(--line-2)}
-.brief-av{width:40px;height:40px;border-radius:10px;background:var(--ink);color:var(--bg);display:grid;place-items:center;font:700 13px var(--f-display)}
-.brief h2{font:700 15px var(--f-ui);display:flex;gap:8px;align-items:baseline;flex-wrap:wrap}
-.brief p{color:var(--ink-2);margin-top:4px;max-width:78ch}
+/* command */
+.brief{display:grid;grid-template-columns:auto minmax(0,1fr) auto;gap:14px 16px;align-items:start}
+.brief-av{width:40px;height:40px;border-radius:10px;background:var(--ink);color:var(--bg);display:grid;place-items:center;font:700 12.5px var(--f-ui)}
+.brief h2{font-size:15px;font-weight:700;display:flex;gap:8px;align-items:baseline;flex-wrap:wrap}
+.brief p{color:var(--ink-2);margin-top:4px;max-width:80ch}
 .brief-cta{display:flex;flex-direction:column;align-items:flex-end;gap:8px}
-.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(168px,1fr));gap:12px}
+.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:12px}
 .kpi{padding:14px 16px 10px}
 .kpi-top{display:flex;justify-content:space-between;align-items:center;gap:6px}
-.kpi-label{font-size:12px;color:var(--muted);font-weight:500}
-.kpi-val{font:500 24px/1.2 var(--f-mono);letter-spacing:-.02em;margin:6px 0 4px;font-variant-numeric:tabular-nums;transition:color .4s}
+.kpi-label{font-size:12px;color:var(--muted);font-weight:500;line-height:1.3}
+.kpi-val{font:500 23px/1.2 var(--f-mono);letter-spacing:-.02em;margin:7px 0 4px;transition:color .4s}
 .kpi-val.bump{color:var(--accent)}
-.delta{font:600 11.5px var(--f-mono)}
-.delta.up-good,.delta.down-good{color:var(--good)}
-.delta.up-bad,.delta.down-bad{color:var(--bad)}
-.delta.flat{color:var(--muted)}
+.delta{font:600 11px var(--f-mono);white-space:nowrap}
+.delta.gd{color:var(--good)}.delta.bd{color:var(--bad)}
 .spark{display:block;width:100%;height:auto}
-.bars{display:flex;flex-direction:column;gap:12px}
-.bar-row{display:grid;grid-template-columns:120px minmax(0,1fr) 92px;gap:12px;align-items:center}
+.bars{display:flex;flex-direction:column;gap:14px}
+.bar-row{display:grid;grid-template-columns:150px minmax(0,1fr) 70px;gap:12px;align-items:center}
 .bar-name{font-weight:500;font-size:13px}
 .bar-name small{display:block;color:var(--muted);font-size:11.5px;font-weight:400}
 .bar-track{height:14px;background:var(--sunk);border-radius:4px;overflow:hidden}
-.bar-fill{height:100%;background:var(--c);border-radius:4px;transition:width .6s ease}
-.bar-row.off .bar-fill{background:var(--line-2)}
+.bar-fill{height:100%;background:var(--c);border-radius:4px;transition:width .6s}
 .bar-val{text-align:right;font:500 13px var(--f-mono)}
-.bar-val small{display:block;color:var(--muted);font-size:11px}
 .queue{display:flex;flex-direction:column;gap:10px}
 .qcard{border:1px solid var(--line);border-left:3px solid var(--amber);border-radius:8px;padding:11px 12px;background:var(--surface-2);display:flex;flex-direction:column;gap:7px}
 .qcard h4{font-size:13.5px;font-weight:600}
 .qcard p{font-size:12.5px;color:var(--ink-2)}
-.empty{color:var(--muted);font-size:13px;padding:14px;border:1px dashed var(--line-2);border-radius:8px;text-align:center}
-.feed{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;max-height:300px;overflow:auto}
-.feed li{display:grid;grid-template-columns:48px 14px minmax(0,1fr);gap:8px;align-items:baseline;padding:7px 0;border-bottom:1px solid var(--line);font-size:13px}
+.feed{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;max-height:330px;overflow:auto}
+.feed li{display:grid;grid-template-columns:44px 12px minmax(0,1fr);gap:8px;align-items:baseline;padding:7px 0;border-bottom:1px solid var(--line);font-size:13px}
 .feed li:last-child{border-bottom:0}
 .feed time{font:400 11.5px var(--f-mono);color:var(--muted)}
 .feed .dot{width:8px;height:8px;border-radius:50%;background:var(--c);align-self:center}
-.feed li.new{animation:fadein .6s ease}
+.feed li.new{animation:fadein .8s ease}
 @keyframes fadein{from{background:var(--accent-soft)}to{background:transparent}}
-.tbl-wrap{overflow-x:auto}
-table{width:100%;border-collapse:collapse;font-size:13px}
-th{text-align:left;font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);font-weight:600;padding:0 10px 8px 0;border-bottom:1px solid var(--line)}
-td{padding:10px 10px 10px 0;border-bottom:1px solid var(--line);vertical-align:middle}
-tr:last-child td{border-bottom:0}
-td.r,th.r{text-align:right}
-.prog{height:6px;border-radius:3px;background:var(--sunk);overflow:hidden;min-width:70px}
-.prog i{display:block;height:100%;background:var(--accent)}
+.lrow{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:4px 10px;padding:9px 0;border-bottom:1px solid var(--line)}
+.lrow:last-child{border-bottom:0}
+.lrow b{font-weight:600;font-size:13.5px}
 
-/* ---------- wizard ---------- */
-.stepper{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:16px;counter-reset:s}
-.step{display:flex;align-items:center;gap:8px;font-size:13px;color:var(--muted);font-weight:500;padding:6px 12px 6px 6px;border-radius:999px;background:var(--surface);border:1px solid var(--line)}
-.step b{width:22px;height:22px;border-radius:50%;display:grid;place-items:center;font:600 11px var(--f-mono);background:var(--sunk);color:var(--ink-2)}
-.step.on{color:var(--ink);border-color:var(--accent)}
-.step.on b{background:var(--accent);color:var(--accent-ink)}
-.step.done b{background:var(--good-soft);color:var(--good)}
-.types{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:12px}
-.type{text-align:left;border:1px solid var(--line);background:var(--surface);border-radius:var(--r);padding:14px;cursor:pointer;display:flex;flex-direction:column;gap:8px;box-shadow:var(--shadow)}
-.type:hover{border-color:var(--line-2)}
-.type[aria-pressed="true"]{border-color:var(--accent);box-shadow:0 0 0 2px var(--accent-soft)}
-.type-ico{width:34px;height:34px;border-radius:8px;background:var(--sunk);display:grid;place-items:center;color:var(--ink-2)}
-.type[aria-pressed="true"] .type-ico{background:var(--accent);color:var(--accent-ink)}
-.type h4{font:700 15px var(--f-display);letter-spacing:-.01em}
-.type p{font-size:12.5px;color:var(--ink-2)}
-.type .meta{font:500 11.5px var(--f-mono);color:var(--muted);margin-top:auto}
-.wiz-foot{display:flex;justify-content:space-between;gap:10px;margin-top:18px;flex-wrap:wrap}
-.form{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px 18px}
-.field{display:flex;flex-direction:column;gap:5px}
-.field.wide{grid-column:1/-1}
-.field label{font-size:12px;font-weight:600;color:var(--ink-2)}
-.field input,.field textarea{font:inherit;color:var(--ink);background:var(--surface-2);border:1px solid var(--line-2);border-radius:8px;padding:8px 10px;width:100%}
-.field textarea{resize:vertical;min-height:64px}
-.field input:focus,.field textarea:focus{outline:2px solid var(--accent);outline-offset:0;border-color:transparent}
-.hint{font-size:12px;color:var(--muted)}
-.phases{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px}
-.phase{background:var(--surface-2);border:1px solid var(--line);border-radius:8px;padding:12px;display:flex;flex-direction:column;gap:8px}
-.phase-h{display:flex;justify-content:space-between;align-items:baseline;gap:6px}
-.phase-h b{font-size:13.5px}
-.phase-h span{font:500 11px var(--f-mono);color:var(--muted)}
-.task{display:flex;flex-direction:column;gap:4px;background:var(--surface);border:1px solid var(--line);border-radius:6px;padding:8px 9px;font-size:12.5px}
-.kv{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px 16px}
-.kv div{display:flex;flex-direction:column;gap:2px}
-.kv dt{font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);font-weight:600}
-.kv dd{margin:0;font-weight:500}
-.flow{display:flex;align-items:center;gap:8px;flex-wrap:wrap;font-size:13px;color:var(--ink-2)}
-.flow b{color:var(--ink)}
-
-/* ---------- team ---------- */
-.team-grid{display:grid;grid-template-columns:minmax(0,1.35fr) minmax(0,1fr);gap:16px}
+/* team */
+.team-grid{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(0,1fr);gap:16px}
 .org{width:100%;height:auto;display:block}
-.org .edge{fill:none;stroke:var(--line-2);stroke-width:1.6}
+.org .edge{fill:none;stroke:var(--line-2);stroke-width:1.5}
 .org .edge.flow{stroke:var(--accent);stroke-dasharray:6 6;animation:dash .8s linear infinite}
+.org .loop{fill:none;stroke:var(--muted);stroke-width:1.3;stroke-dasharray:4 5}
+.org .loop-t{fill:var(--muted);font:500 11.5px var(--f-ui)}
 @keyframes dash{to{stroke-dashoffset:-12}}
 .org .n-box{fill:var(--surface);stroke:var(--line-2);stroke-width:1.2}
-.org .n-name{fill:var(--ink);font:600 13.5px var(--f-ui)}
-.org .n-role{fill:var(--muted);font:400 11.5px var(--f-ui)}
-.org .n-dot{fill:var(--muted)}
+.org .n-name{fill:var(--ink);font:600 13px var(--f-ui)}
+.org .n-sp{fill:var(--ink-2);font:500 12px var(--f-ui)}
+.org .n-role{fill:var(--muted);font:400 11px var(--f-ui)}
+.org .n-dot{fill:var(--line-2)}
 .org .n-band{fill:var(--c)}
+.org .l-tag{fill:var(--muted);font:600 10.5px var(--f-mono);letter-spacing:.06em}
 .org .s-working .n-box{stroke:var(--accent);stroke-width:2}
 .org .s-working .n-dot{fill:var(--accent);animation:blink 1s ease-in-out infinite}
 .org .s-done .n-dot{fill:var(--good)}
 .org .s-waiting .n-dot{fill:var(--amber)}
 @keyframes blink{50%{opacity:.25}}
-.legend{display:flex;gap:14px;flex-wrap:wrap;font-size:12px;color:var(--muted);margin-top:8px}
+.legend{display:flex;gap:14px;flex-wrap:wrap;font-size:12px;color:var(--muted)}
 .legend span{display:inline-flex;align-items:center;gap:6px}
 .legend i{width:8px;height:8px;border-radius:50%}
-.chat{display:flex;flex-direction:column;min-height:420px}
-.chat-log{flex:1;overflow:auto;display:flex;flex-direction:column;gap:10px;padding:4px 2px 12px;max-height:440px}
-.msg{max-width:88%;padding:9px 12px;border-radius:12px;font-size:13.5px;line-height:1.5}
+.chat{display:flex;flex-direction:column;min-height:440px}
+.chat-log{flex:1;overflow:auto;display:flex;flex-direction:column;gap:10px;padding:2px 2px 12px;max-height:470px}
+.msg{max-width:88%;padding:9px 12px;border-radius:12px;font-size:13.5px}
 .msg.you{align-self:flex-end;background:var(--accent);color:var(--accent-ink);border-bottom-right-radius:4px}
-.msg.cmo{align-self:flex-start;background:var(--sunk);color:var(--ink);border-bottom-left-radius:4px}
+.msg.cmo{align-self:flex-start;background:var(--sunk);border-bottom-left-radius:4px}
 .msg.cmo b{display:block;font-size:11.5px;color:var(--muted);font-weight:600;margin-bottom:2px}
 .chat-form{display:flex;gap:8px;border-top:1px solid var(--line);padding-top:12px}
 .chat-form input{flex:1;min-width:0;font:inherit;color:var(--ink);background:var(--surface-2);border:1px solid var(--line-2);border-radius:8px;padding:8px 10px}
 .suggest{display:flex;gap:6px;flex-wrap:wrap;margin-top:8px}
 .suggest button{font-size:12px;border:1px solid var(--line-2);background:var(--surface);border-radius:999px;padding:3px 10px;cursor:pointer;color:var(--ink-2)}
-.transcript{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:0;max-height:340px;overflow:auto}
-.transcript li{display:grid;grid-template-columns:62px 150px 76px minmax(0,1fr);gap:10px;padding:8px 0;border-bottom:1px solid var(--line);font-size:13px;align-items:baseline}
+.transcript{list-style:none;margin:0;padding:0;max-height:340px;overflow:auto}
+.transcript li{display:grid;grid-template-columns:52px 190px 72px minmax(0,1fr);gap:10px;padding:8px 0;border-bottom:1px solid var(--line);font-size:13px;align-items:baseline}
 .transcript time{font:400 11.5px var(--f-mono);color:var(--muted)}
 .kind{font:500 10.5px var(--f-mono);text-transform:uppercase;letter-spacing:.04em;color:var(--muted)}
 .kind.tool{color:var(--c2)}.kind.handoff{color:var(--amber)}.kind.result{color:var(--good)}
-.transcript .t-text{color:var(--ink-2)}
+.t-text{color:var(--ink-2)}
 
-/* ---------- review ---------- */
+/* foundations */
+.fhead{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}
+.statement{font-size:16px;line-height:1.6;max-width:80ch;padding:14px 16px;border-left:3px solid var(--c2);background:var(--surface-2);border-radius:0 8px 8px 0}
+.parts{display:grid;grid-template-columns:repeat(auto-fit,minmax(175px,1fr));gap:12px;margin-top:16px}
+.part{border:1px solid var(--line);border-radius:8px;padding:11px 13px;display:flex;flex-direction:column;gap:4px}
+.part span{font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);font-weight:600}
+[contenteditable="true"]{outline:2px dashed var(--accent);outline-offset:3px;border-radius:4px}
+.house{margin-top:18px;border:1px solid var(--line);border-radius:10px;overflow:hidden}
+.house-roof{background:var(--ink);color:var(--bg);padding:12px 16px;font-weight:700;font-size:15px;text-align:center}
+.house-roof small{display:block;font-weight:500;font-size:11px;letter-spacing:.07em;text-transform:uppercase;opacity:.7}
+.pillars{display:grid;grid-template-columns:repeat(3,minmax(0,1fr))}
+.pillar{padding:13px 15px;display:flex;flex-direction:column;gap:6px}
+.pillar + .pillar{border-left:1px solid var(--line)}
+.pillar b{font-size:14px}
+.pillar ul{margin:0;padding-left:16px;font-size:12.5px;color:var(--ink-2);display:flex;flex-direction:column;gap:3px}
+.personas{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:12px}
+.persona{border:1px solid var(--line);border-radius:10px;padding:13px 14px;display:flex;flex-direction:column;gap:7px;font-size:13px}
+.persona h4{font-size:14.5px}
+.persona dl{margin:0;display:flex;flex-direction:column;gap:5px}
+.persona dt{font-size:11px;color:var(--muted);font-weight:600;text-transform:uppercase;letter-spacing:.05em}
+.persona dd{margin:0;color:var(--ink-2)}
+.persona .msgq{font-weight:600;color:var(--ink)}
+.icp{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin-bottom:16px}
+.icp ul{margin:6px 0 0;padding-left:16px;font-size:13px;color:var(--ink-2);display:flex;flex-direction:column;gap:3px}
+.dmu{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px}
+.dmu div{border:1px solid var(--line);border-radius:10px;padding:12px 14px;display:flex;flex-direction:column;gap:6px;font-size:13px}
+.dmu b{font-size:14px}
+.journey{display:flex;gap:6px;flex-wrap:wrap;margin-top:16px}
+.journey span{font-size:12.5px;background:var(--sunk);border-radius:6px;padding:5px 10px}
+.journey span::after{content:" →";color:var(--muted)}
+.journey span:last-child::after{content:""}
+.ccell{text-align:center}
+.yes{color:var(--good);font-weight:700}
+.release{border:1px solid var(--accent);border-radius:10px;padding:16px;background:var(--surface-2);display:flex;flex-direction:column;gap:14px}
+.relopts{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:10px}
+.relopt{text-align:left;border:1px solid var(--line-2);background:var(--surface);border-radius:8px;padding:10px 12px;cursor:pointer;display:flex;flex-direction:column;gap:3px}
+.relopt[aria-pressed="true"]{border-color:var(--accent);box-shadow:0 0 0 2px var(--accent-soft)}
+.relopt b{font-size:13.5px}
+.relopt span{font-size:12px;color:var(--muted)}
+.field{display:flex;flex-direction:column;gap:5px}
+.field label{font-size:12px;font-weight:600;color:var(--ink-2)}
+.field input,.field textarea{font:inherit;color:var(--ink);background:var(--surface);border:1px solid var(--line-2);border-radius:8px;padding:8px 10px;width:100%}
+.field textarea{resize:vertical;min-height:60px}
+.form{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px 18px}
+.field.wide{grid-column:1/-1}
+.hint{font-size:12px;color:var(--muted)}
+.assess{border:1px solid var(--line);border-radius:8px;background:var(--surface);padding:13px 14px;display:flex;flex-direction:column;gap:8px}
+.lvl{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:6px}
+.lvl div{border:1px solid var(--line);border-radius:6px;padding:7px 9px;font-size:12px;color:var(--muted)}
+.lvl div.on{border-color:var(--accent);background:var(--accent-soft);color:var(--ink);font-weight:600}
+.hist{display:flex;flex-direction:column;gap:0}
+.hist-item{display:grid;grid-template-columns:70px minmax(0,1fr);gap:14px;padding:14px 0;border-bottom:1px solid var(--line)}
+.hist-item:last-child{border-bottom:0}
+.hist-item ul{margin:6px 0 0;padding-left:16px;font-size:13px;color:var(--ink-2)}
+
+/* review */
 .review{display:grid;grid-template-columns:290px minmax(0,1fr);gap:16px;align-items:start}
 .rv-list{display:flex;flex-direction:column;gap:8px;position:sticky;top:12px}
 .rv-item{text-align:left;border:1px solid var(--line);background:var(--surface);border-radius:8px;padding:10px 12px;cursor:pointer;display:flex;flex-direction:column;gap:6px}
@@ -242,101 +276,134 @@ td.r,th.r{text-align:right}
 .rv-item b{font-size:13.5px;font-weight:600;line-height:1.35}
 .rv-kind{font:500 10.5px var(--f-mono);text-transform:uppercase;letter-spacing:.05em;color:var(--muted)}
 .rv-head{display:flex;justify-content:space-between;gap:14px;align-items:flex-start;flex-wrap:wrap;padding-bottom:14px;border-bottom:1px solid var(--line);margin-bottom:16px}
-.rv-head h2{font:700 20px/1.25 var(--f-display);letter-spacing:-.01em}
+.rv-head h2{font-size:19px;line-height:1.25;letter-spacing:-.01em}
 .rv-actions{display:flex;gap:8px;flex-wrap:wrap}
-.sendback{background:var(--amber-soft);border:1px solid color-mix(in srgb,var(--amber) 35%,transparent);border-radius:8px;padding:12px;margin-bottom:16px;display:flex;flex-direction:column;gap:8px}
-.sendback textarea{font:inherit;color:var(--ink);background:var(--surface);border:1px solid var(--line-2);border-radius:6px;padding:8px;min-height:64px;resize:vertical}
-.note{font-size:12.5px;padding:8px 12px;border-radius:8px;background:var(--accent-soft);color:var(--ink);margin-bottom:14px}
-.plan-grid{display:grid;grid-template-columns:minmax(0,1fr) 250px;gap:16px}
+.sendback{background:var(--amber-soft);border-radius:8px;padding:12px;margin-bottom:16px;display:flex;flex-direction:column;gap:8px}
+.sendback textarea{font:inherit;color:var(--ink);background:var(--surface);border:1px solid var(--line-2);border-radius:6px;padding:8px;min-height:60px;resize:vertical}
+.diff{display:flex;flex-direction:column;gap:12px}
+.diff-sec{border:1px solid var(--line);border-radius:8px;overflow:hidden}
+.diff-sec h4{font-size:12px;font-weight:600;color:var(--ink-2);padding:7px 12px;background:var(--sunk);border-bottom:1px solid var(--line)}
+.dl{display:grid;grid-template-columns:20px minmax(0,1fr);padding:7px 12px;font-size:13.5px}
+.dl.del{background:var(--bad-soft)}
+.dl.del span:last-child{text-decoration:line-through;text-decoration-color:color-mix(in srgb,var(--bad) 60%,transparent);color:var(--ink-2)}
+.dl.add{background:var(--good-soft)}
+.dl b{font-family:var(--f-mono);color:var(--muted)}
+.canvas{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));border:1px solid var(--line);border-radius:10px;overflow:hidden}
+.canvas div{padding:11px 13px;border-right:1px solid var(--line);border-bottom:1px solid var(--line);font-size:13px;display:flex;flex-direction:column;gap:4px}
+.canvas div:nth-child(4n){border-right:0}
+.canvas div:nth-last-child(-n+4){border-bottom:0}
+.canvas span{font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);font-weight:600}
 .gantt-wrap{overflow-x:auto;border:1px solid var(--line);border-radius:8px;background:var(--surface-2)}
-.gantt{min-width:580px;padding:10px 12px 12px}
-.g-row{display:grid;grid-template-columns:minmax(170px,1.4fr) repeat(var(--cols),minmax(38px,1fr));align-items:center;min-height:28px}
+.gantt{min-width:620px;padding:10px 12px 12px}
+.g-row{display:grid;grid-template-columns:minmax(190px,1.5fr) repeat(var(--cols),minmax(34px,1fr));align-items:center;min-height:28px}
 .g-row + .g-row{border-top:1px dashed var(--line)}
-.g-phase{font-size:11px;letter-spacing:.06em;text-transform:uppercase;font-weight:700;color:var(--ink-2);padding:4px 6px;background:var(--sunk);border-radius:4px;margin:0 2px;text-align:center}
+.g-phase{font-size:10.5px;letter-spacing:.05em;text-transform:uppercase;font-weight:700;color:var(--ink-2);padding:4px 6px;background:var(--sunk);border-radius:4px;margin:0 2px;text-align:center;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .g-week{font:500 11px var(--f-mono);color:var(--muted);text-align:center}
 .g-label{font-size:12.5px;display:flex;align-items:center;gap:7px;padding-right:8px;min-width:0}
 .g-label i{width:8px;height:8px;border-radius:50%;background:var(--c);flex:none}
-.g-bar{height:12px;border-radius:3px;background:var(--c);margin:0 2px;opacity:.9}
+.g-bar{height:12px;border-radius:3px;background:var(--c);margin:0 2px}
 .g-ms{width:12px;height:12px;background:var(--c);transform:rotate(45deg);justify-self:center}
-.g-now{grid-row:1/-1}
-.side-panel{display:flex;flex-direction:column;gap:14px}
-.donut-row{display:flex;gap:14px;align-items:center}
-.donut-legend{display:flex;flex-direction:column;gap:5px;font-size:12.5px}
-.donut-legend span{display:flex;gap:7px;align-items:center}
-.donut-legend i{width:9px;height:9px;border-radius:2px;background:var(--c)}
-.donut-legend em{font-style:normal;font-family:var(--f-mono);color:var(--muted);margin-left:auto;padding-left:8px}
-.changes{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:6px;font-size:12.5px}
-.changes li{display:grid;grid-template-columns:16px minmax(0,1fr);gap:6px}
-.changes b{font-family:var(--f-mono)}
-.funnel{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:6px;margin-top:16px}
-.fstep{background:var(--accent);color:var(--accent-ink);padding:10px 10px 9px;display:flex;flex-direction:column;gap:1px;clip-path:polygon(0 0,calc(100% - 10px) 0,100% 50%,calc(100% - 10px) 100%,0 100%,10px 50%)}
-.fstep:first-child{clip-path:polygon(0 0,calc(100% - 10px) 0,100% 50%,calc(100% - 10px) 100%,0 100%);border-radius:6px 0 0 6px}
-.fstep span{font-size:11px;opacity:.85}
-.fstep b{font:600 16px var(--f-mono)}
-.fstep:nth-child(2){opacity:.9}.fstep:nth-child(3){opacity:.8}.fstep:nth-child(4){opacity:.7}.fstep:nth-child(5){opacity:.6}
+.ready{display:flex;flex-direction:column}
+.ready div{display:grid;grid-template-columns:90px 14px minmax(0,1fr);gap:8px;align-items:center;padding:7px 0;border-bottom:1px solid var(--line);font-size:13px}
+.ready div:last-child{border-bottom:0}
+.ready b{font-weight:600}
+.ready span:last-child{color:var(--ink-2)}
+.stage{background:var(--sunk);border-radius:10px;padding:22px 16px;display:flex;justify-content:center}
 .seg{display:inline-flex;border:1px solid var(--line-2);border-radius:8px;overflow:hidden}
 .seg button{border:0;background:var(--surface);padding:5px 11px;font-size:12px;font-weight:600;cursor:pointer;color:var(--ink-2)}
 .seg button[aria-pressed="true"]{background:var(--ink);color:var(--bg)}
-.stage{background:var(--sunk);border-radius:10px;padding:22px 16px;display:flex;justify-content:center}
-/* social post mock */
+/* paper mocks (always light, like the real artefact) */
+.paper{background:#FFFFFF;color:#1C2828;border:1px solid #DDE3E3;border-radius:8px;width:100%;max-width:760px;font-family:var(--f-ui);overflow:hidden}
+.bc-top{display:flex;justify-content:space-between;align-items:center;padding:14px 20px;background:#152222;color:#fff;gap:10px;flex-wrap:wrap}
+.bc-top b{font-size:17px}
+.bc-top span{font-size:12px;opacity:.75}
+.bc-move{margin:16px 20px 0;padding:10px 12px;background:#FBF0DC;border-radius:6px;font-size:13px;color:#5A3A08}
+.bc-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;padding:16px 20px 20px}
+.bc-grid section{border:1px solid #E3E8E8;border-radius:6px;padding:11px 13px}
+.bc-grid h5{margin:0 0 6px;font-size:11px;letter-spacing:.07em;text-transform:uppercase;color:#5D6B6A}
+.bc-grid ul{margin:0;padding-left:16px;font-size:13px;display:flex;flex-direction:column;gap:4px}
+.bc-grid .obj p{font-size:13px;margin-bottom:6px}
+.bc-grid .obj p b{display:block}
+.op{max-width:560px;aspect-ratio:1/1.29}
+.op-bar{height:8px;background:#0A7470}
+.op-body{padding:26px 30px;display:flex;flex-direction:column;gap:14px;height:calc(100% - 8px)}
+.op-eye{font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:#0A7470;font-weight:700}
+.op h3{font-size:24px;line-height:1.2;letter-spacing:-.01em;color:#152222}
+.op p{font-size:13.5px;color:#3A4A49}
+.op-cols{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+.op-cols div{border-top:2px solid #0A7470;padding-top:8px;font-size:12.5px;color:#3A4A49}
+.op-cols b{display:block;color:#152222;font-size:13px;margin-bottom:3px}
+.op-stat{display:flex;gap:14px;align-items:center;background:#EEF6F5;border-radius:8px;padding:12px 14px}
+.op-stat b{font:600 28px var(--f-mono);color:#0A7470}
+.op-stat span{font-size:12.5px;color:#3A4A49}
+.op-foot{margin-top:auto;display:flex;justify-content:space-between;align-items:center;gap:10px;font-size:12px;color:#5D6B6A}
+.op-cta{background:#0A7470;color:#fff;padding:8px 14px;border-radius:6px;font-weight:700;font-size:13px}
 .li{background:#FFFFFF;color:#1D2226;border:1px solid #DFDEDA;border-radius:10px;width:100%;max-width:555px;font-family:-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;font-size:14px;overflow:hidden;transition:max-width .3s}
 .li.mobile{max-width:370px}
 .li-head{display:flex;gap:9px;padding:12px 14px 6px}
-.li-av{width:46px;height:46px;border-radius:6px;background:#0A7470;color:#fff;display:grid;place-items:center;font-weight:700;font-size:18px;flex:none}
+.li-av{width:46px;height:46px;border-radius:6px;background:#0A7470;color:#fff;display:grid;place-items:center;font-weight:700;font-size:16px;flex:none}
 .li-head b{font-size:14px;display:block}
 .li-head span{font-size:12px;color:#666;display:block;line-height:1.35}
 .li-text{padding:4px 14px 10px;white-space:pre-wrap;line-height:1.45}
-.li-text[contenteditable="true"],.em-body [contenteditable="true"]{outline:2px dashed #0A7470;outline-offset:2px;border-radius:4px}
 .li-more{border:0;background:none;color:#666;cursor:pointer;padding:0;font:inherit}
-.li-img{aspect-ratio:1.91/1;background:
-  linear-gradient(135deg,#E3F1EF 0%,#CFE6E3 45%,#B9DCD8 100%);display:grid;place-items:center;padding:20px;text-align:center;color:#1F4E4B;border-block:1px solid #E8E8E8;max-width:100%}
+.li-img{aspect-ratio:1.91/1;background:linear-gradient(135deg,#E3F1EF,#BFDDD9);display:grid;place-items:center;padding:20px;text-align:center;color:#1F4E4B;max-width:100%}
 .li-img small{display:block;font-size:10.5px;letter-spacing:.08em;text-transform:uppercase;opacity:.7;margin-bottom:4px}
 .li-img p{font-size:13px;max-width:34ch}
 .li-stats{display:flex;justify-content:space-between;font-size:12px;color:#666;padding:7px 14px;border-bottom:1px solid #E8E8E8}
 .li-actions{display:grid;grid-template-columns:repeat(4,1fr);padding:4px 6px}
 .li-actions span{text-align:center;font-size:13px;font-weight:600;color:#666;padding:9px 0}
-.checks{display:flex;gap:6px;flex-wrap:wrap;margin-top:14px}
-.post-tabs{display:flex;gap:6px;flex-wrap:wrap}
+.post-tabs{display:flex;gap:6px}
 .post-tabs button{border:1px solid var(--line-2);background:var(--surface);border-radius:6px;padding:4px 10px;font:600 12px var(--f-mono);cursor:pointer;color:var(--ink-2)}
 .post-tabs button[aria-pressed="true"]{border-color:var(--accent);color:var(--accent);background:var(--accent-soft)}
-/* email mock */
-.inbox{background:#FFFFFF;color:#202124;border:1px solid #DADCE0;border-radius:10px;width:100%;max-width:640px;font-family:-apple-system,"Segoe UI",Roboto,Arial,sans-serif;overflow:hidden;transition:max-width .3s}
-.inbox.mobile{max-width:370px}
-.ib-row{display:grid;grid-template-columns:130px minmax(0,1fr) 48px;gap:10px;padding:9px 14px;font-size:13px;border-bottom:1px solid #EEE;align-items:baseline}
-.inbox.mobile .ib-row{grid-template-columns:minmax(0,1fr) 44px}
-.inbox.mobile .ib-from{grid-column:1/-1}
-.ib-row.dim{color:#80868B}
-.ib-row.hl{background:#F2F8F7}
-.ib-row.hl .ib-from,.ib-row.hl .ib-sub{font-weight:700}
-.ib-sub{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
-.ib-sub span{color:#5F6368;font-weight:400}
-.ib-time{font-size:12px;text-align:right}
-.em{padding:18px 14px 22px;background:#F4F6F6}
-.em-card{background:#fff;border-radius:8px;max-width:560px;margin:0 auto;overflow:hidden;border:1px solid #E3E7E7}
-.em-top{background:#0A7470;color:#fff;padding:14px 22px;font-weight:700;letter-spacing:.02em}
-.em-body{padding:22px;font-size:14.5px;line-height:1.6;color:#2A3535;display:flex;flex-direction:column;gap:12px}
-.em-body h3{font-size:20px;line-height:1.3;color:#132121}
-.em-cta{align-self:flex-start;background:#0A7470;color:#fff;border-radius:6px;padding:10px 18px;font-weight:700;font-size:14px}
-.em-foot{font-size:11.5px;color:#7A8888;padding:0 22px 18px}
-.meter{display:flex;gap:16px;flex-wrap:wrap;font-size:12.5px;color:var(--ink-2);margin-top:12px}
-.meter b{font-family:var(--f-mono)}
-/* decision */
-.dec-grid{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr);gap:16px}
+.checks{display:flex;gap:6px;flex-wrap:wrap;margin-top:14px}
 .chart{width:100%;height:auto;display:block}
 .chart text{fill:var(--muted);font:11px var(--f-mono)}
 .chart .gl{stroke:var(--line);stroke-width:1}
-.impact{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
-.impact div{background:var(--surface-2);border:1px solid var(--line);border-radius:8px;padding:10px 12px}
-.impact span{font-size:11.5px;color:var(--muted);display:block}
-.impact b{font:500 18px var(--f-mono)}
-.evidence{margin:0;padding-left:18px;display:flex;flex-direction:column;gap:6px;font-size:13px;color:var(--ink-2)}
+.dec-grid{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr);gap:16px}
 
-/* ---------- connections ---------- */
-.conns{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:14px}
+/* gtm */
+.cal-wrap{overflow-x:auto}
+.cal{min-width:720px}
+.cal-row{display:grid;grid-template-columns:200px repeat(8,minmax(0,1fr));align-items:center;min-height:34px}
+.cal-row + .cal-row{border-top:1px solid var(--line)}
+.cal-h{font:500 11px var(--f-mono);color:var(--muted);text-align:center}
+.cal-l{font-size:13px;display:flex;gap:7px;align-items:center;min-width:0}
+.cal-bar{height:14px;border-radius:4px;background:var(--c);opacity:.85;margin:0 2px}
+.cal-ms{justify-self:center;display:inline-flex;align-items:center;gap:5px;font:600 11px var(--f-mono);color:var(--c)}
+.cal-ms i{width:12px;height:12px;background:var(--c);transform:rotate(45deg);display:inline-block}
+.launches{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px}
+.tier{font:700 11px var(--f-mono);padding:2px 7px;border-radius:5px;background:var(--ink);color:var(--bg)}
+/* wizard */
+.stepper{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:16px}
+.step{display:flex;align-items:center;gap:8px;font-size:13px;color:var(--muted);font-weight:500;padding:5px 12px 5px 5px;border-radius:999px;background:var(--surface);border:1px solid var(--line)}
+.step b{width:22px;height:22px;border-radius:50%;display:grid;place-items:center;font:600 11px var(--f-mono);background:var(--sunk);color:var(--ink-2)}
+.step.on{color:var(--ink);border-color:var(--accent)}
+.step.on b{background:var(--accent);color:var(--accent-ink)}
+.step.done b{background:var(--good-soft);color:var(--good)}
+.types{display:grid;grid-template-columns:repeat(auto-fill,minmax(215px,1fr));gap:12px}
+.type{text-align:left;border:1px solid var(--line);background:var(--surface);border-radius:var(--r);padding:14px;cursor:pointer;display:flex;flex-direction:column;gap:7px}
+.type:hover{border-color:var(--line-2)}
+.type[aria-pressed="true"]{border-color:var(--accent);box-shadow:0 0 0 2px var(--accent-soft)}
+.type h4{font-size:14.5px}
+.type p{font-size:12.5px;color:var(--ink-2)}
+.type .meta{font:500 11.5px var(--f-mono);color:var(--muted);margin-top:auto}
+.layers-used{display:flex;gap:4px}
+.layers-used i{width:16px;height:5px;border-radius:3px;background:var(--line-2)}
+.layers-used i.on{background:var(--c)}
+.phases{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px}
+.phase{background:var(--surface-2);border:1px solid var(--line);border-radius:8px;padding:12px;display:flex;flex-direction:column;gap:8px}
+.phase-h{display:flex;justify-content:space-between;align-items:baseline;gap:6px}
+.phase-h b{font-size:13.5px}
+.phase-h span{font:500 11px var(--f-mono);color:var(--muted)}
+.task{display:flex;flex-direction:column;gap:4px;background:var(--surface);border:1px solid var(--line);border-radius:6px;padding:8px 9px;font-size:12.5px}
+.wiz-foot{display:flex;justify-content:space-between;gap:10px;margin-top:18px;flex-wrap:wrap}
+.flow{display:flex;align-items:center;gap:8px;flex-wrap:wrap;font-size:13px;color:var(--ink-2)}
+/* connections */
+.conns{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:14px}
 .conn{display:flex;flex-direction:column;gap:10px}
 .conn-h{display:flex;align-items:center;gap:10px}
-.conn-logo{width:36px;height:36px;border-radius:8px;display:grid;place-items:center;font:700 13px var(--f-display);color:#fff;background:var(--c);flex:none}
-.conn-h b{font-size:14.5px;display:block}
+.conn-logo{width:34px;height:34px;border-radius:8px;display:grid;place-items:center;font:700 12px var(--f-ui);color:#fff;background:var(--c);flex:none}
+.conn-h b{font-size:14px;display:block}
 .conn-h span{font-size:12px;color:var(--muted)}
 .switch{margin-left:auto;width:38px;height:22px;border-radius:999px;border:0;background:var(--line-2);position:relative;cursor:pointer;flex:none}
 .switch::after{content:"";position:absolute;top:3px;left:3px;width:16px;height:16px;border-radius:50%;background:var(--surface);transition:left .2s}
@@ -346,60 +413,63 @@ td.r,th.r{text-align:right}
 .conn li{font-size:11.5px;background:var(--sunk);border-radius:4px;padding:1px 7px;color:var(--ink-2)}
 .conn-stats{display:flex;justify-content:space-between;font-size:12px;color:var(--muted);border-top:1px solid var(--line);padding-top:9px;gap:8px;flex-wrap:wrap}
 .conn-stats b{color:var(--ink);font-family:var(--f-mono);font-weight:500}
-.future{display:grid;grid-template-columns:repeat(auto-fill,minmax(170px,1fr));gap:10px}
-.future div{border:1px dashed var(--line-2);border-radius:8px;padding:10px 12px;font-size:13px;display:flex;justify-content:space-between;gap:8px;align-items:center}
-.future small{font-size:10.5px;color:var(--muted);text-transform:uppercase;letter-spacing:.05em}
-
 .toast{position:fixed;right:18px;bottom:calc(18px + env(safe-area-inset-bottom,0px));background:var(--ink);color:var(--bg);padding:10px 14px;border-radius:10px;font-size:13px;display:flex;gap:12px;align-items:center;box-shadow:0 8px 24px rgba(0,0,0,.2);z-index:10;max-width:calc(100vw - 36px)}
 .toast button{border:0;background:none;color:var(--bg);font-weight:700;text-decoration:underline;cursor:pointer}
 
-@media (max-width:1180px){.grid-2,.team-grid,.dec-grid{grid-template-columns:minmax(0,1fr)}.plan-grid{grid-template-columns:minmax(0,1fr)}}
+@media (max-width:1200px){.grid-2,.team-grid,.dec-grid{grid-template-columns:minmax(0,1fr)}.grid-3{grid-template-columns:repeat(2,minmax(0,1fr))}.canvas{grid-template-columns:repeat(2,minmax(0,1fr))}.canvas div:nth-child(4n){border-right:1px solid var(--line)}.canvas div:nth-child(2n){border-right:0}.canvas div:nth-last-child(-n+4){border-bottom:1px solid var(--line)}.canvas div:nth-last-child(-n+2){border-bottom:0}}
 @media (max-width:900px){
   .app{grid-template-columns:minmax(0,1fr)}
   .side{position:static;height:auto;flex-direction:row;align-items:center;padding:10px 16px;border-right:0;border-bottom:1px solid var(--line);overflow-x:auto;gap:12px}
-  .logo span,.side-foot,.nav-label,.nav .later{display:none}
+  .logo span,.side-foot,.nav-label{display:none}
   .nav{flex-direction:row;gap:4px}
   .nav button{white-space:nowrap;padding:7px 10px}
   .main{padding:16px 16px 40px}
+  .grid-3{grid-template-columns:minmax(0,1fr)}
   .review{grid-template-columns:minmax(0,1fr)}
   .rv-list{position:static;flex-direction:row;overflow-x:auto;padding-bottom:4px}
-  .rv-item{min-width:210px}
+  .rv-item{min-width:220px}
   .brief{grid-template-columns:auto minmax(0,1fr)}
   .brief-cta{grid-column:1/-1;align-items:flex-start;flex-direction:row;flex-wrap:wrap}
-  .form{grid-template-columns:minmax(0,1fr)}
-  .transcript li{grid-template-columns:52px minmax(0,1fr);}
+  .form,.icp,.bc-grid,.op-cols{grid-template-columns:minmax(0,1fr)}
+  .pillars{grid-template-columns:minmax(0,1fr)}
+  .pillar + .pillar{border-left:0;border-top:1px solid var(--line)}
+  .lvl{grid-template-columns:minmax(0,1fr)}
+  .transcript li{grid-template-columns:48px minmax(0,1fr)}
   .transcript li .kind{display:none}
   .transcript li .t-text{grid-column:1/-1}
-  .funnel{grid-template-columns:repeat(2,minmax(0,1fr))}
-  .fstep,.fstep:first-child{clip-path:none;border-radius:6px}
+  .op{aspect-ratio:auto}
 }
-@media (max-width:520px){.bar-row{grid-template-columns:90px minmax(0,1fr) 70px}}
+@media (max-width:560px){.bar-row{grid-template-columns:110px minmax(0,1fr) 54px}.canvas{grid-template-columns:minmax(0,1fr)}.canvas div{border-right:0!important;border-bottom:1px solid var(--line)!important}}
 @media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}}
 </style>
 
 <div class="app">
   <aside class="side">
-    <div class="logo"><div class="logo-mark">HQ</div><div><b>Marketing HQ</b><span>AI marketing team</span></div></div>
+    <div class="logo"><div class="logo-mark">HQ</div><div><b>Marketing HQ</b><span>AI product marketing team</span></div></div>
     <nav class="nav" id="nav" aria-label="Main">
-      <div class="nav-label">Run</div>
+      <div class="nav-label">Overview</div>
       <button data-view="command"><svg class="ico" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="6" height="6" rx="1.5"/><rect x="11" y="3" width="6" height="6" rx="1.5"/><rect x="3" y="11" width="6" height="6" rx="1.5"/><rect x="11" y="11" width="6" height="6" rx="1.5"/></svg>Command Center</button>
       <button data-view="review"><svg class="ico" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M2.5 10s2.8-5 7.5-5 7.5 5 7.5 5-2.8 5-7.5 5-7.5-5-7.5-5Z"/><circle cx="10" cy="10" r="2.3"/></svg>Review Room<span class="badge" id="badge"></span></button>
       <button data-view="team"><svg class="ico" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="7" y="2.5" width="6" height="4" rx="1"/><rect x="2" y="13.5" width="5" height="4" rx="1"/><rect x="7.5" y="13.5" width="5" height="4" rx="1"/><rect x="13" y="13.5" width="5" height="4" rx="1"/><path d="M10 6.5v7M4.5 13.5V10h11v3.5"/></svg>Team &amp; CMO</button>
-      <div class="nav-label">Campaigns</div>
-      <button data-view="wizard"><svg class="ico" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="10" cy="10" r="7"/><path d="M10 6.5v7M6.5 10h7"/></svg>New campaign</button>
-      <button data-view="campaigns"><svg class="ico" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 5h14M3 10h14M3 15h9"/></svg>All campaigns</button>
+      <div class="nav-label">Layers</div>
+      <button data-view="foundations"><span class="lnum" style="--c:var(--c2)">1</span>Foundations</button>
+      <button data-view="materials"><span class="lnum" style="--c:var(--c4)">2</span>Materials</button>
+      <button data-view="gtm"><span class="lnum" style="--c:var(--c3)">3</span>Go-to-market</button>
       <div class="nav-label">Data</div>
       <button data-view="connections"><svg class="ico" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M8 12l4-4M6.5 9.5 5 11a3 3 0 0 0 4 4l1.5-1.5M13.5 10.5 15 9a3 3 0 0 0-4-4L9.5 6.5"/></svg>Connections</button>
-      <button class="later" disabled><svg class="ico" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 17V9M8 17V4M13 17v-6M18 17H2"/></svg>Analytics<span class="tag-later">Phase 1</span></button>
-      <button class="later" disabled><svg class="ico" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="14" height="14" rx="2"/><path d="M6 8h8M6 12h5"/></svg>Content library<span class="tag-later">Phase 2</span></button>
-      <button class="later" disabled><svg class="ico" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="10" cy="10" r="2.5"/><path d="M10 2.5v2M10 15.5v2M2.5 10h2M15.5 10h2M4.7 4.7l1.4 1.4M13.9 13.9l1.4 1.4M4.7 15.3l1.4-1.4M13.9 6.1l1.4-1.4"/></svg>Brand &amp; playbooks<span class="tag-later">Phase 2</span></button>
     </nav>
-    <div class="side-foot">Clickable prototype · all figures are sample data</div>
+    <div class="side-foot">Clickable prototype. All names and figures are sample data.</div>
   </aside>
   <main class="main">
     <header class="topbar">
       <div><h1 id="vtitle">Command Center</h1><div class="sub" id="vsub"></div></div>
-      <div class="top-right"><span class="live"><i></i>Live</span><span class="proto">Sample data</span></div>
+      <div class="top-right">
+        <span class="live"><i></i>Live</span><span class="proto">Sample data</span>
+        <div class="theme" role="group" aria-label="Theme">
+          <button data-theme-set="light" aria-pressed="false"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="10" cy="10" r="3.5"/><path d="M10 2v2M10 16v2M2 10h2M16 10h2M4.3 4.3l1.4 1.4M14.3 14.3l1.4 1.4M4.3 15.7l1.4-1.4M14.3 5.7l1.4-1.4"/></svg>Day</button>
+          <button data-theme-set="dark" aria-pressed="false"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M16 12.5A6.5 6.5 0 0 1 7.5 4a6.5 6.5 0 1 0 8.5 8.5Z"/></svg>Night</button>
+        </div>
+      </div>
     </header>
     <div id="view"></div>
   </main>
@@ -407,370 +477,483 @@ td.r,th.r{text-align:right}
 <div class="toast" id="toast" hidden></div>
 
 <script>
-/* ============ data ============ */
+/* ================= data ================= */
 function rng(seed){return function(){seed=seed+0x6D2B79F5|0;let t=Math.imul(seed^seed>>>15,1|seed);t=t+Math.imul(t^t>>>7,61|t)^t;return((t^t>>>14)>>>0)/4294967296}}
-const R=rng(7);
-function series(end,n,vol,trend){const out=[];const start=end*(1-trend);for(let i=0;i<n;i++){const base=start+(end-start)*i/(n-1);const wk=(i%7===5||i%7===6)?0.82:1;out.push(base*wk*(1+(R()-.5)*vol))}out[n-1]=end;return out}
+const R=rng(11);
+function series(end,n,vol,trend){const out=[];const st=end*(1-trend);for(let i=0;i<n;i++){out.push((st+(end-st)*i/(n-1))*(1+(R()-.5)*vol))}out[n-1]=end;return out}
 
+const LC={0:'var(--ink)',1:'var(--c2)',2:'var(--c4)',3:'var(--c3)',a:'var(--c1)'};
 const AG={
-  cmo:{name:'CMO',role:'Orchestrator · strategy, budget, final review',c:'var(--ink)'},
-  planner:{name:'Campaign Planner',role:'Plans campaigns from playbooks',c:'var(--c2)'},
-  content:{name:'Content & Copy',role:'Posts, emails, pages, brand check',c:'var(--c4)'},
-  seo:{name:'SEO & Competitive',role:'Keywords, gaps, competitors',c:'var(--c3)'},
-  analyst:{name:'Analyst',role:'Metrics, trends, budget moves',c:'var(--c1)'}
+  cmo:{name:'CMO',L:0,role:'Strategy, budget, final review'},
+  analyst:{name:'Analyst',L:'a',role:'Measures all three layers'},
+  found:{name:'Foundations lead',L:1,role:'Owns the source of truth'},
+  pos:{name:'Positioning & Messaging',L:1},icp:{name:'ICP & Buying Committee',L:1},comp:{name:'Competitive Landscape',L:1},research:{name:'Research Interviews',L:1},
+  mat:{name:'Materials lead',L:2,role:'Builds from approved foundations'},
+  enable:{name:'Sales Enablement',L:2},partner:{name:'Partner Enablement',L:2},proof:{name:'Customer Proof',L:2},
+  gtm:{name:'Go-to-market lead',L:3,role:'Launches and campaigns'},
+  content:{name:'Content & Copy',L:3},seo:{name:'SEO',L:3}
 };
+const LEAD={1:'found',2:'mat',3:'gtm'};
+const SPECS={found:['pos','icp','comp','research'],mat:['enable','partner','proof'],gtm:['content','seo']};
+const LNAME={1:'Foundations',2:'Materials',3:'Go-to-market'};
+
 const PB={
-  launch:{name:'Product Launch',ico:'M4 16 16 4M9 4h7v7',blurb:'Build anticipation, go live loudly, then turn attention into pipeline.',
-    kpis:['Sign-ups','Demos booked','Pipeline','Share of voice'],channels:[['LinkedIn',45],['Search',30],['Content',15],['Email',10]],
-    weeks:['W-4','W-3','W-2','W-1','W0','W+1','W+2','W+3'],spans:[4,1,3],
-    phases:[{name:'Pre-launch',when:'W-4 → W-1',tasks:[['Positioning & messaging house','planner'],['Keyword & competitor scan','seo'],['Teaser post series (3)','content'],['Waitlist landing page','content'],['Press kit','content']]},
-      {name:'Launch day',when:'W0',tasks:[['Announcement blog','content'],['Press release','content'],['Launch email blast','content'],['LinkedIn + Search ads burst','planner']]},
-      {name:'Post-launch',when:'W+1 → W+3',tasks:[['Customer case study','content'],['Nurture sequence (4 emails)','content'],['Retargeting ads','planner'],['Results report','analyst']]}]},
-  webinar:{name:'Webinar / Event',ico:'M10 3v9M6.5 8.5a3.5 3.5 0 0 0 7 0V6a3.5 3.5 0 0 0-7 0ZM5 10a5 5 0 0 0 10 0M10 15v2',blurb:'Fill the room, get people to show up, and follow up while interest is high.',
-    kpis:['Registrations','Show-up rate','Post-event MQLs'],channels:[['Email',40],['LinkedIn',35],['Partners',15],['Search',10]],
-    spans:[1,3,1,2],phases:[{name:'Setup',when:'W1',tasks:[['Landing page & registration form','content'],['Speaker brief','planner'],['Title & keyword check','seo']]},
-      {name:'Promotion',when:'W2 → W4',tasks:[['3-email invite sequence','content'],['Social countdown (5 posts)','content'],['Partner promo kit','content']]},
-      {name:'Live',when:'W5',tasks:[['Reminder emails (24h, 1h)','content'],['Run of show','planner']]},
-      {name:'Follow-up',when:'W6 → W7',tasks:[['Recording email','content'],['Attendee vs no-show nurture','content'],['Clips for social','content'],['Registration → MQL report','analyst']]}]},
-  leadgen:{name:'Lead Gen',ico:'M10 17a7 7 0 1 0 0-14 7 7 0 0 0 0 14ZM10 13a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z',blurb:'Trade a useful asset for contact details, then qualify and hand off.',
-    kpis:['Leads','Cost per lead','MQL → SQL'],channels:[['Search',40],['LinkedIn',35],['Content',15],['Email',10]],
-    spans:[2,3,2,1],phases:[{name:'Offer',when:'W1 → W2',tasks:[['Gated guide outline','content'],['Landing page','content'],['Keyword targeting','seo']]},
-      {name:'Distribution',when:'W3 → W5',tasks:[['Search ads','planner'],['LinkedIn lead-gen ads','content'],['Organic posts','content']]},
-      {name:'Nurture',when:'W6 → W7',tasks:[['5-email nurture','content'],['Lead scoring rules','analyst']]},
-      {name:'Handoff',when:'W8',tasks:[['Sales handoff brief','planner'],['CPL & MQL → SQL report','analyst']]}]},
-  nurture:{name:'Nurture Sequence',ico:'M3 5h14v10H3zM3 5l7 6 7-6',blurb:'Move known contacts forward with a branching email sequence.',
-    kpis:['Open rate','Click rate','Conversion','Unsubscribes'],channels:[['Email',85],['LinkedIn',15]],
-    spans:[1,1,2,2],phases:[{name:'Segment',when:'W1',tasks:[['Segment definition','analyst']]},
-      {name:'Map',when:'W2',tasks:[['Sequence map with branches','planner']]},
-      {name:'Copy',when:'W3 → W4',tasks:[['Email copy ×5','content'],['Subject line variants','content']]},
-      {name:'Test',when:'W5 → W6',tasks:[['A/B test plan','analyst']]}]},
-  brand:{name:'Brand / Awareness',ico:'M3 8v4l9 4V4L3 8ZM12 7h3a2 2 0 0 1 0 6h-3',blurb:'Make the right audience know who you are and what you stand for.',
-    kpis:['Reach','Engagement','Followers','Branded search'],channels:[['LinkedIn',55],['Content',25],['Search',20]],
-    spans:[1,3,2,2],phases:[{name:'Narrative',when:'W1',tasks:[['Brand narrative & pillars','planner']]},
-      {name:'Series',when:'W2 → W4',tasks:[['Content series (6 posts)','content']]},
-      {name:'Thought leadership',when:'W5 → W6',tasks:[['Exec bylines ×2','content'],['SEO topic cluster','seo']]},
-      {name:'Reach',when:'W7 → W8',tasks:[['Paid reach plan','planner'],['Reach & branded-search report','analyst']]}]},
-  partner:{name:'Partner / Co-marketing',ico:'M3 10l4-4 3 3 3-3 4 4-7 7-7-7Z',blurb:'Go to market with a partner and share the audience, assets and leads.',
-    kpis:['Partner-sourced leads','Partner engagement'],channels:[['Partners',40],['LinkedIn',30],['Email',20],['Content',10]],
-    spans:[1,2,2,2],phases:[{name:'Value prop',when:'W1',tasks:[['Joint value proposition','planner']]},
-      {name:'Assets',when:'W2 → W3',tasks:[['Co-branded one-pager','content'],['Joint landing page','content']]},
-      {name:'Enablement',when:'W4 → W5',tasks:[['Partner enablement kit','content']]},
-      {name:'Joint offer',when:'W6 → W7',tasks:[['Joint webinar','planner'],['Partner-sourced lead report','analyst']]}]},
-  reengage:{name:'Re-engagement',ico:'M16 7a6.5 6.5 0 1 0 .5 5M16 3v4h-4',blurb:'Win back contacts who went quiet, and clean up the ones who won’t return.',
-    kpis:['Reactivation rate','List health'],channels:[['Email',75],['LinkedIn',25]],
-    spans:[1,1,2,1],phases:[{name:'Segment',when:'W1',tasks:[['Dormant segment (90+ days)','analyst']]},
-      {name:'Offer',when:'W2',tasks:[['Win-back offer','planner']]},
-      {name:'Sequence',when:'W3 → W4',tasks:[['3-touch sequence','content']]},
-      {name:'Sunset',when:'W5',tasks:[['Sunset rule & list hygiene','analyst']]}]},
-  seo:{name:'Content / SEO program',ico:'M8.5 14a5.5 5.5 0 1 0 0-11 5.5 5.5 0 0 0 0 11ZM12.5 12.5 17 17',blurb:'Build organic demand with a keyword plan and a steady publishing rhythm.',
-    kpis:['Organic sessions','Rankings','Conversions'],channels:[['Content',70],['Search',20],['LinkedIn',10]],
-    spans:[2,1,4,1],phases:[{name:'Research',when:'W1 → W2',tasks:[['Keyword cluster map','seo'],['Competitor content gaps','seo']]},
-      {name:'Calendar',when:'W3',tasks:[['12-week editorial calendar','planner']]},
-      {name:'Production',when:'W4 → W7',tasks:[['Pillar page','content'],['Cluster posts ×6','content']]},
-      {name:'Refresh',when:'W8',tasks:[['Ranking & refresh report','analyst']]}]}
+  t1:{name:'T1 launch',blurb:'A major release that changes how you sell. Foundations checked, every team made ready.',kpis:['Pipeline','Adoption','Win rate'],weeks:['W-6','W-5','W-4','W-3','W-2','W-1','W0','W+1','W+2','W+3'],spans:[1,5,1,3],
+    phases:[{name:'Foundations check',when:'W-6',tasks:[['Release impact check','found'],['Launch messaging & value props','pos'],['Competitive angle','comp']]},
+      {name:'Readiness',when:'W-5 → W-1',tasks:[['Sales deck & demo script','enable'],['Battlecard updates','enable'],['Partner launch kit','partner'],['Beta customer story','proof'],['Readiness board','gtm']]},
+      {name:'Launch',when:'W0',tasks:[['Announcement blog & PR','content'],['Launch email & social','content'],['Paid launch burst','gtm']]},
+      {name:'Adopt',when:'W+1 → W+3',tasks:[['Adoption push (in-app, email)','content'],['Results report','analyst']]}]},
+  t2:{name:'T2 launch',blurb:'A meaningful feature. Clear value prop, a sales brief, and an adoption push.',kpis:['Adoption'],spans:[1,2,1,2],
+    phases:[{name:'Messaging',when:'W1',tasks:[['Feature value prop','pos']]},{name:'Enablement',when:'W2 → W3',tasks:[['Enablement brief & FAQ','enable']]},
+      {name:'Release',when:'W4',tasks:[['Release blog','content'],['In-app announcement','content']]},{name:'Adopt',when:'W5 → W6',tasks:[['Adoption email','content'],['Adoption report','analyst']]}]},
+  compete:{name:'Competitive response',blurb:'A competitor moved. Understand it, arm Sales, and win the deals at risk.',kpis:['Competitive win rate'],spans:[1,2,2,1],
+    phases:[{name:'Analyse',when:'W1',tasks:[['Competitor move analysis','comp'],['Win/loss call review','research']]},
+      {name:'Respond',when:'W2 → W3',tasks:[['Battlecard refresh','enable'],['Objection handling update','enable'],['Positioning check','pos']]},
+      {name:'Win back',when:'W4 → W5',tasks:[['Targeted campaign','gtm'],['Comparison page','seo']]},{name:'Measure',when:'W6',tasks:[['Competitive win rate report','analyst']]}]},
+  segment:{name:'New segment / ICP',blurb:'Go after a new buyer or segment, starting with research, not guesses.',kpis:['Pipeline in segment'],spans:[3,2,1,2],
+    phases:[{name:'Research',when:'W1 → W3',tasks:[['Discovery interviews ×12','research'],['Market sizing','analyst']]},
+      {name:'Define',when:'W4 → W5',tasks:[['ICP & persona update','icp'],['Segment messaging','pos']]},{name:'Enable',when:'W6',tasks:[['Segment one-pager','enable']]},
+      {name:'Pilot',when:'W7 → W8',tasks:[['Pilot campaign','gtm'],['Landing page','content']]}]},
+  pricing:{name:'Pricing & packaging',blurb:'A new plan or price. Check positioning, prepare Sales, tell customers well.',kpis:['Conversion','Churn'],spans:[1,2,1,2],
+    phases:[{name:'Check',when:'W1',tasks:[['Positioning check','pos'],['Competitor pricing scan','comp']]},
+      {name:'Prepare',when:'W2 → W3',tasks:[['Pricing page copy','content'],['Sales pricing guidance','enable'],['Partner pricing brief','partner']]},
+      {name:'Communicate',when:'W4',tasks:[['Customer email & FAQ','content']]},{name:'Measure',when:'W5 → W6',tasks:[['Conversion & churn report','analyst']]}]},
+  adoption:{name:'Feature adoption',blurb:'Customers have it but don’t use it. Find the drop-off and fix it.',kpis:['Feature adoption'],spans:[1,2,2,1],
+    phases:[{name:'Analyse',when:'W1',tasks:[['Usage drop-off analysis','analyst']]},{name:'Guide',when:'W2 → W3',tasks:[['In-app guides','content'],['How-to video script','content']]},
+      {name:'Engage',when:'W4 → W5',tasks:[['Adoption webinar','gtm'],['Customer tips story','proof']]},{name:'Measure',when:'W6',tasks:[['Adoption report','analyst']]}]},
+  webinar:{name:'Webinar / event',blurb:'Fill the room, get people to show up, follow up while interest is high.',kpis:['Registrations','MQLs'],spans:[1,3,1,2],
+    phases:[{name:'Setup',when:'W1',tasks:[['Landing page','content'],['Speaker brief','gtm']]},{name:'Promote',when:'W2 → W4',tasks:[['Invite sequence (3 emails)','content'],['Partner promo kit','partner']]},
+      {name:'Live',when:'W5',tasks:[['Run of show','gtm']]},{name:'Follow up',when:'W6 → W7',tasks:[['Recording & nurture','content'],['Registrations → MQL report','analyst']]}]},
+  demand:{name:'Demand gen',blurb:'Trade a useful asset for contact details, then nurture and hand off.',kpis:['Leads','Cost per lead'],spans:[2,3,2,1],
+    phases:[{name:'Offer',when:'W1 → W2',tasks:[['Gated guide','content'],['Keyword targeting','seo']]},{name:'Distribute',when:'W3 → W5',tasks:[['Ads & landing page','gtm'],['Organic posts','content']]},
+      {name:'Nurture',when:'W6 → W7',tasks:[['Nurture sequence','content']]},{name:'Handoff',when:'W8',tasks:[['Sales handoff brief','enable'],['Pipeline report','analyst']]}]}
 };
-const DEF={
-  launch:['Q1 Connector App Launch','300 MQLs'],webinar:['Community call: AL performance','400 registrations'],
-  leadgen:['ISV Readiness Guide','250 leads under €18 each'],nurture:['New partner onboarding','20% click-to-demo'],
-  brand:['BC in Practice series','+30% LinkedIn reach'],partner:['Co-marketing with a partner ISV','120 partner-sourced leads'],
-  reengage:['Dormant ISV win-back','15% reactivation'],seo:['AppSource SEO program','+40% organic sessions']
-};
+const DEF={t1:['Scenario Planner launch','€600k pipeline in 90 days'],t2:['Slack alerts release','30% adoption in 30 days'],compete:['Response to Competitor A price cut','Win rate vs A back above 40%'],segment:['Finance teams segment','€250k pipeline from Finance'],pricing:['New Growth plan','+15% self-serve conversion'],adoption:['Forecast Explain adoption','Weekly use from 42% to 55%'],webinar:['Forecasting masterclass','400 registrations'],demand:['Forecast accuracy guide','250 leads']};
 const taskCount=pb=>pb.phases.reduce((s,p)=>s+p.tasks.length,0);
+const layersOf=pb=>{const s=new Set();pb.phases.forEach(p=>p.tasks.forEach(t=>{const L=AG[t[1]].L;if(typeof L==='number'&&L>0)s.add(L)}));return s};
+
+const F={
+  ver:'2.0',approved:'18 Aug 2026',
+  statement:'For RevOps teams at mid-market B2B SaaS companies who need a forecast they can defend, Your Brand is the revenue forecasting platform that combines CRM and product usage data. Unlike spreadsheets or enterprise planning suites, it explains every number and goes live in five days.',
+  parts:[['Competitive alternatives','Spreadsheets + BI · Competitor A (enterprise planning suite) · Competitor B (CRM add-on)'],['Unique attributes','Forecasts from CRM and product usage data · explains why each number moved · live in five days'],['Value','Forecasts within 5% of actuals · 6 hours a week saved per RevOps analyst'],['Target customers','RevOps teams at mid-market B2B SaaS (200–2,000 employees)'],['Market category','Revenue forecasting for mid-market SaaS']],
+  umbrella:'Forecasts your board can trust',
+  pillars:[{key:'accurate',name:'Accurate',line:'Built on CRM and product usage data, not gut feel',proof:['Within 5% of actuals for 80% of customers','Usage signals catch 1 in 4 slipping deals']},
+    {key:'explainable',name:'Explainable',line:'See why every number moved',proof:['Every change traced to the deals behind it','Board-ready commentary in one click']},
+    {key:'fast',name:'Fast to value',line:'Live in five days, not five months',proof:['Median setup: 5 days','No data team needed']}],
+  icp:{firmo:['B2B SaaS, 200–2,000 employees','€20M–€300M ARR','Salesforce or HubSpot CRM','RevOps team of 2 or more'],triggers:['Missed a forecast by more than 10%','New CFO or board pressure','Moving to usage-based pricing'],disq:['No CRM discipline','No RevOps role and under 50 reps']},
+  personas:[{key:'revops',name:'VP Revenue Operations',role:'Champion',goals:'A forecast the exec team stops arguing about',pains:'Builds it by hand every week and can’t explain changes',msg:'Spend Monday on decisions, not spreadsheets.'},
+    {key:'cfo',name:'CFO',role:'Economic buyer',goals:'Predictable revenue for the board',pains:'Surprises late in the quarter',msg:'A number you can take to the board, with the reasons behind it.'},
+    {key:'sm',name:'Sales Manager',role:'User',goals:'Hit the team number',pains:'Finds out about slipping deals too late',msg:'See your team’s forecast in one place.'},
+    {key:'it',name:'IT & Security',role:'Approver',goals:'Safe, low-effort tools',pains:'Shadow tools with CRM access',msg:'SOC 2 Type II, SSO and read-only CRM access.'}],
+  dmu:[['CFO','Economic buyer','Signs off budget',90],['VP RevOps','Champion','Runs the evaluation',80],['CRO','Influencer','Backs it if reps adopt it',65],['IT & Security','Approver','Security review and SSO',55],['Sales Managers','Users','Daily use, the adoption risk',45],['Procurement','Gatekeeper','Contract and terms',35]],
+  journey:['Missed forecast','RevOps researches','Shortlist of 3','Demo with CRO & CFO','Security review','2-week pilot','Contract'],
+  compHead:['','Your Brand','Competitor A','Competitor B','Spreadsheets + BI'],
+  comp:[['Uses product usage data','✓','—','—','—'],['Explains forecast changes','✓','Partial','—','—'],['Time to go live','5 days','3–6 months','2 weeks','—'],['Price for 50 users','€€','€€€€','€','€'],['Best for','Mid-market RevOps','Enterprise FP&A','Small sales teams','Very early stage']],
+  moves:[['Competitor A','Cut list price by 15% for new mid-market deals','2 Oct'],['Competitor B','Launched AI deal summaries','24 Sep']],
+  features:[['Forecast Explain','See why every number moved','VP RevOps, CFO','GA','Mar 2026'],['Scenario Planner','Model best, base and worst case in minutes','CFO, VP RevOps','Launching','3 Nov 2026'],['Slack alerts','Forecast changes posted to Slack','Sales Manager','Beta','20 Oct 2026']],
+  history:[{v:'2.0',date:'18 Aug 2026',by:'You',why:'14 win/loss interviews showed we win on explainability, not BI features',changes:['Repositioned from “BI add-on for sales” to “revenue forecasting for mid-market SaaS”','New pillar: Explainable','Dropped SMB from the ICP']},
+    {v:'1.1',date:'12 May 2026',by:'You',why:'Two deals lost in security review',changes:['Added IT & Security and Procurement to the buying committee']},
+    {v:'1.0',date:'3 Mar 2026',by:'You',why:'First version',changes:['Positioning, ICP, three personas, messaging house']}]
+};
+
+const REL={
+  drs:{name:'Deal Risk Scoring',desc:'Flags deals likely to slip, using activity and product usage signals.',impact:'messaging',
+    why:'Adds a proof point to the Accurate pillar and a stronger message for Sales Managers. Positioning, ICP and buying committee stay the same.',
+    diff:[{s:'Persona · Sales Manager · key message',del:'See your team’s forecast in one place.',add:'See your team’s forecast in one place, and which deals are at risk before they slip.'},
+      {s:'Pillar · Accurate · proof points',add:'Deal Risk Scoring flags at-risk deals 3 weeks earlier on average (beta, 40 customers).'},
+      {s:'Feature catalog',add:'Deal Risk Scoring · Sales Manager, VP RevOps · Launching 17 Nov 2026'}],tags:['persona:sm','pillar:accurate']},
+  board:{name:'Board Reporting module',desc:'Board-ready revenue packs built for Finance teams.',impact:'positioning',
+    why:'Brings in a second buyer (Finance) and widens the category. That changes target customers, the market category and the buying committee.',
+    diff:[{s:'Target customers',del:'RevOps teams at mid-market B2B SaaS (200–2,000 employees)',add:'RevOps and Finance teams at mid-market B2B SaaS (200–2,000 employees)'},
+      {s:'Market category',del:'Revenue forecasting for mid-market SaaS',add:'Revenue forecasting and board reporting for mid-market SaaS'},
+      {s:'Buying committee · CFO',del:'Economic buyer · signs off budget',add:'Economic buyer and user · reviews board packs monthly'},
+      {s:'Personas',add:'New persona: FP&A Manager (user) · builds the board pack'},
+      {s:'Feature catalog',add:'Board Reporting · CFO, FP&A Manager · Planned Q1 2027'}],tags:['positioning','persona:cfo']},
+  dark:{name:'Dark mode for dashboards',desc:'Dashboards in a dark theme.',impact:'none',why:'A welcome improvement, but it changes no value, persona or competitive position.'}
+};
 
 const S={
   kpi:{
-    spend:{label:'Spend',v:12430,d:6.2,fmt:'eur',sem:'flat',s:series(430,30,.25,.15)},
-    leads:{label:'Leads',v:842,d:12.1,fmt:'int',sem:'up',s:series(31,30,.3,.3)},
-    ctr:{label:'CTR',v:2.91,d:.3,fmt:'pct',sem:'up',s:series(2.91,30,.12,.1)},
-    cpl:{label:'Cost per lead',v:14.76,d:-5.4,fmt:'eur2',sem:'down',s:series(14.76,30,.1,-.08)},
-    roas:{label:'ROAS',v:3.4,d:8.0,fmt:'x',sem:'up',s:series(3.4,30,.12,.12)}
+    win:{label:'Win rate',v:31.4,d:3.1,u:'pts',up:true,f:v=>v.toFixed(1)+'%',s:series(31.4,24,.08,.1)},
+    compA:{label:'Win rate vs Competitor A',v:38,d:-4,u:'pts',up:true,f:v=>Math.round(v)+'%',s:series(38,24,.08,-.1)},
+    pipe:{label:'Pipeline influenced',v:1840000,d:18,u:'%',up:true,f:v=>'€'+(v/1e6).toFixed(2)+'M',s:series(1.84,24,.06,.2)},
+    adopt:{label:'Forecast Explain weekly use',v:42,d:9,u:'pts',up:true,f:v=>v.toFixed(1)+'%',s:series(42,24,.05,.25)},
+    reps:{label:'Reps using enablement',v:76,d:6,u:'pts',up:true,f:v=>Math.round(v)+'%',s:series(76,24,.04,.1)},
+    ready:{label:'Next T1 readiness',v:71,d:12,u:'pts',up:true,f:v=>Math.round(v)+'%',s:series(71,24,.06,.4)}
   },
-  channels:[
-    {name:'LinkedIn',sub:'organic + ads',conn:'linkedin',leads:286,spend:5980,c:'var(--c2)'},
-    {name:'Google Ads',sub:'search',conn:'gads',leads:251,spend:4210,c:'var(--c3)'},
-    {name:'Email',sub:'HubSpot',conn:'hubspot',leads:198,spend:1240,c:'var(--c4)'},
-    {name:'Organic',sub:'GA4 · SEO',conn:'ga4',leads:107,spend:1000,c:'var(--c1)'}
-  ],
+  winby:[['Competitor A','12 deals this quarter',38,'var(--c3)'],['Competitor B','19 deals',47,'var(--c4)'],['Spreadsheets + BI','27 deals',52,'var(--c2)']],
   connectors:[
-    {id:'hubspot',name:'HubSpot',logo:'HS',c:'#C4572F',what:'CRM & email',metrics:['Contacts','MQLs','Email opens','Clicks','Deals'],on:true,every:15,ago:4,rows:18420},
-    {id:'linkedin',name:'LinkedIn',logo:'in',c:'#2D63A8',what:'Page & ads',metrics:['Impressions','Engagement','Followers','Ad spend','CTR'],on:true,every:30,ago:11,rows:6210},
-    {id:'ga4',name:'Google Analytics 4',logo:'GA',c:'#B7791F',what:'Website',metrics:['Sessions','Users','Conversions','Top pages'],on:true,every:10,ago:2,rows:40955},
-    {id:'gads',name:'Google Ads',logo:'Ads',c:'#2F8A5B',what:'Paid search',metrics:['Spend','Clicks','CPC','Conversions','ROAS'],on:true,every:20,ago:7,rows:9870}
+    {id:'sf',name:'Salesforce',logo:'SF',c:'#2E6FB7',what:'Pipeline & win rate',metrics:['Opportunities','Win rate','Pipeline'],on:true,every:12,ago:3,rows:28410},
+    {id:'gong',name:'Gong',logo:'Go',c:'#6B4BC4',what:'Sales call insights',metrics:['Calls','Competitor mentions','Objections'],on:true,every:25,ago:9,rows:3120},
+    {id:'g2',name:'G2',logo:'G2',c:'#C4482F',what:'Reviews',metrics:['Reviews','Rating','Comparisons'],on:true,every:40,ago:18,rows:412},
+    {id:'jira',name:'Jira',logo:'Ji',c:'#2F6AD9',what:'Release dates',metrics:['Releases','Epics','Status'],on:true,every:30,ago:21,rows:1980},
+    {id:'amp',name:'Amplitude',logo:'Am',c:'#3A55C8',what:'Feature adoption',metrics:['Active users','Feature use','Retention'],on:true,every:10,ago:2,rows:92800},
+    {id:'hs',name:'Highspot',logo:'Hi',c:'#B7791F',what:'Enablement usage',metrics:['Content views','Pitches','Rep usage'],on:true,every:20,ago:6,rows:7350},
+    {id:'hub',name:'HubSpot',logo:'HS',c:'#C4572F',what:'Marketing & email',metrics:['Contacts','MQLs','Emails'],on:true,every:15,ago:11,rows:18420},
+    {id:'li',name:'LinkedIn',logo:'in',c:'#2D63A8',what:'Social & ads',metrics:['Impressions','Engagement','Ad spend'],on:true,every:30,ago:14,rows:6210},
+    {id:'ga4',name:'Google Analytics 4',logo:'GA',c:'#9A6A12',what:'Website',metrics:['Sessions','Conversions','Top pages'],on:false,every:10,ago:0,rows:40955}
   ],
-  feed:[
-    ['14:02','content','Drafted 4 LinkedIn posts for Q4 App Launch'],
-    ['14:01','hubspot','HubSpot sync: 23 new contacts, 6 MQLs'],
-    ['13:55','planner','Submitted Q4 App Launch plan to the CMO'],
-    ['13:52','analyst','Flagged LinkedIn CPL up 3 weeks in a row'],
-    ['13:40','cmo','Paused BC in Practice series to fund the launch'],
-    ['13:31','seo','Keyword scan: 14 terms, 3 competitor gaps']
+  feed:[['14:02','enable','Refreshed the Competitor A battlecard after their price cut'],['13:58','gong','Gong: 4 calls this week mention Competitor A pricing'],['13:51','found','Release impact check: Deal Risk Scoring is a messaging-level change'],['13:40','gtm','Scenario Planner launch plan sent to the CMO'],['13:31','analyst','Message test: “Explainable” beats the umbrella line on CTR'],['13:12','jira','Jira: Scenario Planner build signed off for 3 Nov']],
+  launches:[
+    {id:'sp',name:'Scenario Planner',tier:'T1',type:'t1',date:'3 Nov',col:3,goal:'€600k pipeline in 90 days',status:'Plan in review',
+      ready:{Product:['g','GA build signed off'],Sales:['a','Training 4 Nov, deck in review'],CS:['a','Help docs 60% done'],Marketing:['g','Launch plan in review'],Web:['r','Product page not started'],Pricing:['g','Included in Pro plan'],Legal:['g','Claims approved']},
+      canvas:[['Target','RevOps and CFOs at mid-market SaaS, customers and new logos'],['Problem','Plans fall apart when one big deal slips'],['Positioning','“Plan every quarter before it happens.” Built on the Explainable pillar'],['Pricing','Included in Pro, add-on for Starter at €400 a month'],['Sales motion','Sales-led for new logos, in-app for customers'],['Channels','LinkedIn, email, webinar, partners'],['Tier','T1: every team involved'],['Success','€600k pipeline in 90 days, 35% adoption of eligible accounts']]},
+    {id:'drs',name:'Deal Risk Scoring',tier:'T2',type:'t2',date:'17 Nov',col:5,goal:'30% adoption in 30 days',status:'Planning',
+      ready:{Product:['a','Beta with 40 customers'],Sales:['r','Brief not started'],CS:['r','Docs not started'],Marketing:['a','Messaging change in review'],Web:['g','No page needed'],Pricing:['g','Included in all plans'],Legal:['g','No new claims']}},
+    {id:'slack',name:'Slack alerts',tier:'T3',type:'t2',date:'20 Oct',col:1,goal:'20% of teams connect Slack',status:'Ready',
+      ready:{Product:['g','Shipped to beta'],Sales:['g','Release note shared'],CS:['a','Help article in review'],Marketing:['g','In-app note ready'],Web:['g','No page needed'],Pricing:['g','All plans'],Legal:['g','No new claims']}}
   ],
   campaigns:[
-    {id:'q4',name:'Q4 App Launch',type:'launch',status:'Planning',progress:20,budget:5000,spent:0,goal:'300 MQLs',audience:'Business Central ISVs, product and marketing leads',message:'Ship to AppSource in weeks, not months',
-      changes:[['+','Partner teaser post added (fits budget)'],['−','Press tour removed (no budget at €5k)'],['↻','Case study moved to W+2 (customer availability)']]},
-    {id:'cc',name:'Community call: AL performance',type:'webinar',status:'Live',progress:65,budget:3000,spent:1840},
-    {id:'lg',name:'ISV Partner Program lead gen',type:'leadgen',status:'Live',progress:40,budget:6000,spent:2410},
-    {id:'bs',name:'BC in Practice series',type:'brand',status:'Paused',progress:50,budget:4500,spent:2250}
+    {id:'c1',name:'Response to Competitor A price cut',type:'compete',status:'Live',progress:40,cols:[0,3]},
+    {id:'c2',name:'Forecasting masterclass',type:'webinar',status:'Live',progress:65,cols:[1,4]},
+    {id:'c3',name:'Forecast accuracy guide',type:'demand',status:'Paused',progress:50,cols:[2,6]}
+  ],
+  materials:[
+    {id:'bcA',name:'Battlecard: Competitor A',type:'Battlecard',for:'Sales',tags:['comp','pillar:accurate'],built:'2.0',owner:'enable',usage:'81% of reps',status:'proposed'},
+    {id:'bcB',name:'Battlecard: Competitor B',type:'Battlecard',for:'Sales',tags:['comp','pillar:explainable'],built:'2.0',owner:'enable',usage:'58% of reps',status:'current'},
+    {id:'deck',name:'Core sales deck',type:'Deck',for:'Sales',tags:['positioning','pillar:accurate','pillar:explainable','pillar:fast'],built:'2.0',owner:'enable',usage:'92% of reps',status:'current'},
+    {id:'opcfo',name:'One-pager: CFO',type:'One-pager',for:'CFO',tags:['persona:cfo'],built:'2.0',owner:'enable',usage:'44% of reps',status:'current'},
+    {id:'opsm',name:'One-pager: Sales Manager',type:'One-pager',for:'Sales Manager',tags:['persona:sm'],built:'2.0',owner:'enable',usage:'37% of reps',status:'current'},
+    {id:'demo',name:'Demo script: forecasting',type:'Demo script',for:'Sales',tags:['persona:sm','pillar:accurate'],built:'2.0',owner:'enable',usage:'70% of reps',status:'current'},
+    {id:'obj',name:'Objection handling guide',type:'Guide',for:'Sales',tags:['comp','persona:cfo'],built:'2.0',owner:'enable',usage:'66% of reps',status:'current'},
+    {id:'pkit',name:'Partner enablement kit',type:'Partner kit',for:'Partners',tags:['positioning'],built:'2.0',owner:'partner',usage:'12 partners',status:'current'},
+    {id:'case',name:'Case study: 600-person SaaS company',type:'Case study',for:'All buyers',tags:['pillar:accurate'],built:'2.0',owner:'proof',usage:'1,240 views',status:'current'}
   ],
   review:[
-    {id:'plan',kind:'plan',campaignId:'q4',title:'Q4 App Launch: campaign plan',agent:'planner',sum:'Launch playbook, 13 tasks, €5,000 across 4 channels.',status:'pending',v:1},
-    {id:'posts',kind:'social',title:'4 LinkedIn launch posts',agent:'content',sum:'Teasers and launch-day posts. 1 claim flagged for a source.',status:'pending',v:1},
-    {id:'email',kind:'email',title:'Launch-day email',agent:'content',sum:'To 4,120 ISV contacts in HubSpot. Subject 46/60 characters.',status:'pending',v:1},
-    {id:'shift',kind:'decision',title:'Move €800 from LinkedIn to Search',agent:'analyst',sum:'Projected +25 leads a week at a lower blended cost per lead.',status:'pending',v:1}
+    {id:'fd-drs',kind:'foundation',rel:'drs',title:'Foundations update: Deal Risk Scoring',agent:'found',sum:'Messaging-level: 1 persona message, 1 proof point, 1 feature. Positioning unchanged.',status:'pending',v:1},
+    {id:'lp-sp',kind:'launch',lid:'sp',title:'Scenario Planner: T1 launch plan',agent:'gtm',sum:'Launch 3 Nov. 15 tasks across all three layers. Readiness 71%.',status:'pending',v:1},
+    {id:'bc-a',kind:'battlecard',title:'Battlecard refresh: Competitor A',agent:'enable',sum:'Updated after their 15% price cut on 2 Oct.',status:'pending',v:1},
+    {id:'op-cfo',kind:'onepager',title:'One-pager: Scenario Planner for CFOs',agent:'enable',sum:'Built from Foundations v2.0 · Persona: CFO · Pillar: Explainable.',status:'pending',v:1},
+    {id:'post',kind:'social',title:'LinkedIn teasers: Scenario Planner',agent:'content',sum:'Two teaser posts for W-2 and W-1. Brand check passed.',status:'pending',v:1},
+    {id:'msg',kind:'msgtest',title:'Message test: lead ads with “Explainable”',agent:'analyst',sum:'“See why every forecast moves” beat the umbrella line by 42% on CTR.',status:'pending',v:1}
   ],
   posts:[
-    {text:'Getting a Business Central app onto AppSource usually takes four to six months. The ISVs we worked with this year averaged nine weeks.\n\nWhat changed:\n→ validation checks run in the pipeline from day one\n→ one partner owns the listing, not three\n→ technical and marketing reviews run in parallel\n\nOn 4 November we open this playbook to every ISV. Join the waitlist and get the checklist first.',
-      img:'A six-month calendar shrinking to nine weeks. Brand teal, flat illustration, no people.',checks:[['good','Tone matches brand'],['good','Approved terms'],['amber','"Nine weeks" needs a source']],when:'W-3 · Tue 09:00'},
-    {text:'Three things AppSource reviewers flag most often on Business Central apps:\n\n1. Telemetry not set up\n2. Permission sets that are too broad\n3. Listing copy that promises features the app doesn’t ship\n\nAll three take a day to fix if you catch them early. Our launch checklist catches them before you submit.',
-      img:'Checklist card with three red flags turning green.',checks:[['good','Tone matches brand'],['good','Approved terms'],['good','No unsupported claims']],when:'W-2 · Thu 09:00'},
-    {text:'Launch day is 4 November.\n\nIf you build apps for Business Central and your next release is stuck in validation, bring it to us. We’ll run the checklist live with the first 20 ISVs on the waitlist.',
-      img:'Countdown tile: 4 Nov, teal on white.',checks:[['good','Tone matches brand'],['good','Approved terms'],['amber','Confirm the 20-seat limit with the partner team']],when:'W-1 · Mon 09:00'},
-    {text:'“We shipped our connector in eight weeks, and the listing went live the same day as our release notes.”\n\nA partner ISV on what changed when they moved AppSource prep into their sprint cadence. Full story on launch day.',
-      img:'Quote card with a partner logo placeholder.',checks:[['good','Tone matches brand'],['amber','Quote needs partner approval'],['good','Approved terms']],when:'W0 · Tue 10:00'}
+    {text:'Every forecast has a story. Most tools only show you the number.\n\nOn 3 November we’re launching Scenario Planner: model best, base and worst case from your live forecast, and see exactly which deals move each one.\n\nIf you run RevOps or finance at a SaaS company, you’ll want to see this.',img:'Three forecast lines (best, base, worst) branching from today, brand teal.',when:'W-2 · Tue 09:00'},
+    {text:'“What happens to Q1 if the two biggest deals slip?”\n\nThat question used to take a day in spreadsheets. With Scenario Planner it takes about a minute, with the reasons behind every number.\n\nLive 3 November.',img:'A question card with a one-minute timer.',when:'W-1 · Thu 09:00'}
   ],
-  email:{from:'Your Brand Partner Team',subject:'Your BC app on AppSource in weeks, not months',pre:'The launch checklist is live from 4 November. Get it first.',
-    body:['Hi {first_name},','Most Business Central ISVs spend four to six months getting a new app through AppSource. This year the partners we worked with averaged nine weeks.','On 4 November we’re opening the same launch checklist to every ISV: validation checks, listing review and go-live plan in one place.','Waitlist members get it first, plus a live walkthrough with our AppSource team.'],cta:'Get the checklist'},
-  agents:{cmo:['idle','Watching KPIs'],planner:['idle','Ready'],content:['idle','Ready'],seo:['idle','Ready'],analyst:['idle','Daily sweep at 07:00']},
-  chat:[
-    ['you','Launch campaign for the new BC app, €5k, 6 weeks, ISVs'],
-    ['cmo','This fits Q4 objective #1 (ISV pipeline). €5k is 22% of the Q4 budget, so I paused the BC in Practice series to fund it. The Planner has a Launch mandate: 300 MQLs, €5k cap, go-live 4 November. The plan is in your Review Room.']
-  ],
-  transcript:[
-    ['13:31','cmo','think','Request: launch for the new BC app. Checking against Q4 objectives and €8,320 unallocated budget.'],
-    ['13:31','cmo','tool','get_strategy() → Q4 objective #1 ISV pipeline, #2 partner-sourced leads'],
-    ['13:32','cmo','handoff','Mandate to Campaign Planner: 300 MQLs, €5,000 cap, go-live 4 Nov, priority high'],
-    ['13:32','planner','tool','load_playbook("launch") → 3 phases, 13 tasks'],
-    ['13:33','planner','handoff','Assigned 1 task to SEO & Competitive, 10 to Content & Copy, 1 to Analyst'],
-    ['13:41','seo','result','14 keywords, top term "business central appsource" (720/mo). 3 competitor gaps.'],
-    ['13:52','content','result','Drafted 4 LinkedIn posts and the launch email. 1 claim flagged for a source.'],
-    ['13:55','planner','result','Plan submitted to the CMO. Removed the press tour to stay under the cap.'],
-    ['13:58','cmo','think','Plan fits budget and Q4 goals. Sent to you for approval.']
-  ],
-  wiz:{step:1,type:'launch',name:'',goal:'',budget:5000,weeks:8,audience:'Business Central ISVs, product and marketing leads',message:''},
-  runName:'Q4 App Launch',sel:'plan',device:'desktop',post:0,more:false,editing:false,sendback:false,running:false
+  agents:Object.fromEntries(Object.keys(AG).map(a=>[a,['idle',a==='cmo'?'Watching all three layers':a==='analyst'?'Daily sweep at 07:00':'Ready']])),
+  chat:[['you','Plan the Scenario Planner launch. T1, 3 November, €18k.'],['cmo','This is our biggest release this half, so T1 is right. €18k fits if I hold back the Forecast accuracy guide until December. The GTM lead has the mandate, and Foundations confirmed no positioning change is needed: it builds on the Explainable pillar. The plan is in your Review Room.']],
+  transcript:[['13:20','cmo','think','Request: Scenario Planner, T1, 3 Nov, €18k. Checking strategy, budget and the launch calendar.'],['13:21','cmo','handoff','Mandate to Go-to-market lead: €600k pipeline in 90 days, cap €18,000, launch 3 Nov.'],['13:21','gtm','tool','get_foundations() → v2.0, approved 18 Aug'],['13:22','found','result','Impact check: no positioning change. Builds on the Explainable pillar.'],['13:25','gtm','handoff','Assigned 3 Foundations tasks, 4 Materials tasks, 5 Go-to-market tasks'],['13:33','pos','result','Launch message: “Plan every quarter before it happens.”'],['13:37','enable','result','Deck and demo script drafted from Foundations v2.0'],['13:40','gtm','result','Plan with readiness board sent to the CMO']],
+  runName:'Scenario Planner launch',
+  wiz:{step:1,type:'t1',name:'',goal:'',budget:12000,date:'',audience:'',message:''},
+  ftab:'positioning',fedit:false,rel:{open:false,pick:'drs',state:'idle',custom:{name:'',desc:''},result:null},
+  sel:'fd-drs',device:'desktop',post:0,more:false,sendback:false,running:false
 };
 
-/* ============ helpers ============ */
+/* ================= helpers ================= */
 const $=(s,r=document)=>r.querySelector(s);
 const esc=s=>String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
 const eur=n=>'€'+Math.round(n).toLocaleString('en-US');
-const fmt=(v,f)=>f==='eur'?eur(v):f==='eur2'?'€'+v.toFixed(2):f==='pct'?v.toFixed(2)+'%':f==='x'?v.toFixed(2)+'×':Math.round(v).toLocaleString('en-US');
 const now=()=>{const d=new Date();return String(d.getHours()).padStart(2,'0')+':'+String(d.getMinutes()).padStart(2,'0')};
-const agentColor=a=>(AG[a]||{}).c||(S.connectors.find(c=>c.id===a)||{}).c||'var(--muted)';
-const agentName=a=>(AG[a]||{}).name||(S.connectors.find(c=>c.id===a)||{}).name||a;
-const chip=a=>`<span class="chip" style="--c:${agentColor(a)}"><i></i>${esc(agentName(a))}</span>`;
+const conn=id=>S.connectors.find(c=>c.id===id);
+const aColor=a=>AG[a]?LC[AG[a].L]:(conn(a)||{}).c||'var(--muted)';
+const aName=a=>AG[a]?AG[a].name:(conn(a)||{}).name||a;
+const chip=a=>`<span class="chip" style="--c:${aColor(a)}"><i></i>${esc(aName(a))}</span>`;
 const statusPill=s=>({pending:'<span class="pill amber">Needs your call</span>',approved:'<span class="pill good">Approved</span>',rejected:'<span class="pill bad">Rejected</span>',revising:'<span class="pill accent">Revising</span>'}[s]);
-const kindLabel={plan:'Campaign plan',social:'Social posts',email:'Email',decision:'Budget decision'};
+const KIND={foundation:'Foundations change',launch:'Launch plan',battlecard:'Battlecard',onepager:'One-pager',social:'Social posts',msgtest:'Message test'};
+const TAGN={'comp':'Competitive','positioning':'Positioning','persona:cfo':'Persona: CFO','persona:sm':'Persona: Sales Manager','pillar:accurate':'Pillar: Accurate','pillar:explainable':'Pillar: Explainable','pillar:fast':'Pillar: Fast to value'};
 const pending=()=>S.review.filter(r=>r.status==='pending');
-function spark(v,c){const w=160,h=38,p=3;const mn=Math.min(...v),mx=Math.max(...v);const x=i=>p+i*(w-2*p)/(v.length-1);const y=d=>h-p-(d-mn)/((mx-mn)||1)*(h-2*p);const pts=v.map((d,i)=>x(i).toFixed(1)+','+y(d).toFixed(1));const line='M'+pts.join('L');return `<svg viewBox="0 0 ${w} ${h}" class="spark" aria-hidden="true"><path d="${line}L${x(v.length-1).toFixed(1)},${h}L${p},${h}Z" fill="${c}" opacity=".12"/><path d="${line}" fill="none" stroke="${c}" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round"/><circle cx="${x(v.length-1).toFixed(1)}" cy="${y(v[v.length-1]).toFixed(1)}" r="3" fill="${c}"/></svg>`}
-function toast(msg,go){const t=$('#toast');t.innerHTML=esc(msg)+(go?` <button data-go="${go}">Open</button>`:'');t.hidden=false;clearTimeout(toast.t);toast.t=setTimeout(()=>t.hidden=true,4200)}
-function addFeed(agent,text){S.feed.unshift([now(),agent,text]);S.feed.length=Math.min(S.feed.length,14);const f=$('#feed');if(f)f.innerHTML=feedItems(true)}
+const readyPct=l=>Math.round(Object.values(l.ready).reduce((s,x)=>s+(x[0]==='g'?1:x[0]==='a'?.5:0),0)/Object.keys(l.ready).length*100);
+function nextVer(level){const[a,b]=F.ver.split('.').map(Number);return level==='positioning'?(a+1)+'.0':a+'.'+(b+1)}
+function spark(v,c){const w=160,h=36,p=3;const mn=Math.min(...v),mx=Math.max(...v);const x=i=>p+i*(w-2*p)/(v.length-1);const y=d=>h-p-(d-mn)/((mx-mn)||1)*(h-2*p);const line='M'+v.map((d,i)=>x(i).toFixed(1)+','+y(d).toFixed(1)).join('L');return `<svg viewBox="0 0 ${w} ${h}" class="spark" aria-hidden="true"><path d="${line}L${x(v.length-1).toFixed(1)},${h}L${p},${h}Z" fill="${c}" opacity=".1"/><path d="${line}" fill="none" stroke="${c}" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round"/><circle cx="${x(v.length-1).toFixed(1)}" cy="${y(v[v.length-1]).toFixed(1)}" r="3" fill="${c}"/></svg>`}
+function toast(msg,go){const t=$('#toast');t.innerHTML=esc(msg)+(go?` <button data-go="${go}">Open</button>`:'');t.hidden=false;clearTimeout(toast.t);toast.t=setTimeout(()=>t.hidden=true,4500)}
+function addFeed(a,text){S.feed.unshift([now(),a,text]);S.feed.length=Math.min(S.feed.length,16);const f=$('#feed');if(f)f.innerHTML=feedItems(true)}
 function updateBadge(){$('#badge').textContent=pending().length||''}
 
-/* ============ views ============ */
+/* theme */
+function setTheme(t){document.documentElement.setAttribute('data-theme',t);try{localStorage.setItem('mhq-theme',t)}catch(e){}
+  document.querySelectorAll('[data-theme-set]').forEach(b=>b.setAttribute('aria-pressed',b.dataset.themeSet===t))}
+
+/* ================= views ================= */
 const VIEWS={
-  command:{t:'Command Center',s:'Everything the team is doing, and what needs your call'},
-  review:{t:'Review Room',s:'See every proposal the way it will look, then approve, edit or send it back'},
-  team:{t:'Team & CMO',s:'Your CMO runs the team. Talk to it here and watch the work move'},
-  wizard:{t:'New campaign',s:'Pick the campaign type first. Each type has its own playbook'},
-  campaigns:{t:'All campaigns',s:'Every campaign the team is planning or running'},
-  connections:{t:'Connections',s:'Data sources feeding the dashboard. Add more over time'}
+  command:{t:'Command Center',s:'What the team is doing across all three layers, and what needs your call'},
+  review:{t:'Review Room',s:'Every proposal shown the way it will look. Approve, edit or send it back'},
+  team:{t:'Team & CMO',s:'Your CMO runs three layers: Foundations, Materials and Go-to-market'},
+  foundations:{t:'Foundations',s:'The source of truth: positioning, ICP, buying committee, competitors and features'},
+  materials:{t:'Materials',s:'Everything Sales and partners use, each built from a version of the foundations'},
+  gtm:{t:'Go-to-market',s:'Launches with readiness, and campaigns from playbooks'},
+  wizard:{t:'New launch or campaign',s:'Pick a playbook. Each one assigns work across the three layers'},
+  connections:{t:'Connections',s:'Data sources feeding the team. Add more over time'}
 };
 let view='command';
-function setView(v){if(!VIEWS[v])v='command';view=v;S.sendback=false;S.editing=false;
-  document.querySelectorAll('#nav button[data-view]').forEach(b=>b.setAttribute('aria-current',b.dataset.view===v?'page':'false'));
+function setView(v){if(!VIEWS[v])v='command';view=v;S.sendback=false;
+  document.querySelectorAll('#nav button[data-view]').forEach(b=>b.setAttribute('aria-current',b.dataset.view===(v==='wizard'?'gtm':v)?'page':'false'));
   $('#vtitle').textContent=VIEWS[v].t;$('#vsub').textContent=VIEWS[v].s;render();window.scrollTo(0,0);
   try{history.replaceState(null,'','#'+v)}catch(e){}}
-function render(){$('#view').innerHTML=({command:vCommand,review:vReview,team:vTeam,wizard:vWizard,campaigns:vCampaigns,connections:vConnections})[view]();updateBadge();
+function render(){$('#view').innerHTML=({command:vCommand,review:vReview,team:vTeam,foundations:vFound,materials:vMat,gtm:vGtm,wizard:vWizard,connections:vConn})[view]();updateBadge();
   if(view==='team'){const l=$('#chatlog');if(l)l.scrollTop=l.scrollHeight}}
 
-/* --- command --- */
-function kpiTiles(){return Object.entries(S.kpi).map(([k,o])=>{const up=o.d>0;const cls=o.sem==='flat'?'flat':(up?(o.sem==='up'?'up-good':'up-bad'):(o.sem==='down'?'down-good':'down-bad'));const unit=k==='ctr'?' pts':'%';
-  return `<div class="card kpi"><div class="kpi-top"><span class="kpi-label">${o.label}</span><span class="delta ${cls}">${up?'▲':'▼'} ${Math.abs(o.d).toFixed(1)}${unit}</span></div><div class="kpi-val" id="k-${k}">${fmt(o.v,o.fmt)}</div>${spark(o.s,k==='spend'?'var(--muted)':'var(--accent)')}</div>`}).join('')}
-function channelBars(){const max=Math.max(...S.channels.map(c=>c.leads));return `<div class="bars">${S.channels.map(c=>{const on=S.connectors.find(x=>x.id===c.conn).on;return `<div class="bar-row${on?'':' off'}"><div class="bar-name">${c.name}<small>${on?c.sub:'connection paused'}</small></div><div class="bar-track"><div class="bar-fill" style="--c:${c.c};width:${(c.leads/max*100).toFixed(1)}%"></div></div><div class="bar-val">${c.leads} leads<small>€${(c.spend/c.leads).toFixed(2)} CPL</small></div></div>`}).join('')}</div>`}
+/* ---------- command ---------- */
+function kpiTiles(){return Object.entries(S.kpi).map(([k,o])=>{const good=(o.d>0)===o.up;return `<div class="card kpi"><div class="kpi-top"><span class="kpi-label">${o.label}</span><span class="delta ${good?'gd':'bd'}">${o.d>0?'▲':'▼'} ${Math.abs(o.d)}${o.u==='%'?'%':' pts'}</span></div><div class="kpi-val num" id="k-${k}">${o.f(o.v)}</div>${spark(o.s,'var(--accent)')}</div>`}).join('')}
+function winBars(){return `<div class="bars">${S.winby.map(w=>`<div class="bar-row"><div class="bar-name">vs ${w[0]}<small>${w[1]}</small></div><div class="bar-track"><div class="bar-fill" style="--c:${w[3]};width:${w[2]}%"></div></div><div class="bar-val">${w[2]}%</div></div>`).join('')}</div><p class="muted small" style="margin-top:12px">22% of opportunities end in no decision. Research Interviews is reviewing 8 of them.</p>`}
 function queueCards(){const p=pending();if(!p.length)return '<div class="empty">Nothing waiting. The CMO adds items here when something needs your call.</div>';
-  return `<div class="queue">${p.map(r=>`<div class="qcard"><div class="row">${chip(r.agent)}<span class="rv-kind">${kindLabel[r.kind]}</span></div><h4>${esc(r.title)}</h4><p>${esc(r.sum)}</p><div class="row"><button class="btn sm primary" data-act="preview" data-id="${r.id}">Preview</button><button class="btn sm" data-act="approve" data-id="${r.id}">Approve</button><button class="btn sm ghost danger" data-act="reject" data-id="${r.id}">Reject</button></div></div>`).join('')}</div>`}
-function feedItems(fresh){return S.feed.map((f,i)=>`<li class="${fresh&&i===0?'new':''}"><time>${f[0]}</time><span class="dot" style="--c:${agentColor(f[1])}"></span><span>${esc(f[2])}</span></li>`).join('')}
-function campTable(){return `<div class="tbl-wrap"><table><thead><tr><th>Campaign</th><th>Type</th><th>Status</th><th>Progress</th><th class="r">Budget used</th></tr></thead><tbody>${S.campaigns.map(c=>`<tr><td><b style="font-weight:600">${esc(c.name)}</b></td><td><span class="chip">${PB[c.type].name}</span></td><td>${c.status==='Live'?'<span class="pill good">Live</span>':c.status==='Paused'?'<span class="pill neutral">Paused</span>':'<span class="pill accent">'+c.status+'</span>'}</td><td><div class="prog"><i style="width:${c.progress}%"></i></div></td><td class="r num">${eur(c.spent)} / ${eur(c.budget)}</td></tr>`).join('')}</tbody></table></div>`}
-function vCommand(){const p=pending().length;return `<div class="stack">
+  return `<div class="queue">${p.slice(0,4).map(r=>`<div class="qcard"><div class="row">${chip(r.agent)}<span class="rv-kind">${KIND[r.kind]}</span></div><h4>${esc(r.title)}</h4><p>${esc(r.sum)}</p><div class="row"><button class="btn sm primary" data-act="preview" data-id="${r.id}">Preview</button><button class="btn sm" data-act="approve" data-id="${r.id}">Approve</button></div></div>`).join('')}${p.length>4?`<button class="btn sm ghost" data-go="review">${p.length-4} more in the Review Room</button>`:''}</div>`}
+function feedItems(fresh){return S.feed.map((f,i)=>`<li class="${fresh&&i===0?'new':''}"><time>${f[0]}</time><span class="dot" style="--c:${aColor(f[1])}"></span><span>${esc(f[2])}</span></li>`).join('')}
+function vCommand(){const p=pending().length;const stale=S.materials.filter(m=>m.status==='stale').length;return `<div class="stack">
   <section class="card brief"><div class="brief-av">CMO</div><div><h2>CMO briefing <span class="muted small" style="font-weight:400">today, 08:30</span></h2>
-  <p>Leads are up 12% on last week, and Search is doing most of the work. LinkedIn cost per lead has risen three weeks in a row, so I recommend moving €800 to Search. The Q4 App Launch plan is ready for you, and I paused the BC in Practice series to fund it.</p></div>
+  <p>Win rate is up 3 points, but we’re losing ground to Competitor A since their price cut. Sales has a refreshed battlecard waiting for you. Scenario Planner launches 3 November at 71% readiness, and the website is the blocker. Deal Risk Scoring needs a small messaging update to the foundations. Positioning stays the same.</p></div>
   <div class="brief-cta">${p?`<span class="pill amber">${p} need${p===1?'s':''} your call</span>`:'<span class="pill good">Nothing waiting</span>'}<button class="btn sm" data-go="review">Open Review Room</button></div></section>
   <section class="kpis" id="kpis">${kpiTiles()}</section>
-  <div class="grid-2"><section class="card"><div class="card-head"><span class="eyebrow">Leads by channel · last 30 days</span></div><div id="channels">${channelBars()}</div></section>
+  <div class="grid-2"><div class="stack">
+   <section class="card"><div class="card-head"><span class="eyebrow">Win rate by competitor · this quarter</span></div>${winBars()}</section>
+   <section class="card"><div class="card-head"><span class="eyebrow">Upcoming launches</span><button class="btn sm ghost" data-go="gtm">Calendar</button></div>
+     ${S.launches.map(l=>`<div class="lrow"><b><span class="tier">${l.tier}</span> ${esc(l.name)}</b><span class="mono small muted">${l.date} · ${readyPct(l)}% ready</span><div class="prog" style="grid-column:1/-1"><i style="width:${readyPct(l)}%"></i></div></div>`).join('')}</section>
+   <section class="card"><div class="card-head"><span class="eyebrow">Foundations</span><span class="vbadge">v${F.ver}</span></div>
+     <p style="font-weight:600">${esc(F.umbrella)}</p><p class="muted small" style="margin-top:4px">Approved ${F.approved}. Source of truth for ${S.materials.length} materials and ${S.launches.length} launches.</p>
+     <div class="row" style="margin-top:12px">${S.review.some(r=>r.kind==='foundation'&&r.status==='pending')?'<span class="pill amber">Change proposed</span>':'<span class="pill good">No open changes</span>'}${stale?`<span class="pill bad">${stale} materials out of date</span>`:''}<button class="btn sm ghost" data-go="foundations">Open</button></div></section></div>
   <section class="card"><div class="card-head"><span class="eyebrow">Decisions waiting</span></div><div id="queue">${queueCards()}</div></section></div>
-  <div class="grid-2"><section class="card"><div class="card-head"><span class="eyebrow">Live activity</span><span class="muted small">Updates as agents work and data syncs</span></div><ol class="feed" id="feed">${feedItems()}</ol></section>
-  <section class="card"><div class="card-head"><span class="eyebrow">Active campaigns</span><button class="btn sm" data-go="wizard">New campaign</button></div>${campTable()}</section></div></div>`}
+  <div>
+   <section class="card"><div class="card-head"><span class="eyebrow">Live activity</span><span class="muted small">Agents and connected data, as it happens</span></div><ol class="feed" id="feed">${feedItems()}</ol></section>
+  </div></div>`}
 
-/* --- wizard --- */
-function stepper(){const names=['Type','Goal & budget','Playbook preview','Send to team'];return `<div class="stepper">${names.map((n,i)=>`<div class="step ${S.wiz.step===i+1?'on':S.wiz.step>i+1?'done':''}"><b>${S.wiz.step>i+1?'✓':i+1}</b>${n}</div>`).join('')}</div>`}
-function pbPhases(pb){return `<div class="phases">${pb.phases.map(p=>`<div class="phase"><div class="phase-h"><b>${p.name}</b><span>${p.when}</span></div>${p.tasks.map(t=>`<div class="task">${esc(t[0])}<span>${chip(t[1])}</span></div>`).join('')}</div>`).join('')}</div>`}
-function vWizard(){const w=S.wiz,pb=PB[w.type];let body='';
-  if(w.step===1){body=`<div class="types">${Object.entries(PB).map(([id,p])=>`<button class="type" data-act="wtype" data-id="${id}" aria-pressed="${w.type===id}"><span class="type-ico"><svg width="18" height="18" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="${p.ico}"/></svg></span><h4>${p.name}</h4><p>${p.blurb}</p><span class="meta">${p.phases.length} phases · ${taskCount(p)} tasks</span></button>`).join('')}</div>
-    <div class="card" style="margin-top:14px"><div class="flow"><b>${pb.name} playbook:</b> ${pb.phases.map(p=>`${p.name} <span class="muted mono small">(${p.when})</span>`).join(' ▸ ')}</div></div>`}
-  if(w.step===2){const d=DEF[w.type];body=`<div class="card"><div class="form">
-    <div class="field wide"><label for="w-name">Campaign name</label><input id="w-name" value="${esc(w.name||d[0])}"></div>
-    <div class="field"><label for="w-goal">Goal</label><input id="w-goal" value="${esc(w.goal||d[1])}"><span class="hint">Suggested KPIs for this type: ${pb.kpis.join(', ')}</span></div>
-    <div class="field"><label for="w-budget">Budget cap (€)</label><input id="w-budget" type="number" min="0" step="250" value="${w.budget}"><span class="hint">The CMO checks this against the Q4 budget (€8,320 unallocated).</span></div>
-    <div class="field"><label for="w-weeks">Duration (weeks)</label><input id="w-weeks" type="number" min="1" max="26" value="${w.weeks}"></div>
-    <div class="field"><label for="w-aud">Audience</label><input id="w-aud" value="${esc(w.audience)}"></div>
-    <div class="field wide"><label for="w-msg">Key message (optional)</label><textarea id="w-msg" placeholder="Leave empty and the Planner will propose one">${esc(w.message)}</textarea></div></div></div>`}
-  if(w.step===3){body=`<div class="stack"><div class="card"><div class="card-head"><span class="eyebrow">${pb.name} playbook · ${taskCount(pb)} tasks, each assigned to a specialist</span><span class="muted small">The Planner can add, remove or re-time tasks to fit your budget</span></div>${pbPhases(pb)}</div>
-    <div class="card"><dl class="kv"><div><dt>KPIs</dt><dd>${pb.kpis.join(', ')}</dd></div><div><dt>Default channel split</dt><dd>${pb.channels.map(c=>c[0]+' '+c[1]+'%').join(' · ')}</dd></div><div><dt>Approval checkpoints</dt><dd>Plan, every asset, any budget change</dd></div></dl></div></div>`}
-  if(w.step===4){body=`<div class="card stack"><dl class="kv"><div><dt>Campaign</dt><dd>${esc(w.name)}</dd></div><div><dt>Type</dt><dd>${pb.name}</dd></div><div><dt>Goal</dt><dd>${esc(w.goal)}</dd></div><div><dt>Budget cap</dt><dd class="num">${eur(w.budget)}</dd></div><div><dt>Duration</dt><dd>${w.weeks} weeks</dd></div><div><dt>Audience</dt><dd>${esc(w.audience)}</dd></div></dl>
-    <div class="flow"><span class="chip" style="--c:var(--ink)"><i></i>CMO</span> checks strategy &amp; budget ▸ ${chip('planner')} loads the ${pb.name} playbook ▸ ${chip('seo')} ${chip('content')} ${chip('analyst')} do the work ▸ <b>you review it visually</b></div></div>`}
-  return `${stepper()}${body}<div class="wiz-foot"><button class="btn" data-act="wback" ${w.step===1?'disabled':''}>Back</button>${w.step<4?`<button class="btn primary" data-act="wnext">Continue</button>`:`<button class="btn primary" data-act="wsend" ${S.running?'disabled':''}>${S.running?'Team is busy':'Send to CMO'}</button>`}</div>`}
-
-/* --- team --- */
-const POS={cmo:[380,50],planner:[380,160],content:[150,290],seo:[380,290],analyst:[610,290]};
-function orgChart(){const e=(id,d)=>`<path class="edge${id!=='cmo'&&S.agents[id][0]==='working'?' flow':''}" id="e-${id}" d="${d}"/>`;
-  const edges=e('planner','M380 80 V130')+['content','seo','analyst'].map(a=>e(a,`M380 190 V225 H${POS[a][0]} V260`)).join('');
-  const nodes=Object.keys(POS).map(a=>{const[x,y]=POS[a],st=S.agents[a];return `<g class="node s-${st[0]}" id="n-${a}" style="--c:${AG[a].c}"><rect class="n-box" x="${x-100}" y="${y-30}" width="200" height="60" rx="10"/><rect class="n-band" x="${x-100}" y="${y-30}" width="5" height="60" rx="2"/><circle class="n-dot" cx="${x+86}" cy="${y-16}" r="4.5"/><text class="n-name" x="${x-86}" y="${y-5}">${AG[a].name}</text><text class="n-role" id="t-${a}" x="${x-86}" y="${y+15}">${esc(st[1])}</text></g>`}).join('');
-  return `<svg class="org" viewBox="0 0 760 330" role="img" aria-label="Team structure: CMO, then Campaign Planner, then Content, SEO and Analyst">${edges}${nodes}</svg>`}
-function setAgent(a,st,note){S.agents[a]=[st,note];const g=$('#n-'+a);if(g){g.setAttribute('class','node s-'+st);$('#t-'+a).textContent=note}const e=$('#e-'+a);if(e)e.setAttribute('class','edge'+(st==='working'?' flow':''))}
+/* ---------- team ---------- */
+const OX={found:170,mat:480,gtm:790};
+function orgChart(){const st=a=>S.agents[a][0];
+  const box=(a,x,y,w,h,big)=>`<g class="node s-${st(a)}" id="n-${a}" style="--c:${aColor(a)}"><rect class="n-box" x="${x-w/2}" y="${y-h/2}" width="${w}" height="${h}" rx="9"/><rect class="n-band" x="${x-w/2}" y="${y-h/2}" width="4" height="${h}" rx="2"/><circle class="n-dot" cx="${x+w/2-13}" cy="${y-(big?h/2-14:0)}" r="4"/>${big?`<text class="n-name" x="${x-w/2+16}" y="${y-4}">${AG[a].name}</text><text class="n-role" id="t-${a}" x="${x-w/2+16}" y="${y+14}">${esc(S.agents[a][1])}</text>`:`<text class="n-sp" x="${x-w/2+16}" y="${y+4}">${AG[a].name}</text>`}</g>`;
+  let s='';
+  s+=`<path class="edge" d="M580 46 H 680"/>`;
+  Object.entries(OX).forEach(([l,x])=>{s+=`<path class="edge${st(l)==='working'?' flow':''}" id="e-${l}" d="M480 74 V96 H${x} V124"/>`;
+    const n=SPECS[l].length;s+=`<path class="edge${SPECS[l].some(a=>st(a)==='working')?' flow':''}" id="sp-${l}" d="M${x} 180 V${226+(n-1)*44}"/>`});
+  s+=`<path class="loop" d="M${OX.gtm+110} 152 H 920 V 440 H 40 V 152 H ${OX.found-110}" marker-end="url(#arr)"/><text class="loop-t" x="480" y="428" text-anchor="middle">↺ results, win/loss and new insights flow back into Foundations</text>`;
+  [1,2,3].forEach(L=>{s+=`<text class="l-tag" x="${OX[LEAD[L]]-110}" y="116">${L} · ${LNAME[L].toUpperCase()}</text>`});
+  s+=box('cmo',480,46,200,56,true)+box('analyst',780,46,190,56,true);
+  Object.entries(OX).forEach(([l,x])=>{s+=box(l,x,152,220,56,true);SPECS[l].forEach((a,i)=>{s+=box(a,x,226+i*44,206,32,false)})});
+  return `<svg class="org" viewBox="0 0 960 460" role="img" aria-label="Team structure: CMO with Analyst; three layer leads for Foundations, Materials and Go-to-market, each with specialists"><defs><marker id="arr" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="var(--muted)"/></marker></defs>${s}</svg>`}
+function setAgent(a,st,note){S.agents[a]=[st,note||S.agents[a][1]];const g=$('#n-'+a);if(g){g.setAttribute('class','node s-'+st);const t=$('#t-'+a);if(t)t.textContent=S.agents[a][1]}
+  const e=$('#e-'+a);if(e)e.setAttribute('class','edge'+(st==='working'?' flow':''));
+  const L=AG[a].L;if(typeof L==="number"&&L>0&&LEAD[L]!==a){const lead=LEAD[L];const sp=$('#sp-'+lead);if(sp)sp.setAttribute('class','edge'+(SPECS[lead].some(x=>S.agents[x][0]==='working')?' flow':''))}}
 function chatMsgs(){return S.chat.map(m=>`<div class="msg ${m[0]}">${m[0]==='cmo'?'<b>CMO</b>':''}${esc(m[1])}</div>`).join('')}
 function trItems(){return S.transcript.map(t=>`<li><time>${t[0]}</time><span>${chip(t[1])}</span><span class="kind ${t[2]}">${t[2]}</span><span class="t-text">${esc(t[3])}</span></li>`).join('')}
-function vTeam(){return `<div class="stack"><div class="team-grid">
-  <section class="card"><div class="card-head"><span class="eyebrow">Who does what</span><span class="muted small" id="runstate">${S.running?'Run in progress':'Idle. Start a campaign from New campaign to see the team work'}</span></div>${orgChart()}
-  <div class="legend"><span><i style="background:var(--accent)"></i>Working</span><span><i style="background:var(--amber)"></i>Waiting on team</span><span><i style="background:var(--good)"></i>Done</span><span><i style="background:var(--muted)"></i>Idle</span></div></section>
-  <section class="card chat"><div class="card-head"><span class="eyebrow">Chat with your CMO</span><span class="muted small">Replies are scripted in this prototype</span></div><div class="chat-log" id="chatlog">${chatMsgs()}</div>
-  <form class="chat-form" id="chatform"><input id="chatinput" placeholder="Ask the CMO anything, or give it a goal" autocomplete="off"><button class="btn primary">Send</button></form>
-  <div class="suggest"><button data-act="ask" data-q="How are we doing this week?">How are we doing?</button><button data-act="ask" data-q="What budget do we have left?">Budget left?</button><button data-act="ask" data-q="Should we cut LinkedIn?">Cut LinkedIn?</button><button data-act="ask" data-q="Let's do a big launch next month for €15k">€15k launch next month</button></div></section></div>
-  <section class="card"><div class="card-head"><span class="eyebrow">Run transcript · ${esc(S.runName)}</span><span class="muted small">Every thought, tool call and handoff, streamed live</span></div><ol class="transcript" id="transcript">${trItems()}</ol></section></div>`}
+function vTeam(){return `<div class="stack"><section class="card"><div class="card-head"><span class="eyebrow">Who does what</span><span class="muted small" id="runstate">${S.running?'Run in progress':'Idle. Start a launch or campaign to see the team work'}</span></div>${orgChart()}
+  <div class="legend" style="margin-top:6px"><span><i style="background:var(--accent)"></i>Working</span><span><i style="background:var(--amber)"></i>Waiting on team</span><span><i style="background:var(--good)"></i>Done</span><span><i style="background:var(--line-2)"></i>Idle</span></div></section>
+  <div class="team-grid"><section class="card"><div class="card-head"><span class="eyebrow">Run transcript · ${esc(S.runName)}</span><span class="muted small">Every step, tool call and handoff</span></div><ol class="transcript" id="transcript">${trItems()}</ol></section>
+  <section class="card chat"><div class="card-head"><span class="eyebrow">Chat with your CMO</span><span class="muted small">Scripted in this prototype</span></div><div class="chat-log" id="chatlog">${chatMsgs()}</div>
+  <form class="chat-form" id="chatform"><input id="chatinput" placeholder="Ask the CMO, or give it a goal" autocomplete="off"><button class="btn primary">Send</button></form>
+  <div class="suggest"><button data-act="ask" data-q="How are we doing?">How are we doing?</button><button data-act="ask" data-q="Should we change our positioning after losing the big deal to Competitor A?">Change positioning?</button><button data-act="ask" data-q="What about Competitor A's price cut?">Competitor A price cut?</button><button data-act="ask" data-q="Let's add a second T1 launch in November">Second T1 in November</button></div></section></div></div>`}
 function cmoReply(q){const s=q.toLowerCase();
-  if(/15k|15,000|15 000|big launch/.test(s))return 'I’d push back on that. €15k is more than the €8,320 we have unallocated this quarter, and a second launch a month after Q4 App Launch would split the same ISV audience. My proposal: run it in January with €9k, and use December for a lead-gen push that warms the audience up. Want me to brief the Planner on that version?';
-  if(/budget|spend|money|left/.test(s))return 'Q4 budget is €22,500. €14,180 is committed across four campaigns, which leaves €8,320. I’d keep €2,000 in reserve for launch week and put the rest behind whatever Search keeps delivering.';
-  if(/linkedin/.test(s))return 'Not cut, rebalance. LinkedIn is still our best reach into ISV decision-makers, but its cost per lead went from €16.10 to €21.40 in three weeks. I’d keep organic at full pace and move €800 of paid to Search. That proposal is waiting in your Review Room.';
-  if(/how|doing|status|report|week/.test(s))return 'This week: 842 leads (+12%), cost per lead €14.76 (−5%). Search is carrying the gains. Risks: LinkedIn cost per lead is creeping up, and the brand series is paused to fund the launch. Two things need your call: the launch plan and the budget move.';
-  if(/launch|campaign|webinar|lead/.test(s))return 'I can take that on. Before I brief the Planner I need the goal, a budget cap and the go-live date. The quickest route is New campaign: pick the type and I’ll take it from there.';
-  return 'Noted. I’ll check it against our Q4 objectives (ISV pipeline and partner-sourced leads) and come back with a recommendation. If it doesn’t serve either, I’ll say so before anyone starts work on it.'}
+  if(/position/.test(s))return 'Not on the back of one deal. Positioning changes need evidence: a pattern in win/loss, or a release that changes who we serve. I’ll have Research Interviews run 8 win/loss calls on recent Competitor A losses. If a pattern shows up, Foundations will propose a change and you’ll see the diff.';
+  if(/second|another t1|two t1/.test(s))return 'I’d push back. Sales can absorb one T1 a month. A second in November would mean two trainings and two decks in three weeks, and Scenario Planner readiness is already at 71%. My proposal: make it a T2 in November, or a T1 in January. Want the GTM lead to plan both options?';
+  if(/price|competitor a/.test(s))return 'Competitor A cut list price by 15% for mid-market. We shouldn’t follow. Our win rate against them only dropped in deals where price came up before value. The refreshed battlecard moves the explainability demo earlier and adds a total-cost comparison. It’s waiting for your approval.';
+  if(/how|doing|status|week/.test(s))return 'Win rate 31% (up 3 points). Pipeline influenced €1.84M (up 18%). The risk is Competitor A: our win rate against them is down to 38%. Scenario Planner is 71% ready, and the website is the blocker. Six items are in your Review Room.';
+  return 'Noted. I’ll check it against the foundations and this quarter’s priorities, then come back with a recommendation. If it doesn’t fit, I’ll say why before anyone starts.'}
 function sendChat(q){if(!q.trim())return;S.chat.push(['you',q]);const l=$('#chatlog');if(l){l.innerHTML=chatMsgs();l.scrollTop=l.scrollHeight}
-  setAgent('cmo','working','Thinking…');setTimeout(()=>{S.chat.push(['cmo',cmoReply(q)]);setAgent('cmo','idle','Watching KPIs');const l=$('#chatlog');if(l){l.innerHTML=chatMsgs();l.scrollTop=l.scrollHeight}},1100)}
+  setAgent('cmo','working','Thinking…');setTimeout(()=>{S.chat.push(['cmo',cmoReply(q)]);setAgent('cmo','idle','Watching all three layers');const l=$('#chatlog');if(l){l.innerHTML=chatMsgs();l.scrollTop=l.scrollHeight}},1100)}
 function tr(a,k,t){S.transcript.push([now(),a,k,t]);const el=$('#transcript');if(el){el.innerHTML=trItems();el.scrollTop=el.scrollHeight}}
+function pushChat(m){S.chat.push(['cmo',m]);const l=$('#chatlog');if(l){l.innerHTML=chatMsgs();l.scrollTop=l.scrollHeight}}
 
-/* --- run simulation --- */
-function runTeam(c){S.running=true;const pb=PB[c.type];const steps=[];const at=(d,f)=>steps.push([d,f]);
-  S.transcript=[];S.runName=c.name;
-  const per=a=>pb.phases.reduce((s,p)=>s+p.tasks.filter(t=>t[1]===a).length,0);
-  at(300,()=>{setAgent('cmo','working','Checking strategy & budget');tr('cmo','think',`New request: ${pb.name}, "${c.name}". Checking it against Q4 objectives and the €8,320 unallocated budget.`)});
-  at(1300,()=>tr('cmo','tool','get_strategy() → Q4 objective #1 ISV pipeline, #2 partner-sourced leads'));
-  at(1200,()=>{const over=c.budget>8320;tr('cmo','handoff',`Mandate to Campaign Planner: ${c.goal}, cap ${eur(Math.min(c.budget,8320))}${over?' (trimmed from '+eur(c.budget)+')':''}, ${c.weeks} weeks, priority high.`);
-    setAgent('cmo','waiting','Waiting for the plan');setAgent('planner','working','Loading '+pb.name+' playbook');
-    S.chat.push(['cmo',over?`"${c.name}" fits our pipeline goals, but ${eur(c.budget)} is more than we have left. I've briefed the Planner with an €8,320 cap. You can override that when you review the plan.`:`"${c.name}" fits our pipeline goals. I've briefed the Planner with a ${eur(c.budget)} cap. The plan will be in your Review Room shortly.`]);const l=$('#chatlog');if(l){l.innerHTML=chatMsgs();l.scrollTop=l.scrollHeight}});
-  at(1200,()=>tr('planner','tool',`load_playbook("${c.type}") → ${pb.phases.length} phases, ${taskCount(pb)} tasks`));
-  const specs=['seo','content','analyst'].filter(a=>per(a));
-  specs.forEach(a=>at(800,()=>{const n=per(a);setAgent(a,'working',`Working on ${n} task${n>1?'s':''}`);tr('planner','handoff',`Assigned ${n} task${n>1?'s':''} to ${AG[a].name}`)}));
-  const RES={seo:'Keyword set and competitor gaps ready.',content:'Drafts ready with brand check. 1 claim flagged for a source.',analyst:'Baseline from last 90 days. Projected cost per lead €13.20.'};
-  specs.forEach(a=>at(1500,()=>{setAgent(a,'done','Drafts ready');tr(a,'result',RES[a])}));
-  at(1100,()=>{setAgent('planner','working','Reviewing against the brief');tr('planner','think','Checked every draft against the brief. Trimmed paid reach 20% to stay under the cap.')});
-  at(1200,()=>{setAgent('planner','done','Plan submitted');setAgent('cmo','working','Final review');tr('cmo','think','Plan fits the budget and Q4 goals. Sending it to you for approval.')});
-  at(1000,()=>{const id='plan-'+c.id;S.review.unshift({id,kind:'plan',campaignId:c.id,title:c.name+': campaign plan',agent:'planner',sum:`${pb.name} playbook, ${taskCount(pb)} tasks, ${eur(c.budget)} budget.`,status:'pending',v:1});
-    c.status='Awaiting approval';Object.keys(S.agents).forEach(a=>setAgent(a,'idle',a==='cmo'?'Watching KPIs':'Ready'));S.running=false;
-    addFeed('planner',`Plan for ${c.name} is ready for review`);S.chat.push(['cmo',`The plan for "${c.name}" is in your Review Room.`]);S.sel=id;updateBadge();
-    if(view==='team'){const l=$('#chatlog');if(l){l.innerHTML=chatMsgs();l.scrollTop=l.scrollHeight}$('#runstate').textContent='Run finished'}
+function runTeam(obj){S.running=true;S.runName=obj.name;S.transcript=[];const pb=PB[obj.type];const steps=[];const at=(d,f)=>steps.push([d,f]);
+  const per={};pb.phases.forEach(p=>p.tasks.forEach(t=>{per[t[1]]=(per[t[1]]||0)+1}));
+  at(300,()=>{setAgent('cmo','working','Checking strategy & budget');tr('cmo','think',`New request: ${pb.name}, “${obj.name}”. Checking priorities, budget and the launch calendar.`)});
+  at(1200,()=>{tr('cmo','handoff',`Mandate to Go-to-market lead: ${obj.goal}, cap ${eur(obj.budget)}.`);setAgent('cmo','waiting','Waiting for the plan');setAgent('gtm','working','Loading '+pb.name+' playbook');
+    pushChat(`“${obj.name}” fits this quarter’s priorities. I’ve given the Go-to-market lead a ${eur(obj.budget)} cap. The plan will be in your Review Room shortly.`)});
+  at(1100,()=>tr('gtm','tool',`load_playbook("${obj.type}") → ${pb.phases.length} phases, ${taskCount(pb)} tasks`));
+  at(900,()=>tr('gtm','tool',`get_foundations() → v${F.ver}, approved ${F.approved}`));
+  [1,2,3].forEach(L=>{const specs=Object.keys(per).filter(a=>AG[a].L===L&&a!==LEAD[L]);const leadTasks=per[LEAD[L]]||0;if(!specs.length&&!leadTasks)return;
+    at(900,()=>{if(L!==3)setAgent(LEAD[L],'working','Assigning '+LNAME[L]+' tasks');const n=specs.reduce((s,a)=>s+per[a],0)+leadTasks;tr('gtm','handoff',`Assigned ${n} ${LNAME[L]} task${n>1?'s':''}`);specs.forEach(a=>setAgent(a,'working'))});
+    at(1500,()=>{specs.forEach(a=>setAgent(a,'done'));if(L!==3)setAgent(LEAD[L],'done','Checked against v'+F.ver);tr(LEAD[L],'result',L===1?'Impact check: no positioning change needed.':L===2?'Materials drafted from Foundations v'+F.ver+'.':'Channel plan and content drafted.')})});
+  if(per.analyst)at(900,()=>{setAgent('analyst','working','Setting the baseline');tr('analyst','result','Baseline from the last 90 days. Success metric agreed.')});
+  at(1000,()=>{setAgent('analyst','idle','Daily sweep at 07:00');setAgent('gtm','working','Reviewing the plan');tr('gtm','think','Checked every task against the foundations and the budget cap.')});
+  at(1100,()=>{setAgent('gtm','done','Plan submitted');setAgent('cmo','working','Final review');tr('cmo','think','Plan fits the budget and priorities. Sending it to you for approval.')});
+  at(900,()=>{const id='lp-'+obj.id;S.review.unshift({id,kind:'launch',lid:obj.id,title:obj.name+': plan',agent:'gtm',sum:`${pb.name} playbook, ${taskCount(pb)} tasks across ${layersOf(pb).size} layers.`,status:'pending',v:1});
+    Object.keys(S.agents).forEach(a=>setAgent(a,'idle',a==='cmo'?'Watching all three layers':a==='analyst'?'Daily sweep at 07:00':'Ready'));S.running=false;S.sel=id;
+    addFeed('gtm',`Plan for ${obj.name} is ready for review`);pushChat(`The plan for “${obj.name}” is in your Review Room.`);updateBadge();const rs=$('#runstate');if(rs)rs.textContent='Run finished';
     if(view==='command')render();toast('New plan ready for review','review')});
   let t=0;steps.forEach(([d,f])=>{t+=d;setTimeout(f,t)})}
 
-/* --- review --- */
+/* ---------- foundations ---------- */
+function vFound(){const tabs=[['positioning','Positioning'],['icp','ICP & personas'],['dmu','Buying committee'],['comp','Competitive'],['features','Feature catalog'],['history','History']];
+  const pend=S.review.find(r=>r.kind==='foundation'&&r.status==='pending');
+  return `<div class="stack"><section class="card"><div class="fhead"><div class="row"><span class="vbadge">v${F.ver}</span><span><b>Approved ${F.approved}</b> <span class="muted">· source of truth for ${S.materials.length} materials and ${S.launches.length} launches</span></span>${pend?`<button class="pill amber" style="border:0;cursor:pointer" data-act="preview" data-id="${pend.id}">Change proposed: ${esc(REL[pend.rel]?REL[pend.rel].name:pend.title)}</button>`:''}</div>
+   <div class="row"><button class="btn" data-act="ftab" data-id="history">Version history</button><button class="btn primary" data-act="relopen">New release</button></div></div></section>
+  ${S.rel.open?relPanel():''}
+  <section class="card"><div class="tabs" role="tablist">${tabs.map(t=>`<button role="tab" aria-selected="${S.ftab===t[0]}" data-act="ftab" data-id="${t[0]}">${t[1]}</button>`).join('')}</div>${fTab()}</section></div>`}
+function fTab(){const e=S.fedit;
+  if(S.ftab==='positioning')return `<div class="row" style="justify-content:space-between;margin-bottom:12px"><span class="eyebrow">Positioning statement</span>${e?'<div class="row"><button class="btn sm ghost" data-act="fcancel">Cancel</button><button class="btn sm primary" data-act="fsave">Save as v'+nextVer('messaging')+'</button></div>':'<button class="btn sm" data-act="fedit">Edit</button>'}</div>
+    <div class="statement" id="f-statement" ${e?'contenteditable="true"':''}>${esc(F.statement)}</div>
+    <div class="parts">${F.parts.map((p,i)=>`<div class="part"><span>${p[0]}</span><div id="f-part-${i}" ${e?'contenteditable="true"':''}>${esc(p[1])}</div></div>`).join('')}</div>
+    ${e?'<p class="hint" style="margin-top:10px">Your direct edits save straight away as a new version, and materials built on Positioning are flagged.</p>':''}
+    <div class="house"><div class="house-roof"><small>Messaging house · umbrella</small>${esc(F.umbrella)}</div><div class="pillars">${F.pillars.map(p=>`<div class="pillar"><span class="eyebrow">Pillar</span><b>${p.name}</b><span class="small muted">${esc(p.line)}</span><ul>${p.proof.map(x=>`<li>${esc(x)}</li>`).join('')}</ul></div>`).join('')}</div></div>`;
+  if(S.ftab==='icp')return `<div class="icp"><div class="part"><span>Ideal customer</span><ul>${F.icp.firmo.map(x=>`<li>${esc(x)}</li>`).join('')}</ul></div><div class="part"><span>Buying triggers</span><ul>${F.icp.triggers.map(x=>`<li>${esc(x)}</li>`).join('')}</ul></div><div class="part"><span>Disqualifiers</span><ul>${F.icp.disq.map(x=>`<li>${esc(x)}</li>`).join('')}</ul></div></div>
+    <div class="personas">${F.personas.map(p=>`<div class="persona"><div class="row" style="justify-content:space-between"><h4>${esc(p.name)}</h4><span class="pill neutral">${p.role}</span></div><dl><div><dt>Goal</dt><dd>${esc(p.goals)}</dd></div><div><dt>Pain</dt><dd>${esc(p.pains)}</dd></div><div><dt>Key message</dt><dd class="msgq">${esc(p.msg)}</dd></div></dl></div>`).join('')}</div>`;
+  if(S.ftab==='dmu')return `<div class="dmu">${F.dmu.map(d=>`<div><div class="row" style="justify-content:space-between"><b>${esc(d[0])}</b><span class="pill neutral">${d[1]}</span></div><span class="muted small">${esc(d[2])}</span><span class="small">Influence</span><div class="prog"><i style="width:${d[3]}%"></i></div></div>`).join('')}</div>
+    <div class="eyebrow" style="margin-top:18px">Typical buying journey</div><div class="journey">${F.journey.map(j=>`<span>${esc(j)}</span>`).join('')}</div>`;
+  if(S.ftab==='comp')return `<div class="tbl-wrap"><table><thead><tr>${F.compHead.map((h,i)=>`<th class="${i?'ccell':''}">${h}</th>`).join('')}</tr></thead><tbody>${F.comp.map(r=>`<tr>${r.map((c,i)=>`<td class="${i?'ccell':''}${c==='✓'?' yes':''}" ${i===1?'style="font-weight:600"':''}>${esc(c)}</td>`).join('')}</tr>`).join('')}</tbody></table></div>
+    <div class="eyebrow" style="margin:18px 0 8px">Latest competitor moves</div>${F.moves.map(m=>`<div class="lrow"><span><b>${m[0]}</b> · ${esc(m[1])}</span><span class="mono small muted">${m[2]}</span></div>`).join('')}`;
+  if(S.ftab==='features')return `<div class="tbl-wrap"><table><thead><tr><th>Feature</th><th>Value</th><th>Who cares</th><th>Status</th><th>Release</th></tr></thead><tbody>${F.features.map(f=>`<tr><td><b style="font-weight:600">${esc(f[0])}</b></td><td>${esc(f[1])}</td><td class="small">${esc(f[2])}</td><td>${f[3]==='GA'?'<span class="pill good">GA</span>':f[3]==='Launching'?'<span class="pill accent">Launching</span>':'<span class="pill neutral">'+f[3]+'</span>'}</td><td class="mono small">${f[4]}</td></tr>`).join('')}</tbody></table></div><p class="hint" style="margin-top:10px">Add releases with <b>New release</b>. Later, Jira adds them automatically.</p>`;
+  return `<div class="hist">${F.history.map((h,i)=>`<div class="hist-item"><div><span class="vbadge" style="${i?'background:var(--sunk);color:var(--ink-2)':''}">v${h.v}</span></div><div><div class="row"><b>${esc(h.why)}</b></div><div class="muted small">${h.date} · approved by ${h.by}${i===0?' · current':''}</div><ul>${h.changes.map(c=>`<li>${esc(c)}</li>`).join('')}</ul>${i>0?`<button class="btn sm ghost" data-act="rollback" data-id="${h.v}">Roll back to v${h.v}</button>`:''}</div></div>`).join('')}</div>`}
+function relPanel(){const r=S.rel;const pick=r.pick;const res=r.result;
+  return `<section class="release"><div class="row" style="justify-content:space-between"><b>New release · check the impact on the foundations</b><button class="btn sm ghost" data-act="relclose">Close</button></div>
+  <div class="relopts">${Object.entries(REL).map(([k,x])=>`<button class="relopt" data-act="relpick" data-id="${k}" aria-pressed="${pick===k}"><b>${x.name}</b><span>${esc(x.desc)}</span></button>`).join('')}<button class="relopt" data-act="relpick" data-id="custom" aria-pressed="${pick==='custom'}"><b>Your own release</b><span>Describe a feature and see how it’s classified</span></button></div>
+  ${pick==='custom'?`<div class="form"><div class="field"><label for="rel-name">Feature name</label><input id="rel-name" value="${esc(r.custom.name)}" placeholder="e.g. Usage-based billing forecasts"></div><div class="field"><label for="rel-desc">What it does</label><input id="rel-desc" value="${esc(r.custom.desc)}" placeholder="One sentence"></div></div>`:''}
+  <div class="row"><button class="btn primary" data-act="relcheck" ${r.state==='checking'?'disabled':''}>${r.state==='checking'?'Foundations lead is checking…':'Check impact'}</button><span class="hint">The Foundations lead compares the release against positioning, ICP, buying committee and pillars.</span></div>
+  ${res?`<div class="assess"><div class="lvl"><div class="${res.impact==='none'?'on':''}">None · feature catalog only</div><div class="${res.impact==='messaging'?'on':''}">Messaging · v${F.ver} → v${nextVer('messaging')}</div><div class="${res.impact==='positioning'?'on':''}">Positioning · v${F.ver} → v${nextVer('positioning')}</div></div>
+   <p><b>${res.name}:</b> ${esc(res.why)}</p>${res.impact==='none'?'<p class="pill good" style="align-self:flex-start">Added to the feature catalog. No approval needed.</p>':`<p class="small muted">Approval: ${res.impact==='positioning'?'CMO review, then you':'you'}. ${res.diff.length} section${res.diff.length>1?'s':''} change.</p><div class="row"><button class="btn primary sm" data-act="preview" data-id="${res.rid}">Review the diff</button></div>`}</div>`:''}</section>`}
+function applyRelease(rel){const R=REL[rel];
+  if(rel==='drs'){F.personas.find(p=>p.key==='sm').msg=R.diff[0].add;F.pillars[0].proof.push(R.diff[1].add);F.features.push(['Deal Risk Scoring','Flags deals likely to slip','Sales Manager, VP RevOps','Launching','17 Nov 2026'])}
+  else if(rel==='board'){F.parts[3][1]=R.diff[0].add;F.parts[4][1]=R.diff[1].add;F.dmu[0][2]='Reviews board packs monthly';F.personas.push({key:'fpa',name:'FP&A Manager',role:'User',goals:'A board pack that builds itself',pains:'Rebuilds the revenue section every month',msg:'Your board pack, ready the moment the quarter closes.'});F.features.push(['Board Reporting','Board-ready revenue packs','CFO, FP&A Manager','Planned','Q1 2027'])}
+  else{F.pillars[2].proof.push(R.diff[1].add);F.features.push([R.name,R.desc,'To confirm','Planned','TBD'])}}
+function approveFoundation(it){const R=REL[it.rel];const nv=nextVer(R.impact);const old=F.ver;applyRelease(it.rel);F.ver=nv;F.approved='12 Oct 2026';
+  F.history.unshift({v:nv,date:'12 Oct 2026',by:'You',why:`Release: ${R.name} (${R.impact}-level)`,changes:R.diff.map(d=>d.s+(d.del?': updated':': added'))});
+  const hit=S.materials.filter(m=>m.tags.some(t=>R.tags.includes(t)));hit.forEach(m=>{m.status='stale';m.staleFrom=old});
+  addFeed('found',`Foundations v${nv} approved. ${hit.length} materials flagged out of date`);toast(`Foundations v${nv} saved. ${hit.length} materials flagged`,'materials');
+  if(hit.length)setTimeout(()=>addFeed('mat',`Materials lead will propose updates for ${hit.length} assets`),1500)}
+
+/* ---------- materials ---------- */
+function vMat(){const c=s=>S.materials.filter(m=>m.status===s).length;
+  return `<div class="stack"><div class="row"><span class="pill good">${c('current')} current</span><span class="pill bad">${c('stale')} out of date</span><span class="pill accent">${c('proposed')} update proposed</span><span class="muted small">Each asset records which foundation sections it was built from, so only affected assets are flagged.</span></div>
+  <section class="card"><div class="tbl-wrap"><table><thead><tr><th>Asset</th><th>For</th><th>Built from</th><th>Owner</th><th>Usage</th><th>Status</th><th></th></tr></thead><tbody>
+  ${S.materials.map(m=>`<tr><td><b style="font-weight:600">${esc(m.name)}</b><div class="small muted">${m.type}</div></td><td class="small">${m.for}</td><td><div class="row" style="gap:4px"><span class="vbadge" style="font-size:11px;padding:1px 6px;${m.status==='stale'?'background:var(--bad)':''}">v${m.built}</span>${m.tags.map(t=>`<span class="tagc">${TAGN[t]}</span>`).join('')}</div></td><td>${chip(m.owner)}</td><td class="small mono" style="white-space:nowrap">${m.usage}</td>
+  <td>${m.status==='current'?'<span class="pill good">Current</span>':m.status==='stale'?`<span class="pill bad">Out of date</span>`:'<span class="pill accent">Update proposed</span>'}</td>
+  <td>${m.status==='stale'?`<button class="btn sm" data-act="matfix" data-id="${m.id}">Ask for update</button>`:m.id==='bcA'&&m.status==='proposed'?'<button class="btn sm ghost" data-act="preview" data-id="bc-a">Review</button>':''}</td></tr>`).join('')}
+  </tbody></table></div></section></div>`}
+
+/* ---------- go-to-market ---------- */
+function vGtm(){const dates=['12 Oct','19 Oct','26 Oct','2 Nov','9 Nov','16 Nov','23 Nov','30 Nov'];
+  const cal=`<div class="cal-wrap"><div class="cal"><div class="cal-row"><div class="cal-l muted small">Week of</div>${dates.map(d=>`<div class="cal-h">${d}</div>`).join('')}</div>
+   ${S.launches.map(l=>`<div class="cal-row" style="--c:var(--c3)"><div class="cal-l"><span class="tier">${l.tier}</span>${esc(l.name)}</div><span class="cal-ms" style="grid-column:${l.col+2}"><i></i>${l.date}</span></div>`).join('')}
+   ${S.campaigns.filter(c=>c.cols).map(c=>`<div class="cal-row" style="--c:var(--c2)"><div class="cal-l" title="${esc(PB[c.type].name)}"><span style="overflow:hidden;text-overflow:ellipsis;white-space:nowrap">${esc(c.name)}</span></div><div class="cal-bar" style="grid-column:${c.cols[0]+2} / ${c.cols[1]+3}" title="${esc(c.name)}"></div></div>`).join('')}</div></div>`;
+  return `<div class="stack"><section class="card"><div class="card-head"><span class="eyebrow">Launch calendar · next 8 weeks</span><button class="btn primary sm" data-go="wizard">New launch or campaign</button></div>${cal}</section>
+  <div class="launches">${S.launches.map(l=>`<section class="card stack" style="gap:12px"><div class="row" style="justify-content:space-between"><div class="row"><span class="tier">${l.tier}</span><b style="font-size:15px">${esc(l.name)}</b></div><span class="mono small muted">${l.date}</span></div>
+   <div><div class="row" style="justify-content:space-between"><span class="small muted">${esc(l.goal)}</span><b class="mono">${readyPct(l)}%</b></div><div class="prog" style="margin-top:6px"><i style="width:${readyPct(l)}%"></i></div></div>
+   <div class="ready">${Object.entries(l.ready).map(([t,x])=>`<div><b>${t}</b><span class="rag ${x[0]}"></span><span>${esc(x[1])}</span></div>`).join('')}</div>
+   ${S.review.find(r=>r.lid===l.id)?`<button class="btn sm" data-act="preview" data-id="${S.review.find(r=>r.lid===l.id).id}">Open launch plan</button>`:''}</section>`).join('')}</div>
+  <section class="card"><div class="card-head"><span class="eyebrow">Campaigns</span></div><div class="tbl-wrap"><table><thead><tr><th>Campaign</th><th>Playbook</th><th>Status</th><th>Progress</th></tr></thead><tbody>${S.campaigns.map(c=>`<tr><td><b style="font-weight:600">${esc(c.name)}</b></td><td><span class="tagc">${PB[c.type].name}</span></td><td>${c.status==='Live'?'<span class="pill good">Live</span>':c.status==='Paused'?'<span class="pill neutral">Paused</span>':'<span class="pill accent">'+c.status+'</span>'}</td><td><div class="prog"><i style="width:${c.progress}%"></i></div></td></tr>`).join('')}</tbody></table></div></section></div>`}
+
+/* ---------- wizard ---------- */
+function vWizard(){const w=S.wiz,pb=PB[w.type];const names=['Playbook','Goal','Preview','Send'];let body='';
+  const stepper=`<div class="stepper">${names.map((n,i)=>`<div class="step ${w.step===i+1?'on':w.step>i+1?'done':''}"><b>${w.step>i+1?'✓':i+1}</b>${n}</div>`).join('')}</div>`;
+  if(w.step===1)body=`<div class="types">${Object.entries(PB).map(([id,p])=>{const ls=layersOf(p);return `<button class="type" data-act="wtype" data-id="${id}" aria-pressed="${w.type===id}"><h4>${p.name}</h4><p>${p.blurb}</p><span class="layers-used" title="Layers involved">${[1,2,3].map(L=>`<i class="${ls.has(L)?'on':''}" style="--c:${LC[L]}"></i>`).join('')}</span><span class="meta">${p.phases.length} phases · ${taskCount(p)} tasks</span></button>`}).join('')}</div><div class="legend" style="margin-top:12px">${[1,2,3].map(L=>`<span><i style="background:${LC[L]};border-radius:2px;width:14px;height:5px"></i>${LNAME[L]}</span>`).join('')}</div>`;
+  if(w.step===2){const d=DEF[w.type];body=`<div class="card"><div class="form"><div class="field wide"><label for="w-name">Name</label><input id="w-name" value="${esc(w.name||d[0])}"></div>
+    <div class="field"><label for="w-goal">Goal</label><input id="w-goal" value="${esc(w.goal||d[1])}"><span class="hint">Suggested KPIs: ${pb.kpis.join(', ')}</span></div>
+    <div class="field"><label for="w-budget">Budget cap (€)</label><input id="w-budget" type="number" min="0" step="500" value="${w.budget}"></div>
+    <div class="field"><label for="w-date">Launch or start date</label><input id="w-date" value="${esc(w.date)}" placeholder="e.g. 1 Dec"></div>
+    <div class="field"><label for="w-aud">Audience</label><input id="w-aud" value="${esc(w.audience)}" placeholder="Leave empty to use the ICP from Foundations"></div></div></div>`}
+  if(w.step===3)body=`<div class="card"><div class="card-head"><span class="eyebrow">${pb.name} · ${taskCount(pb)} tasks, colour shows the layer</span><span class="muted small">Built from Foundations v${F.ver}</span></div><div class="phases">${pb.phases.map(p=>`<div class="phase"><div class="phase-h"><b>${p.name}</b><span>${p.when}</span></div>${p.tasks.map(t=>`<div class="task">${esc(t[0])}<span>${chip(t[1])}</span></div>`).join('')}</div>`).join('')}</div></div>`;
+  if(w.step===4)body=`<div class="card stack"><dl class="kv"><div><dt>Name</dt><dd>${esc(w.name)}</dd></div><div><dt>Playbook</dt><dd>${pb.name}</dd></div><div><dt>Goal</dt><dd>${esc(w.goal)}</dd></div><div><dt>Budget cap</dt><dd class="num">${eur(w.budget)}</dd></div><div><dt>Date</dt><dd>${esc(w.date||'To be set by the GTM lead')}</dd></div></dl>
+    <div class="flow">${chip('cmo')} checks priorities &amp; budget ▸ ${chip('gtm')} loads the playbook ▸ ${[...layersOf(pb)].filter(L=>L!==3).map(L=>chip(LEAD[L])).join(' ')} build from Foundations v${F.ver} ▸ <b>you review it</b></div></div>`;
+  return `${stepper}${body}<div class="wiz-foot"><button class="btn" data-act="wback" ${w.step===1?'disabled':''}>Back</button>${w.step<4?'<button class="btn primary" data-act="wnext">Continue</button>':`<button class="btn primary" data-act="wsend" ${S.running?'disabled':''}>${S.running?'Team is busy':'Send to CMO'}</button>`}</div>`}
+
+/* ---------- review ---------- */
 function vReview(){if(!S.review.find(r=>r.id===S.sel))S.sel=S.review[0].id;const it=S.review.find(r=>r.id===S.sel);
-  return `<div class="review"><div class="rv-list">${S.review.map(r=>`<button class="rv-item" data-act="rsel" data-id="${r.id}" aria-current="${r.id===S.sel}"><span class="row" style="justify-content:space-between"><span class="rv-kind">${kindLabel[r.kind]}</span>${statusPill(r.status)}</span><b>${esc(r.title)}</b>${chip(r.agent)}</button>`).join('')}</div>
-  <section class="card">${rvHead(it)}${S.sendback?`<div class="sendback"><label for="sb-text" style="font-weight:600;font-size:13px">Send back to ${AG[it.agent].name} with a comment</label><textarea id="sb-text" placeholder="e.g. Add a source for the nine-week claim, and make post 3 shorter"></textarea><div class="row"><button class="btn primary sm" data-act="sbsend">Send back</button><button class="btn ghost sm" data-act="sbcancel">Cancel</button></div></div>`:''}
-  ${it.note?`<div class="note">${esc(it.note)}</div>`:''}${({plan:pvPlan,social:pvSocial,email:pvEmail,decision:pvDecision})[it.kind](it)}</section></div>`}
-function rvHead(it){const act=it.status==='pending';const canEdit=act&&(it.kind==='social'||it.kind==='email');
-  return `<div class="rv-head"><div><div class="row" style="margin-bottom:6px"><span class="rv-kind">${kindLabel[it.kind]} · v${it.v}</span>${statusPill(it.status)}</div><h2>${esc(it.title)}</h2><div class="row" style="margin-top:6px"><span class="muted small">Prepared by</span>${chip(it.agent)}<span class="muted small">· reviewed by</span>${chip('cmo')}</div></div>
-  <div class="rv-actions">${act?`<button class="btn good" data-act="approve" data-id="${it.id}">Approve</button>${canEdit?`<button class="btn" data-act="edit">${S.editing?'Done editing':'Edit'}</button>`:''}<button class="btn" data-act="sendback">Send back</button><button class="btn ghost danger" data-act="reject" data-id="${it.id}">Reject</button>`:it.status==='revising'?'<span class="muted small">'+AG[it.agent].name+' is revising…</span>':`<button class="btn ghost" data-act="undo" data-id="${it.id}">Undo</button>`}</div></div>`}
-function pvPlan(it){const c=S.campaigns.find(x=>x.id===it.campaignId),pb=PB[c.type];
-  const spans=pb.spans,cols=spans.reduce((a,b)=>a+b,0),labels=pb.weeks||Array.from({length:cols},(_,i)=>'W'+(i+1));
-  let start=0;const rows=[];pb.phases.forEach((p,pi)=>{const sp=spans[pi];p.tasks.forEach((t,ti)=>{const off=sp>1?Math.min(ti,sp-1):0;const len=sp===1?1:Math.max(1,sp-off-(ti%2));rows.push({t,col:start+off,len,ms:sp===1})});start+=sp});
-  const gantt=`<div class="gantt-wrap"><div class="gantt" style="--cols:${cols}">
-    <div class="g-row"><div class="g-label muted small">Phase</div>${pb.phases.map((p,i)=>`<div class="g-phase" style="grid-column:span ${spans[i]}">${p.name}</div>`).join('')}</div>
-    <div class="g-row"><div class="g-label muted small">Task · owner</div>${labels.map(l=>`<div class="g-week">${l}</div>`).join('')}</div>
-    ${rows.map(r=>`<div class="g-row" style="--c:${AG[r.t[1]].c}"><div class="g-label"><i></i>${esc(r.t[0])}</div>${r.ms?`<div class="g-ms" style="grid-column:${r.col+2}"></div>`:`<div class="g-bar" style="grid-column:${r.col+2} / span ${r.len}"></div>`}</div>`).join('')}</div></div>`;
-  const C=2*Math.PI*38;let acc=0;const cols4=['var(--c2)','var(--c4)','var(--c3)','var(--c1)'];
-  const donut=`<div class="donut-row"><svg width="110" height="110" viewBox="0 0 110 110" role="img" aria-label="Budget split"><circle cx="55" cy="55" r="38" fill="none" stroke="var(--sunk)" stroke-width="16"/>${pb.channels.map((ch,i)=>{const len=C*ch[1]/100;const s=`<circle cx="55" cy="55" r="38" fill="none" stroke="${cols4[i%4]}" stroke-width="16" stroke-dasharray="${(len-1.5).toFixed(2)} ${(C-len+1.5).toFixed(2)}" stroke-dashoffset="${(-acc).toFixed(2)}" transform="rotate(-90 55 55)"/>`;acc+=len;return s}).join('')}<text x="55" y="52" text-anchor="middle" style="fill:var(--muted);font:10px var(--f-ui)">Budget</text><text x="55" y="67" text-anchor="middle" style="fill:var(--ink);font:600 13px var(--f-mono)">${eur(c.budget)}</text></svg>
-    <div class="donut-legend">${pb.channels.map((ch,i)=>`<span style="--c:${cols4[i%4]}"><i></i>${ch[0]}<em>${eur(c.budget*ch[1]/100)}</em></span>`).join('')}</div></div>`;
-  const b=c.budget,reach=b*24,clicks=reach*.03,leads=clicks*.15,mql=leads*.55,opp=mql*.15;const k=n=>n>=10000?(n/1000).toFixed(0)+'k':n>=1000?(n/1000).toFixed(1)+'k':Math.round(n);
-  const changes=c.changes||[['+','Retargeting audience built from site visitors'],['−','Paid reach trimmed 20% to stay under the cap']];
-  return `<dl class="kv" style="margin-bottom:16px"><div><dt>Goal</dt><dd>${esc(c.goal)}</dd></div><div><dt>Audience</dt><dd>${esc(c.audience)}</dd></div><div><dt>Key message</dt><dd>${esc(c.message||'Proposed by Planner: "Launch faster with less risk"')}</dd></div><div><dt>Type</dt><dd>${pb.name}</dd></div></dl>
-  <div class="plan-grid"><div>${gantt}</div><div class="side-panel"><div><div class="eyebrow" style="margin-bottom:8px">Budget split</div>${donut}</div>
-  <div><div class="eyebrow" style="margin-bottom:8px">Playbook changes by the Planner</div><ul class="changes">${changes.map(x=>`<li><b>${x[0]}</b><span>${esc(x[1])}</span></li>`).join('')}</ul></div>
-  <div class="row">${Object.keys(AG).filter(a=>a!=='cmo').map(chip).join('')}</div></div></div>
-  <div class="eyebrow" style="margin-top:18px">Projected funnel</div><div class="funnel"><div class="fstep"><span>Reach</span><b>${k(reach)}</b></div><div class="fstep"><span>Clicks</span><b>${k(clicks)}</b></div><div class="fstep"><span>Leads</span><b>${k(leads)}</b></div><div class="fstep"><span>MQLs</span><b>${k(mql)}</b></div><div class="fstep"><span>Opportunities</span><b>${k(opp)}</b></div></div>`}
-function devSeg(){return `<div class="seg" role="group" aria-label="Device"><button data-act="dev" data-d="desktop" aria-pressed="${S.device==='desktop'}">Desktop</button><button data-act="dev" data-d="mobile" aria-pressed="${S.device==='mobile'}">Mobile</button></div>`}
-function pvSocial(){const p=S.posts[S.post];const long=p.text.length>200&&!S.more&&!S.editing;const txt=long?p.text.slice(0,p.text.lastIndexOf(' ',190)):p.text;
-  return `<div class="row" style="justify-content:space-between;margin-bottom:12px"><div class="post-tabs">${S.posts.map((x,i)=>`<button data-act="post" data-i="${i}" aria-pressed="${S.post===i}">Post ${i+1}</button>`).join('')}</div>${devSeg()}</div>
-  <div class="stage"><article class="li ${S.device}"><div class="li-head"><div class="li-av">YB</div><div><b>Your Brand</b><span>1,204 followers</span><span>Scheduled · ${p.when}</span></div></div>
-  <div class="li-text" id="post-text" ${S.editing?'contenteditable="true"':''}>${esc(txt)}${long?'… <button class="li-more" data-act="more">see more</button>':''}</div>
-  <div class="li-img"><div><small>Image to design · prompt from Content</small><p>${esc(p.img)}</p></div></div>
-  <div class="li-stats"><span>Preview</span><span>0 comments</span></div><div class="li-actions"><span>Like</span><span>Comment</span><span>Repost</span><span>Send</span></div></article></div>
-  <div class="checks">${p.checks.map(c=>`<span class="pill ${c[0]}">${c[0]==='good'?'✓':'!'} ${esc(c[1])}</span>`).join('')}<span class="pill neutral">${p.text.length} / 3,000 characters</span></div>`}
-function pvEmail(){const e=S.email;return `<div class="row" style="justify-content:space-between;margin-bottom:12px"><span class="muted small">Audience: 4,120 ISV contacts in HubSpot · sends W0, Tue 10:00</span>${devSeg()}</div>
-  <div class="stage" style="flex-direction:column;align-items:center;gap:14px"><div class="inbox ${S.device}">
-  <div class="ib-row dim"><span class="ib-from">Microsoft Partner Center</span><span class="ib-sub">Your monthly partner update <span>– New incentives</span></span><span class="ib-time">09:12</span></div>
-  <div class="ib-row hl"><span class="ib-from">${esc(e.from)}</span><span class="ib-sub">${esc(e.subject)} <span>– ${esc(e.pre)}</span></span><span class="ib-time">10:00</span></div>
-  <div class="ib-row dim"><span class="ib-from">Team calendar</span><span class="ib-sub">Sprint review moved to Thursday <span>– Room 4B</span></span><span class="ib-time">Mon</span></div>
-  <div class="em"><div class="em-card"><div class="em-top">Your Brand</div><div class="em-body" id="email-body" ${S.editing?'contenteditable="true"':''}><h3>${esc(e.subject)}</h3>${e.body.map(p=>`<p>${esc(p)}</p>`).join('')}<span class="em-cta">${esc(e.cta)}</span></div><div class="em-foot">You receive this because you’re a registered partner. Unsubscribe · Preferences</div></div></div></div></div>
-  <div class="meter"><span>Subject <b>${e.subject.length}/60</b> <span class="pill good">✓</span></span><span>Preheader <b>${e.pre.length}/90</b> <span class="pill good">✓</span></span><span class="pill amber">! "Nine weeks" needs the same source as post 1</span><span class="pill good">✓ Unsubscribe link present</span></div>`}
-function pvDecision(){const ch=[['LinkedIn',67,58],['Search',59,93],['Email',46,46],['Organic',25,25]];const W=520,H=230,L=40,B=30,T=14,max=100;const y=v=>T+(H-T-B)*(1-v/max);const gw=(W-L-10)/ch.length;
-  const grid=[0,25,50,75,100].map(v=>`<line class="gl" x1="${L}" x2="${W-6}" y1="${y(v)}" y2="${y(v)}"/><text x="${L-8}" y="${y(v)+4}" text-anchor="end">${v}</text>`).join('');
-  const bars=ch.map((c,i)=>{const x=L+i*gw+gw*.18,bw=gw*.3;return `<rect x="${x}" y="${y(c[1])}" width="${bw}" height="${y(0)-y(c[1])}" rx="2" fill="var(--line-2)"/><rect x="${x+bw+4}" y="${y(c[2])}" width="${bw}" height="${y(0)-y(c[2])}" rx="2" fill="var(--accent)"/><text x="${x+bw+2}" y="${H-10}" text-anchor="middle">${c[0]}</text>${c[1]!==c[2]?`<text x="${x+bw*1.5+4}" y="${y(c[2])-5}" text-anchor="middle" style="fill:var(--ink)">${c[2]>c[1]?'+':''}${c[2]-c[1]}</text>`:''}`}).join('');
-  return `<div class="dec-grid"><div><div class="card-head"><span class="eyebrow">Leads per week by channel</span><span class="legend" style="margin:0"><span><i style="background:var(--line-2)"></i>Now</span><span><i style="background:var(--accent)"></i>After the move</span></span></div>
-  <svg class="chart" viewBox="0 0 ${W} ${H}" role="img" aria-label="Leads per week now versus projected">${grid}${bars}</svg></div>
-  <div class="stack"><div class="impact"><div><span>Leads per week</span><b>197 → 222</b></div><div><span>Blended cost per lead</span><b>€14.76 → €13.10</b></div><div><span>Budget moved</span><b>€800 / month</b></div><div><span>Confidence</span><b>Medium</b></div></div>
-  <div><div class="eyebrow" style="margin-bottom:6px">Evidence from the Analyst</div><ul class="evidence"><li>LinkedIn paid cost per lead rose from €16.10 to €21.40 over 3 weeks.</li><li>Search cost per lead is steady at €11.80.</li><li>Search is losing 38% of impression share to budget, so extra spend has room to convert.</li><li>LinkedIn organic is unaffected and stays at full pace.</li></ul></div>
-  <div class="note" style="margin:0"><b>CMO:</b> I agree. It’s reversible weekly, and I’ll have the Analyst report back after 14 days.</div></div></div>`}
+  return `<div class="review"><div class="rv-list">${S.review.map(r=>`<button class="rv-item" data-act="rsel" data-id="${r.id}" aria-current="${r.id===S.sel}"><span class="row" style="justify-content:space-between"><span class="rv-kind">${KIND[r.kind]}</span>${statusPill(r.status)}</span><b>${esc(r.title)}</b>${chip(r.agent)}</button>`).join('')}</div>
+  <section class="card">${rvHead(it)}${S.sendback?`<div class="sendback"><label for="sb-text" style="font-weight:600;font-size:13px">Send back to ${aName(it.agent)} with a comment</label><textarea id="sb-text" placeholder="What should change?"></textarea><div class="row"><button class="btn primary sm" data-act="sbsend">Send back</button><button class="btn ghost sm" data-act="sbcancel">Cancel</button></div></div>`:''}
+  ${it.note?`<div class="note" style="margin-bottom:14px">${esc(it.note)}</div>`:''}${({foundation:pvFound,launch:pvLaunch,battlecard:pvBattle,onepager:pvOne,social:pvSocial,msgtest:pvMsg})[it.kind](it)}</section></div>`}
+function rvHead(it){const act=it.status==='pending';
+  return `<div class="rv-head"><div><div class="row" style="margin-bottom:6px"><span class="rv-kind">${KIND[it.kind]} · v${it.v}</span>${statusPill(it.status)}</div><h2>${esc(it.title)}</h2><div class="row" style="margin-top:6px"><span class="muted small">Prepared by</span>${chip(it.agent)}<span class="muted small">· reviewed by</span>${chip('cmo')}</div></div>
+  <div class="rv-actions">${act?`<button class="btn good" data-act="approve" data-id="${it.id}">Approve</button><button class="btn" data-act="sendback">Send back</button><button class="btn ghost danger" data-act="reject" data-id="${it.id}">Reject</button>`:it.status==='revising'?`<span class="muted small">${aName(it.agent)} is revising…</span>`:it.kind==='foundation'?'':`<button class="btn ghost" data-act="undo" data-id="${it.id}">Undo</button>`}</div></div>`}
+function pvFound(it){const R=REL[it.rel];const done=it.status==='approved';const hit=S.materials.filter(m=>m.tags.some(t=>R.tags.includes(t)));
+  return `<div class="row" style="margin-bottom:12px"><span class="pill ${R.impact==='positioning'?'bad':'accent'}">${R.impact==='positioning'?'Positioning-level':'Messaging-level'}</span><span class="mono small">v${done?it.from:F.ver} → v${done?it.to:nextVer(R.impact)}</span><span class="muted small">Approval: ${R.impact==='positioning'?'CMO, then you':'you'}</span></div>
+  <p style="margin-bottom:14px;color:var(--ink-2)"><b style="color:var(--ink)">Why:</b> ${esc(R.why)}</p>
+  ${R.impact==='positioning'?'<div class="note" style="margin-bottom:14px"><b>CMO:</b> This is a real shift, so I reviewed it first. I agree, but I’d like 6 Finance discovery interviews before we roll it out to Sales.</div>':''}
+  <div class="diff">${R.diff.map(d=>`<div class="diff-sec"><h4>${esc(d.s)}</h4>${d.del?`<div class="dl del"><b>−</b><span>${esc(d.del)}</span></div>`:''}<div class="dl add"><b>+</b><span>${esc(d.add)}</span></div></div>`).join('')}</div>
+  <div class="eyebrow" style="margin:18px 0 8px">${done?'Flagged as out of date':'Will flag as out of date'} · ${hit.length} materials</div><div class="row">${hit.map(m=>`<span class="tagc">${esc(m.name)}</span>`).join('')||'<span class="muted small">None</span>'}</div>`}
+function launchObj(it){return S.launches.find(l=>l.id===it.lid)||S.campaigns.find(c=>c.id===it.lid)}
+function pvLaunch(it){const l=launchObj(it),pb=PB[l.type];const spans=pb.spans,cols=spans.reduce((a,b)=>a+b,0),labels=pb.weeks||Array.from({length:cols},(_,i)=>'W'+(i+1));
+  let start=0;const rows=[];pb.phases.forEach((p,pi)=>{const sp=spans[pi];p.tasks.forEach((t,ti)=>{const off=sp>1?Math.min(ti,sp-1):0;rows.push({t,col:start+off,len:sp===1?1:Math.max(1,sp-off-(ti%2)),ms:sp===1})});start+=sp});
+  const canvas=l.canvas||[['Target',F.parts[3][1]],['Problem','To be sharpened by Positioning'],['Positioning','Built on Foundations v'+F.ver],['Pricing','No change'],['Sales motion','Sales-led, in-app for customers'],['Channels','LinkedIn, email, web'],['Playbook',pb.name],['Success',l.goal]];
+  return `<div class="eyebrow" style="margin-bottom:8px">GTM canvas</div><div class="canvas">${canvas.map(c=>`<div><span>${c[0]}</span>${esc(c[1])}</div>`).join('')}</div>
+  <div class="eyebrow" style="margin:18px 0 8px">Timeline · colour shows the layer</div><div class="gantt-wrap"><div class="gantt" style="--cols:${cols}">
+   <div class="g-row"><div class="g-label muted small">Phase</div>${pb.phases.map((p,i)=>`<div class="g-phase" style="grid-column:span ${spans[i]}" title="${p.name}">${p.name}</div>`).join('')}</div>
+   <div class="g-row"><div class="g-label muted small">Task</div>${labels.map(x=>`<div class="g-week">${x}</div>`).join('')}</div>
+   ${rows.map(r=>`<div class="g-row" style="--c:${aColor(r.t[1])}"><div class="g-label"><i></i>${esc(r.t[0])}</div>${r.ms?`<div class="g-ms" style="grid-column:${r.col+2}"></div>`:`<div class="g-bar" style="grid-column:${r.col+2} / span ${r.len}"></div>`}</div>`).join('')}</div></div>
+  ${l.ready?`<div class="eyebrow" style="margin:18px 0 8px">Readiness · ${readyPct(l)}%</div><div class="ready">${Object.entries(l.ready).map(([t,x])=>`<div><b>${t}</b><span class="rag ${x[0]}"></span><span>${esc(x[1])}</span></div>`).join('')}</div>`:''}`}
+function pvBattle(){return `<div class="stage"><article class="paper"><div class="bc-top"><b>Battlecard · Competitor A</b><span>Built from Foundations v2.0 · Competitive, Pillar: Accurate · updated 3 Oct</span></div>
+  <div class="bc-move"><b>Their latest move (2 Oct):</b> 15% list price cut for new mid-market deals. Expect it to come up in the first call.</div>
+  <div class="bc-grid"><section><h5>Why we win</h5><ul><li>Forecasts use product usage data, not just CRM fields</li><li>Every number is explained, so the CFO trusts it</li><li>Live in 5 days; Competitor A takes 3 to 6 months</li></ul></section>
+  <section><h5>Why we lose</h5><ul><li>Price comes up before value is shown</li><li>Buyer wants one suite for planning and forecasting</li></ul></section>
+  <section><h5>Landmines to set</h5><ul><li>“How long did your last planning rollout take?”</li><li>“Can your team explain last month’s forecast change?”</li><li>“Who maintains the model after go-live?”</li></ul></section>
+  <section class="obj"><h5>Objections → responses</h5><p><b>“Competitor A is cheaper now.”</b>On licence, maybe. Add 4 months of implementation and an admin, and year-one cost is about 2× ours.</p><p><b>“We want one suite.”</b>Fair, for enterprise FP&A. For RevOps forecasting, speed and explainability matter more than breadth.</p></section></div></article></div>`}
+function pvOne(){return `<div class="stage"><article class="paper op"><div class="op-bar"></div><div class="op-body"><span class="op-eye">Scenario Planner · for CFOs</span><h3>Plan every quarter before it happens</h3>
+  <p>Scenario Planner models best, base and worst case from your live forecast, and shows the deals behind every number. Take a plan to the board that you can defend line by line.</p>
+  <div class="op-cols"><div><b>Accurate</b>Built on CRM and product usage data, not gut feel.</div><div><b>Explainable</b>Every scenario traced to the deals that move it.</div><div><b>Fast to value</b>Live in five days. No data team needed.</div></div>
+  <div class="op-stat"><b>±5%</b><span>Forecasts within 5% of actuals for 80% of customers</span></div>
+  <div class="op-foot"><span>Your Brand · revenue forecasting for mid-market SaaS</span><span class="op-cta">Book a 20-minute walkthrough</span></div></div></article></div>
+  <div class="checks"><span class="pill good">✓ Matches Persona: CFO message</span><span class="pill good">✓ Proof point from Pillar: Accurate</span><span class="pill good">✓ Claims approved by Legal</span></div>`}
+function pvSocial(){const p=S.posts[S.post];const long=p.text.length>180&&!S.more;const txt=long?p.text.slice(0,p.text.lastIndexOf(' ',170)):p.text;
+  return `<div class="row" style="justify-content:space-between;margin-bottom:12px"><div class="post-tabs">${S.posts.map((x,i)=>`<button data-act="post" data-i="${i}" aria-pressed="${S.post===i}">Post ${i+1}</button>`).join('')}</div><div class="seg"><button data-act="dev" data-d="desktop" aria-pressed="${S.device==='desktop'}">Desktop</button><button data-act="dev" data-d="mobile" aria-pressed="${S.device==='mobile'}">Mobile</button></div></div>
+  <div class="stage"><article class="li ${S.device}"><div class="li-head"><div class="li-av">YB</div><div><b>Your Brand</b><span>8,420 followers</span><span>Scheduled · ${p.when}</span></div></div>
+  <div class="li-text">${esc(txt)}${long?'… <button class="li-more" data-act="more">see more</button>':''}</div>
+  <div class="li-img"><div><small>Image to design · prompt from Content</small><p>${esc(p.img)}</p></div></div><div class="li-stats"><span>Preview</span><span>0 comments</span></div><div class="li-actions"><span>Like</span><span>Comment</span><span>Repost</span><span>Send</span></div></article></div>
+  <div class="checks"><span class="pill good">✓ Uses the launch message</span><span class="pill good">✓ Tone matches brand</span><span class="pill neutral">${p.text.length} / 3,000 characters</span></div>`}
+function pvMsg(){const v=[['Forecasts your board can trust','umbrella',1.9],['See why every forecast moves','Explainable',2.7],['Live in five days, not five months','Fast to value',2.2]];const W=540,H=220,L=40,B=34,T=16,max=3;const y=x=>T+(H-T-B)*(1-x/max);const gw=(W-L-10)/3;
+  const grid=[0,1,2,3].map(x=>`<line class="gl" x1="${L}" x2="${W-6}" y1="${y(x)}" y2="${y(x)}"/><text x="${L-8}" y="${y(x)+4}" text-anchor="end">${x}%</text>`).join('');
+  const bars=v.map((b,i)=>{const x=L+i*gw+gw*.25,bw=gw*.5;return `<rect x="${x}" y="${y(b[2])}" width="${bw}" height="${y(0)-y(b[2])}" rx="3" fill="${i===1?'var(--accent)':'var(--line-2)'}"/><text x="${x+bw/2}" y="${y(b[2])-6}" text-anchor="middle" style="fill:var(--ink)">${b[2]}%</text><text x="${x+bw/2}" y="${H-12}" text-anchor="middle">${b[1]}</text>`}).join('');
+  return `<div class="dec-grid"><div><div class="eyebrow" style="margin-bottom:8px">LinkedIn ad CTR by headline · 14 days, 61k impressions</div><svg class="chart" viewBox="0 0 ${W} ${H}" role="img" aria-label="Click-through rate by headline">${grid}${bars}</svg>
+  <div class="stack" style="gap:6px;margin-top:8px">${v.map((b,i)=>`<div class="row small"><span class="rag" style="background:${i===1?'var(--accent)':'var(--line-2)'}"></span>“${b[0]}”</div>`).join('')}</div></div>
+  <div class="stack"><div><div class="eyebrow" style="margin-bottom:6px">Analyst recommendation</div><p>Lead paid ads with the Explainable headline. It beat the umbrella line by 42% on CTR, and demo requests from those clicks were 31% higher.</p></div>
+  <div class="note"><b>CMO:</b> Agreed for ads. I would not change the umbrella line in the foundations on one test. I’ve logged it as evidence for the next foundations review.</div>
+  <div class="row"><span class="pill accent">No foundations change</span><span class="pill neutral">Logged as evidence</span></div></div></div>`}
 
-/* --- campaigns --- */
-function vCampaigns(){return `<div class="card"><div class="card-head"><span class="eyebrow">${S.campaigns.length} campaigns</span><button class="btn primary sm" data-go="wizard">New campaign</button></div>${campTable()}</div>`}
+/* ---------- connections ---------- */
+function vConn(){return `<div class="conns">${S.connectors.map(c=>`<section class="card conn"><div class="conn-h"><div class="conn-logo" style="--c:${c.c}">${c.logo}</div><div><b>${c.name}</b><span>${c.what} · ${c.on?'<span style="color:var(--good)">Sample data</span>':'Paused'}</span></div><button class="switch" role="switch" aria-checked="${c.on}" aria-label="${c.on?'Pause':'Resume'} ${c.name}" data-act="ctoggle" data-id="${c.id}"></button></div>
+  <ul>${c.metrics.map(m=>`<li>${m}</li>`).join('')}</ul><div class="conn-stats"><span>Last sync <b id="sync-${c.id}">${c.on?Math.round(c.ago)+'s ago':'paused'}</b></span><span>Rows <b id="rows-${c.id}">${c.rows.toLocaleString('en-US')}</b></span></div></section>`).join('')}</div>`}
 
-/* --- connections --- */
-function syncLabel(c){return c.on?Math.round(c.ago)+'s ago':'paused'}
-function vConnections(){return `<div class="stack"><div class="conns">${S.connectors.map(c=>`<section class="card conn"><div class="conn-h"><div class="conn-logo" style="--c:${c.c}">${c.logo}</div><div><b>${c.name}</b><span>${c.what} · ${c.on?'<span style="color:var(--good)">Sample data flowing</span>':'Paused'}</span></div><button class="switch" role="switch" aria-checked="${c.on}" aria-label="${c.on?'Pause':'Resume'} ${c.name}" data-act="ctoggle" data-id="${c.id}"></button></div>
-  <ul>${c.metrics.map(m=>`<li>${m}</li>`).join('')}</ul><div class="conn-stats"><span>Last sync <b id="sync-${c.id}">${syncLabel(c)}</b></span><span>Every <b>${c.every}s</b></span><span>Rows <b id="rows-${c.id}">${c.rows.toLocaleString('en-US')}</b></span></div>
-  <div class="row"><button class="btn sm" data-act="csync" data-id="${c.id}" ${c.on?'':'disabled'}>Sync now</button><button class="btn sm ghost" disabled title="Real accounts connect in Phase 3">Connect real account</button></div></section>`).join('')}</div>
-  <section class="card"><div class="card-head"><span class="eyebrow">Add later · each one is a plug-in file</span></div><div class="future">${[['Salesforce','Phase 4'],['Meta Ads','Phase 4'],['Search Console','Phase 4'],['Semrush','Phase 4'],['YouTube','Phase 4'],['Canva','Phase 4']].map(f=>`<div>${f[0]}<small>${f[1]}</small></div>`).join('')}</div></section></div>`}
-
-/* ============ events ============ */
+/* ================= events ================= */
 document.addEventListener('click',e=>{
+  const th=e.target.closest('[data-theme-set]');if(th){setTheme(th.dataset.themeSet);return}
   const g=e.target.closest('[data-go]');if(g){$('#toast').hidden=true;setView(g.dataset.go);return}
   const nb=e.target.closest('#nav button[data-view]');if(nb){setView(nb.dataset.view);return}
   const b=e.target.closest('[data-act]');if(!b)return;const a=b.dataset.act,id=b.dataset.id;const it=S.review.find(r=>r.id===id);
   if(a==='preview'){S.sel=id;setView('review')}
-  else if(a==='approve'){saveEdits();it.status='approved';addFeed('cmo','You approved: '+it.title);toast('Approved: '+it.title);S.editing=false;S.sendback=false;render()}
-  else if(a==='reject'){it.status='rejected';addFeed('cmo','You rejected: '+it.title);S.sendback=false;render()}
+  else if(a==='approve'){if(it.kind==='foundation'){it.from=F.ver;it.to=nextVer(REL[it.rel].impact);approveFoundation(it)}
+    if(it.kind==='battlecard'){const m=S.materials.find(x=>x.id==='bcA');m.status='current';m.built=F.ver}
+    it.status='approved';addFeed('cmo','You approved: '+it.title);if(it.kind!=='foundation')toast('Approved: '+it.title);S.sendback=false;render()}
+  else if(a==='reject'){it.status='rejected';addFeed('cmo','You rejected: '+it.title);render()}
   else if(a==='undo'){it.status='pending';render()}
-  else if(a==='rsel'){saveEdits();S.sel=id;S.sendback=false;S.editing=false;S.more=false;render()}
+  else if(a==='rsel'){S.sel=id;S.sendback=false;S.more=false;render()}
   else if(a==='dev'){S.device=b.dataset.d;render()}
-  else if(a==='post'){saveEdits();S.post=+b.dataset.i;S.more=false;render()}
+  else if(a==='post'){S.post=+b.dataset.i;S.more=false;render()}
   else if(a==='more'){S.more=true;render()}
-  else if(a==='edit'){if(S.editing)saveEdits();S.editing=!S.editing;S.more=true;render()}
   else if(a==='sendback'){S.sendback=true;render();const t=$('#sb-text');if(t)t.focus()}
   else if(a==='sbcancel'){S.sendback=false;render()}
-  else if(a==='sbsend'){const r=S.review.find(x=>x.id===S.sel);const c=($('#sb-text').value||'').trim()||'Please tighten this up.';r.status='revising';S.sendback=false;addFeed('cmo',`Sent back to ${AG[r.agent].name}: "${c}"`);render();
-    setTimeout(()=>{r.status='pending';r.v++;r.note=`v${r.v}: ${AG[r.agent].name} revised this after your comment "${c}".`;if(r.kind==='social'){S.posts[0].checks[2]=['good','Source added: 2025 partner delivery data'];S.posts[0].text=S.posts[0].text.replace('averaged nine weeks.','averaged nine weeks (source: our 2025 partner delivery data).')}addFeed(r.agent,`Revised ${r.title} (v${r.v})`);if(view==='review')render();else updateBadge();toast(`${r.title} revised`,'review')},3200)}
+  else if(a==='sbsend'){const r=S.review.find(x=>x.id===S.sel);const c=($('#sb-text').value||'').trim()||'Please tighten this up.';r.status='revising';S.sendback=false;addFeed('cmo',`Sent back to ${aName(r.agent)}: “${c}”`);render();
+    setTimeout(()=>{r.status='pending';r.v++;r.note=`v${r.v}: ${aName(r.agent)} revised this after your comment “${c}”.`;addFeed(r.agent,`Revised ${r.title} (v${r.v})`);if(view==='review')render();else updateBadge();toast(r.title+' revised','review')},3000)}
+  else if(a==='ftab'){S.ftab=id;S.fedit=false;render()}
+  else if(a==='fedit'){S.fedit=true;render()}
+  else if(a==='fcancel'){S.fedit=false;render()}
+  else if(a==='fsave'){const st=$('#f-statement').innerText.trim();const parts=F.parts.map((p,i)=>($('#f-part-'+i).innerText||'').trim()||p[1]);const changed=[];if(st!==F.statement)changed.push('Positioning statement');parts.forEach((p,i)=>{if(p!==F.parts[i][1])changed.push(F.parts[i][0])});
+    S.fedit=false;if(!changed.length){render();return}const old=F.ver,nv=nextVer('messaging');F.statement=st;parts.forEach((p,i)=>F.parts[i][1]=p);F.ver=nv;F.approved='12 Oct 2026';
+    F.history.unshift({v:nv,date:'12 Oct 2026',by:'You',why:'Direct edit',changes:changed.map(c=>c+': edited')});const hit=S.materials.filter(m=>m.tags.includes('positioning'));hit.forEach(m=>{m.status='stale';m.staleFrom=old});
+    addFeed('found',`You saved Foundations v${nv}. ${hit.length} materials flagged`);toast(`Saved as v${nv}. ${hit.length} materials flagged`,'materials');render()}
+  else if(a==='rollback'){const h=F.history.find(x=>x.v===id);toast(`Rolling back creates a new version that restores v${h.v}. Available in the real build.`)}
+  else if(a==='relopen'){S.rel.open=true;S.rel.result=null;S.rel.state='idle';render()}
+  else if(a==='relclose'){S.rel.open=false;render()}
+  else if(a==='relpick'){readRel();S.rel.pick=id;S.rel.result=null;S.rel.state='idle';render()}
+  else if(a==='relcheck'){readRel();let key=S.rel.pick;if(key==='custom'){const nm=S.rel.custom.name.trim()||'New feature';const ds=S.rel.custom.desc.trim()||'A new capability.';key='cust'+Date.now();
+      REL[key]={name:nm,desc:ds,impact:'messaging',why:'A new capability that adds a proof point. Positioning, ICP and buying committee stay the same. Send it back if you think it’s bigger.',diff:[{s:'Feature catalog',add:`${nm} · personas to confirm · date to be set`},{s:'Pillar · Fast to value · proof points',add:`${nm}: ${ds}`}],tags:['pillar:fast']}}
+    S.rel.state='checking';setAgent('found','working','Checking a release');render();
+    setTimeout(()=>{const R=REL[key];S.rel.state='done';setAgent('found','idle','Ready');let rid=null;
+      if(R.impact==='none'){if(!F.features.some(f=>f[0]===R.name))F.features.push([R.name,R.desc,'All users','Planned','TBD']);addFeed('found',`${R.name}: no foundations impact. Added to the feature catalog`)}
+      else{const ex=S.review.find(r=>r.rel===key&&r.status==='pending');if(ex)rid=ex.id;else{rid='fd-'+key+'-'+Date.now();S.review.unshift({id:rid,kind:'foundation',rel:key,title:'Foundations update: '+R.name,agent:'found',sum:`${R.impact==='positioning'?'Positioning':'Messaging'}-level: ${R.diff.length} sections change.`,status:'pending',v:1});addFeed('found',`Impact check: ${R.name} is a ${R.impact}-level change`)}}
+      S.rel.result={...R,rid};if(view==='foundations')render();updateBadge()},1600)}
+  else if(a==='matfix'){const m=S.materials.find(x=>x.id===id);m.status='proposed';addFeed('mat',`Update proposed for ${m.name}, rebuilt on v${F.ver}`);render();setTimeout(()=>{m.built=F.ver;m.status='current';addFeed(m.owner,`${m.name} updated to v${F.ver}`);if(view==='materials')render()},2500)}
   else if(a==='wtype'){S.wiz.type=id;S.wiz.name='';S.wiz.goal='';render()}
   else if(a==='wnext'){if(S.wiz.step===2)readWiz();if(S.wiz.step===1){const d=DEF[S.wiz.type];S.wiz.name=S.wiz.name||d[0];S.wiz.goal=S.wiz.goal||d[1]}S.wiz.step++;render()}
   else if(a==='wback'){if(S.wiz.step===2)readWiz();S.wiz.step--;render()}
-  else if(a==='wsend'){const w=S.wiz;const c={id:'c'+Date.now(),name:w.name,type:w.type,status:'Planning',progress:5,budget:w.budget,spent:0,goal:w.goal,weeks:w.weeks,audience:w.audience,message:w.message};S.campaigns.unshift(c);addFeed('cmo','New request: '+c.name);S.wiz={step:1,type:'launch',name:'',goal:'',budget:5000,weeks:8,audience:w.audience,message:''};runTeam(c);setView('team')}
-  else if(a==='ask'){sendChat(b.dataset.q)}
-  else if(a==='ctoggle'){const c=S.connectors.find(x=>x.id===id);c.on=!c.on;addFeed(c.id,`${c.name} ${c.on?'resumed':'paused'}`);render()}
-  else if(a==='csync'){const c=S.connectors.find(x=>x.id===id);doSync(c)}
+  else if(a==='wsend'){const w=S.wiz;const id2='x'+Date.now();const isL=w.type==='t1'||w.type==='t2';
+    const obj={id:id2,name:w.name,type:w.type,goal:w.goal,budget:w.budget,status:'Planning',progress:5};
+    if(isL){Object.assign(obj,{tier:w.type==='t1'?'T1':'T2',date:w.date||'TBD',col:7,ready:{Product:['a','Release date to confirm'],Sales:['r','Not started'],CS:['r','Not started'],Marketing:['a','Plan in progress'],Web:['r','Not started'],Pricing:['a','To confirm'],Legal:['r','Not started']}});S.launches.push(obj)}else S.campaigns.unshift(obj);
+    addFeed('cmo','New request: '+obj.name);S.wiz={step:1,type:'t1',name:'',goal:'',budget:12000,date:'',audience:'',message:''};runTeam(obj);setView('team')}
+  else if(a==='ask')sendChat(b.dataset.q);
+  else if(a==='ctoggle'){const c=conn(id);c.on=!c.on;addFeed(c.id,`${c.name} ${c.on?'resumed':'paused'}`);render()}
 });
 document.addEventListener('submit',e=>{if(e.target.id==='chatform'){e.preventDefault();const i=$('#chatinput');sendChat(i.value);i.value=''}});
-function readWiz(){const v=id=>($('#'+id)||{}).value;S.wiz.name=v('w-name')||S.wiz.name;S.wiz.goal=v('w-goal')||S.wiz.goal;S.wiz.budget=Math.max(0,+v('w-budget')||S.wiz.budget);S.wiz.weeks=Math.max(1,+v('w-weeks')||S.wiz.weeks);S.wiz.audience=v('w-aud')||S.wiz.audience;S.wiz.message=v('w-msg')||''}
-function saveEdits(){if(!S.editing)return;const pt=$('#post-text');if(pt)S.posts[S.post].text=pt.innerText.replace(/…\s*see more$/,'').trim();const eb=$('#email-body');if(eb){const ps=[...eb.querySelectorAll('p')].map(p=>p.innerText.trim()).filter(Boolean);if(ps.length)S.email.body=ps;const h=eb.querySelector('h3');if(h)S.email.subject=h.innerText.trim()}}
+function readWiz(){const v=id=>($('#'+id)||{}).value;const w=S.wiz;w.name=v('w-name')||w.name;w.goal=v('w-goal')||w.goal;w.budget=Math.max(0,+v('w-budget')||w.budget);w.date=v('w-date')||'';w.audience=v('w-aud')||''}
+function readRel(){const n=$('#rel-name'),d=$('#rel-desc');if(n)S.rel.custom.name=n.value;if(d)S.rel.custom.desc=d.value}
 
-/* ============ live ticking ============ */
-const SYNCMSG={hubspot:n=>`HubSpot sync: ${n} new contacts`,linkedin:n=>`LinkedIn sync: ${n*140} impressions`,ga4:n=>`GA4 sync: ${n*9} sessions`,gads:n=>`Google Ads sync: ${n*6} clicks`};
-function doSync(c){const n=1+Math.floor(Math.random()*4);c.ago=0;c.rows+=n*12;const ch=S.channels.find(x=>x.conn===c.id);
-  if(Math.random()<.7){const l=1+Math.floor(Math.random()*2);ch.leads+=l;S.kpi.leads.v+=l;S.kpi.leads.s[29]+=l}
-  if(c.id!=='ga4'){const sp=10+Math.random()*30;ch.spend+=sp;S.kpi.spend.v+=sp;S.kpi.spend.s[29]+=sp}
-  S.kpi.cpl.v=S.kpi.spend.v/S.kpi.leads.v;S.kpi.ctr.v=Math.max(2.5,Math.min(3.3,S.kpi.ctr.v+(Math.random()-.48)*.02));
-  if(c.id==='hubspot'||Math.random()<.35)addFeed(c.id,SYNCMSG[c.id](n));paintLive(true)}
-function paintLive(bump){const k=$('#kpis');if(k){k.innerHTML=kpiTiles();if(bump){const el=$('#k-leads');if(el){el.classList.add('bump');setTimeout(()=>el.classList.remove('bump'),900)}}}
-  const ch=$('#channels');if(ch)ch.innerHTML=channelBars()}
-setInterval(()=>{S.connectors.forEach(c=>{if(!c.on)return;c.ago+=1;if(c.ago>=c.every)doSync(c);const s=$('#sync-'+c.id);if(s)s.textContent=syncLabel(c);const r=$('#rows-'+c.id);if(r)r.textContent=c.rows.toLocaleString('en-US')})},1000);
+/* ================= live ticking ================= */
+const SYNC={sf:()=>{const k=S.kpi.pipe;const add=5000+Math.random()*20000;k.v+=add;k.s[k.s.length-1]=k.v/1e6;return Math.random()<.4?`Salesforce: ${eur(add)} new influenced pipeline`:null},
+  amp:()=>{const k=S.kpi.adopt;k.v=Math.min(60,k.v+Math.random()*.15);k.s[k.s.length-1]=k.v;return null},
+  hs:()=>{const k=S.kpi.reps;if(Math.random()<.3){k.v=Math.min(95,k.v+1);k.s[k.s.length-1]=k.v;return 'Highspot: 3 reps opened the Competitor A battlecard'}return null},
+  gong:()=>Math.random()<.6?['Gong: 2 new calls mention Competitor A pricing','Gong: “explainability” came up in 5 demos today','Gong: objection logged: “we already have a BI tool”'][Math.floor(Math.random()*3)]:null,
+  g2:()=>Math.random()<.5?'G2: new 5-star review mentions setup speed':null,
+  jira:()=>Math.random()<.5?'Jira: Deal Risk Scoring moved to QA':null,
+  hub:()=>null,li:()=>null,ga4:()=>null};
+function paint(){const k=$('#kpis');if(k){k.innerHTML=kpiTiles();const el=$('#k-pipe');if(el){el.classList.add('bump');setTimeout(()=>el.classList.remove('bump'),900)}}}
+setInterval(()=>{S.connectors.forEach(c=>{if(!c.on)return;c.ago+=1;if(c.ago>=c.every){c.ago=0;c.rows+=1+Math.floor(Math.random()*40);const msg=SYNC[c.id]();if(msg)addFeed(c.id,msg);paint()}
+  const s=$('#sync-'+c.id);if(s)s.textContent=Math.round(c.ago)+'s ago';const r=$('#rows-'+c.id);if(r)r.textContent=c.rows.toLocaleString('en-US')})},1000);
 
+setTheme(document.documentElement.getAttribute('data-theme')||'light');
 setView((location.hash||'').slice(1)||'command');
 </script>
 

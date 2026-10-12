@@ -1,34 +1,47 @@
 # Marketing HQ
 
-An AI marketing team run from one live web app.
+An AI product marketing team run from one live web app.
 
-An **AI CMO** (the orchestrator) owns strategy, priorities and budget. It briefs a **Campaign Planner**, which picks the campaign type, loads that type's playbook and hands tasks to specialist agents (**Content & Copy**, **SEO & Competitive**, **Analyst**). Nothing goes live without human approval, and every proposal is reviewed as a visual preview of how it will actually look.
+An **AI CMO** orchestrates the team. The work runs in **three layers**, the way product marketing actually works:
 
-![Team org chart](docs/screenshots/2-team-org-chart.png)
+1. **Foundations:** positioning, ICP and personas, buying committee (DMU), competitive landscape, research interviews. This is the versioned **source of truth**.
+2. **Materials:** sales enablement, partner enablement and customer proof, each built from a specific version of the foundations.
+3. **Go-to-market:** launches (tiers, readiness boards) and campaigns from playbooks.
+
+Results and insights flow back into Foundations. When the foundations change, only the materials built on the changed sections are flagged as out of date. Nothing goes live without human approval, and every proposal is reviewed the way it will actually look.
+
+![Team org chart](docs/screenshots/team-org-chart.png)
 
 ## Status
 
-**Phase 0: clickable prototype.** A single HTML file with sample data. No backend yet.
+**Phase 0: clickable prototype.** A single HTML file with sample data and no backend yet. It has a Day/Night switch in the top bar.
 
-Open `prototype/index.html` in a browser. Screens:
+Open `prototype/index.html` in a browser. Things to try:
 
-- **Command Center**: CMO briefing, live KPIs, leads by channel, decisions waiting, activity feed
-- **New campaign**: pick one of 8 campaign types, set the goal and budget, preview the playbook, send it to the CMO
-- **Team & CMO**: live org chart, chat with the CMO, run transcript
-- **Review Room**: campaign plan (timeline, budget, funnel), LinkedIn post and email mockups, budget decision chart. Approve, edit, reject or send back with a comment.
-- **Connections**: HubSpot, LinkedIn, GA4 and Google Ads on mock data
+- **Foundations → New release:** check how a release affects the foundations.
+  - "Dark mode" is added to the feature catalog only.
+  - "Deal Risk Scoring" proposes v2.1.
+  - "Board Reporting" proposes v3.0.
+- **Review Room:** approve the v2.1 diff, then open **Materials** to see exactly which assets were flagged.
+- **Go-to-market → New launch or campaign:** pick one of 8 playbooks and send it to the CMO. Then watch the three layers work on **Team & CMO**.
+- **Team & CMO:** ask the CMO to change positioning, or to add a second T1 launch. It pushes back when the evidence or capacity isn't there.
+
+| | |
+|---|---|
+| ![Command Center](docs/screenshots/command-center.png) | ![Foundations](docs/screenshots/foundations.png) |
+| ![Foundations diff](docs/screenshots/review-foundations-diff.png) | ![Materials out of date](docs/screenshots/materials-out-of-date.png) |
 
 ## Roadmap
 
 | Phase | What |
 |---|---|
 | 0 | Clickable prototype ✅ |
-| 1 | Foundation: monorepo, database, live mock connectors, Command Center and Analytics |
-| 2 | Agent team on the Claude Agent SDK, with the Visual Review Room |
-| 3 | Real connectors: HubSpot, GA4, Google Ads, LinkedIn |
-| 4 | More agents (Paid Ads, Social Media, Email & Automation, Design, Events), more connectors, auth, cloud deploy |
+| 1 | Foundation: monorepo, database, live mock connectors, Command Center, Foundations library with versioning |
+| 2 | Agent team on the Claude Agent SDK (CMO, Analyst, layer leads, first specialists), Review Room, release impact check |
+| 3 | Real connectors: Salesforce/HubSpot, Jira, Gong, Amplitude, Highspot, G2 |
+| 4 | Remaining specialists, Markdown export of foundations to Git, Notion sync, auth, cloud deploy |
 
-The full plan, covering architecture, data model, agents, playbooks and wireframes, is in [docs/PLAN.md](docs/PLAN.md).
+The full plan, covering architecture, agents, versioning, playbooks and data model, is in [docs/PLAN.md](docs/PLAN.md).
 
 ## Planned stack
 
