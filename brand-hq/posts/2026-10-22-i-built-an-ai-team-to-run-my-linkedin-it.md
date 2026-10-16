@@ -6,7 +6,7 @@ pillar: Building with AI in public
 title: "I built an AI team to run my LinkedIn. Its first move was to push back."
 visual_style: screenshot
 foundation: v1.0
-status: drafted
+status: needs_approval
 ---
 
 ## Why
