@@ -413,6 +413,77 @@ tr:last-child td{border-bottom:0}
 .conn li{font-size:11.5px;background:var(--sunk);border-radius:4px;padding:1px 7px;color:var(--ink-2)}
 .conn-stats{display:flex;justify-content:space-between;font-size:12px;color:var(--muted);border-top:1px solid var(--line);padding-top:9px;gap:8px;flex-wrap:wrap}
 .conn-stats b{color:var(--ink);font-family:var(--f-mono);font-weight:500}
+.dbrowser{display:grid;grid-template-columns:280px minmax(0,1fr);gap:18px;align-items:start}
+.dlist{display:flex;flex-direction:column;gap:6px;max-height:720px;overflow:auto;padding-right:4px}
+.dphase{font-size:11px;letter-spacing:.07em;text-transform:uppercase;color:var(--muted);font-weight:600;padding:10px 2px 2px}
+.ditem{text-align:left;border:1px solid var(--line);background:var(--surface);border-radius:8px;padding:8px 10px;cursor:pointer;display:flex;flex-direction:column;gap:4px;align-items:flex-start}
+.ditem b{font-size:13px;font-weight:600;line-height:1.3}
+.ditem[aria-current="true"]{border-color:var(--accent);box-shadow:0 0 0 2px var(--accent-soft)}
+.dtype{font:500 10.5px var(--f-mono);text-transform:uppercase;letter-spacing:.05em;color:var(--muted)}
+.dpreview{min-width:0}
+.inbox{background:#FFFFFF;color:#202124;border:1px solid #DADCE0;border-radius:10px;width:100%;max-width:640px;font-family:-apple-system,"Segoe UI",Roboto,Arial,sans-serif;overflow:hidden;transition:max-width .3s}
+.inbox.mobile{max-width:370px}
+.ib-row{display:grid;grid-template-columns:120px minmax(0,1fr) 48px;gap:10px;padding:9px 14px;font-size:13px;border-bottom:1px solid #EEE;align-items:baseline}
+.inbox.mobile .ib-row{grid-template-columns:minmax(0,1fr) 44px}
+.inbox.mobile .ib-from{grid-column:1/-1}
+.ib-row.dim{color:#80868B}
+.ib-row.hl{background:#F2F8F7}
+.ib-row.hl .ib-from,.ib-row.hl .ib-sub{font-weight:700}
+.ib-sub{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.ib-sub span{color:#5F6368;font-weight:400}
+.ib-time{font-size:12px;text-align:right}
+.em{padding:18px 14px 22px;background:#F4F6F6}
+.em-card{background:#fff;border-radius:8px;max-width:560px;margin:0 auto;overflow:hidden;border:1px solid #E3E7E7}
+.em-top{background:#0A7470;color:#fff;padding:13px 22px;font-weight:700}
+.em-body{padding:22px;font-size:14.5px;line-height:1.6;color:#2A3535;display:flex;flex-direction:column;gap:12px}
+.em-body h3{font-size:20px;line-height:1.3;color:#152222}
+.em-cta{align-self:flex-start;background:#0A7470;color:#fff;border-radius:6px;padding:9px 16px;font-weight:700;font-size:13.5px}
+.em-foot{font-size:11.5px;color:#7A8888;padding:0 22px 16px}
+.browser{background:#fff;border:1px solid #DADCE0;border-radius:10px;width:100%;max-width:820px;overflow:hidden;color:#1C2828;transition:max-width .3s}
+.browser.mobile{max-width:380px}
+.br-bar{display:flex;align-items:center;gap:6px;padding:9px 12px;background:#F1F3F3;border-bottom:1px solid #DADCE0}
+.br-bar i{width:10px;height:10px;border-radius:50%;background:#C9D0D0}
+.br-bar span{margin-left:10px;font:12px var(--f-mono);color:#5D6B6A;background:#fff;border-radius:6px;padding:3px 10px;flex:1;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.lp-hero{display:grid;grid-template-columns:minmax(0,1.4fr) minmax(0,1fr);gap:24px;padding:30px 30px 24px}
+.browser.mobile .lp-hero{grid-template-columns:minmax(0,1fr);padding:22px}
+.lp-hero h3{font-size:28px;line-height:1.15;margin:8px 0 10px;color:#152222}
+.lp-hero p{font-size:14px;color:#3A4A49}
+.lp-hero ul{margin:14px 0 0;padding-left:18px;font-size:13.5px;color:#3A4A49;display:flex;flex-direction:column;gap:5px}
+.lp-form{border:1px solid #E3E8E8;border-radius:10px;padding:16px;display:flex;flex-direction:column;gap:6px;font-size:12px;color:#5D6B6A;align-self:start}
+.lp-form b{font-size:15px;color:#152222;margin-bottom:4px}
+.lp-form i{display:block;height:32px;border:1px solid #D3DADA;border-radius:6px;margin-bottom:4px}
+.lp-proof{display:flex;gap:10px;flex-wrap:wrap;padding:0 30px 26px}
+.lp-proof span{font-size:12.5px;background:#EEF6F5;color:#0A5C59;border-radius:999px;padding:4px 11px;font-weight:600}
+.doc{max-width:680px;padding:26px 30px;display:flex;flex-direction:column;gap:10px}
+.doc h3{font-size:22px;line-height:1.25;color:#152222}
+.doc h5{margin:8px 0 0;font-size:11px;letter-spacing:.07em;text-transform:uppercase;color:#5D6B6A}
+.doc p{font-size:14px;line-height:1.6;color:#2A3535}
+.doc-meta{font-size:12px;color:#7A8888}
+.steps{margin:6px 0 0;padding-left:20px;display:flex;flex-direction:column;gap:10px}
+.steps p{font-size:13.5px}
+.slides{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+.slide{aspect-ratio:16/9;background:#fff;color:#152222;border:1px solid #DDE3E3;border-radius:8px;padding:18px 20px;display:flex;flex-direction:column;gap:8px;position:relative;overflow:hidden}
+.slide b{font-size:18px;line-height:1.2}
+.slide p{font-size:12.5px;color:#3A4A49}
+.slide.title{background:#152222;color:#fff}
+.slide.title p{color:#B9CFCD}
+.sl-n{position:absolute;right:12px;bottom:10px;font:11px var(--f-mono);color:#9AA7A6}
+.gad{background:#fff;color:#202124;border:1px solid #DADCE0;border-radius:10px;padding:14px 16px;max-width:600px;font-family:Arial,sans-serif;display:flex;flex-direction:column;gap:4px}
+.gad-url{font-size:12px;color:#5F6368}
+.gad b{color:#1A0DAB;font-size:17px;font-weight:400}
+.gad p{font-size:13.5px;color:#4D5156}
+@media (max-width:900px){.dbrowser{grid-template-columns:minmax(0,1fr)}.dlist{max-height:260px}.slides{grid-template-columns:minmax(0,1fr)}.lp-hero{grid-template-columns:minmax(0,1fr)}}
+.demo-cap{position:fixed;left:50%;bottom:calc(28px + env(safe-area-inset-bottom,0px));transform:translateX(-50%);background:var(--ink);color:var(--bg);padding:12px 20px;border-radius:12px;font-size:17px;font-weight:600;max-width:min(860px,calc(100vw - 32px));text-align:center;box-shadow:0 10px 30px rgba(0,0,0,.25);z-index:40;transition:opacity .3s}
+.demo-cap small{display:block;font-size:11px;letter-spacing:.08em;text-transform:uppercase;opacity:.6;font-weight:600;margin-bottom:2px}
+.demo-cur{position:fixed;width:22px;height:22px;border-radius:50%;border:2px solid #fff;background:rgba(10,116,112,.85);box-shadow:0 2px 10px rgba(0,0,0,.35);z-index:41;pointer-events:none;transition:left .45s cubic-bezier(.4,0,.2,1),top .45s cubic-bezier(.4,0,.2,1);transform:translate(-50%,-50%)}
+.demo-cur.click::after{content:"";position:absolute;inset:-10px;border-radius:50%;border:2px solid rgba(10,116,112,.9);animation:ripple .5s ease-out}
+@keyframes ripple{from{transform:scale(.4);opacity:1}to{transform:scale(1.6);opacity:0}}
+.demo-start{position:fixed;inset:0;background:color-mix(in srgb,var(--bg) 70%,transparent);backdrop-filter:blur(3px);display:grid;place-items:center;z-index:50}
+.demo-start div{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:26px 30px;text-align:center;display:flex;flex-direction:column;gap:12px;max-width:420px}
+.demo-start b{font-size:18px}
+.demo-end{position:fixed;inset:0;background:var(--bg);display:grid;place-items:center;z-index:45;text-align:center}
+.demo-end h2{font-size:34px;letter-spacing:-.02em}
+.demo-end p{color:var(--muted);margin-top:8px;font-size:16px}
 .toast{position:fixed;right:18px;bottom:calc(18px + env(safe-area-inset-bottom,0px));background:var(--ink);color:var(--bg);padding:10px 14px;border-radius:10px;font-size:13px;display:flex;gap:12px;align-items:center;box-shadow:0 8px 24px rgba(0,0,0,.2);z-index:10;max-width:calc(100vw - 36px)}
 .toast button{border:0;background:none;color:var(--bg);font-weight:700;text-decoration:underline;cursor:pointer}
 
@@ -522,13 +593,13 @@ const PB={
     phases:[{name:'Analyse',when:'W1',tasks:[['Usage drop-off analysis','analyst']]},{name:'Guide',when:'W2 → W3',tasks:[['In-app guides','content'],['How-to video script','content']]},
       {name:'Engage',when:'W4 → W5',tasks:[['Adoption webinar','gtm'],['Customer tips story','proof']]},{name:'Measure',when:'W6',tasks:[['Adoption report','analyst']]}]},
   webinar:{name:'Webinar / event',blurb:'Fill the room, get people to show up, follow up while interest is high.',kpis:['Registrations','MQLs'],spans:[1,3,1,2],
-    phases:[{name:'Setup',when:'W1',tasks:[['Landing page','content'],['Speaker brief','gtm']]},{name:'Promote',when:'W2 → W4',tasks:[['Invite sequence (3 emails)','content'],['Partner promo kit','partner']]},
+    phases:[{name:'Setup',when:'W1',tasks:[['Session angle & messaging','pos'],['Landing page','content'],['Speaker brief','gtm']]},{name:'Promote',when:'W2 → W4',tasks:[['Invite sequence (3 emails)','content'],['Partner promo kit','partner']]},
       {name:'Live',when:'W5',tasks:[['Run of show','gtm']]},{name:'Follow up',when:'W6 → W7',tasks:[['Recording & nurture','content'],['Registrations → MQL report','analyst']]}]},
   demand:{name:'Demand gen',blurb:'Trade a useful asset for contact details, then nurture and hand off.',kpis:['Leads','Cost per lead'],spans:[2,3,2,1],
     phases:[{name:'Offer',when:'W1 → W2',tasks:[['Gated guide','content'],['Keyword targeting','seo']]},{name:'Distribute',when:'W3 → W5',tasks:[['Ads & landing page','gtm'],['Organic posts','content']]},
       {name:'Nurture',when:'W6 → W7',tasks:[['Nurture sequence','content']]},{name:'Handoff',when:'W8',tasks:[['Sales handoff brief','enable'],['Pipeline report','analyst']]}]}
 };
-const DEF={t1:['Scenario Planner launch','€600k pipeline in 90 days'],t2:['Slack alerts release','30% adoption in 30 days'],compete:['Response to Competitor A price cut','Win rate vs A back above 40%'],segment:['Finance teams segment','€250k pipeline from Finance'],pricing:['New Growth plan','+15% self-serve conversion'],adoption:['Forecast Explain adoption','Weekly use from 42% to 55%'],webinar:['Forecasting masterclass','400 registrations'],demand:['Forecast accuracy guide','250 leads']};
+const DEF={t1:['Scenario Planner launch','€600k pipeline in 90 days'],t2:['Slack alerts release','30% adoption in 30 days'],compete:['Response to Competitor A price cut','Win rate vs A back above 40%'],segment:['Finance teams segment','€250k pipeline from Finance'],pricing:['New Growth plan','+15% self-serve conversion'],adoption:['Forecast Explain adoption','Weekly use from 42% to 55%'],webinar:['Board-ready forecasting webinar','400 registrations'],demand:['Forecast accuracy guide','250 leads']};
 const taskCount=pb=>pb.phases.reduce((s,p)=>s+p.tasks.length,0);
 const layersOf=pb=>{const s=new Set();pb.phases.forEach(p=>p.tasks.forEach(t=>{const L=AG[t[1]].L;if(typeof L==='number'&&L>0)s.add(L)}));return s};
 
@@ -636,6 +707,7 @@ const S={
   transcript:[['13:20','cmo','think','Request: Scenario Planner, T1, 3 Nov, €18k. Checking strategy, budget and the launch calendar.'],['13:21','cmo','handoff','Mandate to Go-to-market lead: €600k pipeline in 90 days, cap €18,000, launch 3 Nov.'],['13:21','gtm','tool','get_foundations() → v2.0, approved 18 Aug'],['13:22','found','result','Impact check: no positioning change. Builds on the Explainable pillar.'],['13:25','gtm','handoff','Assigned 3 Foundations tasks, 4 Materials tasks, 5 Go-to-market tasks'],['13:33','pos','result','Launch message: “Plan every quarter before it happens.”'],['13:37','enable','result','Deck and demo script drafted from Foundations v2.0'],['13:40','gtm','result','Plan with readiness board sent to the CMO']],
   runName:'Scenario Planner launch',
   wiz:{step:1,type:'t1',name:'',goal:'',budget:12000,date:'',audience:'',message:''},
+  dels:{},dsel:{},etab:{},cur:null,mreq:{open:false,type:'One-pager',for:'CFO',brief:'',busy:false},
   ftab:'positioning',fedit:false,rel:{open:false,pick:'drs',state:'idle',custom:{name:'',desc:''},result:null},
   sel:'fd-drs',device:'desktop',post:0,more:false,sendback:false,running:false
 };
@@ -650,8 +722,8 @@ const aColor=a=>AG[a]?LC[AG[a].L]:(conn(a)||{}).c||'var(--muted)';
 const aName=a=>AG[a]?AG[a].name:(conn(a)||{}).name||a;
 const chip=a=>`<span class="chip" style="--c:${aColor(a)}"><i></i>${esc(aName(a))}</span>`;
 const statusPill=s=>({pending:'<span class="pill amber">Needs your call</span>',approved:'<span class="pill good">Approved</span>',rejected:'<span class="pill bad">Rejected</span>',revising:'<span class="pill accent">Revising</span>'}[s]);
-const KIND={foundation:'Foundations change',launch:'Launch plan',battlecard:'Battlecard',onepager:'One-pager',social:'Social posts',msgtest:'Message test'};
-const TAGN={'comp':'Competitive','positioning':'Positioning','persona:cfo':'Persona: CFO','persona:sm':'Persona: Sales Manager','pillar:accurate':'Pillar: Accurate','pillar:explainable':'Pillar: Explainable','pillar:fast':'Pillar: Fast to value'};
+const KIND={foundation:'Foundations change',launch:'Launch plan',battlecard:'Battlecard',onepager:'One-pager',social:'Social posts',msgtest:'Message test',drafts:'Drafts',material:'New material'};
+const TAGN={'persona:revops':'Persona: VP RevOps','persona:it':'Persona: IT & Security','comp':'Competitive','positioning':'Positioning','persona:cfo':'Persona: CFO','persona:sm':'Persona: Sales Manager','pillar:accurate':'Pillar: Accurate','pillar:explainable':'Pillar: Explainable','pillar:fast':'Pillar: Fast to value'};
 const pending=()=>S.review.filter(r=>r.status==='pending');
 const readyPct=l=>Math.round(Object.values(l.ready).reduce((s,x)=>s+(x[0]==='g'?1:x[0]==='a'?.5:0),0)/Object.keys(l.ready).length*100);
 function nextVer(level){const[a,b]=F.ver.split('.').map(Number);return level==='positioning'?(a+1)+'.0':a+'.'+(b+1)}
@@ -672,15 +744,16 @@ const VIEWS={
   foundations:{t:'Foundations',s:'The source of truth: positioning, ICP, buying committee, competitors and features'},
   materials:{t:'Materials',s:'Everything Sales and partners use, each built from a version of the foundations'},
   gtm:{t:'Go-to-market',s:'Launches with readiness, and campaigns from playbooks'},
+  campaign:{t:'Deliverables',s:'Every task in the plan and what it produced. Open any draft to review it'},
   wizard:{t:'New launch or campaign',s:'Pick a playbook. Each one assigns work across the three layers'},
   connections:{t:'Connections',s:'Data sources feeding the team. Add more over time'}
 };
 let view='command';
 function setView(v){if(!VIEWS[v])v='command';view=v;S.sendback=false;
-  document.querySelectorAll('#nav button[data-view]').forEach(b=>b.setAttribute('aria-current',b.dataset.view===(v==='wizard'?'gtm':v)?'page':'false'));
+  document.querySelectorAll('#nav button[data-view]').forEach(b=>b.setAttribute('aria-current',b.dataset.view===((v==='wizard'||v==='campaign')?'gtm':v)?'page':'false'));
   $('#vtitle').textContent=VIEWS[v].t;$('#vsub').textContent=VIEWS[v].s;render();window.scrollTo(0,0);
   try{history.replaceState(null,'','#'+v)}catch(e){}}
-function render(){$('#view').innerHTML=({command:vCommand,review:vReview,team:vTeam,foundations:vFound,materials:vMat,gtm:vGtm,wizard:vWizard,connections:vConn})[view]();updateBadge();
+function render(){$('#view').innerHTML=({command:vCommand,review:vReview,team:vTeam,foundations:vFound,materials:vMat,gtm:vGtm,campaign:vCampaign,wizard:vWizard,connections:vConn})[view]();updateBadge();
   if(view==='team'){const l=$('#chatlog');if(l)l.scrollTop=l.scrollHeight}}
 
 /* ---------- command ---------- */
@@ -754,11 +827,11 @@ function runTeam(obj){S.running=true;S.runName=obj.name;S.transcript=[];const pb
   if(per.analyst)at(900,()=>{setAgent('analyst','working','Setting the baseline');tr('analyst','result','Baseline from the last 90 days. Success metric agreed.')});
   at(1000,()=>{setAgent('analyst','idle','Daily sweep at 07:00');setAgent('gtm','working','Reviewing the plan');tr('gtm','think','Checked every task against the foundations and the budget cap.')});
   at(1100,()=>{setAgent('gtm','done','Plan submitted');setAgent('cmo','working','Final review');tr('cmo','think','Plan fits the budget and priorities. Sending it to you for approval.')});
-  at(900,()=>{const id='lp-'+obj.id;S.review.unshift({id,kind:'launch',lid:obj.id,title:obj.name+': plan',agent:'gtm',sum:`${pb.name} playbook, ${taskCount(pb)} tasks across ${layersOf(pb).size} layers.`,status:'pending',v:1});
+  at(900,()=>{const id='lp-'+obj.id;ensureDels(obj,'planned');S.review.unshift({id,kind:'launch',lid:obj.id,title:obj.name+': plan',agent:'gtm',sum:`${pb.name} playbook, ${taskCount(pb)} tasks across ${layersOf(pb).size} layers.`,status:'pending',v:1});
     Object.keys(S.agents).forEach(a=>setAgent(a,'idle',a==='cmo'?'Watching all three layers':a==='analyst'?'Daily sweep at 07:00':'Ready'));S.running=false;S.sel=id;
     addFeed('gtm',`Plan for ${obj.name} is ready for review`);pushChat(`The plan for “${obj.name}” is in your Review Room.`);updateBadge();const rs=$('#runstate');if(rs)rs.textContent='Run finished';
     if(view==='command')render();toast('New plan ready for review','review')});
-  let t=0;steps.forEach(([d,f])=>{t+=d;setTimeout(f,t)})}
+  let t=0;steps.forEach(([d,f])=>{t+=d*SPD;setTimeout(f,t)})}
 
 /* ---------- foundations ---------- */
 function vFound(){const tabs=[['positioning','Positioning'],['icp','ICP & personas'],['dmu','Buying committee'],['comp','Competitive'],['features','Feature catalog'],['history','History']];
@@ -800,11 +873,11 @@ function approveFoundation(it){const R=REL[it.rel];const nv=nextVer(R.impact);co
 
 /* ---------- materials ---------- */
 function vMat(){const c=s=>S.materials.filter(m=>m.status===s).length;
-  return `<div class="stack"><div class="row"><span class="pill good">${c('current')} current</span><span class="pill bad">${c('stale')} out of date</span><span class="pill accent">${c('proposed')} update proposed</span><span class="muted small">Each asset records which foundation sections it was built from, so only affected assets are flagged.</span></div>
+  return `<div class="stack"><div class="row"><span class="pill good">${c('current')} current</span><span class="pill bad">${c('stale')} out of date</span><span class="pill accent">${c('proposed')} update proposed</span>${c('draft')?`<span class="pill amber">${c('draft')} draft in review</span>`:''}<span class="muted small">Each asset records which foundation sections it was built from, so only affected assets are flagged.</span><button class="btn primary sm" style="margin-left:auto" data-act="mopen">New material</button></div>${S.mreq.open?matPanel():''}
   <section class="card"><div class="tbl-wrap"><table><thead><tr><th>Asset</th><th>For</th><th>Built from</th><th>Owner</th><th>Usage</th><th>Status</th><th></th></tr></thead><tbody>
   ${S.materials.map(m=>`<tr><td><b style="font-weight:600">${esc(m.name)}</b><div class="small muted">${m.type}</div></td><td class="small">${m.for}</td><td><div class="row" style="gap:4px"><span class="vbadge" style="font-size:11px;padding:1px 6px;${m.status==='stale'?'background:var(--bad)':''}">v${m.built}</span>${m.tags.map(t=>`<span class="tagc">${TAGN[t]}</span>`).join('')}</div></td><td>${chip(m.owner)}</td><td class="small mono" style="white-space:nowrap">${m.usage}</td>
-  <td>${m.status==='current'?'<span class="pill good">Current</span>':m.status==='stale'?`<span class="pill bad">Out of date</span>`:'<span class="pill accent">Update proposed</span>'}</td>
-  <td>${m.status==='stale'?`<button class="btn sm" data-act="matfix" data-id="${m.id}">Ask for update</button>`:m.id==='bcA'&&m.status==='proposed'?'<button class="btn sm ghost" data-act="preview" data-id="bc-a">Review</button>':''}</td></tr>`).join('')}
+  <td>${m.status==='current'?'<span class="pill good">Current</span>':m.status==='stale'?`<span class="pill bad">Out of date</span>`:m.status==='draft'?'<span class="pill amber">Draft in review</span>':'<span class="pill accent">Update proposed</span>'}</td>
+  <td>${m.status==='stale'?`<button class="btn sm" data-act="matfix" data-id="${m.id}">Ask for update</button>`:m.status==='draft'?`<button class="btn sm ghost" data-act="preview" data-id="mr-${m.id}">Review</button>`:m.id==='bcA'&&m.status==='proposed'?'<button class="btn sm ghost" data-act="preview" data-id="bc-a">Review</button>':''}</td></tr>`).join('')}
   </tbody></table></div></section></div>`}
 
 /* ---------- go-to-market ---------- */
@@ -816,8 +889,8 @@ function vGtm(){const dates=['12 Oct','19 Oct','26 Oct','2 Nov','9 Nov','16 Nov'
   <div class="launches">${S.launches.map(l=>`<section class="card stack" style="gap:12px"><div class="row" style="justify-content:space-between"><div class="row"><span class="tier">${l.tier}</span><b style="font-size:15px">${esc(l.name)}</b></div><span class="mono small muted">${l.date}</span></div>
    <div><div class="row" style="justify-content:space-between"><span class="small muted">${esc(l.goal)}</span><b class="mono">${readyPct(l)}%</b></div><div class="prog" style="margin-top:6px"><i style="width:${readyPct(l)}%"></i></div></div>
    <div class="ready">${Object.entries(l.ready).map(([t,x])=>`<div><b>${t}</b><span class="rag ${x[0]}"></span><span>${esc(x[1])}</span></div>`).join('')}</div>
-   ${S.review.find(r=>r.lid===l.id)?`<button class="btn sm" data-act="preview" data-id="${S.review.find(r=>r.lid===l.id).id}">Open launch plan</button>`:''}</section>`).join('')}</div>
-  <section class="card"><div class="card-head"><span class="eyebrow">Campaigns</span></div><div class="tbl-wrap"><table><thead><tr><th>Campaign</th><th>Playbook</th><th>Status</th><th>Progress</th></tr></thead><tbody>${S.campaigns.map(c=>`<tr><td><b style="font-weight:600">${esc(c.name)}</b></td><td><span class="tagc">${PB[c.type].name}</span></td><td>${c.status==='Live'?'<span class="pill good">Live</span>':c.status==='Paused'?'<span class="pill neutral">Paused</span>':'<span class="pill accent">'+c.status+'</span>'}</td><td><div class="prog"><i style="width:${c.progress}%"></i></div></td></tr>`).join('')}</tbody></table></div></section></div>`}
+   ${S.review.find(r=>r.lid===l.id)?`<button class="btn sm" data-act="preview" data-id="${S.review.find(r=>r.lid===l.id).id}">Open launch plan</button>`:''}<button class="btn sm" data-act="opencamp" data-id="${l.id}">Deliverables</button></section>`).join('')}</div>
+  <section class="card"><div class="card-head"><span class="eyebrow">Campaigns</span></div><div class="tbl-wrap"><table><thead><tr><th>Campaign</th><th>Playbook</th><th>Status</th><th>Progress</th><th></th></tr></thead><tbody>${S.campaigns.map(c=>`<tr><td><b style="font-weight:600">${esc(c.name)}</b></td><td><span class="tagc">${PB[c.type].name}</span></td><td>${c.status==='Live'?'<span class="pill good">Live</span>':c.status==='Paused'?'<span class="pill neutral">Paused</span>':'<span class="pill accent">'+c.status+'</span>'}</td><td><div class="prog"><i style="width:${c.progress}%"></i></div></td><td><button class="btn sm" data-act="opencamp" data-id="${c.id}">Deliverables</button></td></tr>`).join('')}</tbody></table></div></section></div>`}
 
 /* ---------- wizard ---------- */
 function vWizard(){const w=S.wiz,pb=PB[w.type];const names=['Playbook','Goal','Preview','Send'];let body='';
@@ -837,7 +910,7 @@ function vWizard(){const w=S.wiz,pb=PB[w.type];const names=['Playbook','Goal','P
 function vReview(){if(!S.review.find(r=>r.id===S.sel))S.sel=S.review[0].id;const it=S.review.find(r=>r.id===S.sel);
   return `<div class="review"><div class="rv-list">${S.review.map(r=>`<button class="rv-item" data-act="rsel" data-id="${r.id}" aria-current="${r.id===S.sel}"><span class="row" style="justify-content:space-between"><span class="rv-kind">${KIND[r.kind]}</span>${statusPill(r.status)}</span><b>${esc(r.title)}</b>${chip(r.agent)}</button>`).join('')}</div>
   <section class="card">${rvHead(it)}${S.sendback?`<div class="sendback"><label for="sb-text" style="font-weight:600;font-size:13px">Send back to ${aName(it.agent)} with a comment</label><textarea id="sb-text" placeholder="What should change?"></textarea><div class="row"><button class="btn primary sm" data-act="sbsend">Send back</button><button class="btn ghost sm" data-act="sbcancel">Cancel</button></div></div>`:''}
-  ${it.note?`<div class="note" style="margin-bottom:14px">${esc(it.note)}</div>`:''}${({foundation:pvFound,launch:pvLaunch,battlecard:pvBattle,onepager:pvOne,social:pvSocial,msgtest:pvMsg})[it.kind](it)}</section></div>`}
+  ${it.note?`<div class="note" style="margin-bottom:14px">${esc(it.note)}</div>`:''}${({foundation:pvFound,launch:pvLaunch,battlecard:()=>pvBattle(),onepager:()=>pvOne(),social:pvSocial,msgtest:pvMsg,drafts:x=>delBrowser(x.lid),material:pvMaterial})[it.kind](it)}</section></div>`}
 function rvHead(it){const act=it.status==='pending';
   return `<div class="rv-head"><div><div class="row" style="margin-bottom:6px"><span class="rv-kind">${KIND[it.kind]} · v${it.v}</span>${statusPill(it.status)}</div><h2>${esc(it.title)}</h2><div class="row" style="margin-top:6px"><span class="muted small">Prepared by</span>${chip(it.agent)}<span class="muted small">· reviewed by</span>${chip('cmo')}</div></div>
   <div class="rv-actions">${act?`<button class="btn good" data-act="approve" data-id="${it.id}">Approve</button><button class="btn" data-act="sendback">Send back</button><button class="btn ghost danger" data-act="reject" data-id="${it.id}">Reject</button>`:it.status==='revising'?`<span class="muted small">${aName(it.agent)} is revising…</span>`:it.kind==='foundation'?'':`<button class="btn ghost" data-act="undo" data-id="${it.id}">Undo</button>`}</div></div>`}
@@ -848,7 +921,8 @@ function pvFound(it){const R=REL[it.rel];const done=it.status==='approved';const
   <div class="diff">${R.diff.map(d=>`<div class="diff-sec"><h4>${esc(d.s)}</h4>${d.del?`<div class="dl del"><b>−</b><span>${esc(d.del)}</span></div>`:''}<div class="dl add"><b>+</b><span>${esc(d.add)}</span></div></div>`).join('')}</div>
   <div class="eyebrow" style="margin:18px 0 8px">${done?'Flagged as out of date':'Will flag as out of date'} · ${hit.length} materials</div><div class="row">${hit.map(m=>`<span class="tagc">${esc(m.name)}</span>`).join('')||'<span class="muted small">None</span>'}</div>`}
 function launchObj(it){return S.launches.find(l=>l.id===it.lid)||S.campaigns.find(c=>c.id===it.lid)}
-function pvLaunch(it){const l=launchObj(it),pb=PB[l.type];const spans=pb.spans,cols=spans.reduce((a,b)=>a+b,0),labels=pb.weeks||Array.from({length:cols},(_,i)=>'W'+(i+1));
+function pvLaunch(it){return pvLaunchBase(it)+`<div class="row" style="margin-top:16px"><button class="btn primary sm" data-act="opencamp" data-id="${it.lid}">Open deliverables</button><span class="muted small">Every email, post, page and document this plan produces</span></div>`}
+function pvLaunchBase(it){const l=launchObj(it),pb=PB[l.type];const spans=pb.spans,cols=spans.reduce((a,b)=>a+b,0),labels=pb.weeks||Array.from({length:cols},(_,i)=>'W'+(i+1));
   let start=0;const rows=[];pb.phases.forEach((p,pi)=>{const sp=spans[pi];p.tasks.forEach((t,ti)=>{const off=sp>1?Math.min(ti,sp-1):0;rows.push({t,col:start+off,len:sp===1?1:Math.max(1,sp-off-(ti%2)),ms:sp===1})});start+=sp});
   const canvas=l.canvas||[['Target',F.parts[3][1]],['Problem','To be sharpened by Positioning'],['Positioning','Built on Foundations v'+F.ver],['Pricing','No change'],['Sales motion','Sales-led, in-app for customers'],['Channels','LinkedIn, email, web'],['Playbook',pb.name],['Success',l.goal]];
   return `<div class="eyebrow" style="margin-bottom:8px">GTM canvas</div><div class="canvas">${canvas.map(c=>`<div><span>${c[0]}</span>${esc(c[1])}</div>`).join('')}</div>
@@ -857,14 +931,24 @@ function pvLaunch(it){const l=launchObj(it),pb=PB[l.type];const spans=pb.spans,c
    <div class="g-row"><div class="g-label muted small">Task</div>${labels.map(x=>`<div class="g-week">${x}</div>`).join('')}</div>
    ${rows.map(r=>`<div class="g-row" style="--c:${aColor(r.t[1])}"><div class="g-label"><i></i>${esc(r.t[0])}</div>${r.ms?`<div class="g-ms" style="grid-column:${r.col+2}"></div>`:`<div class="g-bar" style="grid-column:${r.col+2} / span ${r.len}"></div>`}</div>`).join('')}</div></div>
   ${l.ready?`<div class="eyebrow" style="margin:18px 0 8px">Readiness · ${readyPct(l)}%</div><div class="ready">${Object.entries(l.ready).map(([t,x])=>`<div><b>${t}</b><span class="rag ${x[0]}"></span><span>${esc(x[1])}</span></div>`).join('')}</div>`:''}`}
-function pvBattle(){return `<div class="stage"><article class="paper"><div class="bc-top"><b>Battlecard · Competitor A</b><span>Built from Foundations v2.0 · Competitive, Pillar: Accurate · updated 3 Oct</span></div>
-  <div class="bc-move"><b>Their latest move (2 Oct):</b> 15% list price cut for new mid-market deals. Expect it to come up in the first call.</div>
-  <div class="bc-grid"><section><h5>Why we win</h5><ul><li>Forecasts use product usage data, not just CRM fields</li><li>Every number is explained, so the CFO trusts it</li><li>Live in 5 days; Competitor A takes 3 to 6 months</li></ul></section>
-  <section><h5>Why we lose</h5><ul><li>Price comes up before value is shown</li><li>Buyer wants one suite for planning and forecasting</li></ul></section>
-  <section><h5>Landmines to set</h5><ul><li>“How long did your last planning rollout take?”</li><li>“Can your team explain last month’s forecast change?”</li><li>“Who maintains the model after go-live?”</li></ul></section>
-  <section class="obj"><h5>Objections → responses</h5><p><b>“Competitor A is cheaper now.”</b>On licence, maybe. Add 4 months of implementation and an admin, and year-one cost is about 2× ours.</p><p><b>“We want one suite.”</b>Fair, for enterprise FP&A. For RevOps forecasting, speed and explainability matter more than breadth.</p></section></div></article></div>`}
-function pvOne(){return `<div class="stage"><article class="paper op"><div class="op-bar"></div><div class="op-body"><span class="op-eye">Scenario Planner · for CFOs</span><h3>Plan every quarter before it happens</h3>
-  <p>Scenario Planner models best, base and worst case from your live forecast, and shows the deals behind every number. Take a plan to the board that you can defend line by line.</p>
+const BC={
+  'Competitor A':{meta:'Competitive, Pillar: Accurate · updated 3 Oct',move:'<b>Their latest move (2 Oct):</b> 15% list price cut for new mid-market deals. Expect it to come up in the first call.',
+    win:['Forecasts use product usage data, not just CRM fields','Every number is explained, so the CFO trusts it','Live in 5 days; Competitor A takes 3 to 6 months'],
+    lose:['Price comes up before value is shown','Buyer wants one suite for planning and forecasting'],
+    mines:['“How long did your last planning rollout take?”','“Can your team explain last month’s forecast change?”','“Who maintains the model after go-live?”'],
+    obj:[['“Competitor A is cheaper now.”','On licence, maybe. Add 4 months of implementation and an admin, and year-one cost is about 2× ours.'],['“We want one suite.”','Fair, for enterprise FP&A. For RevOps forecasting, speed and explainability matter more than breadth.']]},
+  'Competitor B':{meta:'Competitive, Pillar: Explainable · updated 12 Oct',move:'<b>Their latest move (24 Sep):</b> launched AI deal summaries. Expect “we have AI too” in demos.',
+    win:['Explains why the forecast moved, not just what each deal says','Uses product usage signals that a CRM add-on can’t see','Built for RevOps and the CFO, not only for reps'],
+    lose:['They’re already inside the CRM, so it feels free','Small teams that only need rep-level roll-ups'],
+    mines:['“Can it explain a change in the total forecast?”','“Does your CFO use it, or only Sales?”','“What happens when a deal’s usage drops?”'],
+    obj:[['“Competitor B has AI summaries now.”','Summaries describe deals. We explain the forecast: which deals moved the number and why.'],['“It’s already in our CRM.”','Great for reps. The board needs a forecast with reasons, and that needs product usage data too.']]}
+};
+function pvBattle(comp){comp=BC[comp]?comp:'Competitor A';const c=BC[comp];const li=a=>a.map(x=>`<li>${esc(x)}</li>`).join('');
+  return `<div class="stage"><article class="paper"><div class="bc-top"><b>Battlecard · ${comp}</b><span>Built from Foundations v${F.ver} · ${c.meta}</span></div><div class="bc-move">${c.move}</div>
+  <div class="bc-grid"><section><h5>Why we win</h5><ul>${li(c.win)}</ul></section><section><h5>Why we lose</h5><ul>${li(c.lose)}</ul></section>
+  <section><h5>Landmines to set</h5><ul>${li(c.mines)}</ul></section><section class="obj"><h5>Objections → responses</h5>${c.obj.map(o=>`<p><b>${esc(o[0])}</b>${esc(o[1])}</p>`).join('')}</section></div></article></div>`}
+function pvOne(o){o=o||{eye:'Scenario Planner · for CFOs',h:'Plan every quarter before it happens',p:null};return `<div class="stage"><article class="paper op"><div class="op-bar"></div><div class="op-body"><span class="op-eye">${esc(o.eye)}</span><h3>${esc(o.h)}</h3>${o.p?`<p>${esc(o.p)}</p>`:''}
+  ${o.p?'':'<p>Scenario Planner models best, base and worst case from your live forecast, and shows the deals behind every number. Take a plan to the board that you can defend line by line.</p>'}
   <div class="op-cols"><div><b>Accurate</b>Built on CRM and product usage data, not gut feel.</div><div><b>Explainable</b>Every scenario traced to the deals that move it.</div><div><b>Fast to value</b>Live in five days. No data team needed.</div></div>
   <div class="op-stat"><b>±5%</b><span>Forecasts within 5% of actuals for 80% of customers</span></div>
   <div class="op-foot"><span>Your Brand · revenue forecasting for mid-market SaaS</span><span class="op-cta">Book a 20-minute walkthrough</span></div></div></article></div>
@@ -888,6 +972,116 @@ function pvMsg(){const v=[['Forecasts your board can trust','umbrella',1.9],['Se
 function vConn(){return `<div class="conns">${S.connectors.map(c=>`<section class="card conn"><div class="conn-h"><div class="conn-logo" style="--c:${c.c}">${c.logo}</div><div><b>${c.name}</b><span>${c.what} · ${c.on?'<span style="color:var(--good)">Sample data</span>':'Paused'}</span></div><button class="switch" role="switch" aria-checked="${c.on}" aria-label="${c.on?'Pause':'Resume'} ${c.name}" data-act="ctoggle" data-id="${c.id}"></button></div>
   <ul>${c.metrics.map(m=>`<li>${m}</li>`).join('')}</ul><div class="conn-stats"><span>Last sync <b id="sync-${c.id}">${c.on?Math.round(c.ago)+'s ago':'paused'}</b></span><span>Rows <b id="rows-${c.id}">${c.rows.toLocaleString('en-US')}</b></span></div></section>`).join('')}</div>`}
 
+/* ================= deliverables ================= */
+const DTYPE={email:'Email',social:'Social posts',landing:'Landing page',blog:'Article',deck:'Slides',demo:'Demo script',ads:'Ads',battlecard:'Battlecard',onepager:'One-pager',doc:'Document'};
+function delType(t){const s=t.toLowerCase();
+  if(/battlecard/.test(s))return 'battlecard';if(/one-pager/.test(s))return 'onepager';if(/deck/.test(s))return 'deck';if(/demo script/.test(s))return 'demo';
+  if(/email|sequence|nurture|invite/.test(s))return 'email';if(/social|post|countdown|teaser|clips/.test(s))return 'social';
+  if(/landing|page/.test(s))return 'landing';if(/blog|\bpr\b|press|announcement|story|case study/.test(s))return 'blog';
+  if(/ads|paid|burst|retarget|campaign/.test(s))return 'ads';return 'doc'}
+const findObj=id=>S.launches.find(l=>l.id===id)||S.campaigns.find(c=>c.id===id);
+const topicOf=o=>o.id==='sp'?'Scenario Planner':o.name.replace(/ (launch|release)$/i,'');
+function modeFor(o){return o.id==='sp'?'review':['c1','c2','c3','slack'].includes(o.id)?'live':'planned'}
+function ensureDels(o,mode){if(S.dels[o.id])return S.dels[o.id];const pb=PB[o.type];const n=pb.phases.length;const out=[];
+  pb.phases.forEach((p,pi)=>p.tasks.forEach((t,ti)=>{let st='planned';
+    if(mode==='live')st=pi<n-2?'approved':pi===n-2?'ready':'scheduled';
+    if(mode==='review')st=pi===0?'approved':pi<n-1?'ready':'scheduled';
+    out.push({id:o.id+'-'+pi+'-'+ti,task:t[0],agent:t[1],phase:p.name,when:p.when,type:delType(t[0]),status:st,v:1})}));
+  S.dels[o.id]=out;return out}
+function refreshDel(lid){if(view==='campaign'&&S.cur===lid)render();else if(view==='review'){const it=S.review.find(r=>r.id===S.sel);if(it&&it.lid===lid&&!S.sendback)render()}}
+function startProduction(lid){const o=findObj(lid);const pb=PB[o.type];const last=pb.phases[pb.phases.length-1].name;const ds=ensureDels(o,modeFor(o));
+  ds.filter(d=>d.phase===last&&d.status==='planned').forEach(d=>d.status='scheduled');
+  const todo=ds.filter(d=>d.status==='planned');if(!todo.length)return;
+  addFeed('gtm',`Plan approved. ${todo.length} deliverables in production for ${o.name}`);
+  todo.forEach((d,i)=>{setTimeout(()=>{d.status='drafting';refreshDel(lid)},(300+i*650)*SPD);
+    setTimeout(()=>{d.status='ready';addFeed(d.agent,`Draft ready: ${d.task}`);refreshDel(lid);
+      if(i===todo.length-1){S.review.unshift({id:'dr-'+lid+'-'+Date.now(),kind:'drafts',lid,title:`${o.name}: ${todo.length} drafts ready`,agent:'gtm',sum:'Open each draft, then approve it or send it back.',status:'pending',v:1});updateBadge();toast(`${todo.length} drafts ready for ${o.name}`,'review');if(view==='command')render()}},(900+i*650)*SPD)})}
+const dPill=s=>({planned:'<span class="pill neutral">Planned</span>',scheduled:'<span class="pill neutral">Scheduled</span>',drafting:'<span class="pill accent">Drafting…</span>',ready:'<span class="pill amber">Ready for review</span>',approved:'<span class="pill good">Approved</span>',revising:'<span class="pill accent">Revising…</span>'}[s]);
+const viewable=d=>['ready','approved','revising'].includes(d.status);
+function delBrowser(lid){const o=findObj(lid);const ds=ensureDels(o,modeFor(o));let sel=S.dsel[lid];
+  if(!sel||!ds.find(d=>d.id===sel)){const f=ds.find(d=>d.status==='ready')||ds.find(viewable)||ds[0];sel=f.id;S.dsel[lid]=sel}
+  const d=ds.find(x=>x.id===sel);const phases=[...new Set(ds.map(x=>x.phase))];
+  const head=`<div class="rv-head" style="margin-bottom:14px"><div><div class="row" style="margin-bottom:6px"><span class="rv-kind">${DTYPE[d.type]} · ${esc(d.phase)} · ${esc(d.when)}${d.v>1?' · v'+d.v:''}</span>${dPill(d.status)}</div><h2>${esc(d.task)}</h2><div class="row" style="margin-top:6px"><span class="muted small">By</span>${chip(d.agent)}<span class="muted small">· built from Foundations v${F.ver}</span></div></div>
+    <div class="rv-actions">${['email','social','landing'].includes(d.type)&&viewable(d)?`<div class="seg"><button data-act="dev" data-d="desktop" aria-pressed="${S.device==='desktop'}">Desktop</button><button data-act="dev" data-d="mobile" aria-pressed="${S.device==='mobile'}">Mobile</button></div>`:''}${d.status==='ready'?`<button class="btn good" data-act="dapprove" data-l="${lid}" data-id="${d.id}">Approve</button><button class="btn" data-act="dback" data-l="${lid}" data-id="${d.id}">Send back</button>`:''}</div></div>`;
+  const body=viewable(d)?pvDel(d,o):`<div class="empty">${d.status==='drafting'?esc(aName(d.agent))+' is drafting this now…':d.status==='scheduled'?'Scheduled for '+esc(d.when)+'. It’s drafted closer to the date, using the latest results.':'Drafting starts when you approve the plan.'}</div>`;
+  return `<div class="dbrowser"><div class="dlist">${phases.map(ph=>`<div class="dphase">${esc(ph)}</div>`+ds.filter(x=>x.phase===ph).map(x=>`<button class="ditem" data-act="dsel" data-l="${lid}" data-id="${x.id}" aria-current="${x.id===sel}"><span class="dtype">${DTYPE[x.type]}</span><b>${esc(x.task)}</b>${dPill(x.status)}</button>`).join('')).join('')}</div><div class="dpreview">${head}${body}</div></div>`}
+
+/* previews for every deliverable type (templated from the campaign and the foundations) */
+function pvDel(d,o){const t=topicOf(o);switch(d.type){
+  case 'email':return pvEmails(d,o,t);case 'social':return pvPosts(o,t);case 'landing':return pvLanding(o,t);case 'blog':return pvBlog(d,o,t);
+  case 'deck':return pvDeck(o,t);case 'demo':return pvDemo(t);case 'ads':return pvAds(t);
+  case 'battlecard':return pvBattle(o.comp||'Competitor A');case 'onepager':return o.persona?pvOne(onePagerFor(o.persona)):o.id==='sp'?pvOne():pvOne({eye:t,h:F.umbrella,p:F.statement});default:return pvDoc(d,o,t)}}
+function emailsFor(d,o,t){const s=d.task.toLowerCase();const m=s.match(/(\d+)\s*-?\s*emails?/);let n=m?+m[1]:/sequence|nurture/.test(s)?3:1;n=Math.min(n,5);
+  const web=o.type==='webinar',lau=o.type==='t1'||o.type==='t2';
+  const subj=web?[`You’re invited: ${t}`,`What you’ll learn at ${t}`,`Starting tomorrow: ${t}`,`The recording: ${t}`,'One last resource']:lau?[`Introducing ${t}`,`${t} in two minutes`,`How RevOps teams use ${t}`,`Your questions about ${t}, answered`,'Last call']:[`${t}: forecasts your board can trust`,'Why RevOps teams are switching','The one-page version','A quick question','Last chance'];
+  const cta=web?'Save my seat':lau?'See it in action':'Get the guide';
+  const bodies=[[`Most RevOps teams still build the forecast by hand every week, and can’t explain why it moved.`,web?`In 45 minutes we’ll show how teams like yours build a forecast the board trusts, with a live walkthrough and time for questions.`:`${t} changes that. ${F.pillars[1].line}, built on CRM and product usage data.`],
+    [`A quick follow-up on my last note.`,`${F.pillars[0].proof[0]}. ${F.pillars[0].line}.`,web?`We’ll cover how they did it, step by step.`:`Here’s a two-minute look at how it works.`],
+    [web?`We start tomorrow at 16:00 CET.`:`Last note from me on this.`,`${F.pillars[2].line}. ${F.pillars[2].proof[0]}, and ${F.pillars[2].proof[1].toLowerCase()}.`],
+    [`Thanks for your interest.`,`Here’s everything in one place, including the questions other RevOps leaders asked.`],[`I’ll keep this one short.`,`If now isn’t the right time, no problem. Reply “later” and I’ll check back next quarter.`]];
+  const days=[0,3,7,10,14];
+  return Array.from({length:n},(_,i)=>({subject:subj[i],pre:[F.pillars[1].line,F.pillars[0].line,F.pillars[2].line,'Everything in one place','Two lines, promise'][i]+'.',body:bodies[i],cta,day:days[i]}))}
+function pvEmails(d,o,t){const es=emailsFor(d,o,t);const i=Math.min(S.etab[d.id]||0,es.length-1);const e=es[i];
+  return `<div class="row" style="justify-content:space-between;margin-bottom:12px">${es.length>1?`<div class="post-tabs">${es.map((x,k)=>`<button data-act="etab" data-id="${d.id}" data-i="${k}" aria-pressed="${i===k}">Email ${k+1} · Day ${x.day}</button>`).join('')}</div>`:'<span></span>'}<span class="muted small">Sent from HubSpot · ${es.length} email${es.length>1?'s':''}</span></div>
+  <div class="stage" style="flex-direction:column;align-items:center"><div class="inbox ${S.device}">
+   <div class="ib-row dim"><span class="ib-from">Team calendar</span><span class="ib-sub">Pipeline review moved to Thursday <span>– Room 4B</span></span><span class="ib-time">09:12</span></div>
+   <div class="ib-row hl"><span class="ib-from">Your Brand</span><span class="ib-sub">${esc(e.subject)} <span>– ${esc(e.pre)}</span></span><span class="ib-time">10:00</span></div>
+   <div class="em"><div class="em-card"><div class="em-top">Your Brand</div><div class="em-body"><h3>${esc(e.subject)}</h3><p>Hi {first_name},</p>${e.body.map(p=>`<p>${esc(p)}</p>`).join('')}<span class="em-cta">${esc(e.cta)}</span><p style="font-size:13px;color:#5D6B6A">The Your Brand team</p></div><div class="em-foot">Unsubscribe · Preferences</div></div></div></div></div>
+  <div class="checks"><span class="pill ${e.subject.length<=60?'good':'amber'}">Subject ${e.subject.length}/60</span><span class="pill good">✓ Message from Foundations v${F.ver}</span><span class="pill good">✓ Unsubscribe link</span></div>`}
+function pvPosts(o,t){const posts=o.id==='sp'?S.posts:[{text:`Most forecasts can’t explain themselves.\n\n${t}: ${F.pillars[1].line.toLowerCase()}, built on CRM and product usage data.\n\nMore soon.`,img:`${t} title card, brand teal, one bold line.`,when:'Scheduled'},{text:`“Why did the forecast drop 8% overnight?”\n\nIf that question costs your team a morning, ${t} is for you. ${F.pillars[2].line}.`,img:'Question card with a forecast line dipping.',when:'Scheduled'}];
+  const i=Math.min(S.post,posts.length-1);const p=posts[i];const long=p.text.length>180&&!S.more;const txt=long?p.text.slice(0,p.text.lastIndexOf(' ',170)):p.text;
+  return `<div class="post-tabs" style="margin-bottom:12px">${posts.map((x,k)=>`<button data-act="post" data-i="${k}" aria-pressed="${i===k}">Post ${k+1}</button>`).join('')}</div>
+  <div class="stage"><article class="li ${S.device}"><div class="li-head"><div class="li-av">YB</div><div><b>Your Brand</b><span>8,420 followers</span><span>${esc(p.when)}</span></div></div><div class="li-text">${esc(txt)}${long?'… <button class="li-more" data-act="more">see more</button>':''}</div>
+  <div class="li-img"><div><small>Image to design · prompt from Content</small><p>${esc(p.img)}</p></div></div><div class="li-stats"><span>Preview</span><span>0 comments</span></div><div class="li-actions"><span>Like</span><span>Comment</span><span>Repost</span><span>Send</span></div></article></div>`}
+function pvLanding(o,t){const web=o.type==='webinar';const slug=t.toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'');
+  const h=o.id==='sp'?'Plan every quarter before it happens':web?t:F.umbrella;const sub=web?'A 45-minute live session for RevOps and finance leaders. Thursday 20 November, 16:00 CET.':o.id==='sp'?'Model best, base and worst case from your live forecast, and see the deals behind every number.':F.statement;
+  return `<div class="stage"><div class="browser ${S.device}"><div class="br-bar"><i></i><i></i><i></i><span>yourbrand.com/${slug}</span></div><div class="lp"><div class="lp-hero"><div><span class="op-eye">${web?'Live webinar':'Your Brand'}</span><h3>${esc(h)}</h3><p>${esc(sub)}</p><ul>${F.pillars.map(p=>`<li><b>${p.name}.</b> ${esc(p.line)}</li>`).join('')}</ul></div>
+  <div class="lp-form"><b>${web?'Save your seat':'See it in action'}</b><span>Work email</span><i></i><span>Company</span><i></i><span class="em-cta" style="align-self:stretch;text-align:center">${web?'Register':'Book a demo'}</span></div></div>
+  <div class="lp-proof"><span>±5% forecast accuracy</span><span>Live in 5 days</span><span>SOC 2 Type II</span></div></div></div></div>`}
+function pvBlog(d,o,t){const story=/story|case/.test(d.task.toLowerCase());const title=story?`How a 600-person SaaS company got its forecast within 5%`:o.id==='sp'?'Introducing Scenario Planner: plan every quarter before it happens':`${t}: ${F.umbrella.toLowerCase()}`;
+  return `<div class="stage"><article class="paper doc"><span class="op-eye">${story?'Customer story':'Announcement'}</span><h3>${esc(title)}</h3><span class="doc-meta">Your Brand team · 4 min read · built from Foundations v${F.ver}</span>
+  <p>${story?'Their RevOps team of three rebuilt the forecast by hand every Monday. When the board asked why the number moved, the answer took a day.':'Most RevOps teams can tell you the forecast. Very few can tell you why it moved since last week.'}</p>
+  <p>${esc(F.pillars[0].line)}. ${esc(F.pillars[1].line)}: every change is traced to the deals behind it, so the conversation moves from “is the number right?” to “what do we do about it?”</p>
+  <p>${story?'Within one quarter, the forecast landed within 5% of actuals, and Monday prep went from six hours to one.':'It goes live in five days, with no data team needed. Customers on the Pro plan get it today.'}</p></article></div>`}
+function pvDeck(o,t){const sl=[[t,F.umbrella,'title'],['The problem',F.personas[0].pains+'. '+F.personas[1].pains+'.',''],['Why Your Brand',F.pillars.map(p=>p.name+': '+p.line).join(' · ',''),''],['Proof',F.pillars[0].proof[0]+'. '+F.pillars[2].proof[0]+'.','']];
+  return `<div class="slides">${sl.map((s,i)=>`<div class="slide ${s[2]}"><span class="sl-n">${i+1}</span><b>${esc(s[0])}</b><p>${esc(s[1])}</p></div>`).join('')}</div><p class="hint" style="margin-top:10px">4 of 12 slides shown. Speaker notes are written for each slide.</p>`}
+function pvDemo(t){const st=[['Open with the pain','2 min','Ask how long Monday forecast prep takes, and who explains changes to the CFO.'],['Show the live forecast','4 min','Their CRM data, connected in the trial. Point out the usage signals column.'],['Explain a change','3 min','Click the week-over-week drop and walk through the deals behind it.'],['Run a scenario','3 min',`Use ${t} to model the two biggest deals slipping.`],['Close on time to value','2 min','Five-day setup plan and the security pack for IT.']];
+  return `<div class="stage"><article class="paper doc"><span class="op-eye">Demo script · 14 minutes</span><h3>${esc(t)} demo</h3><span class="doc-meta">For Account Executives · built from Foundations v${F.ver}</span><ol class="steps">${st.map(s=>`<li><b>${s[0]}</b> <span class="doc-meta">${s[1]}</span><p>${esc(s[2])}</p></li>`).join('')}</ol></article></div>`}
+function pvAds(t){return `<div class="stack"><div class="stage"><article class="li" style="max-width:480px"><div class="li-head"><div class="li-av">YB</div><div><b>Your Brand</b><span>Promoted</span></div></div><div class="li-text">Your forecast changed. Do you know why?</div><div class="li-img"><div><small>Ad image</small><p>See why every forecast moves</p></div></div><div class="li-stats"><span><b style="color:#1D2226">See why every forecast moves</b><br>yourbrand.com</span><span class="em-cta" style="padding:6px 12px">Learn more</span></div></article></div>
+  <div class="stage"><div class="gad"><span class="gad-url">Sponsored · yourbrand.com</span><b>Revenue Forecasting Software | See Why Every Number Moves | Live in 5 Days</b><p>Forecasts built on CRM and product usage data. Within 5% of actuals for 80% of customers. Book a demo.</p></div></div>
+  <div class="checks"><span class="pill good">✓ Leads with the winning message test</span><span class="pill good">✓ Headlines within 30 characters each</span></div></div>`}
+function pvDoc(d,o,t){const a=d.agent;let secs;
+  if(a==='analyst')secs=[['Metric',(PB[o.type].kpis||['Pipeline']).join(', ')],['Baseline','Last 90 days from Salesforce and Amplitude'],['Target',o.goal||'Set with the CMO'],['How we measure','Weekly dashboard, final report two weeks after the end date']];
+  else if(AG[a]&&AG[a].L===1)secs=[['Summary',`${d.task} for ${t}, checked against Foundations v${F.ver}.`],['Positioning',F.parts[4][1]+'. '+F.parts[1][1]+'.'],['Who it’s for',F.personas.slice(0,3).map(p=>p.name+' ('+p.role.toLowerCase()+')').join(', ')],['Recommendation','No positioning change. Lead with the Explainable pillar.']];
+  else if(a==='enable'||a==='partner')secs=[['What’s inside','One-page brief, talk track, three objections with answers, links to the deck and demo script'],['Key message',F.umbrella],['Training','30 minutes in the weekly sales meeting, recording in Highspot']];
+  else secs=[['Goal',o.goal||'—'],['Checklist','Owners named · dates set · assets linked · approvals recorded'],['Notes',`Built from Foundations v${F.ver}.`]];
+  return `<div class="stage"><article class="paper doc"><span class="op-eye">${esc(DTYPE.doc)}</span><h3>${esc(d.task)}</h3><span class="doc-meta">${esc(t)} · by ${esc(aName(a))}</span>${secs.map(s=>`<h5>${esc(s[0])}</h5><p>${esc(s[1])}</p>`).join('')}</article></div>`}
+function onePagerFor(f){const p=F.personas.find(x=>x.name===f);return p?{eye:'For '+p.name,h:p.msg,p:F.statement}:{eye:'For '+f,h:F.umbrella,p:F.statement}}
+
+/* campaign / launch deliverables page */
+function vCampaign(){const o=findObj(S.cur);if(!o)return '<div class="empty">Campaign not found.</div>';const pb=PB[o.type];const plan=S.review.find(r=>r.kind==='launch'&&r.lid===o.id);
+  const ds=ensureDels(o,modeFor(o));const c=s=>ds.filter(d=>d.status===s).length;
+  return `<div class="stack"><section class="card"><div class="fhead"><div class="row">${o.tier?`<span class="tier">${o.tier}</span>`:''}<b style="font-size:17px">${esc(o.name)}</b><span class="tagc">${pb.name}</span><span class="muted small">${esc(o.goal||'')}</span></div><div class="row">${plan?`<button class="btn sm" data-act="preview" data-id="${plan.id}">View plan</button>`:''}<button class="btn sm ghost" data-go="gtm">Back to Go-to-market</button></div></div>
+  <div class="row" style="margin-top:12px"><span class="pill good">${c('approved')} approved</span><span class="pill amber">${c('ready')} ready for review</span><span class="pill accent">${c('drafting')} drafting</span><span class="pill neutral">${c('planned')+c('scheduled')} planned or scheduled</span></div></section>
+  <section class="card">${delBrowser(o.id)}</section></div>`}
+
+/* new material request */
+const MTYPES=[['Battlecard','battlecard'],['One-pager','onepager'],['Sales deck','deck'],['Demo script','demo'],['Objection guide','doc'],['Case study','blog'],['Partner kit','doc'],['Email sequence','email']];
+function matPanel(){const r=S.mreq;const fors=[...F.personas.map(p=>p.name),'Competitor A','Competitor B','Partners','All buyers'];
+  return `<section class="release"><div class="row" style="justify-content:space-between"><b>New material · the Materials lead builds it from Foundations v${F.ver}</b><button class="btn sm ghost" data-act="mclose">Close</button></div>
+  <div><div class="eyebrow" style="margin-bottom:6px">Type</div><div class="row">${MTYPES.map(m=>`<button class="relopt" style="padding:6px 11px" data-act="mtype" data-id="${m[0]}" aria-pressed="${r.type===m[0]}"><b>${m[0]}</b></button>`).join('')}</div></div>
+  <div><div class="eyebrow" style="margin-bottom:6px">For</div><div class="row">${fors.map(f=>`<button class="relopt" style="padding:6px 11px" data-act="mfor" data-id="${esc(f)}" aria-pressed="${r.for===f}"><b>${esc(f)}</b></button>`).join('')}</div></div>
+  <div class="field"><label for="m-brief">Brief (optional)</label><textarea id="m-brief" placeholder="e.g. For the November security reviews. Keep it to one page and lead with SSO.">${esc(r.brief)}</textarea></div>
+  <div class="row"><button class="btn primary" data-act="msend" ${r.busy?'disabled':''}>${r.busy?'Materials lead is drafting…':'Send to Materials lead'}</button><span class="hint">It shows up in the Review Room. Once approved, it joins the library and is tracked against the foundations.</span></div></section>`}
+function requestMaterial(){const r=S.mreq;const b=$('#m-brief');if(b)r.brief=b.value;r.busy=true;const type=r.type,f=r.for,dtype=MTYPES.find(m=>m[0]===type)[1];
+  const p=F.personas.find(x=>x.name===f);const tags=p?['persona:'+p.key]:/Competitor/.test(f)?['comp']:['positioning'];const owner=type==='Partner kit'?'partner':type==='Case study'?'proof':'enable';
+  setAgent('mat','working','Drafting '+type.toLowerCase());addFeed('mat',`New request: ${type} for ${f}`);render();
+  setTimeout(()=>{const id='m'+Date.now();S.materials.unshift({id,name:`${type}: ${f}`,type,for:f,tags,built:F.ver,owner,usage:'New',status:'draft',dtype});
+    S.review.unshift({id:'mr-'+id,kind:'material',mid:id,title:`New ${type.toLowerCase()}: ${f}`,agent:owner,sum:`Built from Foundations v${F.ver}${r.brief?'. Brief: '+r.brief:''}.`,status:'pending',v:1});
+    r.busy=false;r.open=false;r.brief='';setAgent('mat','idle','Builds from approved foundations');addFeed(owner,`Draft ready: ${type} for ${f}`);updateBadge();toast(`${type} for ${f} is ready for review`,'review');if(view==='materials')render()},2600)}
+function pvMaterial(it){const m=S.materials.find(x=>x.id===it.mid);const ctx={id:'mat',name:'Your Brand',type:'demand',goal:'',persona:F.personas.some(p=>p.name===m.for)?m.for:null,comp:/Competitor/.test(m.for)?m.for:null};
+  return `<div class="row" style="margin-bottom:12px"><span class="pill neutral">For ${esc(m.for)}</span><span class="pill accent">Built from Foundations v${m.built}</span>${m.tags.map(t=>`<span class="tagc">${TAGN[t]||t}</span>`).join('')}</div>${pvDel({id:m.id,task:m.name,type:m.dtype,agent:m.owner,phase:'',when:''},ctx)}`}
+
 /* ================= events ================= */
 document.addEventListener('click',e=>{
   const th=e.target.closest('[data-theme-set]');if(th){setTheme(th.dataset.themeSet);return}
@@ -897,6 +1091,9 @@ document.addEventListener('click',e=>{
   if(a==='preview'){S.sel=id;setView('review')}
   else if(a==='approve'){if(it.kind==='foundation'){it.from=F.ver;it.to=nextVer(REL[it.rel].impact);approveFoundation(it)}
     if(it.kind==='battlecard'){const m=S.materials.find(x=>x.id==='bcA');m.status='current';m.built=F.ver}
+    if(it.kind==='launch')setTimeout(()=>startProduction(it.lid),400);
+    if(it.kind==='drafts')(S.dels[it.lid]||[]).forEach(d=>{if(d.status==='ready')d.status='approved'});
+    if(it.kind==='material'){const m=S.materials.find(x=>x.id===it.mid);if(m)m.status='current'}
     it.status='approved';addFeed('cmo','You approved: '+it.title);if(it.kind!=='foundation')toast('Approved: '+it.title);S.sendback=false;render()}
   else if(a==='reject'){it.status='rejected';addFeed('cmo','You rejected: '+it.title);render()}
   else if(a==='undo'){it.status='pending';render()}
@@ -934,6 +1131,15 @@ document.addEventListener('click',e=>{
     const obj={id:id2,name:w.name,type:w.type,goal:w.goal,budget:w.budget,status:'Planning',progress:5};
     if(isL){Object.assign(obj,{tier:w.type==='t1'?'T1':'T2',date:w.date||'TBD',col:7,ready:{Product:['a','Release date to confirm'],Sales:['r','Not started'],CS:['r','Not started'],Marketing:['a','Plan in progress'],Web:['r','Not started'],Pricing:['a','To confirm'],Legal:['r','Not started']}});S.launches.push(obj)}else S.campaigns.unshift(obj);
     addFeed('cmo','New request: '+obj.name);S.wiz={step:1,type:'t1',name:'',goal:'',budget:12000,date:'',audience:'',message:''};runTeam(obj);setView('team')}
+  else if(a==='opencamp'){S.cur=id;S.post=0;S.more=false;setView('campaign')}
+  else if(a==='dsel'){S.dsel[b.dataset.l]=id;S.more=false;S.post=0;render()}
+  else if(a==='etab'){S.etab[id]=+b.dataset.i;render()}
+  else if(a==='dapprove'){const l=b.dataset.l;const d=S.dels[l].find(x=>x.id===id);d.status='approved';addFeed('cmo','You approved: '+d.task);const nx=S.dels[l].find(x=>x.status==='ready');if(nx)S.dsel[l]=nx.id;render()}
+  else if(a==='dback'){const l=b.dataset.l;const d=S.dels[l].find(x=>x.id===id);d.status='revising';addFeed('cmo','Sent back: '+d.task);render();setTimeout(()=>{d.status='ready';d.v++;addFeed(d.agent,`Revised: ${d.task} (v${d.v})`);refreshDel(l)},2500)}
+  else if(a==='mopen'){S.mreq.open=true;render()}
+  else if(a==='mclose'){S.mreq.open=false;render()}
+  else if(a==='mtype'||a==='mfor'){const bb=$('#m-brief');if(bb)S.mreq.brief=bb.value;if(a==='mtype')S.mreq.type=id;else S.mreq.for=id;render()}
+  else if(a==='msend')requestMaterial();
   else if(a==='ask')sendChat(b.dataset.q);
   else if(a==='ctoggle'){const c=conn(id);c.on=!c.on;addFeed(c.id,`${c.name} ${c.on?'resumed':'paused'}`);render()}
 });
@@ -953,8 +1159,45 @@ function paint(){const k=$('#kpis');if(k){k.innerHTML=kpiTiles();const el=$('#k-
 setInterval(()=>{S.connectors.forEach(c=>{if(!c.on)return;c.ago+=1;if(c.ago>=c.every){c.ago=0;c.rows+=1+Math.floor(Math.random()*40);const msg=SYNC[c.id]();if(msg)addFeed(c.id,msg);paint()}
   const s=$('#sync-'+c.id);if(s)s.textContent=Math.round(c.ago)+'s ago';const r=$('#rows-'+c.id);if(r)r.textContent=c.rows.toLocaleString('en-US')})},1000);
 
+/* ================= demo mode (#demo): plays the full flow for screen recording ================= */
+const dwait=ms=>new Promise(r=>setTimeout(r,ms));
+function dcap(t,step){let c=$('#demo-cap');if(!c){c=document.createElement('div');c.id='demo-cap';c.className='demo-cap';document.body.appendChild(c)}c.innerHTML=(step?`<small>${step}</small>`:'')+esc(t)}
+function dcur(){let c=$('#demo-cur');if(!c){c=document.createElement('div');c.id='demo-cur';c.className='demo-cur';c.style.left=(innerWidth*0.6)+'px';c.style.top=(innerHeight*0.5)+'px';document.body.appendChild(c)}return c}
+async function dclick(target){const el=typeof target==='string'?$(target):target;if(!el)return false;el.scrollIntoView({block:'nearest',behavior:'smooth'});await dwait(220);
+  const r=el.getBoundingClientRect();const c=dcur();c.style.left=(r.left+Math.min(r.width/2,140))+'px';c.style.top=(r.top+r.height/2)+'px';await dwait(520);
+  c.classList.remove('click');void c.offsetWidth;c.classList.add('click');el.click();await dwait(220);return true}
+const byText=(sel,re)=>[...document.querySelectorAll(sel)].find(e=>re.test(e.textContent));
+async function dtype(sel,text){const el=$(sel);if(!el)return;await dclick(el);el.value='';for(const ch of text){el.value+=ch;await dwait(32)}}
+async function untilDone(pred,max){const t0=Date.now();while(!pred()&&Date.now()-t0<max)await dwait(250)}
+var SPD=1;
+async function runDemo(){S.dels={};SPD=0.5;window.__demoDone=false;
+  setView('command');dcap('I’m the CEO. My AI CMO runs a product marketing team in three layers.','Marketing HQ');await dwait(3000);
+  dcap('I ask for a new campaign: a webinar for RevOps leaders.','1 · The request');await dclick('#nav [data-view=gtm]');await dwait(300);
+  await dclick('[data-go=wizard]');await dwait(250);
+  await dclick('[data-act=wtype][data-id=webinar]');await dwait(350);await dclick('[data-act=wnext]');await dwait(700);
+  dcap('The playbook splits it into tasks across all three layers.','1 · The request');await dclick('[data-act=wnext]');await dwait(1700);
+  await dclick('[data-act=wnext]');await dwait(300);
+  dcap('I send it to the CMO.','1 · The request');await dclick('[data-act=wsend]');
+  dcap('The CMO checks budget and priorities, then briefs the team.','2 · The team works');await dwait(2800);
+  dcap('Specialists in all three layers work in parallel, from the approved foundations.','2 · The team works');await untilDone(()=>!S.running,15000);await dwait(400);
+  const plan=S.review.find(r=>r.kind==='launch'&&r.status==='pending'&&/Board-ready/.test(r.title));
+  dcap('The plan comes back to me as a timeline, not a wall of text.','3 · The result');if(plan){S.sel=plan.id;setView('review');$('#toast').hidden=true}
+  await dwait(900);window.scrollTo({top:420,behavior:'smooth'});await dwait(1600);window.scrollTo({top:0,behavior:'smooth'});await dwait(500);
+  dcap('I approve it, and production starts.','4 · Approve');await dclick(`[data-act=approve][data-id="${plan?plan.id:''}"]`);await dwait(300);
+  const lid=plan?plan.lid:null;if(lid){S.cur=lid;setView('campaign')}
+  dcap('Drafts arrive one by one.','5 · The materials');await untilDone(()=>lid&&S.dels[lid]&&!S.dels[lid].some(d=>d.status==='planned'||d.status==='drafting'),8000);await dwait(300);$('#toast').hidden=true;
+  dcap('Every piece is shown the way it will look: the 3-email invite sequence…','5 · The materials');await dclick(byText('.ditem',/Invite sequence/));await dwait(1400);
+  await dclick('[data-act=etab][data-i="1"]');await dwait(1200);await dclick('[data-act=etab][data-i="2"]');await dwait(1200);
+  await dclick(byText('[data-act=dapprove]',/Approve/));await dwait(400);
+  dcap('…and the landing page. Nothing goes out without my approval.','5 · The materials');await dclick(byText('.ditem',/Landing page/));await dwait(2600);
+  const c=$('#demo-cap');if(c)c.remove();const cu=$('#demo-cur');if(cu)cu.remove();$('#toast').hidden=true;
+  const end=document.createElement('div');end.className='demo-end';end.innerHTML='<div><h2>Marketing HQ</h2><p>An AI product marketing team. Clickable prototype on sample data.</p><p>Next: real agents and live data.</p></div>';document.body.appendChild(end);
+  await dwait(3000);window.__demoDone=true;await dwait(1500);end.remove();SPD=1}
+function demoGate(){const g=document.createElement('div');g.className='demo-start';g.innerHTML='<div><b>Demo mode</b><span class="muted">Start your screen recording, then press Play. The demo runs for about 50 seconds.</span><button class="btn primary" id="demo-play">Play demo</button></div>';document.body.appendChild(g);
+  $('#demo-play').addEventListener('click',async()=>{g.remove();await dwait(800);runDemo()})}
 setTheme(document.documentElement.getAttribute('data-theme')||'light');
 setView((location.hash||'').slice(1)||'command');
+if(location.hash==='#demo')demoGate();
 </script>
 
 </body>

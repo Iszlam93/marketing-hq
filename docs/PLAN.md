@@ -145,8 +145,13 @@ Launches also get a **readiness board** covering Product, Sales, CS, Marketing, 
 - `/review` **Review Room**: visual previews of foundations diffs, launch plans (GTM canvas, timeline, readiness), battlecards, one-pagers, social posts and message tests. You can approve, edit, reject or send back with a comment.
 - `/team` **Team & CMO**: org chart of the three layers with live status, a CMO chat and the run transcript.
 - `/foundations`: tabs for Positioning, ICP & personas, Buying committee, Competitive, Feature catalog and History. It also has a **New release** flow with an impact check, plus direct editing that saves a version.
-- `/materials`: library of assets, showing what each was built from, its version, status and usage, with out-of-date flags.
+- `/materials`: library of assets, showing what each was built from, its version, status and usage, with out-of-date flags. **New material** request: choose the type (battlecard, one-pager, deck, demo script, objection guide, case study, partner kit, email sequence), who it's for, and an optional brief. The Materials lead drafts it from the current foundations, and it goes to the Review Room.
 - `/gtm`: launch calendar, launches with readiness boards, campaigns, and a **New launch or campaign** wizard (choose a playbook, set the goal, preview, send to the CMO).
+- `/gtm/:id` **Deliverables**: every task in the plan and its output.
+  - **Status flow:** planned → drafting → ready → approved. Final-phase tasks are scheduled and drafted closer to their date.
+  - **Approving the plan starts production.** When the drafts are done, a "drafts ready" item appears in the Review Room.
+  - **Each deliverable has a preview of its type:** email sequences (each email in an inbox view, day by day), social posts, landing pages in a browser frame, articles, slides, demo scripts, ads, battlecards, one-pagers and briefs.
+  - **Each deliverable** can be approved or sent back on its own.
 - `/connections`: connector catalog with status and sync.
 
 The clickable reference for all screens is `prototype/index.html`.

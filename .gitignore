@@ -31,3 +31,6 @@ desktop.ini
 .vscode/*
 !.vscode/extensions.json
 .idea/
+
+# demo videos (large binaries)
+media/
