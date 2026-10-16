@@ -6,7 +6,7 @@ pillar: Product marketing craft
 title: "Positioning is a decision, not a sentence"
 visual_style: hand-drawn
 foundation: v1.0
-status: needs_approval
+status: approved
 ---
 
 ## Why
