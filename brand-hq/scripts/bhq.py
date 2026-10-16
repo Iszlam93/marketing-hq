@@ -61,7 +61,7 @@ def esc(s):
 
 # ---------- post files ----------
 def load(path):
-    raw = open(path, encoding="utf-8").read()
+    raw = open(path, encoding="utf-8").read().replace("\r\n", "\n")
     m = re.match(r"^---\n(.*?)\n---\n(.*)$", raw, re.S)
     meta = {}
     for line in m.group(1).splitlines():
@@ -91,7 +91,7 @@ def find(pid):
 
 def set_meta(pid, **kv):
     m = find(pid)
-    raw = open(m["_file"], encoding="utf-8").read()
+    raw = open(m["_file"], encoding="utf-8").read().replace("\r\n", "\n")
     for k, v in kv.items():
         if re.search(rf"^{k}:.*$", raw, re.M):
             raw = re.sub(rf"^{k}:.*$", f"{k}: {v}", raw, count=1, flags=re.M)
@@ -108,7 +108,7 @@ def section(body, name):
 def append_feedback(pid, text):
     m = find(pid)
     stamp = datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M UTC")
-    raw = open(m["_file"], encoding="utf-8").read()
+    raw = open(m["_file"], encoding="utf-8").read().replace("\r\n", "\n")
     if "\n## Feedback" not in raw:
         raw = raw.rstrip() + "\n\n## Feedback\n"
     raw = raw.rstrip() + f"\n- {stamp}: {text}\n"
