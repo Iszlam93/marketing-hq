@@ -6,7 +6,7 @@ pillar: AI for marketers
 title: "Before I publish positioning, I let AI argue against it"
 visual_style: violet editorial
 foundation: v1.0
-status: drafted
+status: needs_approval
 ---
 
 ## Why
