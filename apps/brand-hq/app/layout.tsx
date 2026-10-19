@@ -8,7 +8,7 @@ import { storeMode } from "@/lib/store";
 export const metadata: Metadata = { title: "Brand HQ", description: "Islam's LinkedIn personal brand team" };
 export const dynamic = "force-dynamic";
 
-const themeBoot = `(function(){var t=null;try{t=localStorage.getItem('bhq-theme')}catch(e){}if(!t){t=(window.matchMedia&&matchMedia('(prefers-color-scheme: dark)').matches)?'dark':'light'}document.documentElement.setAttribute('data-theme',t)})();`;
+const themeBoot = `(function(){var t=null;try{t=new URLSearchParams(location.search).get('theme')||localStorage.getItem('bhq-theme')}catch(e){}if(!t){t=(window.matchMedia&&matchMedia('(prefers-color-scheme: dark)').matches)?'dark':'light'}document.documentElement.setAttribute('data-theme',t)})();`;
 
 export default async function RootLayout({ children }: { children: React.ReactNode }) {
   let pending = 0;

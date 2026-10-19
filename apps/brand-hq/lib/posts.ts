@@ -24,6 +24,8 @@ export const PILLARS: Record<string, { share: number; color: string; short: stri
 
 export const STATUS: Record<string, { label: string; tone: string }> = {
   planned: { label: "Planned", tone: "neutral" },
+  awaiting_review: { label: "Awaiting your review", tone: "amber" },
+  on_hold: { label: "On hold", tone: "neutral" },
   drafting: { label: "Drafting", tone: "accent" },
   drafted: { label: "Draft ready", tone: "amber" },
   needs_approval: { label: "Needs your approval", tone: "amber" },
@@ -34,7 +36,7 @@ export const STATUS: Record<string, { label: string; tone: string }> = {
   skipped: { label: "Skipped", tone: "neutral" },
 };
 
-export const NEEDS_YOU = ["needs_approval", "drafted"];
+export const NEEDS_YOU = ["needs_approval", "drafted", "awaiting_review"];
 
 export function parse(raw: string, path: string): Post | null {
   const m = raw.match(/^---\n([\s\S]*?)\n---\n([\s\S]*)$/);

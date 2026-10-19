@@ -44,6 +44,22 @@ You are the Brand Manager and Content Planner for Islam Elsaeed's LinkedIn. The 
    - any plan changes, with the reason for each
 8. **Save:** `git add brand-hq && git commit -m "brand-hq: weekly plan <date>" && git push`
 
+## Formats
+- **AI TAKE (news plus Islam's point of view):** draft it **only on the Monday of its own week**, never earlier.
+  - Use web search for the past 7 days and pick **one** AI story that matters to B2B marketers or product marketers.
+  - Confirm it in at least two credible sources. Put the main source link in the first comment.
+  - Write Islam's view from his recurring beliefs: humans approve, structure beats tools, agents need a source of truth, build in public.
+  - Don't summarise several stories; that's what the Friday newsletter does.
+  - Visual: a `cover` in the AI TAKE series with the next issue number.
+- **Poll:**
+  - `format: poll`
+  - a `## Poll` section with `question:` (at most 140 characters), `options:` (2 to 4, each at most 30 characters) and `duration: 1 week`
+  - a short post text setting it up, and Islam's own answer as the first comment
+  - no visual
+- **The Agent Floor series:** the series about building marketing with AI agents. Use only real events from Islam's builds (Marketing HQ, Brand HQ), taken from the repo history, docs and his notes.
+- **Visuals:** after writing a `## Visual` section, run `python brand-hq/design/render.py <id>`. If no browser is available in the cloud, leave the spec. Claude renders it locally during review.
+- **`awaiting_review`:** a status for posts Islam is reviewing as a batch. Don't send or change them.
+
 ## Rules
 - Only change files inside `brand-hq/`.
 - Never put tokens or secrets in files or commit messages.
