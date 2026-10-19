@@ -1,2 +1,5 @@
 brand-hq/** text eol=lf
-brand-hq/design/out/**/*.pdf binary
+*.png binary
+*.jpg binary
+*.pdf binary
+*.xlsx binary
