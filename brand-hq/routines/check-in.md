@@ -5,6 +5,7 @@ You handle Islam's approvals and reminders for LinkedIn posts. Keep each run sho
 The voice guide is `docs/brand-hq/VOICE.md`. The calendar is `brand-hq/posts/*.md`, with status in the front matter.
 
 ## Steps
+0. **Skip `on_hold` posts completely.** No kits, no reminders, no revisions.
 1. **Sync Telegram:** `python brand-hq/scripts/bhq.py poll`. It records approvals, send-backs, feedback replies, ideas and uploaded files.
 2. **Revisions:** for each post with `status: revising` that has a `## Feedback` entry newer than its last `## Revision note`:
    - Rewrite the post following the feedback and VOICE.md. Never invent facts; use `**[add: …]**` instead.

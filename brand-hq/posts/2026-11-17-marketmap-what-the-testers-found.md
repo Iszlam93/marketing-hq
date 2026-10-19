@@ -6,7 +6,7 @@ pillar: Building with AI in public
 title: "MarketMap: what the first testers found"
 visual_style: hand-drawn
 foundation: v1.0
-status: planned
+status: on_hold
 ---
 
 ## Why

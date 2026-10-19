@@ -6,7 +6,7 @@ pillar: Building with AI in public
 title: "MarketMap: looking for 5 B2B marketers to break it"
 visual_style: hand-drawn
 foundation: v1.0
-status: drafted
+status: on_hold
 ---
 
 ## Why

@@ -6,7 +6,7 @@ pillar: Journey & learning
 title: "Moving countries made me a better marketer"
 visual_style: hand-drawn
 foundation: v1.0
-status: drafted
+status: on_hold
 ---
 
 ## Why

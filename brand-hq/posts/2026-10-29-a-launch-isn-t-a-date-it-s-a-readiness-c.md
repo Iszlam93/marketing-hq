@@ -6,7 +6,7 @@ pillar: Product marketing craft
 title: "A launch isn't a date. It's a readiness check."
 visual_style: hand-drawn
 foundation: v1.0
-status: drafted
+status: on_hold
 ---
 
 ## Why

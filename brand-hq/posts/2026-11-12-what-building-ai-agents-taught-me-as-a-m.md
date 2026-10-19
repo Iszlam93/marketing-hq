@@ -6,7 +6,7 @@ pillar: Building with AI in public
 title: "What building AI agents taught me as a marketer, not an engineer"
 visual_style: hand-drawn
 foundation: v1.0
-status: drafted
+status: on_hold
 ---
 
 ## Why

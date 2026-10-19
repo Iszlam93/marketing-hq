@@ -6,7 +6,7 @@ pillar: Product marketing craft
 title: "Sales doesn't ignore battlecards. It ignores old ones."
 visual_style: hand-drawn
 foundation: v1.0
-status: drafted
+status: on_hold
 ---
 
 ## Why

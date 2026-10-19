@@ -31,6 +31,25 @@ Built from Islam's own posts: the MarketMap demo, the desk story, and "Tools are
 - **Links go in the first comment,** never in the post.
 - **Off-limits:** former employer names and branding, confidential work details, salary, and job-search negativity.
 
+## Don't sound like AI (added 19 Oct 2026, after Islam's feedback)
+Islam's verdict on the first drafts was "generic, AI-ish". These patterns caused it.
+
+**Banned or rationed:**
+- **Contrast closers** like "The sentence is the receipt. The decision is the work.": at most **once a month**, never as a default ending.
+- **"X, not Y" / "It's not A. It's B."** framing: at most once a month.
+- **Tidy groups of three** (three bullets, three adjectives, three lessons): vary it with 2, 4 or none.
+- **Arrow (→) lists:** at most one post in four.
+- **Stock phrases:** "Here's the part I care about", "Here's the thing", "Let that sink in", "game-changer", "in today's world", "the real question is", "spoiler:", "unpopular opinion", "I'll say it again", rhetorical "Why does this matter?"
+- **One-line paragraphs used for drama** in every line. Mix in normal 2 to 3 sentence paragraphs.
+- **Hooks built as a fake-profound split** ("Most X are written. The good ones are decided.").
+
+**Required:**
+- **Islam's raw material.** Every post starts from something Islam actually said, did, saw or decided. Drafts are written from his answers, not around them. If there's no real material, ask him; don't invent it.
+- **A specific detail no one else could write:** a name of a tool, a number, a moment, a mistake, a place.
+- **A real opinion,** even a small one, that someone could disagree with.
+- **Plain endings.** A question is fine if it's genuinely what he wants to know, but it's not mandatory.
+- **Read it aloud.** If it sounds like a LinkedIn template rather than Islam talking to a colleague, rewrite it.
+
 ## Before publishing, check
 - [ ] Does line 1 stand on its own if it's the only thing someone reads?
 - [ ] Is there at least one concrete detail (a number, an object, a date)?
