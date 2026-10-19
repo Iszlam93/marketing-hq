@@ -34,3 +34,6 @@ desktop.ini
 
 # demo videos (large binaries)
 media/
+
+# Brand HQ rendered post visuals are needed for posting
+!brand-hq/design/out/
