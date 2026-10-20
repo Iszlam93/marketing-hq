@@ -6,46 +6,48 @@ pillar: Building with AI in public
 format: image
 series: THE AGENT FLOOR
 issue: "001"
-title: "I built an AI team to write my LinkedIn posts. Then I rejected everything it wrote."
+title: "Meet the team that runs my LinkedIn"
 visual_style: swiss-grid
 foundation: v1.0
-status: revising
+status: awaiting_review
 ---
 
 ## Why
-True story from this week, and the start of The Agent Floor series. Honest, specific and a little self-deprecating. It shows judgment, not just tooling.
+Your feedback: show how the team works (the Team window, Notion, Telegram) with a simple explanation. It opens The Agent Floor with the whole system in one picture.
 
 ## Post
-Last week I built an AI team to run my LinkedIn.
+Meet the team that runs my LinkedIn. Five members, one human approver.
 
-A Brand Manager that keeps the goal in view, a planner that always has the next month mapped out, a writer, a designer, and a Telegram bot that pings me when something needs my approval.
+Here's how it works, in plain terms.
 
-It worked. Four weeks of posts, fully drafted, within a day.
+The Brand Manager plans. Every Monday it looks at what I've posted and what's coming up, and keeps the next 30 days filled with two posts a week.
 
-And I rejected all of them.
+The Writer and the Designer do the work. The Writer drafts in my voice, from things I've actually done. The Designer turns each post into a visual in one consistent style.
 
-Nothing in them was wrong. They were just obviously written by AI. Every post ended on a neat one-liner. Every list had exactly three points. I could see the template behind each sentence, and if I could see it, so could everyone else.
+Notion is the shared desk. Every post lives there as one page with its text, its visual and its status. When I change a status, the team sees it.
 
-So I changed two things.
+Telegram is how they reach me. Drafts arrive on my phone with two buttons: approve, or send back with a comment. A check-in agent picks up my answer within the hour and revises the draft.
 
-The rules: my voice guide now bans the habits that gave it away, and any rhetorical trick is allowed once a month at most.
+Nothing goes out until I approve it.
 
-The input: the agents no longer write from a topic. They write from something I actually did or said. This post is the first one made that way.
+The screenshot is the team view of the small app I built around all this: who does what, when each agent last ran, and what it changed.
 
-Building the team took a few evenings. Teaching it to sound like me is the real work, and I suspect that's true for any team.
-
-This is the first post in a series about running marketing with AI agents: what works, what breaks, and what I'd do differently. I'm calling it The Agent Floor.
+This is the first post of The Agent Floor, a series about running marketing with AI agents, including the parts that don't work yet.
 
 ## First comment
-Where this started: a few weeks ago I watched one video about AI agents and opened my laptop. Earlier posts on the AI marketing team: [link]
+How it started: a few weeks ago I watched one video about AI agents and opened my laptop. The AI marketing team I built before this: [link]
 
 ## Visual
-template: cover
+template: buildlog
 series: THE AGENT FLOOR
 issue: 001
 context: Brand HQ
-headline: My AI team wrote a month of posts. I *rejected* every one.
+headline: Meet the *team* that runs my LinkedIn.
+screenshot: brand-hq/design/shots/brand-hq-team.png
 
 ## Feedback
 - 2026-10-20 13:50 UTC: I dont like this. if we want to show how I built an AI team that`s fine, but lets then use team and agents window to show hwo team work, how we use notion, connect with telegram and just an easy explaantion for what we do
 - 2026-10-20 13:50 UTC: I dont like this. if we want to show how I built an AI team that`s fine, but lets then use team and agents window to show hwo team work, how we use notion, connect with telegram and just an easy explaantion for what we do
+
+## Revision note
+- 2026-10-20 (v2, by Claude): rewritten from your feedback. It now shows the team view, Notion and Telegram, with a plain explanation. New build-log visual with a real screenshot of the Team page.
