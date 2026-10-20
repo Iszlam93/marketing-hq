@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { getPost, section, fmtDate } from "@/lib/posts";
+import { getPost, getVisuals, parsePoll, section, fmtDate } from "@/lib/posts";
 import { approve, sendBack, saveEdit, markPosted } from "@/app/actions";
 import { PillarChip, StatusPill } from "@/components/ui";
 import LinkedInPreview from "@/components/LinkedInPreview";
@@ -17,13 +17,14 @@ export default async function ReviewPost({
   const p = await getPost(id);
   if (!p) notFound();
   const text = section(p.body, "Post");
+  const visuals = await getVisuals(p.id);
+  const poll = parsePoll(section(p.body, "Poll"));
   const comment = section(p.body, "First comment");
-  const visual = section(p.body, "Visual");
   const why = section(p.body, "Why");
   const notes = section(p.body, "Notes");
   const feedback = section(p.body, "Feedback");
   const revision = section(p.body, "Revision note");
-  const canAct = ["needs_approval", "drafted", "revising", "approved"].includes(p.status) && !!text;
+  const canAct = ["awaiting_review", "needs_approval", "drafted", "revising", "approved"].includes(p.status) && !!text;
   const hasPlaceholder = text.includes("[add:");
 
   return (
@@ -39,7 +40,7 @@ export default async function ReviewPost({
             <h2>{p.title}</h2>
             <div className="row" style={{ marginTop: 6 }}>
               <PillarChip pillar={p.pillar} />
-              <span className="muted small">Visual: {p.visual_style}</span>
+              <span className="muted small">{p.meta.series ? `${p.meta.series} · ${p.meta.issue}` : p.meta.format === "poll" ? "Poll" : ""}</span>
             </div>
           </div>
           <div className="rv-actions">
@@ -68,7 +69,7 @@ export default async function ReviewPost({
 
         {text ? (
           <div className="stage">
-            <LinkedInPreview text={text} date={fmtDate(p.date)} time={p.time} visual={visual} style={p.visual_style} />
+            <LinkedInPreview text={text} date={fmtDate(p.date)} time={p.time} images={visuals.images} pdf={visuals.pdf} poll={poll} />
           </div>
         ) : (
           <div className="empty">Not drafted yet. The Monday planner drafts posts in the week before they go out.</div>

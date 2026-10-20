@@ -71,6 +71,20 @@ export async function getPosts(): Promise<Post[]> {
   return (posts.filter(Boolean) as Post[]).sort((a, b) => (a.date + a.time).localeCompare(b.date + b.time));
 }
 
+export async function getVisuals(id: string): Promise<{ images: string[]; pdf: string | null }> {
+  const files = (await listFiles(`brand-hq/design/out/${id}`)).map((f) => f.split("/").pop()!);
+  return {
+    images: files.filter((f) => f.endsWith(".png")).sort().map((f) => `/api/visual/${id}/${f}`),
+    pdf: files.includes("carousel.pdf") ? `/api/visual/${id}/carousel.pdf` : null,
+  };
+}
+
+export function parsePoll(text: string): { question: string; options: string[] } | null {
+  const q = text.match(/question:\s*(.+)/);
+  if (!q) return null;
+  return { question: q[1].trim(), options: [...text.matchAll(/^\s+-\s+(.+)$/gm)].map((m) => m[1].trim()) };
+}
+
 export async function getPost(id: string) {
   return (await getPosts()).find((p) => p.id === id) || null;
 }

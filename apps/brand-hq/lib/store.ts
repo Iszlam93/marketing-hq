@@ -66,6 +66,47 @@ export async function readFile(p: string): Promise<{ content: string; sha?: stri
   }
 }
 
+/** Local mode: commit and push the change so the cloud agents see it (same effect as the GitHub API path). */
+function syncLocal(p: string, message: string) {
+  if (process.env.LOCAL_GIT_SYNC === "off") return;
+  // eslint-disable-next-line @typescript-eslint/no-require-imports
+  const { execFileSync } = require("child_process") as typeof import("child_process");
+  const git = (...args: string[]) => execFileSync("git", args, { cwd: LOCAL_ROOT, stdio: "pipe" });
+  try {
+    git("add", p);
+    git("commit", "-m", message);
+    try {
+      git("pull", "--rebase", "--autostash", "-q");
+    } catch {
+      /* offline or conflict: push below will report */
+    }
+    git("push", "-q");
+  } catch (e) {
+    console.error("[brand-hq] local git sync failed:", (e as Error).message);
+  }
+}
+
+/** Binary read (images, PDFs) for the visual route. */
+export async function readBinary(p: string): Promise<Buffer | null> {
+  if (storeMode === "local") {
+    try {
+      return await fs.readFile(path.join(LOCAL_ROOT, p));
+    } catch {
+      return null;
+    }
+  }
+  try {
+    const res = await fetch(`https://api.github.com/repos/${REPO}/contents/${enc(p)}?ref=${BRANCH}`, {
+      cache: "no-store",
+      headers: { Authorization: `Bearer ${TOKEN}`, Accept: "application/vnd.github.raw+json", "X-GitHub-Api-Version": "2022-11-28" },
+    });
+    if (!res.ok) return null;
+    return Buffer.from(await res.arrayBuffer());
+  } catch {
+    return null;
+  }
+}
+
 /** Read-modify-write with one retry if an agent committed in between. */
 export async function updateFile(p: string, transform: (old: string) => string, message: string) {
   for (let attempt = 0; attempt < 2; attempt++) {
@@ -75,6 +116,7 @@ export async function updateFile(p: string, transform: (old: string) => string, 
     if (next === cur.content) return;
     if (storeMode === "local") {
       await fs.writeFile(path.join(LOCAL_ROOT, p), next, "utf8");
+      syncLocal(p, message);
       return;
     }
     try {

@@ -2,7 +2,7 @@
 import { cookies } from "next/headers";
 import { redirect } from "next/navigation";
 import { revalidatePath } from "next/cache";
-import { getPost, setMeta, replaceSection, appendFeedback } from "@/lib/posts";
+import { getPost, getPosts, section, setMeta, replaceSection, appendFeedback, todayISO } from "@/lib/posts";
 import { updateFile } from "@/lib/store";
 import { COOKIE, sessionValue } from "@/lib/auth";
 import { notify } from "@/lib/telegram";
@@ -69,4 +69,18 @@ export async function login(form: FormData) {
     maxAge: 60 * 60 * 24 * 90,
   });
   redirect("/");
+}
+
+export async function approveAll() {
+  const today = todayISO();
+  const posts = (await getPosts()).filter(
+    (p) => p.date >= today && ["awaiting_review", "needs_approval", "drafted"].includes(p.status) &&
+      section(p.body, "Post") && !section(p.body, "Post").includes("[add:"),
+  );
+  for (const p of posts) {
+    await updateFile(p.path, (raw) => setMeta(raw, { status: "approved" }), `brand-hq(app): approve ${p.id}`);
+  }
+  if (posts.length) await notify(`✅ Approved ${posts.length} posts in Brand HQ. Post kits arrive on each posting day around 08:00.`);
+  revalidatePath("/", "layout");
+  redirect("/review?approved=" + posts.length);
 }
