@@ -9,7 +9,7 @@ issue: "001"
 title: "Meet the team that runs my LinkedIn"
 visual_style: swiss-grid
 foundation: v1.0
-status: awaiting_review
+status: revising
 ---
 
 ## Why
@@ -51,3 +51,4 @@ screenshot: brand-hq/design/shots/brand-hq-team.png
 
 ## Revision note
 - 2026-10-20 (v2, by Claude): rewritten from your feedback. It now shows the team view, Notion and Telegram, with a plain explanation. New build-log visual with a real screenshot of the Team page.
+- 2026-10-20 14:00 UTC: This is better! but we need designer here! the image is not clear, maybe we can enlarge it or put multipkle image, or maybe turn it to GIF
