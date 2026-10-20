@@ -6,6 +6,7 @@ import { getPost, getPosts, section, setMeta, replaceSection, appendFeedback, to
 import { updateFile } from "@/lib/store";
 import { COOKIE, sessionValue } from "@/lib/auth";
 import { notify } from "@/lib/telegram";
+import { addRequest } from "@/lib/requests";
 
 const stamp = () => new Date().toISOString().slice(0, 16).replace("T", " ") + " UTC";
 
@@ -69,6 +70,15 @@ export async function login(form: FormData) {
     maxAge: 60 * 60 * 24 * 90,
   });
   redirect("/");
+}
+
+export async function sendRequest(form: FormData) {
+  const text = String(form.get("request") || "").trim();
+  if (!text) redirect("/team?err=request#requests");
+  await addRequest(text, "app");
+  await notify(`📥 Request saved from the app: <i>${text.replace(/</g, "&lt;")}</i>. The Editor picks it up on its next run.`);
+  revalidatePath("/team");
+  redirect("/team?sent=1#requests");
 }
 
 export async function approveAll() {

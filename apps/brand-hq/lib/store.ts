@@ -107,6 +107,44 @@ export async function readBinary(p: string): Promise<Buffer | null> {
   }
 }
 
+/** Create or replace a file (text or binary). Used by the Telegram bot for the inbox. */
+export async function writeFile(p: string, data: string | Buffer, message: string) {
+  const buf = typeof data === "string" ? Buffer.from(data, "utf8") : data;
+  if (storeMode === "local") {
+    await fs.mkdir(path.dirname(path.join(LOCAL_ROOT, p)), { recursive: true });
+    await fs.writeFile(path.join(LOCAL_ROOT, p), buf);
+    syncLocal(p, message);
+    return;
+  }
+  for (let attempt = 0; attempt < 2; attempt++) {
+    let sha: string | undefined;
+    try {
+      sha = ((await gh(`/repos/${REPO}/contents/${enc(p)}?ref=${BRANCH}`)) as { sha: string }).sha;
+    } catch (e) {
+      if ((e as { status?: number }).status !== 404) throw e;
+    }
+    try {
+      await gh(`/repos/${REPO}/contents/${enc(p)}`, {
+        method: "PUT",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ message, content: buf.toString("base64"), sha, branch: BRANCH }),
+      });
+      return;
+    } catch (e) {
+      const s = (e as { status?: number }).status;
+      if ((s === 409 || s === 422) && attempt === 0) continue;
+      throw e;
+    }
+  }
+}
+
+/** Append a line to a text file, creating it with a header if it doesn't exist. */
+export async function appendLine(p: string, line: string, header: string, message: string) {
+  const cur = await readFile(p);
+  const base = cur ? cur.content.replace(/\s*$/, "\n") : header.replace(/\s*$/, "\n\n");
+  await writeFile(p, base + line + "\n", message);
+}
+
 /** Read-modify-write with one retry if an agent committed in between. */
 export async function updateFile(p: string, transform: (old: string) => string, message: string) {
   for (let attempt = 0; attempt < 2; attempt++) {

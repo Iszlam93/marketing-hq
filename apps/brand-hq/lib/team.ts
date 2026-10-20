@@ -24,8 +24,8 @@ export const TEAM: Agent[] = [
     routineUrl: ROUTINES + "trig_01Hz43Zmo45JJxJjkkKtA8mC", instructions: "brand-hq/routines/weekly-planner.md", match: /weekly plan/i,
   },
   {
-    id: "checkin", name: "Check-in agent", role: "Approvals, revisions, posting day",
-    does: ["Reads your Telegram taps and replies", "Revises drafts you send back", "Sends the post kit on posting day", "Reminds you the day before"],
+    id: "checkin", name: "Editor", role: "Revisions, requests, posting day",
+    does: ["Revises drafts you send back", "Handles your requests and ideas", "Sends the post kit on posting day", "Reminds you the day before"],
     schedule: "Hourly, 07:00–22:00", model: "Claude Sonnet 5.5",
     routineUrl: ROUTINES + "trig_01Dh7DMnD9gsdLTbeLrY2PhZ", instructions: "brand-hq/routines/check-in.md", match: /check-in/i,
   },
@@ -40,9 +40,9 @@ export const TEAM: Agent[] = [
     schedule: "Inside the Brand Manager run", model: "Claude + renderer", instructions: "docs/brand-hq/BRAND-KIT.md",
   },
   {
-    id: "reminder", name: "Reminder", role: "Your Telegram bot",
-    does: ["Sends drafts with Approve / Send back buttons", "Sends post kits and reminders", "Collects your ideas and analytics exports"],
-    schedule: "Always on · @Pers_Iszlam93bot", model: "Telegram", instructions: "brand-hq/scripts/bhq.py", match: /\(app\)/i,
+    id: "reminder", name: "Concierge", role: "Your Telegram bot, instant replies",
+    does: ["Answers every tap and message within seconds (no AI, free)", "Saves approvals, feedback, requests and files", "Tells you when the Editor will pick it up"],
+    schedule: "Always on · @Pers_Iszlam93bot", model: "Code on Vercel", instructions: "apps/brand-hq/app/api/telegram/route.ts", match: /\(telegram\)|\(app\)/i,
   },
 ];
 
@@ -51,6 +51,7 @@ export type Activity = { when: string; who: string; agentId: string | null; mess
 function classify(msg: string): { who: string; agentId: string | null } {
   if (/weekly plan/i.test(msg)) return { who: "Brand Manager", agentId: "bm" };
   if (/check-in/i.test(msg)) return { who: "Check-in agent", agentId: "checkin" };
+  if (/\(telegram\)/i.test(msg)) return { who: "You, via Telegram", agentId: "reminder" };
   if (/\(app\)/i.test(msg)) return { who: "You, in the app", agentId: null };
   return { who: "Claude (setup)", agentId: null };
 }

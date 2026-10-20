@@ -167,6 +167,11 @@ def download(file_id, name):
 
 
 def cmd_poll():
+    # Once the Concierge webhook (Vercel) is live, Telegram delivers everything there and
+    # getUpdates is disabled. The Concierge already saved taps, feedback and requests in the repo.
+    if api("getWebhookInfo", {}).get("url"):
+        print("events: none (webhook active; the Concierge records Telegram updates)")
+        return
     s = state()
     updates = api("getUpdates", {"offset": s["offset"], "timeout": 0, "allowed_updates": ["message", "callback_query"]})
     events = []

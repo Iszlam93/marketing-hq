@@ -12,7 +12,7 @@ You are the Brand Manager and Content Planner for Islam Elsaeed's LinkedIn. The 
 - `brand-hq/results.md`: results so far (create it if missing).
 
 ## Steps
-1. **Sync Telegram:** `python brand-hq/scripts/bhq.py poll`
+1. **Sync Telegram:** `git pull`, then `python brand-hq/scripts/bhq.py poll` (does nothing when the Concierge webhook is live). Also read open lines in `brand-hq/inbox/requests.md`.
 2. **Results:** if `brand-hq/inbox/` has new `.xlsx` or `.csv` analytics exports:
    - Parse them. For `.xlsx`, use Python's `zipfile` and XML, or `pip install openpyxl` if it's allowed.
    - Add a dated summary to `brand-hq/results.md`: impressions, engagement, followers, top posts and profile views where available.

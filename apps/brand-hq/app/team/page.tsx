@@ -1,11 +1,15 @@
 import { TEAM, getActivity, nextRun, fmtAms } from "@/lib/team";
 import { getPosts, todayISO, NEEDS_YOU } from "@/lib/posts";
 import { PageHead } from "@/components/ui";
+import { openRequests } from "@/lib/requests";
+import { sendRequest } from "@/app/actions";
 
 const POS: Record<string, [number, number]> = { you: [480, 46], bm: [480, 156], writer: [130, 280], designer: [365, 280], checkin: [600, 280], reminder: [835, 280] };
 
-export default async function Team() {
-  const [activity, posts] = await Promise.all([getActivity(30), getPosts()]);
+export default async function Team({ searchParams }: { searchParams: Promise<{ sent?: string; err?: string }> }) {
+  const sp = await searchParams;
+  const [activity, posts, requests] = await Promise.all([getActivity(30), getPosts(), openRequests()]);
+  const nextEditor = nextRun("checkin");
   const today = todayISO();
   const waiting = posts.filter((p) => p.date >= today && NEEDS_YOU.includes(p.status)).length;
   const last: Record<string, string | undefined> = {};
@@ -28,7 +32,7 @@ export default async function Team() {
       <section className="card">
         <div className="card-head"><span className="eyebrow">Org chart</span><span className="muted small">{waiting} post{waiting === 1 ? "" : "s"} waiting for your approval</span></div>
         <div className="tbl-wrap">
-          <svg className="org bh" viewBox="0 0 960 330" role="img" aria-label="You, then the Brand Manager, then Writer, Designer, Check-in agent and Reminder" style={{ minWidth: 720 }}>
+          <svg className="org bh" viewBox="0 0 960 330" role="img" aria-label="You, then the Brand Manager, then Writer, Designer, Editor and Concierge" style={{ minWidth: 720 }}>
             <path className="edge" d="M480 76 V126" />
             {["writer", "designer", "checkin", "reminder"].map((id) => (
               <path key={id} className="edge" d={`M480 186 V220 H${POS[id][0]} V250`} />
@@ -37,8 +41,8 @@ export default async function Team() {
             {node("bm", "Brand Manager", last.bm ? `Last run ${fmtAms(last.bm)}` : "Mondays 07:00", "#E5462C", 230)}
             {node("writer", "Writer", "Your voice", "#3A5FB5")}
             {node("designer", "Designer", "Swiss Grid visuals", "#8A56A8")}
-            {node("checkin", "Check-in agent", last.checkin ? `Last run ${fmtAms(last.checkin)}` : "Hourly 07–22", "#0A7470")}
-            {node("reminder", "Reminder", "Telegram bot", "#B4761C")}
+            {node("checkin", "Editor", last.checkin ? `Last run ${fmtAms(last.checkin)}` : "Hourly 07–22", "#0A7470")}
+            {node("reminder", "Concierge", "Telegram · instant", "#B4761C")}
           </svg>
         </div>
       </section>
@@ -68,6 +72,22 @@ export default async function Team() {
         })}
       </div>
 
+      <section className="card stack" id="requests" style={{ gap: 12 }}>
+        <div className="card-head"><span className="eyebrow">Requests box</span><span className="muted small">{nextEditor ? `Editor picks these up ${fmtAms(nextEditor)}` : "Editor picks these up on its next run"}</span></div>
+        {sp.sent ? <div className="pill good" style={{ alignSelf: "flex-start" }}>Saved. You'll get a Telegram message when it's done.</div> : null}
+        <form action={sendRequest} className="stack" style={{ gap: 8 }}>
+          <textarea id="request" name="request" rows={3} className="ta" placeholder={`e.g. "Move Thursday's post to next week" or "Idea: a post about the Notion setup"`} />
+          {sp.err ? <span className="small" style={{ color: "var(--bad, #c0392b)" }}>Write your request first.</span> : null}
+          <button className="btn primary" style={{ alignSelf: "flex-start" }}>Send to the team</button>
+        </form>
+        {requests.length ? (
+          <div className="stack" style={{ gap: 6 }}>
+            <span className="eyebrow">Waiting ({requests.length})</span>
+            <ul className="rules">{requests.map((r) => <li key={r}>{r}</li>)}</ul>
+          </div>
+        ) : <span className="muted small">No open requests.</span>}
+      </section>
+
       <section className="card">
         <div className="card-head"><span className="eyebrow">Recent activity</span><span className="muted small">What the team changed in your content, newest first</span></div>
         <ol className="feed" style={{ maxHeight: 420 }}>
@@ -88,7 +108,7 @@ export default async function Team() {
           <li><b>Run, pause or reschedule an agent:</b> use the <b>Manage</b> button on its card. It opens the agent in Claude.</li>
           <li><b>Change how they write or design:</b> edit the Voice and Brand Kit pages in your Notion Brand HQ. Every agent reads them on each run.</li>
           <li><b>Change what they do:</b> edit their Instructions, or tell me and I'll update them.</li>
-          <li><b>Chat with the Brand Manager:</b> coming with the online version (Vercel), using your Claude API key.</li>
+          <li><b>Ask the team for something:</b> use the Requests box above, or just message the Telegram bot. You get an instant "saved" reply; the Editor does the work on its next run.</li>
         </ul>
       </section>
     </div>
