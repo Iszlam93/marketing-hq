@@ -52,3 +52,4 @@ screenshot: brand-hq/design/shots/brand-hq-team.png
 ## Revision note
 - 2026-10-20 (v2, by Claude): rewritten from your feedback. It now shows the team view, Notion and Telegram, with a plain explanation. New build-log visual with a real screenshot of the Team page.
 - 2026-10-20 14:00 UTC: This is better! but we need designer here! the image is not clear, maybe we can enlarge it or put multipkle image, or maybe turn it to GIF
+- 2026-10-20 (check-in): visual feedback needs the Designer, not a text rewrite. The renderer only takes one screenshot per build-log image and there are no real Notion or Telegram screenshots yet. Post text unchanged; waiting on your screenshots or a call on format.
