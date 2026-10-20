@@ -8,6 +8,7 @@ const ITEMS = [
   { href: "/plan", label: "30-day plan", group: "This week" },
   { href: "/foundation", label: "Foundation & voice", group: "Brand" },
   { href: "/history", label: "History & results", group: "Brand" },
+  { href: "/team", label: "Team & agents", group: "Team" },
 ];
 
 export default function Nav({ pending }: { pending: number }) {
