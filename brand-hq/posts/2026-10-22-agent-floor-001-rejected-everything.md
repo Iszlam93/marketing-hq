@@ -48,3 +48,4 @@ headline: My AI team wrote a month of posts. I *rejected* every one.
 
 ## Feedback
 - 2026-10-20 13:50 UTC: I dont like this. if we want to show how I built an AI team that`s fine, but lets then use team and agents window to show hwo team work, how we use notion, connect with telegram and just an easy explaantion for what we do
+- 2026-10-20 13:50 UTC: I dont like this. if we want to show how I built an AI team that`s fine, but lets then use team and agents window to show hwo team work, how we use notion, connect with telegram and just an easy explaantion for what we do
