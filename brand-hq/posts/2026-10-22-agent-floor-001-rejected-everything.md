@@ -10,6 +10,7 @@ title: "Meet the team that runs my LinkedIn"
 visual_style: swiss-grid
 foundation: v1.0
 status: revising
+reminded: 2026-10-21
 ---
 
 ## Why
