@@ -112,10 +112,13 @@ export function replaceSection(raw: string, name: string, text: string): string 
   return re.test(raw) ? raw.replace(re, `$1${text.trim()}\n\n`) : raw.trimEnd() + `\n\n## ${name}\n${text.trim()}\n`;
 }
 
+/** Adds a dated line at the end of the ## Feedback section, wherever that section sits in the file. */
 export function appendFeedback(raw: string, text: string, when: string): string {
-  let out = raw.trimEnd();
-  if (!/\n## Feedback\s*\n/.test(out)) out += "\n\n## Feedback";
-  return out + `\n- ${when}: ${text.replace(/\n+/g, " ")}\n`;
+  const line = `- ${when}: ${text.replace(/\n+/g, " ")}`;
+  const out = raw.replace(/\r\n/g, "\n").trimEnd();
+  const re = /(^## Feedback\s*\n)([\s\S]*?)(?=^## |$(?![\s\S]))/m;
+  if (!re.test(out)) return `${out}\n\n## Feedback\n${line}\n`;
+  return out.replace(re, (_m, head: string, body: string) => `${head}${body.trimEnd() ? body.trimEnd() + "\n" : ""}${line}\n\n`).trimEnd() + "\n";
 }
 
 // ---- dates (Europe/Amsterdam) ----
