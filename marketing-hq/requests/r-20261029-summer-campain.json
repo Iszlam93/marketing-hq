@@ -6,8 +6,71 @@
   "brief": "Aud: finance mid size \nObjective: to be seen in the mid size finance comapnies in LATAM",
   "links": [],
   "createdAt": "2026-10-29T18:27:49Z",
-  "status": "new",
-  "plan": null,
-  "notion": null,
-  "updatedAt": "2026-10-29T18:27:49Z"
+  "status": "in_progress",
+  "plan": {
+    "createdAt": "2026-11-01T14:17:16Z",
+    "rationale": "Default plan for campaign-plan (logic tree, then campaign plan with A/B test design). I added two tasks. The brief targets \"finance mid size\" in \"LATAM\", but every approved claim and all segment evidence in the product file covers UK and EU finance only, so I added a job-ad ICP research task for LATAM mid-size finance first, and a positioning task for that segment, because the campaign plan needs messages from a positioning asset and the existing UK/EU positioning (r-20261029-generic-one-pager-for-uk-and-eu-finance-platform--t1) is for a different region and not yet approved. Gaps for Islam: the objective \"to be seen\" is awareness with no KPI or target, the brief gives no budget, dates or channels, and \"summer\" is ambiguous for LATAM (southern-hemisphere summer is December to February). LATAM is outside the locked UK/EU bet, so treat this as an exploratory plan.",
+    "tasks": [
+      {
+        "id": "t1",
+        "agentId": "research",
+        "skillIds": [
+          "icp-discovery-job-ads"
+        ],
+        "title": "Find and rank mid-size finance ICPs in LATAM from public job ads",
+        "dependsOn": [],
+        "outputAssetId": "r-20261029-summer-campain--t1",
+        "status": "in_progress",
+        "note": "Added: the product file has no LATAM evidence; the brief names LATAM mid-size finance."
+      },
+      {
+        "id": "t2",
+        "agentId": "strategy",
+        "skillIds": [
+          "logic-tree"
+        ],
+        "title": "Break the LATAM visibility objective into a logic tree",
+        "dependsOn": [
+          "t1"
+        ],
+        "outputAssetId": "r-20261029-summer-campain--t2",
+        "status": "pending"
+      },
+      {
+        "id": "t3",
+        "agentId": "strategy",
+        "skillIds": [
+          "positioning"
+        ],
+        "title": "Write positioning and messaging for LATAM mid-size finance buyers",
+        "dependsOn": [
+          "t1"
+        ],
+        "outputAssetId": "r-20261029-summer-campain--t3",
+        "status": "pending",
+        "note": "Added: the campaign plan needs messages from a positioning asset; the existing positioning covers UK/EU only and is not approved."
+      },
+      {
+        "id": "t4",
+        "agentId": "strategy",
+        "skillIds": [
+          "campaign-plan",
+          "ab-test-design"
+        ],
+        "title": "Plan the LATAM summer visibility campaign with an honest message test",
+        "dependsOn": [
+          "t2",
+          "t3"
+        ],
+        "outputAssetId": "r-20261029-summer-campain--t4",
+        "status": "pending"
+      }
+    ]
+  },
+  "notion": {
+    "pageId": "40b265ea-4dd8-81aa-8645-e2975f686fbf",
+    "url": "https://app.notion.com/p/40b265ea4dd881aa8645e2975f686fbf",
+    "syncedAt": "2026-11-01T14:20:00Z"
+  },
+  "updatedAt": "2026-11-01T14:20:00Z"
 }
