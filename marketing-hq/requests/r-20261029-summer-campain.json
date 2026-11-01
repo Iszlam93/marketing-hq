@@ -6,7 +6,7 @@
   "brief": "Aud: finance mid size \nObjective: to be seen in the mid size finance comapnies in LATAM",
   "links": [],
   "createdAt": "2026-10-29T18:27:49Z",
-  "status": "in_progress",
+  "status": "in_review",
   "plan": {
     "createdAt": "2026-11-01T14:17:16Z",
     "rationale": "Default plan for campaign-plan (logic tree, then campaign plan with A/B test design). I added two tasks. The brief targets \"finance mid size\" in \"LATAM\", but every approved claim and all segment evidence in the product file covers UK and EU finance only, so I added a job-ad ICP research task for LATAM mid-size finance first, and a positioning task for that segment, because the campaign plan needs messages from a positioning asset and the existing UK/EU positioning (r-20261029-generic-one-pager-for-uk-and-eu-finance-platform--t1) is for a different region and not yet approved. Gaps for Islam: the objective \"to be seen\" is awareness with no KPI or target, the brief gives no budget, dates or channels, and \"summer\" is ambiguous for LATAM (southern-hemisphere summer is December to February). LATAM is outside the locked UK/EU bet, so treat this as an exploratory plan.",
@@ -63,14 +63,14 @@
           "t3"
         ],
         "outputAssetId": "r-20261029-summer-campain--t4",
-        "status": "in_progress"
+        "status": "in_review"
       }
     ]
   },
   "notion": {
     "pageId": "40b265ea-4dd8-81aa-8645-e2975f686fbf",
     "url": "https://app.notion.com/p/40b265ea4dd881aa8645e2975f686fbf",
-    "syncedAt": "2026-11-01T14:20:00Z"
+    "syncedAt": "2026-11-01T14:40:00Z"
   },
-  "updatedAt": "2026-11-01T14:31:30Z"
+  "updatedAt": "2026-11-01T14:40:00Z"
 }

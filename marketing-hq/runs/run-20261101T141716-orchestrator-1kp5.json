@@ -1,0 +1,10 @@
+{
+  "id": "run-20261101T141716-orchestrator-1kp5",
+  "agentId": "orchestrator",
+  "trigger": "schedule",
+  "startedAt": "2026-11-01T14:17:16Z",
+  "endedAt": "2026-11-01T14:40:00Z",
+  "requestId": "r-20261029-summer-campain",
+  "outcome": "ok",
+  "summary": "Planned 1 new request (r-20261029-summer-campain, campaign plan for LATAM mid-size finance): added ICP research and positioning tasks because the product evidence covers UK/EU only. Ran 5 executions (t1 to t4, plus one send-back of t1 to reach 10 ads read). Synced the request and 4 assets to Notion and sent the request for review. 0 decisions applied, 0 requests closed, 0 errors. Demo files (demo request, demo decisions, demo campaign) skipped as in the previous pass. Notion drops each asset's H1 heading because the page title carries it."
+}

@@ -6,10 +6,10 @@ title: LATAM summer visibility campaign plan with headline test A vs C
 agentId: strategy
 skillIds: campaign-plan, ab-test-design
 version: 1
-status: draft
-notionPageId:
-notionUrl:
-updatedAt: 2026-11-01T14:32:52Z
+status: in_review
+notionPageId: 40b265ea-4dd8-81a1-8c54-f1c8e88cf53d
+notionUrl: https://app.notion.com/p/40b265ea4dd881a18c54f1c8e88cf53d
+updatedAt: 2026-11-01T14:40:00Z
 ---
 
 # Campaign plan: LATAM mid-size finance visibility, headline test A vs C

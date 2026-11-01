@@ -1,0 +1,11 @@
+{
+  "id": "run-20261101T143200-strategy-bqpb",
+  "agentId": "strategy",
+  "trigger": "schedule",
+  "startedAt": "2026-11-01T14:32:00Z",
+  "endedAt": "2026-11-01T14:40:00Z",
+  "requestId": "r-20261029-summer-campain",
+  "taskId": "t4",
+  "outcome": "ok",
+  "summary": "Planned a gated LinkedIn single-image test in Mexico and Brazil, headline A vs C, with no spend until the Who and audience gates pass. About 17,700 impressions per headline; planning budget about $2,094 for two cells (non-LATAM benchmarks). Budget, dates, channels and the KPI target are open for Islam."
+}
