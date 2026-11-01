@@ -6,8 +6,9 @@
   "brief": "Aud: finance mid size \nObjective: to be seen in the mid size finance comapnies in LATAM",
   "links": [],
   "createdAt": "2026-10-29T18:27:55Z",
-  "status": "new",
+  "status": "blocked",
   "plan": null,
   "notion": null,
-  "updatedAt": "2026-10-29T18:27:55Z"
+  "syncError": "Duplicate: sent twice by mistake. The team works on the first copy (r-20261029-summer-campain).",
+  "updatedAt": "2026-11-01T13:24:00Z"
 }
