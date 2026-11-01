@@ -5,12 +5,59 @@
   "productId": "demo-product",
   "brief": "Audience: existing customers' accounts payable leads.\nOutput: a 3-email sequence that announces the new exceptions dashboard and gets them to try it this month.\nDecision: whether to lead with time saved or with fewer late payments.",
   "links": [
-    { "label": "Release notes (placeholder)", "href": "https://example.com/release-notes" }
+    {
+      "label": "Release notes (placeholder)",
+      "href": "https://example.com/release-notes"
+    }
   ],
   "priority": "normal",
   "createdAt": "2026-10-29T08:40:00Z",
-  "status": "new",
-  "plan": null,
+  "status": "planned",
+  "plan": {
+    "createdAt": "2026-11-01T15:05:00Z",
+    "rationale": "Default plan for content-piece: strategy positioning, then content. The brief says \"3-email sequence\", so the content task uses email-sequence, not content-piece. I added one ab-test-design task because the brief asks to decide \"whether to lead with time saved or with fewer late payments\"; the sequence will run that test. Risk: \"fewer late payments\" is not an approved claim in the product file, so that variant needs evidence or must stay a hypothesis. The release-notes link is a placeholder, so dashboard details will be marked [add: ...].",
+    "tasks": [
+      {
+        "id": "t1",
+        "agentId": "strategy",
+        "skillIds": [
+          "positioning"
+        ],
+        "title": "Position the exceptions dashboard for accounts payable leads",
+        "dependsOn": [],
+        "outputAssetId": "demo-r-20261029-launch-email-sequence--t1",
+        "status": "pending"
+      },
+      {
+        "id": "t2",
+        "agentId": "strategy",
+        "skillIds": [
+          "ab-test-design"
+        ],
+        "title": "Design the test: time saved vs fewer late payments",
+        "dependsOn": [
+          "t1"
+        ],
+        "outputAssetId": "demo-r-20261029-launch-email-sequence--t2",
+        "status": "pending",
+        "note": "Added: the brief asks which lead message wins (time saved or fewer late payments)."
+      },
+      {
+        "id": "t3",
+        "agentId": "content",
+        "skillIds": [
+          "email-sequence"
+        ],
+        "title": "Draft the 3-email announcement sequence",
+        "dependsOn": [
+          "t1",
+          "t2"
+        ],
+        "outputAssetId": "demo-r-20261029-launch-email-sequence--t3",
+        "status": "pending"
+      }
+    ]
+  },
   "notion": null,
-  "updatedAt": "2026-10-29T08:40:00Z"
+  "updatedAt": "2026-11-01T15:05:00Z"
 }
