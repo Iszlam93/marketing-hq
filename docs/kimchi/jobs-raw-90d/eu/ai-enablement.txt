@@ -1,0 +1,126 @@
+LinkedIn Jobs, keywords "AI enablement", location European Union (geoId 91000000), no industry filter (LinkedIn removed it), past 90 days, pages 1-5 (start=0..100), collected 24 Oct 2026. Format: search | company | job title | jobId
+AI enablement | Ingersoll Rand | CRM AI Enablement Manager | 4440313488
+AI enablement | n8n | Internal AI Enablement Lead | 4479029495
+AI enablement | RIB Software | English speaking AI Marketing Lead (m/f) | Automation, MarTech & Workflow Integration | 4470906277
+AI enablement | HeadFirst Group | Product Manager - AI & Transformation | 4475872212
+AI enablement | Docplanner | AI Project Manager (Growth Marketing) | 4480469491
+AI enablement | Novonesis | Global Digital & AI adoption Lead, Food & Beverage Biosolutions, Novonesis | 4476296534
+AI enablement | JYSK | AI Business Enablement Lead | 4476650442
+AI enablement | n8n | Internal AI Enablement Lead | 4479019903
+AI enablement | Kemppi | AI Enablement Manager | 4477093020
+AI enablement | IFS | GTM Lead - AI Optimization Product | 4483114456
+AI enablement | Ayvens | Experienced AI adoption Lead | 4471755942
+AI enablement | IFS | GTM Lead - AI Optimization Product | 4483106648
+AI enablement | MKS Inc. | Marketing Automation & AI Lead (w/m/d) | 4466225338
+AI enablement | RIB Software | English speaking AI Marketing Lead (m/w) | Automation, MarTech & Workflow Integration | 4464416274
+AI enablement | Just Eat Takeaway.com | AI Agent Ops Lead | 4481007737
+AI enablement | Collibra | AI Enablement Manager | 4475010593
+AI enablement | flatexDEGIRO | Senior AI Solutions & Delivery Manager | 4479345986
+AI enablement | Saab | AI & Digitalization Driver | 4480377179
+AI enablement | Stealth Startup | AI Transformation Lead | 4481691029
+AI enablement | 360Learning | Head of GTM Systems & AI | 4468284005
+AI enablement | Claire Joster | AI Enablement Manager | 4463877776
+AI enablement | 360Learning | Head of GTM Systems & AI (m/f/d) | 4468274840
+AI enablement | ALK | Senior AI Adoption Lead | 4479522614
+AI enablement | Flügger group A/S | AI & MarTech Lead | 4472304895
+AI enablement | AVILOO Battery Diagnostics | GTM AI Operations Lead (f/m/d) | 4476655849
+AI enablement | n8n | Internal AI Enablement Lead | 4479027544
+AI enablement | n8n | Internal AI Enablement Lead | 4479028548
+AI enablement | IFS | GTM Lead - AI Optimization Product | 4480667906
+AI enablement | 360Learning | Head of GTM Systems & AI | 4468274842
+AI enablement | MongoDB | Marketing Automation Manager | 4475843459
+AI enablement | Allianz Technology | AI Engagement Manager (m/f/d)_3095 | 4474187136
+AI enablement | JetBrains | Growth Operations Manager (JetBrains AI) | 4457225974
+AI enablement | Creative Dock Group | AI-Native Growth & Operations Lead | 4476816498
+AI enablement | Allianz Technology | AI Engagement Manager (m/f/d) | 4472260438
+AI enablement | Transcom | Workplace AI Enablement Lead | 4477368199
+AI enablement | Forvis Mazars In Ireland | AI & Transformation Product & Programme Manager | 4474066120
+AI enablement | Hitachi Energy | AI Program Manager | 4475409362
+AI enablement | UPM | Manager, AI Transformation Enablement | 4473904850
+AI enablement | Abysalto | AI Adoption & Enablement Lead (m/f) | 4473818528
+AI enablement | Neptune Software | Marketing Technology, AI & Digital Experience Lead | 4471339914
+AI enablement | Hitachi Energy | AI Program Manager | 4475415198
+AI enablement | Keenfinity Group | AI & Business Automation Lead | 4474186170
+AI enablement | Clipboard | Strategy & Ops Lead, Applied AI | 4471766222
+AI enablement | Vodafone | Product Manager, SaaS & AI | 4458093561
+AI enablement | Planet | Commercial AI Enablement & Performance Manager | 4435498120
+AI enablement | Citi | Digital Platforms and AI Marketing Transformation, Vice President | 4480490464
+AI enablement | CIP Fund Solutions | AI Business Manager, Digital Development | 4472304234
+AI enablement | Optasia | AI Enablement & Adoption Lead | 4468603190
+AI enablement | Ayvens | Experienced AI adoption Lead | 4471765400
+AI enablement | Lovehoney Group | AI Innovation and Enablement Specialist | 4419278975
+AI enablement | B Lab | AI Workflow Lead (Amsterdam, NLD) | 4478377986
+AI enablement | Eversports | Marketing Operations Manager (AI & Automation) | 4482493517
+AI enablement | n8n | Internal AI Enablement Lead | 4479018985
+AI enablement | n8n | Internal AI Enablement Lead | 4479030475
+AI enablement | Hitachi Energy | AI Opportunity Lead | 4479880459
+AI enablement | QCS Staffing | AI Deployment Manager | 4468919850
+AI enablement | Stadler Digital Labs | AI Transformation Lead | 4478512043
+AI enablement | AI & Digital Transformation Manager | AI & Digital Transformation Manager | 4481198911
+AI enablement | Solas IT Recruitment | AI Product Manager | 4479509609
+AI enablement | MMDSmart | AI Adoption Officer | 4449628408
+AI enablement | Cresto Group | BUSINESS DEVELOPMENT & AI | 4476084145
+AI enablement | Mistral | Staff AI Deployment Strategist - UK & Nordics | 4459828445
+AI enablement | Nordex Group | Program Manager AI Transformation (m/f/d) | 4477198988
+AI enablement | Highberg | Product Owner AI Enablement | 4478782509
+AI enablement | ROCKWOOL Group | Commercial AI Lead, Commercial Excellence | 4482887595
+AI enablement | Sherweb | Senior AI Partner Growth & Program Specialist | 4479552183
+AI enablement | Clipboard | Strategy & Ops Lead, Applied AI | 4471756728
+AI enablement | Ayvens | Experienced AI adoption Lead | 4471761792
+AI enablement | TVH | AI Transformation Manager | 4473777704
+AI enablement | AI Futures | AI Transformation Lead | 4478668010
+AI enablement | Holafly | Head of CX Automation & AI | 4472580601
+AI enablement | Holafly | Head of CX Automation & AI | 4472579691
+AI enablement | KPMG Malta | AI Lead | 4480469614
+AI enablement | Husqvarna Group | AI Product Owner | 4476455722
+AI enablement | Mistral | AI Deployment Strategist | 4478009873
+AI enablement | n8n | Internal AI Enablement Lead | 4479041011
+AI enablement | n8n | Internal AI Enablement Lead | 4479022784
+AI enablement | Current AI | Product Manager: Partnerships | 4481544519
+AI enablement | CoreFi | AI Workforce Transformation Manager | 4481034697
+AI enablement | AI Product Manager | AI Product Manager | 4478909135
+AI enablement | Celonis | AI Product Manager (Demo) | 4468905795
+AI enablement | Bel | Marketing AI Program Manager (W/M/X) | 4438044987
+AI enablement | Holafly | Head of CX Automation & AI | 4472582530
+AI enablement | flyboard | AI Strategist | 4475583114
+AI enablement | Husqvarna Group | AI Product Owner - LLMs | 4476457580
+AI enablement | ABB | AI Transformation Lead | 4481252814
+AI enablement | TheSoul Group | Client Deployment Lead, AI (EMEA) | 4479880384
+AI enablement | Motor Oil | AI Product Owner | 4482047673
+AI enablement | Amplifon | Global Data & AI Adoption Program Manager | 4478562341
+AI enablement | Vestas | AI Innovation Lead NCE | 4477837963
+AI enablement | JetBrains | Growth Operations Manager (JetBrains AI) | 4457247043
+AI enablement | Vestas | AI Innovation Lead NCE | 4477847382
+AI enablement | Allianz Technology | AI Engagement Manager | 4450309679
+AI enablement | Philip Morris International | Senior Product Owner AI, Low-Code and Automation | 4480133695
+AI enablement | IQVIA | Enterprise AI Enablement Manager | 4461683261
+AI enablement | ABB | AI Factory Operations Manager | 4481758915
+AI enablement | Comarch | Marketing Operations & AI Lead | 4441933855
+AI enablement | Stark Recruitment | AI & Legal Innovation Manager | 4475831029
+AI enablement | Comarch | Marketing Operations & AI Lead | 4441935748
+AI enablement | Accenture | Innovation Lead – Business, Product & Commercial Strategy | 4477394661
+AI enablement | heyData | Business Automation and AI Manager (all genders) | 4456606517
+AI enablement | Philips | AI Solutions Manager - Grooming and Beauty | 4480496767
+AI enablement | n8n | Internal AI Enablement Lead | 4479025586
+AI enablement | n8n | Internal AI Enablement Lead | 4479029497
+AI enablement | Sanoma Learning | AI Project Manager | 4470303471
+AI enablement | Expleo Group | AI Practice Enablement Lead | 4475824524
+AI enablement | Vestas | AI Innovation Lead NCE | 4477840722
+AI enablement | Vestas | AI Innovation Lead NCE | 4477854209
+AI enablement | JetBrains | Growth Operations Manager (JetBrains AI) | 4457251009
+AI enablement | Booking.com | Lead - Conversational Interfaces | 4480395888
+AI enablement | Matchtech | Global Head of AI Adoption, Training & Capability Development 100% remote 100% remote | 4480464728
+AI enablement | 1GLOBAL | Senior AI Product Manager | 4470085926
+AI enablement | Capgemini | AI Transformation Partner | 4482719552
+AI enablement | Generali | Group AI Discovery & Agentic Design Senior Professional | 4481587445
+AI enablement | MMDSmart | AI Adoption Officer | 4449641316
+AI enablement | Neko Health | AI Acceleration Specialist | 4477863163
+AI enablement | Factbird | AI Operations Specialist | 4475554960
+AI enablement | Axpo Group | AI Adoption Specialist (f/m/d) | 4480973330
+AI enablement | Cohere | Partner Development Manager - Berlin | 4473364446
+AI enablement | Opus Recruitment Solutions | AI Senior Product Manager - Exciting AI Scaleup - Are you an AI First builder? - Fully Remote - up to €120k | 4477585427
+AI enablement | If Insurance | AI Productivity Lead | 4473335625
+AI enablement | Pollet Pool Group | AI STRATEGY & TRANSFORMATION LEAD | 4464369218
+AI enablement | Sherweb | AI & Copilot Partner Enablement Specialist | 4479549232
+AI enablement | Neko Health | AI Acceleration Specialist | 4477853533
+AI enablement | Air Apps | AI Product Manager | 4478288363

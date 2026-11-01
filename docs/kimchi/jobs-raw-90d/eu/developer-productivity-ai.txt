@@ -1,0 +1,126 @@
+LinkedIn Jobs, keywords ""developer productivity" AI", location European Union (geoId 91000000), no industry filter (LinkedIn removed it), past 90 days, pages 1-5 (start=0..100), collected 24 Oct 2026. Format: search | company | job title | jobId
+"developer productivity" AI | heyData | Business Automation and AI Manager (all genders) | 4456606517
+"developer productivity" AI | n8n | Internal AI Enablement Lead | 4479029495
+"developer productivity" AI | Chainels | AI GTM Engineer / RevOps | 4477875990
+"developer productivity" AI | n8n | Internal AI Enablement Lead | 4479019903
+"developer productivity" AI | B Lab | AI Workflow Lead (Amsterdam, NLD) | 4478377986
+"developer productivity" AI | Personio | AI & Automation Manager (d/f/m) | 4476455848
+"developer productivity" AI | Hostaway | Lead AI GTM Engineer - 100% Remote - Europe | 4454563525
+"developer productivity" AI | BriqSafe | Marketing (AI) Studio Manager | 2963985429
+"developer productivity" AI | Hostaway | Lead AI GTM Engineer - 100% Remote - Europe | 4454563524
+"developer productivity" AI | RIB Software | English speaking AI Marketing Lead (m/f) | Automation, MarTech & Workflow Integration | 4470906277
+"developer productivity" AI | Forvis Mazars In Ireland | AI & Transformation Product & Programme Manager | 4474066120
+"developer productivity" AI | The Delta | Senior GTM Engineer (Berlin) | 4480039960
+"developer productivity" AI | Nebius | Customer Experience Automations Manager | 4463044930
+"developer productivity" AI | Clipboard | Strategy & Ops Lead, Applied AI | 4471756728
+"developer productivity" AI | Gorgias | GTM Engineer - Growth | 4483104750
+"developer productivity" AI | Shine | Head of AI Enablement (CEO Office) | 4463048973
+"developer productivity" AI | DataSnipper | GTM Engineer | 4477148000
+"developer productivity" AI | Clipboard | Strategy & Ops Lead, Applied AI | 4471766222
+"developer productivity" AI | Hornetsecurity | AI Automation & Enablement Specialist | 4438245835
+"developer productivity" AI | flatexDEGIRO | Senior AI Solutions & Delivery Manager | 4479345986
+"developer productivity" AI | client | AI Automation Specialist | 4480046105
+"developer productivity" AI | RIB Software | English speaking AI Marketing Lead (m/w) | Automation, MarTech & Workflow Integration | 4464416274
+"developer productivity" AI | Holafly | Head of CX Automation & AI | 4472582530
+"developer productivity" AI | Fiskars Group | AI Solutions Builder – R&D | 4480365084
+"developer productivity" AI | team.blue | AI Enabler | 4427985994
+"developer productivity" AI | n8n | Internal AI Enablement Lead | 4479027544
+"developer productivity" AI | n8n | Internal AI Enablement Lead | 4479018985
+"developer productivity" AI | Hostaway | Lead AI GTM Engineer - 100% Remote - Europe | 4454557658
+"developer productivity" AI | Hostaway | Lead AI GTM Engineer - 100% Remote - Europe | 4454574453
+"developer productivity" AI | Pangea Propulsion | Digital Tools & AI Specialist | 4472165871
+"developer productivity" AI | iziwork Italia | Agentic AI Productivity Specialist | 4477697570
+"developer productivity" AI | heyData | Junior Business Automation and AI Manager (all genders) | 4456624434
+"developer productivity" AI | LSEG | Senior Manager, AI Productivity | 4401473242
+"developer productivity" AI | Rydoo | AI Transformation Engineer | 4479408194
+"developer productivity" AI | Rydoo | AI Transformation Engineer | 4466316335
+"developer productivity" AI | Factbird | AI Operations Specialist | 4475554960
+"developer productivity" AI | RH Marine | AI Specialist | 4480028995
+"developer productivity" AI | Hornetsecurity | AI Automation & Enablement Specialist | 4482861070
+"developer productivity" AI | Robin Radar Systems | AI Enablement Engineer | 4473502122
+"developer productivity" AI | Holafly | Head of CX Automation & AI | 4472580601
+"developer productivity" AI | Campotec Group | AI & Automation Manager | 4469176059
+"developer productivity" AI | Oyster® | Senior AI Solutions Engineer - GTM | 4468722380
+"developer productivity" AI | Sherweb | Senior AI Partner Growth & Program Specialist | 4479552183
+"developer productivity" AI | HEADMATCH | AI Product Engineer | 4471467224
+"developer productivity" AI | Celonis | AI Product Manager (Demo) | 4468905795
+"developer productivity" AI | Holafly | Head of CX Automation & AI | 4472579691
+"developer productivity" AI | Okta | Staff Product Manager - Developer Productivity | 4473158593
+"developer productivity" AI | Source.ai | AI Adoption Lead | 4480976264
+"developer productivity" AI | VMN media | AI Tooling Lead | 4481717858
+"developer productivity" AI | Scott.Weber Workspace | AI & Automation Specialist | 4469105689
+"developer productivity" AI | n8n | Internal AI Enablement Lead | 4479028548
+"developer productivity" AI | n8n | Internal AI Enablement Lead | 4479030475
+"developer productivity" AI | Personio | AI & Automation Manager (d/f/m) | 4476454884
+"developer productivity" AI | Hostaway | Lead AI GTM Engineer - 100% Remote - Europe | 4454579407
+"developer productivity" AI | Hostaway | Lead AI GTM Engineer - 100% Remote - Europe | 4454578432
+"developer productivity" AI | ALOHAS | CX Automation & AI Lead | 4482045867
+"developer productivity" AI | Cast AI | AI Solutions Architect | 4477143140
+"developer productivity" AI | Lleverage | Forward Deployed AI Engineer | 4465027334
+"developer productivity" AI | 360Learning | Head of GTM Systems & AI (m/f/d) | 4468274840
+"developer productivity" AI | dataroots, a Talan company | AI Deployment Strategist | 4462155605
+"developer productivity" AI | NEURA Robotics | Manager Business Artificial Intelligence (Human) | 4422963355
+"developer productivity" AI | P3 Security GmbH | AI & Automation Manager (m/w/d) | 4469303651
+"developer productivity" AI | 8COM Cyber Security | AI Productivity & Orchestration Specialist (m/w/d) | 4467096402
+"developer productivity" AI | Neko Health | AI Acceleration Specialist | 4477853533
+"developer productivity" AI | Collibra | AI Enablement Manager | 4475010593
+"developer productivity" AI | Mutares SE & Co. KGaA | AI Expert – Digital Transformation in Private Equity (m/f/x) - Nordics | 4441340332
+"developer productivity" AI | DocMorris | Growth Automation & AI Manager (m/w/d) | 4472008880
+"developer productivity" AI | Personio | Senior Product Manager - Internal AI (d/f/m) | 4421182639
+"developer productivity" AI | Lighthouse | Senior AI Solutions Engineer for Marketing | 4474744030
+"developer productivity" AI | FDJ UNITED | AI Enablement Lead | 4475538519
+"developer productivity" AI | Creative Dreams GmbH | AI Automation & Operations Manager (m/w/d) | 4477300502
+"developer productivity" AI | Neko Health | AI Acceleration Specialist | 4477863163
+"developer productivity" AI | Kemppi | AI Enablement Manager | 4477093020
+"developer productivity" AI | Natuvion | AI Enablement Specialist (m/w/d) | 4480071101
+"developer productivity" AI | Doctolib | Senior AI Specialist (Operations) (x/f/m) | 4462821293
+"developer productivity" AI | n8n | Internal AI Enablement Lead | 4479041011
+"developer productivity" AI | n8n | Internal AI Enablement Lead | 4479022784
+"developer productivity" AI | Smadex | AI R&D & Effectiveness Lead | 4475218068
+"developer productivity" AI | CoreView | AI Operations Engineer | 4474198614
+"developer productivity" AI | thyssenkrupp | AI Solutions Specialist | 4460760276
+"developer productivity" AI | EOS | AI Solutions Expert (m/f/d) | 4450292257
+"developer productivity" AI | Usercentrics | AI Enablement Engineer | 4469121083
+"developer productivity" AI | Apex Alliance Hotel Management | AI Solutions Lead | 4471907532
+"developer productivity" AI | ACENSI | AGENTIC AI ENABLEMENT CONSULTANT | 4467746479
+"developer productivity" AI | Pfeiffer Vacuum+Fab Solutions | Global Production AI Transformation Lead | 4476145791
+"developer productivity" AI | KK Group | Senior Specialist - AI & Excellence | 4473787223
+"developer productivity" AI | Workhuman | AI Capability Lead | 4475839002
+"developer productivity" AI | Salesforce | AI Builder, Emerging Talent - English Speaking Market | 4482061639
+"developer productivity" AI | Nion | Forward Deployed Engineer — AI & Workflow Automation | 4469955208
+"developer productivity" AI | Macaw Lithuania | AI Developer (Microsoft Stack) | 4471282787
+"developer productivity" AI | Nordea | Expert Agentic Business Engineer | 4479246042
+"developer productivity" AI | Nordea | Expert Agentic Business Engineer | 4479243285
+"developer productivity" AI | AI Adoption Specialist | AI Adoption Specialist | 4478992289
+"developer productivity" AI | Atlas Copco Group | AI Adoption Lead - Software Delivery | 4477508916
+"developer productivity" AI | Capgemini | Senior Manager AI Outcome Deployed Strategist - NL | 4427457892
+"developer productivity" AI | Zinco | Product Manager | 4478281215
+"developer productivity" AI | Janus Henderson Investors | AI Enablement Partner | 4456909803
+"developer productivity" AI | Yarado | Senior/Lead RPA+AI Developer | 4445920050
+"developer productivity" AI | Superchat | Revenue Operations Engineer | AI & Automation (m/f/d) | 4477321794
+"developer productivity" AI | Versuni | Senior Manager, Agentic AI & Integrations | 4481577236
+"developer productivity" AI | n8n | Internal AI Enablement Lead | 4479025586
+"developer productivity" AI | n8n | Internal AI Enablement Lead | 4479028547
+"developer productivity" AI | Kultakiertue Oy | Data & AI Automation Specialist | 4476166821
+"developer productivity" AI | Wayflyer | GTM Engineer | 4468657954
+"developer productivity" AI | Xensam | AI Enablement Engineer | 4442748781
+"developer productivity" AI | Altana | Staff AI Deployment Engineer, Amsterdam | 4477016866
+"developer productivity" AI | Lovable | Member of Technical Staff, Applied AI (Marketing) | 4474640338
+"developer productivity" AI | Dalux | Product Manager – AI | Shape the Future of Construction Tech with Dalux | 4458210113
+"developer productivity" AI | IQVIA | Enterprise AI Enablement Manager | 4461683261
+"developer productivity" AI | Abysalto | AI Adoption & Enablement Lead (m/f) | 4473818528
+"developer productivity" AI | Keenfinity Group | AI & Business Automation Lead | 4474186170
+"developer productivity" AI | NiCE | Senior AI Evangelist & Developer Advocate, Agentic AI | 4475235333
+"developer productivity" AI | Nordea | Senior AI Specialist to Service Fulfilment & Operations | 4477157886
+"developer productivity" AI | Adwise - Your Digital Brain | AI Marketing Specialist | 4470424814
+"developer productivity" AI | Pfeiffer Vacuum+Fab Solutions | Global Production AI Transformation Lead | 4477184470
+"developer productivity" AI | SIX | AI Solutions Lead - Development Tools (Claude Code) | 4479849435
+"developer productivity" AI | Northmill Bank | Applied AI Analyst | 4477692030
+"developer productivity" AI | Lighthouse | Senior AI Solutions Engineer for Revenue & Go-To-Market | 4459012202
+"developer productivity" AI | Nordea | Expert AI Specialist to Service Fulfilment & Operations | 4477161832
+"developer productivity" AI | Uni Systems | AI Enablement Lead | 4475656656
+"developer productivity" AI | Nordex Group | Program Manager AI Transformation (m/f/d) | 4477198988
+"developer productivity" AI | Doctolib | Senior AI Specialist (Operations) (x/f/m) | 4438607485
+"developer productivity" AI | Seargin | AI Product Owner | 4475566030
+"developer productivity" AI | KK Group | Senior Specialist - AI & Excellence | 4473790077
+"developer productivity" AI | Commerzbank Digital Technology Centre Bulgaria | AI Enablement & Agent Engineering Specialist | 4463432735

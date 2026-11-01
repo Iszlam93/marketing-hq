@@ -1,0 +1,126 @@
+LinkedIn Jobs, keywords "coding agents", location European Union (geoId 91000000), no industry filter (LinkedIn removed it), past 90 days, pages 1-5 (start=0..100), collected 24 Oct 2026. Format: search | company | job title | jobId
+coding agents | A2G Consulting BV (A2G Technologies) | Senior Agentic AI Engineer | 4481667757
+coding agents | 3Commas.io | Agentic AI Engineer | 4475805036
+coding agents | Coder | Staff Software Engineer (Agentic Engineering) | 4453475230
+coding agents | Coder | Software Engineering Manager (Agentic Engineering) | 4452845926
+coding agents | Connectis_ | AI Engineer (Agentic SDLC) | 4480230392
+coding agents | The Customization Group | CRM Specialist, AI-first (Riga) | 4457727649
+coding agents | DreamShot | Project Coordinator (AI Automation) | 4480028922
+coding agents | CKM Group | AI Transformation & Automation Lead (m/w/d) | 4477320697
+coding agents | Together AI | Senior Software Engineer — Infra Agent Systems | 4462691471
+coding agents | Cast AI | Product Manager | Kimchi AI Coding Platform| Europe | 4473799874
+coding agents | Computer Futures | Software Engineer Agentic Coding (m/w/d) 80.000€ | 4478530043
+coding agents | CGC | GenAI Engineer / AI Agent Developer | Inteligencia Artificial | 4476289326
+coding agents | Datawords | Applied AI Engineer – Agentic Content & Digital Operations | 4471484869
+coding agents | DigitalNativeAlliance | AI Automation Engineer – Marketing & Operations Consulting (m/w/d) in Stuttgart, Hamburg oder Berlin – Hybrid | 4451919613
+coding agents | Comarch | Software Engineer (Agentic SDLC) | 4476191232
+coding agents | Comarch | Software Engineer (Agentic SDLC) | 4476178879
+coding agents | Computer Futures | Senior Software Engineer Agentic Coding (m/w/d) 80.000 € | 4475808554
+coding agents | CGI | AI Solution Architect – Agentic GenAI Workflows & Automation (m/w/d) | 4447591179
+coding agents | CGI | AI Engineer – GenAI Integration & Automation (m/w/d) | 4447581382
+coding agents | Newcode.ai | Senior RAG Engineer | 4447007567
+coding agents | Newcode.ai | Senior RAG Engineer | 4447004756
+coding agents | SmallClaims | AI Product Engineer | 4479851076
+coding agents | Arcode Systems | AI Engineer / Agentic AI Engineer - Remote (Deutschland) mit gelegentlichem Vor-Ort-Tag | 4478206576
+coding agents | Experts Inside | AI Expert – Generative AI & Agentic Workflows | 4468687801
+coding agents | Axpe Consulting | AI Engineer | Agentes IA | 4479805913
+coding agents | Coder | Staff Software Engineer (Agentic Engineering) | 4453480168
+coding agents | Coder | Software Engineering Manager (Agentic Engineering) | 4452844946
+coding agents | Computer Futures | Senior Software Engineer (m/w/d) Agentic Coding | 4477169426
+coding agents | Newcode.ai | Senior RAG Engineer | 4447016044
+coding agents | CGI | Consultant - Agentic AI & AI Engineering (m/w/d) | 4482159856
+coding agents | Digital360 GOV | AI Agent Developer / DevOps Engineer Senior | 4455888163
+coding agents | Comarch | Full-stack Developer (Agentic AI) | 4456730239
+coding agents | Comarch | Full-stack Developer (Agentic AI) | 4456712335
+coding agents | Computer Futures | Fullstack Developer Agentic Coding (m/w/d) 80.000€ | 4478546079
+coding agents | Cluster365.ai | Artificial Intelligence Engineer | 4478527609
+coding agents | Newcode.ai | Senior RAG Engineer | 4447007566
+coding agents | CreatorIQ | Senior Software Engineer - Brand Safety & Agentic AI | 4481512617
+coding agents | CegTec | AI Software Engineer (FTE) | 4479861473
+coding agents | CGI Nederland | Senior AI Engineer | 4477876058
+coding agents | CribConnects | (Forward Deployed) AI Engineer | 4481546889
+coding agents | The Agile Monkeys | Senior AI-Native Software Engineer (Backend / Full-stack) | 4480496711
+coding agents | AI Collega's | Senior AI Software Architect | 4449480871
+coding agents | Cluster365.ai | AI Tech Lead | 4478520894
+coding agents | codecentric AG | AI Software Engineer and Consultant (w/d/m) | 4453097217
+coding agents | CGI | AI QA Engineer – Conversational AI & GenAI-Automationen (m/w/d) | 4447592166
+coding agents | Deutsche Telekom IT Solutions HU | AI SWE / Agentic SDLC Workflow Engineer - T Cloud Public (REF5735F) | 4449660272
+coding agents | Usercentrics | AI Enablement Engineer | 4469121083
+coding agents | Akkodis | Generative AI Engineer | 4480677109
+coding agents | ALGEBRA Engineering & Consulting GmbH | KI-Engineer – LLM & RAG (m/w/d) | 4479046646
+coding agents | codecentric AG | AI Software Engineer and Consultant (w/d/m) | 4453088316
+coding agents | Agentic AI Solution Specialist | Agentic AI Solution Specialist | 4475027402
+coding agents | g2 Recruitment | Agentic AI Engineer | 4477160235
+coding agents | Engineering Group | Agentic Developer Senior | 4402705177
+coding agents | CoreView | AI Operations Engineer | 4474198614
+coding agents | Coder | Senior Software Engineer (Multiple Teams, Europe) | 4457711457
+coding agents | May Business Consulting (Spain) by Izertis | Senior Agentic AI Engineer | 4482459487
+coding agents | Comarch | Full-stack Developer (Agentic AI) | 4456714288
+coding agents | Comarch | Full-stack Developer (Agentic AI) | 4456709374
+coding agents | Coder | Senior Software Engineer (Multiple Teams, Europe) | 4457708521
+coding agents | Computer Futures | Software Architect (m/w/d) Agentic Coding | 4477157803
+coding agents | codecentric AG | AI Software Engineer and Consultant (w/d/m) | 4453088315
+coding agents | Closer Consulting | AI & Agents Technical Enablement Lead (SDLC) | 4477742142
+coding agents | The Tech Collective | Senior AI Engineer for The Tech Collective | 4453589035
+coding agents | codecentric AG | AI Software Engineer and Consultant (w/d/m) | 4453074372
+coding agents | CGI | Value Engineer - GenAI Engineer Banking (m/w/d) | 4483140886
+coding agents | Codurance | Senior GenAI Full-Stack Engineer - Brazil | 4476736470
+coding agents | CatalystOne Solutions | AI Operations Engineer | 4469753487
+coding agents | beatsquares | AI Developer (m/w/d) | 4449588279
+coding agents | KCS iT | Robotic Process Automation Consultant | 4480248316
+coding agents | Usercentrics | AI Enablement Engineer | 4469108812
+coding agents | CluePoints | AI Engineer | 4481783666
+coding agents | ADC Consulting | Consultant | GenAI Engineer | 4481664187
+coding agents | GCS | Artificial Intelligence Engineer | 4480439798
+coding agents | 300 DEC | AI Developer | 4482626188
+coding agents | ADC Consulting | Consultant | AI Engineer | 4483105515
+coding agents | Innoworks | AI Integration Specialist | 4447334123
+coding agents | Comarch | Full-stack Developer (Agentic AI) | 4456730241
+coding agents | Comarch | Full-stack Developer (Agentic AI) | 4456716310
+coding agents | Oper Credits | AI Solutions Engineer | 4473332742
+coding agents | Yarado | Senior/Lead RPA+AI Developer | 4445920050
+coding agents | CGI | Tech Lead IA & Solution Agentique F/H | 4459034522
+coding agents | CGI | AI Developer | 4463109498
+coding agents | Intetics | Python Team Lead - AI & Automation | 4483134045
+coding agents | ATLAS Operations | Senior AI Developer | 100 % Remote | 4470140932
+coding agents | Cooder | AI Developer | Progression IT | 4481527604
+coding agents | codecentric AG | AI Software Engineer and Consultant (w/d/m) | 4453079372
+coding agents | codecentric AG | AI Software Engineer and Consultant (w/d/m) | 4453091264
+coding agents | Intetics | Python Team Lead - AI & Automation | 4483126185
+coding agents | Cream Consulting | AI engineer | 4478392787
+coding agents | Plain Concepts | AI Engineer - Generative AI | 4482884475
+coding agents | CANCOM | AI Consultant (m/w/d) | 4470841911
+coding agents | 300 DEC | AI Tech Lead | 4470085734
+coding agents | Usercentrics | AI Enablement Engineer | 4469112792
+coding agents | i22 Digital Agency | (Senior) AI Software Engineer – LLM-Anwendungen (m/w/d) | 4469342199
+coding agents | CGI Nederland | Senior AI-Assisted Software Engineer / Consultant - Port Logistics | 4481266433
+coding agents | Jems Group | Consultant IA Gen H/F | 4481735332
+coding agents | Advance in IT Ltd | Data & AI Engineer (GCP) | 4470820488
+coding agents | crossbuilders | AI Solution Engineer (M/W/D) | 4477312132
+coding agents | CHAPTERS Group AG | Forward Deployed AI Engineer | 4477326407
+coding agents | Kodesage | Senior Software Engineer | 4466259158
+coding agents | Comarch | Full-stack Developer (Agentic AI) | 4456711302
+coding agents | Adecco | AI AUTOMATION ENGINEER Tech Lead | 4478676029
+coding agents | CGI | Lead Tech IA – Générative et Agentique F/H | 4476930263
+coding agents | Cast AI | Product Manager | Kimchi AI Coding Platform| Europe | 4473911337
+coding agents | crossvertise GmbH | Product Manager – AI & Agentic Products (m/w/d) | 4480037495
+coding agents | CGI | AI Engineer | 4475873322
+coding agents | Intetics | 1168 Senior AI Developer | 4473904261
+coding agents | Intetics | 1168 Senior AI Developer | 4473790673
+coding agents | Netcompany | Senior AI Engineer | 4474442591
+coding agents | AraCom IT Services GmbH | Senior Software Engineer – AI-nativ (m/w/d) | 4478668507
+coding agents | adesso business consulting AG | AI & Automation Developer SAP (all genders) | 4397234236
+coding agents | CHAMP Cargosystems | Senior Software Engineer – AI | 4475532636
+coding agents | codecentric AG | Forward Deployed Engineer (w/d/m) | 4453079369
+coding agents | adesso business consulting AG | AI Engineer (AWS) (all genders) | 4436809456
+coding agents | codecentric AG | Forward Deployed Engineer (w/d/m) | 4453087293
+coding agents | KCS iT | AI Engineer | 4474960103
+coding agents | KCS iT | RPA Developer – AI / Python | 4480213302
+coding agents | AllCloud | Backend Developer Generative AI | 4474776478
+coding agents | CHECK24 | (Junior) Softwareentwickler (m/w/d) AI Forge | 4422691956
+coding agents | Macaw Lithuania | AI Developer (Microsoft Stack) | 4471282787
+coding agents | Usercentrics | Staff AI Enablement Engineer | 4458185585
+coding agents | A1 Bulgaria | Machine Learning Engineer (f/m/d) @ A1 Competence Delivery Center | 4481208333
+coding agents | Cast AI | Senior Software Engineer | Kimchi (Agent Platform Team) | 4477802918
+coding agents | Conclusion Lifecycle | AI Integrations Developer | 4444930367
+coding agents | K2 Partnering Solutions | Forward Deployed Engineer | 4479974750

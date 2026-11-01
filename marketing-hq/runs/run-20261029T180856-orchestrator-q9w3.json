@@ -1,0 +1,10 @@
+{
+  "id": "run-20261029T180856-orchestrator-q9w3",
+  "agentId": "orchestrator",
+  "trigger": "local",
+  "startedAt": "2026-10-29T18:08:56Z",
+  "endedAt": "2026-10-29T18:19:12Z",
+  "requestId": "r-20261029-generic-one-pager-for-uk-and-eu-finance-platform",
+  "outcome": "ok",
+  "summary": "Planned 1 new request (one-pager: strategy positioning, then content one-pager). Ran 2 tasks, synced the request and 2 assets to Notion, and sent the request for review. Fixed during the pass: the Notion Skills property is now text, and asset tables are converted for Notion. 0 decisions applied, 0 requests closed. Demo files skipped (no product sync needed)."
+}

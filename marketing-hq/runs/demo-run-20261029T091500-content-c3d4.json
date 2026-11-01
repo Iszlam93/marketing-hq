@@ -1,0 +1,11 @@
+{
+  "id": "demo-run-20261029T091500-content-c3d4",
+  "agentId": "content",
+  "trigger": "schedule",
+  "startedAt": "2026-10-29T09:15:00Z",
+  "endedAt": "2026-10-29T09:19:00Z",
+  "requestId": "demo-r-20261027-competitor-battlecard",
+  "taskId": "t2",
+  "outcome": "ok",
+  "summary": "Revised the battlecard to v2 after my comment on v1: removed the unproven claims and added objection handling."
+}

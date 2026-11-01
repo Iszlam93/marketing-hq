@@ -6,8 +6,41 @@
   "brief": "Audience: the platform owner at a UK or EU financial services firm (up to 5,000 staff) that is hiring an AI-rollout role.\nOutput: a one-page sales asset (tier 2, generic for the segment) a seller can send after a first call.\nDecision: which proof points lead the page, and what call to action fits a first meeting.",
   "links": [],
   "createdAt": "2026-10-29T18:08:25Z",
-  "status": "new",
-  "plan": null,
-  "notion": null,
-  "updatedAt": "2026-10-29T18:08:25Z"
+  "status": "in_review",
+  "plan": {
+    "createdAt": "2026-10-29T18:08:56Z",
+    "rationale": "Default plan for one-pager: positioning first, then the page. I added nothing and skipped nothing. The brief names the audience (platform owner at a UK or EU finance firm up to 5,000 staff, hiring an AI-rollout role), the output (a tier 2 generic one-pager sent after a first call) and the decision (which proof points lead, and which call to action fits a first meeting). The product file has approved claims; its headline line is flagged for Islam to confirm, so the positioning task must not treat it as final.",
+    "tasks": [
+      {
+        "id": "t1",
+        "agentId": "strategy",
+        "skillIds": [
+          "positioning"
+        ],
+        "title": "Write positioning and messaging for UK and EU finance platform owners",
+        "dependsOn": [],
+        "outputAssetId": "r-20261029-generic-one-pager-for-uk-and-eu-finance-platform--t1",
+        "status": "in_review"
+      },
+      {
+        "id": "t2",
+        "agentId": "content",
+        "skillIds": [
+          "custom-one-pager"
+        ],
+        "title": "Write the generic tier 2 one-pager for the segment",
+        "dependsOn": [
+          "t1"
+        ],
+        "outputAssetId": "r-20261029-generic-one-pager-for-uk-and-eu-finance-platform--t2",
+        "status": "in_review"
+      }
+    ]
+  },
+  "notion": {
+    "pageId": "408265ea-4dd8-81aa-8397-fc63c7f9fe99",
+    "url": "https://app.notion.com/p/408265ea4dd881aa8397fc63c7f9fe99",
+    "syncedAt": "2026-10-29T18:19:12Z"
+  },
+  "updatedAt": "2026-10-29T18:19:12Z"
 }

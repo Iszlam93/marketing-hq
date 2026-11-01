@@ -1,0 +1,36 @@
+{
+  "id": "demo-c-q4-finance-pipeline",
+  "name": "Demo: Q4 pipeline push for finance buyers",
+  "productId": "demo-product",
+  "objective": "Grow qualified pipeline from finance buyers at mid-size companies by 30% this quarter, with sales using a new battlecard on competitive deals.",
+  "period": { "start": "2026-10-01", "end": "2026-12-31" },
+  "status": "live",
+  "kpis": [
+    {
+      "id": "k-qualified-pipeline",
+      "name": "Qualified pipeline",
+      "unit": "€",
+      "target": 250000,
+      "baseline": 180000,
+      "primary": true,
+      "entries": [
+        { "asOf": "2026-10-14", "actual": 96000, "source": "Demo CRM pipeline report, week 42" },
+        { "asOf": "2026-10-28", "actual": 141000, "source": "Demo CRM pipeline report, week 44", "note": "Two deals from the webinar list" }
+      ]
+    },
+    {
+      "id": "k-win-rate-vs-competitor",
+      "name": "Win rate vs main competitor",
+      "unit": "%",
+      "target": 35,
+      "baseline": 28,
+      "primary": false,
+      "entries": []
+    }
+  ],
+  "results": [
+    { "date": "2026-10-20", "note": "Webinar for finance leaders: 62 sign-ups, 24 attended. Sales followed up with 9 accounts." }
+  ],
+  "createdAt": "2026-10-01T09:00:00Z",
+  "updatedAt": "2026-10-28T16:00:00Z"
+}

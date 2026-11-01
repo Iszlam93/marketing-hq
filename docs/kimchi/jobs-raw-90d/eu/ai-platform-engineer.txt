@@ -1,0 +1,124 @@
+LinkedIn Jobs, keywords "AI platform engineer", location European Union (geoId 91000000), no industry filter (LinkedIn removed it), past 90 days, pages 1-5 (start=0..100), collected 24 Oct 2026. Format: search | company | job title | jobId
+AI platform engineer | Aquablu | Senior AI Platform Engineer | 4468560319
+AI platform engineer | Picnic Technologies | AI Platform Engineer | 4479573260
+AI platform engineer | A.P. Moller - Maersk | Senior AI Platform Engineer | 4464904423
+AI platform engineer | Raisin | AI Platform Engineer (m/f/d) | 4475234224
+AI platform engineer | Bonnie | AI Engineer (Agent Platform) | 4476913931
+AI platform engineer | Atlantic | Agentic Platform Engineer @ AI Venture, Berlin | 4474828274
+AI platform engineer | Mistral | Applied AI, Forward Deployed Machine Learning Engineer - Amsterdam | 4477868133
+AI platform engineer | Altana | Staff AI Deployment Engineer, Amsterdam | 4477016866
+AI platform engineer | MarvelX AI | AI Engineer | 4480235424
+AI platform engineer | Metyis | AI Solutions Engineer | 4463235672
+AI platform engineer | Mastercard | Platform Engineer II | 4472638800
+AI platform engineer | ElevenLabs | Engineering - Internal AI Transformation | 4474375060
+AI platform engineer | SmallClaims | AI Product Engineer | 4479851076
+AI platform engineer | OpenAI | Applied AI Engineer, Digital Natives | 4480470021
+AI platform engineer | Rydoo | AI Transformation Engineer | 4478378577
+AI platform engineer | ElevenLabs | Engineering - Internal AI Transformation | 4474360766
+AI platform engineer | Jobgether | AI Tooling Engineer | 4480775768
+AI platform engineer | Pandora | Lead Engineer, AI Platform | 4472678701
+AI platform engineer | Capgemini | Artificial Intelligence Consultant | 4476280417
+AI platform engineer | Gaide | AI Engineer (Forward Deployed) | 4479540880
+AI platform engineer | WaveSix | AI & Automation Engineer | 4455884148
+AI platform engineer | Capgemini | AI Solution Engineer | 4443008794
+AI platform engineer | TechTree | AI Platform Lead | 4473145870
+AI platform engineer | Xebia | AI Engineer | 4474126183
+AI platform engineer | ABN AMRO Bank N.V. | AI Techlead | 4412111530
+AI platform engineer | ABN AMRO Bank N.V. | AI Engineer | 4413993285
+AI platform engineer | Metyis | AI Solutions Engineer | 4463225693
+AI platform engineer | ElevenLabs | Engineering - Internal AI Transformation | 4474362698
+AI platform engineer | Kraken | AI Platform Engineer, Enablement and Governance Operations | 4467555784
+AI platform engineer | Nokia | AI Expert | 4478993815
+AI platform engineer | Marktlink | AI Engineer | 4479290882
+AI platform engineer | Kraken | AI Platform Engineer, Enablement and Governance Operations | 4467546960
+AI platform engineer | The Coca-Cola Company | Senior Manager, AI Engineer | 4472810749
+AI platform engineer | Rydoo | AI Transformation Engineer | 4479408194
+AI platform engineer | OpenAI | Applied AI Engineer, Digital Natives | 4478168998
+AI platform engineer | ElevenLabs | Engineering - Internal AI Transformation | 4482749198
+AI platform engineer | ScreenPoint Medical | AI Enablement Engineer | 4474712292
+AI platform engineer | Vicoland | AI & Platform Innovation Engineer | 4473474672
+AI platform engineer | ML6 | Forward Deployed Engineer | 4458917449
+AI platform engineer | Vicoland | AI & Platform Innovation Engineer | 4474057467
+AI platform engineer | Rydoo | AI Transformation Engineer | 4466316335
+AI platform engineer | NewRocket | Forward Deployed AI Engineer-Anthropic-Netherlands/Western Europe | 4459604325
+AI platform engineer | Swisscom | Agentic AI Engineer | 4480043757
+AI platform engineer | Sateliot | AI Engineer | 4467873028
+AI platform engineer | The Coca-Cola Company | Senior Manager, AI Engineer | 4472829025
+AI platform engineer | CatalystOne Solutions | AI Operations Engineer | 4469753487
+AI platform engineer | HAVI | AI & Automation Engineer | 4471626532
+AI platform engineer | Nivara | Platform and DevOps Engineer | 4482856053
+AI platform engineer | IFS | Senior Principal Platform Lead || AI & Agentic Systems | 4476026160
+AI platform engineer | Huuva | AI Product Engineer (senior) | 4470395129
+AI platform engineer | Merck Healthcare | Agentic AI Platform Architect | 4467225936
+AI platform engineer | Atira | AI Engineer | 4447576217
+AI platform engineer | 5U AI | Founding AI Engineer | 4452294865
+AI platform engineer | Uni-Tankers A/S | AI Lead | 4479291982
+AI platform engineer | Nooga | Applied AI Engineer | 4446165909
+AI platform engineer | IFS | Senior Principal Platform Lead || AI & Agentic Systems | 4476026143
+AI platform engineer | Mercedes-Benz.io | AI Engineer (f/m/x) | 4466110358
+AI platform engineer | Lufthansa Systems Hungária | AI/ML Engineer | 4382113093
+AI platform engineer | Swoep.AI | Forward Deployed Engineer | 4455312699
+AI platform engineer | Københavns Universitet - University of Copenhagen | Platform engineer | 4477173088
+AI platform engineer | NewRocket | Senior/Lead Forward Deployed AI Engineer-Anthropic-Netherlands/Western Europe | 4459641259
+AI platform engineer | Zaigo | Senior Forward Deployed Engineer, AI Transformation | 4479600584
+AI platform engineer | Siemens Energy | AI Architect (f/m/d) | 4481130725
+AI platform engineer | ZEISS Group | AI Engineer | 4482495913
+AI platform engineer | Oper Credits | AI Solutions Engineer | 4473332742
+AI platform engineer | Supermetrics | Agentic AI Engineer - GTM Systems | 4476664499
+AI platform engineer | Campotec Group | AI & Automation Manager | 4469176059
+AI platform engineer | Legora | Applied AI Engineer | 4470167058
+AI platform engineer | Forward Deployed Engineer | Forward Deployed Engineer | 4480470592
+AI platform engineer | Grasp | AI Engineer | 4454797443
+AI platform engineer | PwC Nederland | Forward Deployed AI Engineer | 4472520993
+AI platform engineer | Nordiska | AI Engineer | 4453714219
+AI platform engineer | Xensam | AI Enablement Engineer | 4442748781
+AI platform engineer | dataroots, a Talan company | AI Deployment Strategist | 4462155605
+AI platform engineer | Allianz Technology | AI Platform Engineer | 4480981045
+AI platform engineer | ABC Fitness | Senior AI Platform Engineer | 4481686624
+AI platform engineer | Gaide | Lead AI Engineer | 4479547883
+AI platform engineer | dexter health | Applied AI Engineer - Remote | 4480625101
+AI platform engineer | LangChain | Deployed Architect, Professional Services (Amsterdam) | 4383267328
+AI platform engineer | Kraken | AI Platform Engineer, Enablement and Governance Operations | 4467546957
+AI platform engineer | Kyvera | PLATFORM LEAD (M/F/D) | 4465662243
+AI platform engineer | bunch | Senior Applied AI Engineer, AI Platform | 4468219494
+AI platform engineer | ElevenLabs | Engineering - Internal AI Transformation | 4474353944
+AI platform engineer | Kraken | AI Platform Engineer, Enablement and Governance Operations | 4467561713
+AI platform engineer | Vicoland | AI & Platform Innovation Engineer | 4474063325
+AI platform engineer | bunch | Senior Applied Ai Engineer, Ai Platform | 4481582226
+AI platform engineer | All Your BI | Senior AI Engineer | 4465065221
+AI platform engineer | Young Financials | AI Engineer | 4482444935
+AI platform engineer | Siemens Energy | AI Architect (f/m/d) | 4481128822
+AI platform engineer | Apylon | Forward Deployed AI Engineer | 4478299541
+AI platform engineer | IFS | Senior Principal Platform Lead || AI & Agentic Systems | 4476007975
+AI platform engineer | IFS | Senior Principal Platform Lead || AI & Agentic Systems | 4476012600
+AI platform engineer | Cognizant | Frontier Engineer | 4457175323
+AI platform engineer | Novo Nordisk | Lead AI Engineer | 4480668248
+AI platform engineer | Usercentrics | AI Enablement Engineer | 4469121083
+AI platform engineer | Brevo | Technical Lead - AI Ops | 4480061455
+AI platform engineer | Marsh | AI Engineer | 4458255082
+AI platform engineer | UCB | Forward Deployed AI Engineer | 4465096235
+AI platform engineer | Schuberg Philis | AI Platform Engineer | 4482894865
+AI platform engineer | Van Lanschot Kempen | AI & Data Specialist | 4474262385
+AI platform engineer | Gain | AI Engineer | 4481571932
+AI platform engineer | Kraken | AI Platform Engineer, Enablement and Governance Operations | 4467549847
+AI platform engineer | dexter health | AI Engineer (LLM Products) - Remote | 4471267379
+AI platform engineer | Kraken | AI Platform Engineer, Enablement and Governance Operations | 4467562511
+AI platform engineer | Riskified | Senior AI Platform Engineer | 4476566751
+AI platform engineer | Merck Healthcare | Agentic AI Platform Architect | 4461089404
+AI platform engineer | bunch | Senior Applied AI Engineer, AI Platform (f/m/d) | 4468227474
+AI platform engineer | IFS | Senior Principal Platform Lead || AI & Agentic Systems | 4476025144
+AI platform engineer | ICEYE | Forward Deployed AI Engineer, Germany | 4457317258
+AI platform engineer | Alpas AI | Senior AI Engineer (f/m/d) | 4476009838
+AI platform engineer | Moss | Applied AI Engineer | 4454385462
+AI platform engineer | Taktile | Senior AI Enablement Engineer | 4474311519
+AI platform engineer | Bain & Company | Manager, AI Engineering | 4478798358
+AI platform engineer | Google | Forward Deployed Engineer, Google Cloud, GenAI | 4466100151
+AI platform engineer | Nordea | AI Specialist to Service Fulfilment & Operations | 4477170461
+AI platform engineer | Albert Bow | Forward Deployed AI Engineer | 4478662947
+AI platform engineer | Bain & Company | Manager, AI Engineering | 4478796404
+AI platform engineer | RebelsAI | Forward Deployed Engineer | 4458622558
+AI platform engineer | Cluster365.ai | AI Tech Lead | 4478520894
+AI platform engineer | BMW Group | Senior AI Infrastructure & Frontier Model Engineer (f/m/x) | 4460733417
+AI platform engineer | Moss | Applied AI Engineer | 4479846891
+AI platform engineer | Supermetrics | Agentic AI Engineer - GTM Systems | 4476655740
+AI platform engineer | Usercentrics | AI Enablement Engineer | 4469108812

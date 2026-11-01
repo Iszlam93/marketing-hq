@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Build or Buy Landing Page</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Geist+Mono:wght@400;500&display=swap">
+<style>
+/* Landing page for the test ads, in Kimchi's brand. Local file only: a take-home example, not for publishing. */
+:root {
+  --black: #18181a; --fg: #1f1f1f; --muted: #696969; --border: #e5e5e5; --surface: #f5f5f5; --warm: #f1efe9;
+  --orange: #ff521d; --orange-50: #ffece5; --lime: #e2ff7a;
+  --sans: "Geist", ui-sans-serif, system-ui, sans-serif; --mono: "Geist Mono", ui-monospace, monospace;
+}
+* { box-sizing: border-box; }
+body { margin: 0; background: #fff; color: var(--fg); font-family: var(--sans); font-size: 15px; line-height: 1.55; }
+.in { max-width: 1080px; margin: 0 auto; padding-left: max(20px, env(safe-area-inset-left, 0px)); padding-right: max(20px, env(safe-area-inset-right, 0px)); }
+nav { border-bottom: 1px solid var(--border); }
+nav .in { display: flex; justify-content: space-between; align-items: center; padding-block: 14px; }
+.wm { font-weight: 700; font-size: 20px; letter-spacing: -0.03em; }
+.wm i { font-style: normal; color: var(--orange); }
+.navlinks { display: flex; gap: 18px; font-size: 14px; color: var(--muted); }
+.hero { background: var(--black); color: #fff; }
+.hero .in { display: grid; grid-template-columns: 1.15fr 0.85fr; gap: 40px; padding-block: 56px 60px; align-items: start; }
+.eyebrow { font-family: var(--mono); font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--orange); }
+h1 { margin: 10px 0 14px; font-size: 44px; line-height: 1.04; letter-spacing: -0.035em; font-weight: 700; text-wrap: balance; }
+h1 em { font-style: normal; background: var(--lime); color: var(--black); padding: 0 8px; border-radius: 8px; }
+.sub { color: #d6d6d6; font-size: 17px; max-width: 520px; margin: 0 0 22px; }
+.ticks { list-style: none; padding: 0; margin: 0; display: grid; gap: 8px; }
+.ticks li { display: grid; grid-template-columns: 22px 1fr; color: #e8e8e8; }
+.ticks li::before { content: "✓"; color: var(--lime); font-weight: 700; }
+form { background: #fff; color: var(--fg); border-radius: 16px; padding: 22px; display: grid; gap: 11px; }
+form h2 { margin: 0; font-size: 19px; letter-spacing: -0.02em; }
+form p { margin: 0; color: var(--muted); font-size: 13.5px; }
+label { display: grid; gap: 4px; font-size: 13px; font-weight: 500; }
+input[type=text], input[type=email] { font: inherit; font-size: 14px; padding: 9px 11px; border: 1px solid var(--border); border-radius: 8px; }
+input:focus-visible, button:focus-visible { outline: 2px solid var(--orange); outline-offset: 2px; }
+fieldset { border: 0; padding: 0; margin: 0; display: grid; gap: 6px; }
+legend { font-size: 13px; font-weight: 500; margin-bottom: 4px; }
+.opts { display: grid; grid-template-columns: 1fr 1fr; gap: 6px; }
+.opts label { display: flex; gap: 7px; align-items: center; font-weight: 400; border: 1px solid var(--border); border-radius: 8px; padding: 7px 9px; cursor: pointer; }
+button { font: inherit; font-weight: 600; background: var(--orange); color: #fff; border: 0; border-radius: 200px; padding: 11px 18px; cursor: pointer; }
+.thanks { background: var(--lime); border-radius: 10px; padding: 12px; font-weight: 600; }
+section { padding-block: 56px; }
+h3.t { margin: 0 0 6px; font-size: 30px; letter-spacing: -0.03em; line-height: 1.1; text-wrap: balance; }
+.lead { color: var(--muted); max-width: 640px; margin: 0 0 26px; }
+.four { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; }
+.tile { border: 1px solid var(--border); border-radius: 14px; padding: 18px; display: grid; gap: 6px; align-content: start; }
+.tile .k { font-family: var(--mono); font-size: 11px; letter-spacing: 0.06em; text-transform: uppercase; color: var(--orange); }
+.tile b { font-size: 16px; letter-spacing: -0.01em; }
+.tile span { color: var(--muted); font-size: 14px; }
+.warmband { background: var(--warm); }
+.vs { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.vs div { border-radius: 14px; padding: 20px; display: grid; gap: 8px; }
+.vs .a { background: #fff; }
+.vs .b { background: var(--black); color: #fff; }
+.vs ul { margin: 0; padding-left: 18px; display: grid; gap: 4px; }
+.vs .b li::marker { color: var(--orange); }
+.qa { display: grid; grid-template-columns: 1fr 1fr; gap: 14px 28px; }
+.qa div { border-top: 1px solid var(--border); padding-top: 12px; }
+.qa b { display: block; margin-bottom: 4px; }
+.qa span { color: var(--muted); font-size: 14px; }
+.final { background: var(--orange); color: #fff; }
+.final .in { display: flex; justify-content: space-between; align-items: center; gap: 20px; padding-block: 36px; }
+.final b { font-size: 24px; letter-spacing: -0.02em; }
+.btn { background: var(--black); color: #fff; border-radius: 200px; padding: 11px 20px; font-weight: 600; white-space: nowrap; text-decoration: none; }
+footer { font-size: 12px; color: var(--muted); }
+footer .in { padding-block: 18px; }
+@media (max-width: 860px) {
+  .hero .in, .vs, .qa { grid-template-columns: 1fr; }
+  .four { grid-template-columns: 1fr 1fr; }
+  h1 { font-size: 34px; }
+  .final .in { flex-direction: column; align-items: flex-start; }
+  .navlinks { display: none; }
+}
+@media (max-width: 480px) { .four, .opts { grid-template-columns: 1fr; } }
+@media (prefers-reduced-motion: reduce) { * { scroll-behavior: auto; } }
+</style>
+</head>
+<body>
+<nav><div class="in"><span class="wm">kimchi<i>.</i></span><span class="navlinks"><span>Platform</span><span>Enterprise</span><span>Pricing</span><span>Docs</span></span></div></nav>
+
+<header class="hero">
+  <div class="in">
+    <div>
+      <span class="eyebrow">For AI platform and engineering leaders</span>
+      <h1>Autonomous agents for your whole team. <em>Limits set before anyone starts.</em></h1>
+      <p class="sub">Agents do the coding work on their own. You set budgets, models and where they run, per team, developer and agent, before they start.</p>
+      <ul class="ticks">
+        <li>Budgets that stop spend at the limit, not a report after it</li>
+        <li>The right model for each task, with Claude or OpenAI on your own key</li>
+        <li>Kimchi's cloud or yours</li>
+        <li>What every merged pull request cost</li>
+      </ul>
+    </div>
+    <form id="lead" novalidate>
+      <h2>Get the free one-page guide</h2>
+      <p>"Set the rules before your agents run". What's changing in AI coding costs in 2026, and five rules to set before agents go team-wide.</p>
+      <label for="name">Full name<input id="name" type="text" autocomplete="name" required></label>
+      <label for="email">Work email<input id="email" type="email" autocomplete="email" required></label>
+      <label for="company">Company<input id="company" type="text" autocomplete="organization" required></label>
+      <fieldset>
+        <legend>Will your team build its AI platform, or buy parts of it?</legend>
+        <div class="opts">
+          <label for="o1"><input id="o1" type="radio" name="bb" value="build">Build</label>
+          <label for="o2"><input id="o2" type="radio" name="bb" value="buy">Buy</label>
+          <label for="o3"><input id="o3" type="radio" name="bb" value="both">Both</label>
+          <label for="o4"><input id="o4" type="radio" name="bb" value="unsure">Not sure yet</label>
+        </div>
+      </fieldset>
+      <button type="submit">Send me the guide</button>
+      <div class="thanks" id="thanks" hidden>Thanks. The guide is on its way to your inbox.</div>
+    </form>
+  </div>
+</header>
+
+<section>
+  <div class="in">
+    <h3 class="t">Four things you decide before the first agent runs</h3>
+    <p class="lead">Your developers keep the tools they like. You set the rules once, for every team.</p>
+    <div class="four">
+      <div class="tile"><span class="k">The spend</span><b>Budgets per team, developer and agent</b><span>Requests stop at the limit. No surprise at the end of the month.</span></div>
+      <div class="tile"><span class="k">The models</span><b>The right model per task</b><span>Strong models for hard problems, lighter ones for the rest. Block what you don't approve.</span></div>
+      <div class="tile"><span class="k">The place</span><b>Our cloud or yours</b><span>Run in Kimchi's cloud, or inside your own when security asks.</span></div>
+      <div class="tile"><span class="k">The work</span><b>Agents that finish tasks</b><span>Approve a plan once; the agent builds it and opens a pull request. See what it cost.</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="warmband">
+  <div class="in">
+    <h3 class="t">Your AI platform hire: build it, or start on the rollout?</h3>
+    <p class="lead">Half the AI-platform job ads we read ask the hire to build this first. That's months before a single team gets agents.</p>
+    <div class="vs">
+      <div class="a"><b>Build it in-house</b><ul><li>A gateway with sign-in and routing</li><li>Limits per team and developer, plus alerts</li><li>Cost reporting across every coding agent</li><li>An audit trail compliance accepts</li><li>Then the rollout</li></ul></div>
+      <div class="b"><b>Switch on Kimchi</b><ul><li>Limits set before anyone starts</li><li>Routing and cost per PR from day one</li><li>Claude Code usage in the same reports</li><li>Your hire starts on the rollout, not the plumbing</li></ul></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="in">
+    <h3 class="t">What your security team will ask</h3>
+    <div class="qa" style="margin-top:20px">
+      <div><b>Where does our code go?</b><span>Kimchi's cloud, or a deployment inside your own environment. You choose per workload.</span></div>
+      <div><b>Which models touch it?</b><span>Only the ones you approve. Frontier models run on your own key.</span></div>
+      <div><b>Do agents hold our credentials?</b><span>No. Credentials are added at the gateway, so agents never see them.</span></div>
+      <div><b>Who audits Kimchi?</b><span>Cast AI Group is audited to SOC 2 Type II and certified to ISO 27001. Reports are available under NDA.</span></div>
+    </div>
+  </div>
+</section>
+
+<div class="final"><div class="in"><div><b>Compare notes: what 15 finance firms are building</b><br><span>30 minutes with a Kimchi engineer, comparing your AI platform plans with your peers'. No demo.</span></div><a class="btn" href="#lead">Start with the guide</a></div></div>
+
+<footer><div class="in">Take-home example by Islam Elsaeed for a Kimchi PMM exercise, not an official Kimchi page. Features from docs.kimchi.dev, the trust centre and the free plan (24 Oct 2026).</div></footer>
+
+<script>
+document.getElementById('lead').addEventListener('submit', function (e) {
+  e.preventDefault();
+  document.getElementById('thanks').hidden = false;
+});
+</script>
+</body>
+</html>

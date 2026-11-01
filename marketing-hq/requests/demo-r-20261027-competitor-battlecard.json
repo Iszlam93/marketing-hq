@@ -1,0 +1,43 @@
+{
+  "id": "demo-r-20261027-competitor-battlecard",
+  "type": "battlecard",
+  "title": "Demo: Battlecard vs a main competitor for finance buyers",
+  "productId": "demo-product",
+  "brief": "Audience: finance leaders at mid-size companies who are comparing us with a main competitor.\nOutput: a one-page battlecard my sales team can use on calls.\nDecision: when to lead with time-to-value and when to lead with integrations.",
+  "campaignId": "demo-c-q4-finance-pipeline",
+  "links": [
+    { "label": "Competitor pricing page (placeholder)", "href": "https://example.com/competitor-pricing" },
+    { "label": "Lost-deal notes (placeholder)", "href": "https://example.com/lost-deals" }
+  ],
+  "due": "2026-11-07",
+  "priority": "high",
+  "createdAt": "2026-10-27T10:05:00Z",
+  "status": "in_review",
+  "plan": {
+    "createdAt": "2026-10-27T10:15:00Z",
+    "rationale": "Default battlecard plan, shortened: the product file already holds approved positioning, so I skipped the positioning task and went straight from research to the battlecard.",
+    "tasks": [
+      {
+        "id": "t1",
+        "agentId": "research",
+        "skillIds": ["competitive-research"],
+        "title": "Research the competitor: pricing, claims, and why we lose",
+        "dependsOn": [],
+        "outputAssetId": "demo-r-20261027-competitor-battlecard--t1",
+        "status": "in_review"
+      },
+      {
+        "id": "t2",
+        "agentId": "content",
+        "skillIds": ["battlecard"],
+        "title": "Write the one-page battlecard",
+        "dependsOn": ["t1"],
+        "outputAssetId": "demo-r-20261027-competitor-battlecard--t2",
+        "status": "in_review",
+        "note": "Revised once after my comment on v1."
+      }
+    ]
+  },
+  "notion": { "pageId": "demo-page-id", "url": "https://example.com/notion/demo-request", "syncedAt": "2026-10-29T09:20:00Z" },
+  "updatedAt": "2026-10-29T09:20:00Z"
+}

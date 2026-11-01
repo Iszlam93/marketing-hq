@@ -1,0 +1,11 @@
+{
+  "id": "demo-run-20261027T141500-research-a1b2",
+  "agentId": "research",
+  "trigger": "schedule",
+  "startedAt": "2026-10-27T14:15:00Z",
+  "endedAt": "2026-10-27T14:31:00Z",
+  "requestId": "demo-r-20261027-competitor-battlecard",
+  "taskId": "t1",
+  "outcome": "ok",
+  "summary": "Wrote research notes on the main competitor (v1) and synced the Notion asset page."
+}

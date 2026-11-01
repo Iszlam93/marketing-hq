@@ -1,0 +1,126 @@
+LinkedIn Jobs, keywords ""developer productivity" AI", location United Kingdom (geoId 101165590), no industry filter (LinkedIn removed it), past 90 days, pages 1-5 (start=0..100), collected 24 Oct 2026. Format: search | company | job title | jobId
+"developer productivity" AI | GitLab | AI Transformation Owner, Product & Design | 4456430391
+"developer productivity" AI | n8n | Internal AI Enablement Lead | 4479031502
+"developer productivity" AI | LOBA GROUP | AI & Automation Specialist | 4479445396
+"developer productivity" AI | Trust In SODA | AI & Automation Specialist | 4478130432
+"developer productivity" AI | dentsu | AI Automation Manager (SEO) | 4464863523
+"developer productivity" AI | Personio | AI & Automation Manager (d/f/m) | 4476454883
+"developer productivity" AI | Environment Bank | AI Enablement Lead | 4471708039
+"developer productivity" AI | Addition | AI Product & Delivery Lead | 4470092551
+"developer productivity" AI | EDF (UK) | AI Product Manager | 4475238395
+"developer productivity" AI | Clipboard | Strategy & Ops Lead, Applied AI | 4471752860
+"developer productivity" AI | Verkada | AI Marketing Engineer | 4446943718
+"developer productivity" AI | Semble | Senior Product Operations Manager - Applied AI | 4475208256
+"developer productivity" AI | Holafly | Head of CX Automation & AI | 4472576722
+"developer productivity" AI | AstraZeneca | AI Activation Specialist | 4477950546
+"developer productivity" AI | incident.io | Product Engineer - GTM | 4450813280
+"developer productivity" AI | Environment Bank | AI Enablement Lead | 4472305548
+"developer productivity" AI | Campbell Chamberlain | AI Enablement Specialist | Claude & Generative AI | 4482168861
+"developer productivity" AI | Dataworks | AI Transformation Manager | 4478543700
+"developer productivity" AI | Multiverse | GTM Engineer | 4479433482
+"developer productivity" AI | Sherweb | Senior AI Partner Growth & Program Specialist | 4479550234
+"developer productivity" AI | B Lab | AI Workflow Lead (London, U.K.) | 4478389385
+"developer productivity" AI | Sonar | Marketing AI Engineer | 4445995616
+"developer productivity" AI | Capital.com | Senior Operations Manager - AI Automation | 4480255875
+"developer productivity" AI | The Future Is Human | Senior GTM System Builder | 4463112834
+"developer productivity" AI | Legora | AI Enablement Lead | 4456510477
+"developer productivity" AI | The Future Is Human | Lead GTM System Builder | 4463123709
+"developer productivity" AI | Aqovia | Senior AI Transformation Lead | 4470749633
+"developer productivity" AI | Unity Advisory | AI Enablement Lead | 4473351628
+"developer productivity" AI | Altimetrik | AI Transformation Specialist | 4482869057
+"developer productivity" AI | OpenAI | Applied AI Engineer, Codex | 4464868540
+"developer productivity" AI | JPMorganChase | Agentic AI Associate - Client 360 | 4438564442
+"developer productivity" AI | Neko Health | AI Acceleration Specialist | 4477842875
+"developer productivity" AI | Xelix | Product Operations Lead, AI | 4463619452
+"developer productivity" AI | Quantuma | AI Adoption Partner | 4470310781
+"developer productivity" AI | ExamWorks UK | AI and Automation Lead | 4476704146
+"developer productivity" AI | Janus Henderson Investors | AI Enablement Partner | 4456902794
+"developer productivity" AI | Airbus | ARP Artificial Intelligence Solutions Specialist | 4477064012
+"developer productivity" AI | Geomiq | AI Automation Engineer | 4467132872
+"developer productivity" AI | OpenAI | Applied AI Engineer, Startups (Codex) | 4470001629
+"developer productivity" AI | Cresta | Forward Deployed Product Manager - AI Agent (EMEA) | 4379963753
+"developer productivity" AI | JPMorganChase | Applied AI ML - AI/LLM Product Associate | 4478591703
+"developer productivity" AI | Tipalti | Principal, AI Transformation | 4468667420
+"developer productivity" AI | Capital on Tap | AI Specialist | 4480586663
+"developer productivity" AI | Think Jam | VP, AI & Innovation | 4463069072
+"developer productivity" AI | Mark Allen Group | AI Implementation | 4477581993
+"developer productivity" AI | Bloomberg | AI Enablement Lead, External Relations | 4452864024
+"developer productivity" AI | Kernel | AI Ops Engineer (Business Operations) | 4471941414
+"developer productivity" AI | Schneider Electric | Program Manager - AI Transformation & Workforce Strategy | 4471924730
+"developer productivity" AI | Wise | AI Implementation Senior Manager, TGS | 4469012749
+"developer productivity" AI | Marcenta Chartering & Shipping Ltd | AI Manager | 4449069898
+"developer productivity" AI | Esko | Manager Agentic AI | 4478798128
+"developer productivity" AI | OpenAI | Applied AI Engineer, Codex Core Agent | 4416724485
+"developer productivity" AI | LocalStack | AI Enablement Engineer | 4462031906
+"developer productivity" AI | ElevenLabs | Engineering - Internal AI Transformation | 4482748226
+"developer productivity" AI | Shell | AI Embedment Lead | 4473361222
+"developer productivity" AI | Burberry | Senior Developer, AI & Emerging Tech | 4481561341
+"developer productivity" AI | Basware | AI Lead | 4461973922
+"developer productivity" AI | Arm | Staff AI Solutions specialist | 4464106130
+"developer productivity" AI | Wave Mind | Founding AI Product Engineer | 4476450663
+"developer productivity" AI | AI Enablement Lead [gn] Data Intelligence | AI Enablement Lead [gn] Data Intelligence | 4472188157
+"developer productivity" AI | Northrop Grumman UK | AI Product Engineer | 4477086913
+"developer productivity" AI | Phorest Software | AI Enablement Engineer | 4476187134
+"developer productivity" AI | Duck Creek Technologies | Senior Product Manager - Agentic AI Platform - Remote | 4460978646
+"developer productivity" AI | iSpeedToLead | Senior AI Product Engineer | 4469804767
+"developer productivity" AI | Syngenta | Lead AI Enablement Technology | 4454070429
+"developer productivity" AI | FDJ UNITED | AI Enablement Lead | 4475537492
+"developer productivity" AI | BCG X | (Senior) AI Factory Product Builder, London - BCG X | 4433457583
+"developer productivity" AI | Vivedia | AI Solutions Engineer | 4475694606
+"developer productivity" AI | Arm | Staff AI Technology Specialist | 4456823914
+"developer productivity" AI | NVIDIA | Developer Relations Manager - Artificial Intelligence | 4395473461
+"developer productivity" AI | Xcede | AI Enablement Lead | 4481906246
+"developer productivity" AI | GSK | Principal, Automation Enablement Lead | 4478630030
+"developer productivity" AI | Cast AI | AI Solutions Architect | 4477133471
+"developer productivity" AI | Matillion | Director of Engineering Productivity and Operations | 4476326235
+"developer productivity" AI | Wave Group | AI Engineer | 4475228085
+"developer productivity" AI | Smartsheet | Senior Product Manager II, Developer ecosystem MCP (Remote from UK) | 4465578283
+"developer productivity" AI | Auquan | AI Applied Engineer - London | 4479072960
+"developer productivity" AI | Coforge | Agentic AI Lead | 4472316974
+"developer productivity" AI | Arm | AI Technical Innovation Lead | 4478133718
+"developer productivity" AI | Bullish | AI Forward Deployed Engineer | 4474571324
+"developer productivity" AI | BCG X | Senior AI Factory Product Builder, United States - BCG X | 4454961219
+"developer productivity" AI | Saragossa | AI Engineer - Investment Management - Up to £100k base | 4474401161
+"developer productivity" AI | Cherry Ventures | Applied AI Engineer | 4480979880
+"developer productivity" AI | Williams Lea | AI Workflow Engineer | 4473672165
+"developer productivity" AI | Senior AI Solutions Engineer - London (Hybrid) | Up to £120k | Senior AI Solutions Engineer - London (Hybrid) | Up to £120k | 4476022713
+"developer productivity" AI | American Express | Senior AI Engineer – Agentic AI | 4478479398
+"developer productivity" AI | Aviva | AI Delivery Method Lead | 4481321252
+"developer productivity" AI | Edra | AI Engineer (London) | 4385059123
+"developer productivity" AI | G-Research | Applied AI Engineer | 4478255829
+"developer productivity" AI | HSBC | Head of Productivity Suite Engineering Lead - AI | 4480535559
+"developer productivity" AI | Anthropic | Forward Deployed Engineer | 4465785416
+"developer productivity" AI | Accelerant | AI Platform Engineer | 4475234570
+"developer productivity" AI | Bain & Company | Director, AI and Machine Learning Engineering | 4482136904
+"developer productivity" AI | Skin Analytics | AI Enablement Engineering Lead | 4481141158
+"developer productivity" AI | Google | Forward Deployed Engineer III, Applied AI | 4469332606
+"developer productivity" AI | Typeform | Senior AI Engineer | 4477164050
+"developer productivity" AI | Skin Analytics | AI Enablement Engineer | 4454094498
+"developer productivity" AI | YNH | Senior AI Engineer | 4477675265
+"developer productivity" AI | Google | Forward Deployed Engineer, Gen AI, Google Cloud | 4478460059
+"developer productivity" AI | Accenture UK & Ireland | AI CX Delivery Consultant | 4477584933
+"developer productivity" AI | Cognizant | AI Automation Engineer | 4479093977
+"developer productivity" AI | Optimizely | Senior AI & Automation Engineer | 4476308443
+"developer productivity" AI | Vega | AI Engineer | 4455948430
+"developer productivity" AI | OpenAI | Forward Deployed Engineer - London | 4474651068
+"developer productivity" AI | Bowden Brown | AI Engineer | 4480956404
+"developer productivity" AI | Durlston Partners | AI Engineer | 4461883795
+"developer productivity" AI | BoF Careers | Burberry Senior Developer, AI & Emerging Tech | 4482619276
+"developer productivity" AI | Gradient Labs | Senior AI Engineer | 4461768086
+"developer productivity" AI | Lendable | AI Scientist | 4473356816
+"developer productivity" AI | loveholidays | Applied AI Engineer | 4479064998
+"developer productivity" AI | Barings | Forward Deployed AI Engineer | 4467771531
+"developer productivity" AI | Dartmouth Partners | Data AI Specialist | 4478479182
+"developer productivity" AI | IRIS Software Group | Principal Engineer - Agentic AI | 4463909365
+"developer productivity" AI | Fresha | Senior Applied AI Engineer, Product (London) | 4478105741
+"developer productivity" AI | Moss | Applied AI Engineer | 4460115226
+"developer productivity" AI | forgd.ai | Applied AI Architect | 4481128057
+"developer productivity" AI | Chambers | AI Solutions Lead | 4474722111
+"developer productivity" AI | Accenture UK & Ireland | Forward Deployed AI Engineer | 4477904245
+"developer productivity" AI | SKIN ANALYTICS LTD | AI Enablement Engineer | 4459165658
+"developer productivity" AI | Xapien | Senior Applied AI Engineer | 4480794000
+"developer productivity" AI | Jobgether | AI Tooling Engineer | 4480775761
+"developer productivity" AI | Third Bridge Group | AI Solutions Engineer | 4452993893
+"developer productivity" AI | Invecta | AI Solutions Engineer | 4482457849
+"developer productivity" AI | Taktile | Senior AI Enablement Engineer | 4474316457
+"developer productivity" AI | Edge Tech | AI Engineering Lead | 4474899904

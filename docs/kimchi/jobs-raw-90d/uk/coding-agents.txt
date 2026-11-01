@@ -1,0 +1,126 @@
+LinkedIn Jobs, keywords "coding agents", location United Kingdom (geoId 101165590), no industry filter (LinkedIn removed it), past 90 days, pages 1-5 (start=0..100), collected 24 Oct 2026. Format: search | company | job title | jobId
+coding agents | Coder | Software Engineering Manager (Agentic Engineering) | 4452839881
+coding agents | Coder | Staff Software Engineer (Agentic Engineering) | 4453464270
+coding agents | G MASS Consulting | Senior Automation Specialist (RPA & AI) | 4473641752
+coding agents | CGI | Forward Deployed AI Engineer – OpenAI / Agentic AI | 4476922509
+coding agents | Cambridge Consultants | Agentic Systems Engineer (Digital Services) | 4447092143
+coding agents | Claude Coding Studios | Claude AI Larper | 4482898078
+coding agents | Travel Counsellors | Agentic Platform Engineer | 4458956685
+coding agents | Cambridge Consultants | Agentic AI Engineer (Defence & Security) | 4470966071
+coding agents | Together AI | Senior Software Engineer — Infra Agent Systems UK | 4460610094
+coding agents | Caspian One | Front End Developer - Agentic AI | 4462202579
+coding agents | Virtual Connect Solutions | Senior Data Engineer – AI & Agentic Systems | 4477974098
+coding agents | InfoSec People Ltd | AI Agent Developer - Copilot Studio | 4478995402
+coding agents | Client Server | Python Software Engineer Agentic AI | 4480968592
+coding agents | Cavendish Professionals | AI Applied Engineer | 4470891439
+coding agents | CGI | Software Engineer – AI | 4477874152
+coding agents | Ethos BeathChapman | Field CTO , Agentic AI, FDE model | 4475931711
+coding agents | Certain Advantage | AI Engineer | 4476031275
+coding agents | Engage (Solutions Group) | AI Engineer | 4470873096
+coding agents | AI Connect | Data & AI Delivery Partner | Lead AI Engineer | 4481210031
+coding agents | Cloud Decisions | Senior AI Engineer | 4468610413
+coding agents | Content Guru | Senior Software Engineer (AI Solutions) | 4476749192
+coding agents | Inspired Thinking Group (ITG) | Creative Technologist/AI Specialist | 4448161691
+coding agents | AI Solutions Business Analyst | AI Solutions Business Analyst | 4476195311
+coding agents | Zealous Agency | Artificial Intelligence Engineer | 4483138205
+coding agents | Addition | Digital Developer | 4476283597
+coding agents | F5 Consultants | GCP Agentic AI Technical Architect | 4478387724
+coding agents | Coder | Senior Solutions Engineer (Europe) | 4459967930
+coding agents | Coder | Senior Software Engineer (Multiple Teams, Europe) | 4457714474
+coding agents | ConnectedSolutions | AI Engineers (UK, Contract) | 4476261746
+coding agents | CGI | AI Engineer / Developer | 4402663553
+coding agents | PA Consulting | Senior AI Engineer | 4456884358
+coding agents | DGH Recruitment | AI Solutions Engineer | 4481669435
+coding agents | Arcus Search | Artificial Intelligence Engineer | 4476405698
+coding agents | Engage (Solutions Group) | Forward Deployed Engineer | 4474447807
+coding agents | Change Digital – Digital & Tech Recruitment | AI Engineer | 4473649723
+coding agents | SoCode Recruitment | Forward Deployed Engineer | 4477560896
+coding agents | Cloud Decisions | Copilot Technical Lead | 4479508971
+coding agents | CPS Group (UK) Limited | Senior AI Software Engineer | 4481562725
+coding agents | PA Consulting | Senior AI Engineer | 4456871421
+coding agents | AgileGrid Solutions | Python Engineer | 4483316173
+coding agents | Cavendish Professionals | Senior Software Engineer | 4470886542
+coding agents | iO Associates | Senior/Lead AI Engineer - Manchester | 4479061807
+coding agents | Search Chain Partners | Forward Deployed Engineer | 4477702559
+coding agents | ConnectedSolutions | Graph AI Engineer, KG (Contract) | 4474238175
+coding agents | Anson McCade | AI Forward Deployed Engineer | 4476673964
+coding agents | Search Chain Partners | Forward Deployed Engineer - AI for Finance | 4470172331
+coding agents | CommonAI Compute | Senior Software Engineer - AI-Native Cloud Infrastructure | 4477161194
+coding agents | Cloud Decisions | Lead Copilot Engineer | 4478508200
+coding agents | Client Server | Senior Software Engineer Python TypeScript AI | 4480359798
+coding agents | C3 AI | Forward Deployed Engineer | 4421500989
+coding agents | Coder | Enterprise Account Manager (German-speaking, UK) | 4452532194
+coding agents | Cavendish Professionals | Senior Software Engineer | 4470886531
+coding agents | Scrumconnect Consulting | Lead AI Engineer | 4481124189
+coding agents | CommuniTech Recruitment Group | Senior Python AI Software Engineer. Top Tier Asset Management House. £100,000 - £140,000 + Discretionary Bonus (15-20%) + Benefits. 3 Days a week Hybrid. | 4479266517
+coding agents | Cast AI | Senior Applied ML Engineer | Kimchi (Model Router) | 4479791736
+coding agents | ConnexAI | Senior Software Engineer | 4438311862
+coding agents | CommuniTech Recruitment Group | Senior Python AI Software Engineer. Top Tier Asset Management House. £140,000 + £145,000 Discretionary Bonus (20%) + Benefits. 3 Days a week Hybrid. | 4479276178
+coding agents | Content Guru | Software Engineer | 4450745903
+coding agents | LevelUP HCS | Full Stack AI Engineer, Global Information Security (Vice President) | 4477560537
+coding agents | SmartChoice International GCC | Full Stack Engineer | 4473630019
+coding agents | FDE Times | Forward Deployed Engineer | 4479493957
+coding agents | CommonAI Compute | Software Engineer - AI-Native Cloud Infrastructure | 4477148884
+coding agents | Content Guru | Senior Software Engineer – Algorithms | 4476750179
+coding agents | Data Idols | Agiloft Technical Consultant | 4477392058
+coding agents | Acuity Analytics | Forward Deployed Engineer | 4463236836
+coding agents | C3 AI | Forward Deployed Engineer - Defence | 4441882545
+coding agents | CGI | Senior Data Scientist – AI | 4473061657
+coding agents | Applied Computing | Full Stack Engineer, Forward Deployed | 4459815363
+coding agents | Stealth iT Consulting | GenAI Full Stack Engineer (SC Eligible) | 4476655128
+coding agents | CGI | Algorithmic Software Developer – Space Surveillance & Tracking | 4473062650
+coding agents | ANS Group | Pre-Sales Solution Architect - AI | 4454849727
+coding agents | Codec | Senior Technical Consultant (Dynamics 365 & Power Platform) | 4482484915
+coding agents | Vertex Marketing Group Ltd | Distribution Engineer (Remote) | 4481208102
+coding agents | Forward Deployed Engineer | Forward Deployed Engineer | 4481139238
+coding agents | Cloud Decisions | Senior Data & AI Consultant | 4472050208
+coding agents | ClearRoute | Agentic AI Developer (Python) | 4457405532
+coding agents | Coder | Senior Partner Deployed Engineer | 4448475825
+coding agents | Capgemini | Workplace AI & Copilot Solutions Engineer | 4481570061
+coding agents | Kainos | Forward Deployed Engineer | 4463392788
+coding agents | Kainos | Forward Deployed Engineer | 4463397652
+coding agents | CGI | Forward Deployment Engineer | 4463636382
+coding agents | CGI | Technical Graduate - Applied AI Engineering & Deployment 2027 | 4475874280
+coding agents | OB Collective | Principal Software Engineer | 4473478679
+coding agents | Candescent | Software Engineer II | 4459985610
+coding agents | Client Server | Backend Software Engineer Python LLM - Finance | 4481572336
+coding agents | Addition | Staff Software Engineer | 4475450789
+coding agents | Client Server | Backend Software Engineer - Distributed Systems | 4479815247
+coding agents | Cast AI | Senior ML Engineer | Kimchi (Inference Stack Optimization) | 4479808003
+coding agents | Akkodis | Integration Engineer (Azure) | 12 month FTC | Remote | 4479421854
+coding agents | commercetools | Senior AI Search engineer | 4470952745
+coding agents | Understanding Recruitment | Senior Software Engineer | 4478605927
+coding agents | AI Connect | Data & AI Delivery Partner | Lead AI Inference Engineer | 4482091015
+coding agents | Context Recruitment | Principal AI Architect | 4482081885
+coding agents | Scrumconnect Consulting | Lead AI Engineer - Permanent | 4482141919
+coding agents | OB Collective | Senior System Engineer | 4473476844
+coding agents | Applied Computing | Data Engineer, Forward Deployed | 4459830236
+coding agents | Cavendish Professionals | Forward Deployed Engneer | 4474056954
+coding agents | Mongoose Gray | Pulsars, magnetars and Senior Software Engineers. | 4464042460
+coding agents | Understanding Recruitment | Staff Software Engineer | 4478605933
+coding agents | Computacenter | Software Development Placement Programme | 4470966442
+coding agents | ClearRoute | Agentic Engineer SDLC | 4444165434
+coding agents | Acuity Analytics | Senior AI Engineer (Python,MSFT Foundry) | 4479340943
+coding agents | Acuity Analytics | Senior AI Engineer (Python,MSFT Foundry) | 4479365013
+coding agents | CGI | Python Developers | 4467443375
+coding agents | thinkcell | Senior Full Stack Developer - AI Team | 4473637168
+coding agents | CGI | Technical Delivery Engineer | 4470619275
+coding agents | Client Server | Backend Developer Golang Node Pub / Sub | 4479807977
+coding agents | Client Server | Python Software Engineer Machine Learning AWS | 4480358729
+coding agents | Accountancy Action - Your Specialist Finance Recruitment Partner | Senior Software Engineer | 4482108538
+coding agents | Alpha Agency | Alpha FMC | Data, AI, & Digital Engineering Analyst Graduate 2027 | 4473435808
+coding agents | Kainos | Workday Extend Developer | 4463393704
+coding agents | Avensys Consulting UK | Copilot Studio Architect | 4480818906
+coding agents | DGH Recruitment | Legal Technologist | 4477527097
+coding agents | MPower Plus | Technical Architect | 4482831634
+coding agents | Kainos | Workday Extend Developer | 4463602047
+coding agents | Senior ServiceNow Developer | Senior ServiceNow Developer | 4480492501
+coding agents | eGain Corporation | Account Executive | 4452877096
+coding agents | Accordion | Senior Director, Data Solutions & Architecture | 4428409135
+coding agents | Ncounter Technology Recruitment | Research Engineer | 4478145137
+coding agents | Client Server | Backend Software Engineer Python ML AWS | 4480348284
+coding agents | Client Server | Java Developer AI Claude - FinTech | 4475544662
+coding agents | Kainos | Workday Extend Developer | 4463385887
+coding agents | CGI | MLOps Engineer (SC Clearance) | 4402611232
+coding agents | ICS AI Ltd | Product Manager | 4479563864
+coding agents | DeepRec.ai | AI Solutions Manager | 4479567658

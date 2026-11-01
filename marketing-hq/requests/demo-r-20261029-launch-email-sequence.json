@@ -1,0 +1,16 @@
+{
+  "id": "demo-r-20261029-launch-email-sequence",
+  "type": "content-piece",
+  "title": "Demo: 3-email sequence for the new exceptions dashboard",
+  "productId": "demo-product",
+  "brief": "Audience: existing customers' accounts payable leads.\nOutput: a 3-email sequence that announces the new exceptions dashboard and gets them to try it this month.\nDecision: whether to lead with time saved or with fewer late payments.",
+  "links": [
+    { "label": "Release notes (placeholder)", "href": "https://example.com/release-notes" }
+  ],
+  "priority": "normal",
+  "createdAt": "2026-10-29T08:40:00Z",
+  "status": "new",
+  "plan": null,
+  "notion": null,
+  "updatedAt": "2026-10-29T08:40:00Z"
+}

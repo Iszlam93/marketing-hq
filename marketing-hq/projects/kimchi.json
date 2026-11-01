@@ -1,0 +1,425 @@
+{
+  "id": "kimchi",
+  "name": "Kimchi: first EMEA bet",
+  "product": "Kimchi (Cast AI), AI coding platform",
+  "mode": "discover",
+  "objective": "Pick one first EMEA bet for Kimchi (segment, positioning, message) and design a 7-week test that tells me whether it is worth scaling.",
+  "status": "active",
+  "currentStep": 5,
+  "updated": "2026-10-28",
+  "summary": {
+    "segment": "UK + EU financial services, up to 5,000 staff",
+    "buyer": "The current platform owner",
+    "trigger": "The firm is hiring an AI-rollout role",
+    "headline": "Roll out coding agents across engineering. Stay in control.",
+    "budget": "About $5k over 7 weeks, 15,400 impressions per ad",
+    "timeline": "Weeks 1-2 validate (no spend), weeks 3-6 live, week 7 decide"
+  },
+  "links": [
+    { "label": "Submission (2 pages)", "href": "https://claude.ai/artifact/24V8A9GgQjqpJ1ggtTovjG" },
+    { "label": "Appendix (detail and sources)", "href": "https://claude.ai/artifact/PoNSdsbQi6p3AdqHnYn3Ja" },
+    { "label": "Raisin one-pager (tier 1 example)", "href": "https://claude.ai/artifact/88KhU4yjEEV9LS5hdm4e81" },
+    { "label": "Finance one-pager (tier 2, the ad download)", "href": "https://claude.ai/artifact/4Uut7tbqiYkxeBuQdAsGyU" },
+    { "label": "Logic tree", "href": "https://claude.ai/artifact/QygeLubfpN49uRuaph96ad" },
+    { "label": "Handoff notes", "href": "docs/kimchi/HANDOFF.md" }
+  ],
+  "steps": [
+    {
+      "n": 1,
+      "key": "evidence",
+      "title": "Evidence",
+      "question": "Is the pain real, and where does it show up?",
+      "phase": "prepared",
+      "status": "done",
+      "did": [
+        "I read Kimchi's own site, pricing and enterprise page to see what it claims.",
+        "I collected pain signals: shadow AI, approved-tool lists and agent spend nobody can see.",
+        "I ran 4 search terms on LinkedIn jobs, each in the UK and the EU (8 searches), over 90 days to see who is hiring to roll out coding agents.",
+        "I signed up for the free plan and checked the product myself, so I did not rely on the vendor's claims.",
+        "I fact-checked the big bank stories (Barclays, Goldman, Citi, MUFG, Bank of America) before using any of them."
+      ],
+      "found": [
+        "The job funnel went 998 postings, then 73 AI-rollout jobs, then 21 finance jobs from 18 firms (source: docs/kimchi/finance-size-check.md).",
+        "Finance is 29% of AI-rollout jobs, second only to tech (source: docs/kimchi/finance-size-check.md).",
+        "I saw budget settings per team, user and key, and cost reporting, in the console. I did not test a cap against real spend (free plan). Claude Code is reported through telemetry only, not controlled.",
+        "The free plan needs your own model key, so a self-serve free trial does not work for this buyer.",
+        "Some bank stories were weaker than the headlines. For example, Citi's 40,000 is the Copilot headcount, not Devin users (source: docs/kimchi/news-factcheck.md)."
+      ],
+      "metrics": [
+        { "label": "LinkedIn postings collected (4 search terms x UK and EU = 8 searches, 90 days)", "value": "998", "source": "docs/kimchi/finance-size-check.md" },
+        { "label": "AI-rollout jobs after cleaning", "value": "73", "source": "docs/kimchi/finance-size-check.md" },
+        { "label": "Finance jobs, from 18 firms", "value": "21 (29%)", "source": "docs/kimchi/finance-size-check.md" },
+        { "label": "Claims checked in the news fact-check", "value": "5", "source": "docs/kimchi/news-factcheck.md" }
+      ],
+      "output": {
+        "summary": "An evidence pack, a 90-day job funnel with every job link, a first-hand product walkthrough and a news fact-check.",
+        "links": [
+          { "label": "Job funnel and links", "href": "docs/kimchi/finance-size-check.md" },
+          { "label": "Evidence pack", "href": "docs/kimchi/EVIDENCE.md" },
+          { "label": "Product walkthrough", "href": "docs/kimchi/product-walkthrough.md" },
+          { "label": "News fact-check", "href": "docs/kimchi/news-factcheck.md" },
+          { "label": "Appendix with sources", "href": "https://claude.ai/artifact/PoNSdsbQi6p3AdqHnYn3Ja" }
+        ]
+      },
+      "decision": "The pain is real and it shows up as a hiring signal. I move on and look for the firms where it is sharpest.",
+      "confidence": "medium",
+      "caveats": [
+        "Forum and Hacker News posts are a signal of pain, not proof of budget.",
+        "LinkedIn's industry filter was not available, so I labelled each firm's industry by hand from its page.",
+        "Buy versus build is the weak spot: Kraken's own job ad says \"Tiered spend controls are live\", built in-house, so some firms will build rather than buy (docs/kimchi/tier1-accounts.md)."
+      ],
+      "learn": {
+        "why": "A PMM starts with evidence so the bet rests on what buyers do, not on what the company wishes were true. A job ad is a cheap, public sign that a firm has the problem now and is investing in solving it. Checking the product first-hand also stops me promising things it cannot do.",
+        "doneWell": [
+          "Every number links back to a saved source that someone else can re-run.",
+          "I separated what a source shows from what I assume.",
+          "I tested the product claims myself and noted the ones that did not hold."
+        ],
+        "mistakes": [
+          "Treating forum chatter or vendor pages as proof of demand.",
+          "Reporting a funnel without saying how the filters and de-duplication worked.",
+          "Repeating a headline number (like Citi's 40,000) without checking what it counts."
+        ],
+        "terms": [
+          { "term": "Demand signal", "meaning": "Public behaviour that shows buyers are acting on a problem, such as hiring for it." },
+          { "term": "Pain signal", "meaning": "Evidence that the problem hurts today, such as shadow AI or spend nobody can attribute." },
+          { "term": "Primary vs secondary source", "meaning": "A primary source is the company itself. A secondary source is press reporting about it." },
+          { "term": "Shadow AI", "meaning": "Staff using AI tools the company has not approved or cannot see." }
+        ]
+      }
+    },
+    {
+      "n": 2,
+      "key": "target",
+      "title": "Target",
+      "question": "Who should I aim at first, and who should I leave out?",
+      "phase": "prepared",
+      "status": "done",
+      "did": [
+        "I sized the finance segment from the job funnel, using LinkedIn's company-size buckets.",
+        "I cut it to firms up to 5,000 staff, where I assume one platform owner can still decide (my assumption; size data shows headcount, not who decides).",
+        "I scored the 11 firms from A to F on developer focus, governance, spend control, multi-model need, security and a dedicated AI team.",
+        "I picked 7 firms for 1:1 outreach and added two wider tiers for ads.",
+        "I kept tech as a comparison group, not the target."
+      ],
+      "found": [
+        "11 firms up to 5,000 staff hire AI-rollout roles (source: docs/kimchi/finance-size-check.md). 7 of them are tier 1 (source: docs/kimchi/tier1-accounts.md).",
+        "Raisin scores 6 of 6. Kraken and bunch score 5 (source: docs/kimchi/tier1-accounts.md).",
+        "SIX scores low on my rubric but is the only firm that names a Claude Code rollout, so I kept it with a stated reason.",
+        "Tech is still ahead on volume, which is why finance needs a head-to-head check."
+      ],
+      "metrics": [
+        { "label": "Firms up to 5,000 staff", "value": "11", "source": "docs/kimchi/finance-size-check.md" },
+        { "label": "Tier 1 firms (1:1 outreach)", "value": "7", "source": "docs/kimchi/tier1-accounts.md" },
+        { "label": "Tier 2 finance look-alikes", "value": "300", "source": "docs/kimchi/HANDOFF.md" }
+      ],
+      "output": {
+        "summary": "A named segment, a named buyer, a named trigger, and three account tiers. Tier 1: Raisin, Kraken, bunch, 9fin, Accelerant, Taktile, SIX. Tier 2: 300 finance look-alikes. Tier 3: 300 tech firms, shown A4 only (the A1 message). Tier sizes: submission, https://claude.ai/artifact/24V8A9GgQjqpJ1ggtTovjG.",
+        "links": [
+          { "label": "Tier 1 account briefs", "href": "docs/kimchi/tier1-accounts.md" },
+          { "label": "Raisin one-pager", "href": "https://claude.ai/artifact/88KhU4yjEEV9LS5hdm4e81" },
+          { "label": "Logic tree", "href": "https://claude.ai/artifact/QygeLubfpN49uRuaph96ad" }
+        ]
+      },
+      "decision": "Go after UK + EU financial services, up to 5,000 staff. The buyer is the current platform owner. The trigger is a firm hiring an AI-rollout role.",
+      "confidence": "medium",
+      "caveats": [
+        "A job ad shows intent to build a rollout, not intent to buy Kimchi. That is an explicit assumption.",
+        "Finance as a segment is medium confidence, because rivals' named customers skew towards tech.",
+        "Germany gets LinkedIn only, so reach there is lower."
+      ],
+      "learn": {
+        "why": "A PMM picks one segment first because a message that tries to speak to everyone lands with no one. Naming the buyer and the trigger tells sales exactly who to call and when. Saying who is left out is as important as saying who is in.",
+        "doneWell": [
+          "The segment, buyer and trigger can each be checked with a public source.",
+          "Exclusions are written down with a reason, including the exception I kept (SIX).",
+          "The scoring rubric is explicit, so someone else could re-score the firms."
+        ],
+        "mistakes": [
+          "Choosing a segment because it sounds big, not because it shows a trigger.",
+          "Naming the vacant job title as the buyer, when the person who decides is the current owner.",
+          "Hiding the weak fits instead of disclosing them."
+        ],
+        "terms": [
+          { "term": "ICP", "meaning": "Ideal customer profile: the type of company most likely to buy and get value." },
+          { "term": "ABM", "meaning": "Account-based marketing: marketing aimed at a named list of accounts, not a broad crowd." },
+          { "term": "DMU", "meaning": "Decision-making unit: the people who together decide a purchase." },
+          { "term": "Trigger event", "meaning": "A visible change, like a new hire, that makes a buyer ready to act now." }
+        ]
+      }
+    },
+    {
+      "n": 3,
+      "key": "message",
+      "title": "Message",
+      "question": "What do I say to them, and can the product back it up?",
+      "phase": "prepared",
+      "status": "done",
+      "did": [
+        "I scanned 12 competitor sites for headline, claims, finance pages and spend control.",
+        "I reviewed LinkedIn Ad Library entries for rivals to see how they advertise.",
+        "I wrote the positioning and the headline for a platform owner in a regulated firm.",
+        "I checked each promise against what I saw in the product, and softened the ones that overreached.",
+        "I wrote three ad angles and a one-pager for the ad download."
+      ],
+      "found": [
+        "Rivals lean on governance or gateway language. I found no finance-specific page that joins spend controls to a measured delivery outcome in my 12-site scan.",
+        "Kimchi's reporting covers Claude Code through telemetry only. It is usage reporting, not control.",
+        "Budget caps apply to Kimchi API and Service Keys, and the product shows PR cost from billed spend.",
+        "Kimchi's own posts already talk about control. I aim that at finance."
+      ],
+      "metrics": [
+        { "label": "Competitor sites scanned", "value": "12", "source": "docs/kimchi/competitor-messaging.md" },
+        { "label": "Product claims checked first-hand", "value": "6", "source": "docs/kimchi/product-walkthrough.md" },
+        { "label": "Ad angles written", "value": "3 (plus one control repeat)", "source": "docs/kimchi/HANDOFF.md" }
+      ],
+      "output": {
+        "summary": "Headline: \"Roll out coding agents across engineering. Stay in control.\" The positioning ends: it is one platform, and it already reports on Claude Code. Ads: A1 control (the headline). A2 \"See what your AI-made PRs cost.\" A3 \"Scale coding agents. Keep security in the loop.\" A4 is A1 shown to tech.",
+        "links": [
+          { "label": "Submission", "href": "https://claude.ai/artifact/24V8A9GgQjqpJ1ggtTovjG" },
+          { "label": "Finance one-pager", "href": "https://claude.ai/artifact/4Uut7tbqiYkxeBuQdAsGyU" },
+          { "label": "Competitor messaging scan", "href": "docs/kimchi/competitor-messaging.md" },
+          { "label": "Ad Library notes", "href": "docs/kimchi/ad-library-reviews.md" }
+        ]
+      },
+      "decision": "Lead with control, back it with spend visibility, and say \"reports on Claude Code\", never \"covers\" or \"controls\".",
+      "confidence": "medium",
+      "caveats": [
+        "The whitespace claim comes from a bounded 12-site scan. It is a positioning hypothesis, not a market fact.",
+        "The free plan needs your own model key, so the offer is a guided pilot, not a free trial.",
+        "Competitor page text was read through summaries, so quotes need a re-check before public use."
+      ],
+      "learn": {
+        "why": "A PMM turns the research into words a buyer will recognise as their own problem. The message has to be true in the product, or sales loses trust on the first call. Writing several angles lets the market pick, instead of me guessing.",
+        "doneWell": [
+          "Every claim in the message maps to something I saw working in the product.",
+          "The wording is exact where it matters, like \"reports\" versus \"covers\".",
+          "The angles differ in one way each, so a test can tell them apart."
+        ],
+        "mistakes": [
+          "Promising control where the product only reports.",
+          "Claiming nobody else says it after a quick look at a few sites.",
+          "Writing one message and calling it tested."
+        ],
+        "terms": [
+          { "term": "Positioning statement", "meaning": "A short statement of who the product is for, what it does and why it is different." },
+          { "term": "Value proposition", "meaning": "The specific benefit a buyer gets, in their words." },
+          { "term": "Whitespace", "meaning": "A claim or audience that rivals have not taken yet." },
+          { "term": "DORA", "meaning": "The EU Digital Operational Resilience Act, which sets IT risk rules for financial firms." }
+        ]
+      }
+    },
+    {
+      "n": 4,
+      "key": "test",
+      "title": "Design the test",
+      "question": "What would I run to learn whether this works, and what do I do with each result?",
+      "phase": "prepared",
+      "status": "done",
+      "did": [
+        "I set the test at 7 weeks and about $5k, with benchmark ranges from public ad data.",
+        "I worked out how many impressions each ad needs before a gap means anything.",
+        "I simulated a three-ad test to see how often a clear winner is caught.",
+        "I defined what success looks like, before any money is spent.",
+        "I wrote a decision for every outcome, including the inconclusive ones."
+      ],
+      "found": [
+        "At 15,400 impressions per ad, the winner must be about 21 or more clicks ahead and above 0.55% (source: docs/kimchi/test-benchmarks.md).",
+        "Under my simulation's assumptions, a gap that big happens by luck only 1 time in 10; a clear winner is caught about 2 in 3 times with three ads (source: docs/kimchi/test-benchmarks.md; appendix https://claude.ai/artifact/PoNSdsbQi6p3AdqHnYn3Ja).",
+        "Success means 3 or more technical calls from 3 firms, and 1 sponsor who agrees to scope a pilot (source: submission rules table, https://claude.ai/artifact/24V8A9GgQjqpJ1ggtTovjG).",
+        "0.55% is both the UK LinkedIn median CTR (ZenABM 2026) and the top of the published finance range (0.30 to 0.55%), so a winner must beat typical, not just the other ads (source: docs/kimchi/test-benchmarks.md)."
+      ],
+      "metrics": [
+        { "label": "Budget", "value": "About $5k over 7 weeks", "source": "docs/kimchi/HANDOFF.md" },
+        { "label": "Impressions per ad", "value": "15,400", "source": "docs/kimchi/HANDOFF.md" },
+        { "label": "Winner rule", "value": "~21+ clicks ahead and above 0.55%", "source": "docs/kimchi/HANDOFF.md; CTR benchmark in docs/kimchi/test-benchmarks.md" },
+        { "label": "Impact goal", "value": "3+ technical calls from 3 firms, and 1 sponsor agrees to scope a pilot", "source": "docs/kimchi/HANDOFF.md" }
+      ],
+      "output": {
+        "summary": "An executable test plan with a timeline (weeks 1-2 validate, weeks 3-6 live, week 7 decide), ad rules, a winner rule and an \"After week 7\" decision table.",
+        "links": [
+          { "label": "Submission (page 2: the test)", "href": "https://claude.ai/artifact/24V8A9GgQjqpJ1ggtTovjG" },
+          { "label": "Logic tree", "href": "https://claude.ai/artifact/QygeLubfpN49uRuaph96ad" },
+          { "label": "Test benchmarks", "href": "docs/kimchi/test-benchmarks.md" }
+        ]
+      },
+      "decision": "Run a message and buying-signal test, not a proof of the ICP. Decide on the week 7 table, and extend the top 2 ads if impressions fall short.",
+      "confidence": "medium",
+      "caveats": [
+        "\"90% sure\" overstates what repeated impressions and clicks can prove. Clicks are a message screen, so I check reach, frequency and form fills first.",
+        "Most benchmarks are from agencies and vendors, mostly not split by industry or region.",
+        "Tier 1 ads and country-specific outreach rules need one corrected sequence before launch, and some tier 1 audiences may be too small to run ads."
+      ],
+      "learn": {
+        "why": "A PMM writes the decision rules before spending money, so the result cannot be bent to fit the hope. A test is only useful if each outcome has a next step, including the boring ones. Small samples fool people, so the plan has to say how much data is enough.",
+        "doneWell": [
+          "Every outcome, including no winner, maps to a next action.",
+          "The sample size and the winner rule are set before launch.",
+          "The limits of the statistics are stated, not hidden."
+        ],
+        "mistakes": [
+          "Calling a winner after a few hundred impressions.",
+          "Measuring only clicks and ignoring calls and sponsor signals.",
+          "Leaving out an inconclusive path, so the test has no plan for the most likely result."
+        ],
+        "terms": [
+          { "term": "Impressions", "meaning": "The number of times an ad is shown." },
+          { "term": "CTR", "meaning": "Click-through rate: clicks divided by impressions." },
+          { "term": "CPM", "meaning": "Cost per thousand impressions." },
+          { "term": "Statistical significance", "meaning": "How sure I am a gap is real and not luck. It is never 100%." }
+        ]
+      }
+    },
+    {
+      "n": 5,
+      "key": "run",
+      "title": "Run the test",
+      "question": "Does the message get the right people to respond?",
+      "phase": "in_role",
+      "status": "next",
+      "did": [
+        "I will spend weeks 1-2 validating with no ad spend: check who I can reach and confirm the ad audiences are big enough.",
+        "I will send LinkedIn notes to the seven tier 1 firms, and emails in the UK only where the route is confirmed.",
+        "I will launch A1, A2, A3 and the A4 tech comparison in weeks 3-6, and keep the tiers apart.",
+        "I will check reach, frequency and form fills each week before reading the click result.",
+        "I will log every call and every sponsor reply as it comes in."
+      ],
+      "found": [],
+      "metrics": [],
+      "output": {
+        "summary": "Planned: live ads on three tiers, 1:1 outreach to tier 1, and a weekly log of impressions, clicks, form fills and calls.",
+        "links": [
+          { "label": "Submission (the test plan)", "href": "https://claude.ai/artifact/24V8A9GgQjqpJ1ggtTovjG" },
+          { "label": "Test benchmarks", "href": "docs/kimchi/test-benchmarks.md" }
+        ]
+      },
+      "decision": "Not taken yet. Go-live depends on the reach check in weeks 1-2.",
+      "confidence": "medium",
+      "caveats": [
+        "Some tier 1 audiences may be too small for company ads. If so, I move that $500 to A1-A3 (source: submission budget table, https://claude.ai/artifact/24V8A9GgQjqpJ1ggtTovjG).",
+        "Cold email needs a confirmed route in each country, and Germany gets LinkedIn only."
+      ],
+      "learn": {
+        "why": "Running the test is where a PMM learns whether the paper plan survives contact with real buyers. The job is to keep the test clean: change one thing at a time and log everything. Early weeks are about checking the setup, not judging the message.",
+        "doneWell": [
+          "Audiences and delivery are checked before money is spent.",
+          "Ads are not edited mid-test, so the numbers stay comparable.",
+          "Calls and replies are logged as they happen, not recalled afterwards."
+        ],
+        "mistakes": [
+          "Changing ad copy mid-flight, which breaks the comparison.",
+          "Peeking at clicks in week 2 and stopping early.",
+          "Running tier 1 and tier 3 together so the results blur."
+        ],
+        "terms": [
+          { "term": "Frequency", "meaning": "How many times the same person sees an ad. High frequency can inflate clicks from a few people." },
+          { "term": "Lead gen form", "meaning": "A LinkedIn form that opens inside the platform and pre-fills the person's details." },
+          { "term": "Control (A/B)", "meaning": "The baseline version that every other version is compared against." }
+        ]
+      }
+    },
+    {
+      "n": 6,
+      "key": "review",
+      "title": "Review results",
+      "question": "What is the market telling me?",
+      "phase": "in_role",
+      "status": "not_started",
+      "did": [
+        "I will compare clicks, CTR and form fills for each ad against the winner rule.",
+        "I will count the technical calls and which firms they came from.",
+        "I will check whether any sponsor agrees to scope a pilot.",
+        "I will compare finance with tech on A1 to see whether finance is really ahead.",
+        "I will write the week 7 decision against the table, and note what I am unsure of."
+      ],
+      "found": [],
+      "metrics": [],
+      "output": {
+        "summary": "Planned: a one-page readout with the winner (or not), call counts, sponsor signal, finance versus tech, and the decision.",
+        "links": [
+          { "label": "Logic tree (the outcome table)", "href": "https://claude.ai/artifact/QygeLubfpN49uRuaph96ad" }
+        ]
+      },
+      "decision": "Not taken yet. I choose one of the outcomes in the loop below.",
+      "confidence": "medium",
+      "caveats": [
+        "If impressions fall under 15,400 per ad, I extend the top 2 ads (about $2.1k more) before deciding (source: submission budget table, https://claude.ai/artifact/24V8A9GgQjqpJ1ggtTovjG).",
+        "CTR alone does not prove the ICP. Calls and sponsor signals carry the weight."
+      ],
+      "learn": {
+        "why": "A PMM reads results against rules written before the test, so a good result cannot be over-sold and a flat result is not hidden. Reporting what did not work is part of the job and builds trust with sales and product.",
+        "doneWell": [
+          "The readout follows the pre-set rules and states the outcome plainly.",
+          "Weak or inconclusive data is called inconclusive.",
+          "The result leads to one clear next step."
+        ],
+        "mistakes": [
+          "Changing the success bar after seeing the data.",
+          "Reading a clicks win as proof that people will buy.",
+          "Burying a null result in a long deck."
+        ],
+        "terms": [
+          { "term": "Kill criteria", "meaning": "The result that tells me to stop or change course, agreed before the test." },
+          { "term": "Inconclusive result", "meaning": "Data too thin or mixed to prove either way. It has its own next step." },
+          { "term": "Sponsor", "meaning": "The senior person who backs a pilot and can release budget or engineers." }
+        ]
+      }
+    },
+    {
+      "n": 7,
+      "key": "scale",
+      "title": "Scale",
+      "question": "If it worked, how do I grow it without losing what made it work?",
+      "phase": "in_role",
+      "status": "not_started",
+      "did": [
+        "I will put the winning message into the sales pitch, site and one-pagers.",
+        "I will move budget from the losing ads to the winner and widen the audience carefully.",
+        "I will turn the best technical calls into a pilot scope that sales and product can run.",
+        "I will brief sales on the buyer, trigger and objections I hear.",
+        "I will set the next test, so learning continues after the first win."
+      ],
+      "found": [],
+      "metrics": [],
+      "output": {
+        "summary": "Planned: a rollout plan for the winning message, a pilot scope for the sponsor, and a next-test brief.",
+        "links": [
+          { "label": "Finance one-pager", "href": "https://claude.ai/artifact/4Uut7tbqiYkxeBuQdAsGyU" },
+          { "label": "Raisin one-pager", "href": "https://claude.ai/artifact/88KhU4yjEEV9LS5hdm4e81" }
+        ]
+      },
+      "decision": "Not taken yet. I scale only if one message wins and a sponsor wants to scope a pilot.",
+      "confidence": "low",
+      "caveats": [
+        "Scaling rests on buy versus build, which is the weakest part of the evidence.",
+        "A pilot needs engineering capacity on Kimchi's side. I would confirm that before promising it."
+      ],
+      "learn": {
+        "why": "A PMM scales what worked and stays honest about why. Scaling means handing the message to sales and channels, so it has to be written down and trained, not just known in my head. It is also the moment to set the next question.",
+        "doneWell": [
+          "Sales can repeat the message in their own words after the briefing.",
+          "Spend moves in steps, with a check after each step.",
+          "A next test is ready before scaling."
+        ],
+        "mistakes": [
+          "Scaling before a sponsor has shown real commitment.",
+          "Widening the audience so far that the winning message stops fitting.",
+          "Declaring victory and stopping the learning."
+        ],
+        "terms": [
+          { "term": "Pilot scope", "meaning": "A short, defined trial with a goal, a team, a time and a way to judge success." },
+          { "term": "Sales enablement", "meaning": "Training and material that help sales use the message well." },
+          { "term": "Go-to-market (GTM)", "meaning": "The plan for how a product reaches and wins its buyers." }
+        ]
+      }
+    }
+  ],
+  "loop": [
+    { "if": "One message wins clearly", "then": "scale the winning message", "reopens": 7, "tone": "win" },
+    { "if": "Good response, but no clear winner", "then": "test the offer next", "reopens": 4, "tone": "loop" },
+    { "if": "Ads are weak, but 1:1 accounts engage", "then": "write new messages in their words", "reopens": 3, "tone": "loop" },
+    { "if": "Tech is clearly ahead of finance", "then": "run a focused finance vs tech test", "reopens": 2, "tone": "loop" },
+    { "if": "No response anywhere", "then": "recheck the pain, the buyer and the channel", "reopens": 1, "tone": "loop" },
+    { "if": "Under 15,400 impressions per ad", "then": "extend the top 2 ads (about $2.1k more), then decide", "reopens": 6, "tone": "wait" }
+  ]
+}

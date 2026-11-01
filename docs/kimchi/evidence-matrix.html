@@ -1,0 +1,281 @@
+<title>Kimchi Evidence Matrix</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Condensed:wght@500;600;700&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: one research sheet. Header, legend, a themes x sources matrix, then patterns and assumptions read off it. */
+:root{
+  --bg:#f6f7f5; --panel:#ffffff; --fg:#1d2321; --muted:#5d6763; --line:#d9dedb;
+  --accent:#c2410c;
+  --strong:#1f7a4d; --strong-bg:#dff2e7;
+  --some:#8a6a00; --some-bg:#fbf0c9;
+  --none:#7b8582; --none-bg:#eef0ef;
+  --against:#b42318; --against-bg:#fde4e1;
+  --display:"IBM Plex Sans Condensed","Arial Narrow",system-ui,sans-serif;
+  --body:"IBM Plex Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --mono:"IBM Plex Mono",ui-monospace,"Cascadia Mono",Consolas,monospace;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#121615; --panel:#1a1f1d; --fg:#e6ebe8; --muted:#9aa5a0; --line:#2c3431;
+  --accent:#fb923c;
+  --strong:#6fd6a0; --strong-bg:#163326;
+  --some:#e8c55a; --some-bg:#33290d;
+  --none:#8d9894; --none-bg:#222927;
+  --against:#ff8a7d; --against-bg:#3a1714; color-scheme:dark;}}
+:root[data-theme="dark"]{
+  --bg:#121615; --panel:#1a1f1d; --fg:#e6ebe8; --muted:#9aa5a0; --line:#2c3431;
+  --accent:#fb923c;
+  --strong:#6fd6a0; --strong-bg:#163326;
+  --some:#e8c55a; --some-bg:#33290d;
+  --none:#8d9894; --none-bg:#222927;
+  --against:#ff8a7d; --against-bg:#3a1714; color-scheme:dark;}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--fg);font:15px/1.55 var(--body);}
+.wrap{max-width:1320px;margin:0 auto;padding-block:32px 64px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));display:grid;gap:40px}
+header{display:grid;gap:10px;max-width:72ch}
+.eyebrow{font:500 12px/1 var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--accent)}
+h1{font:700 clamp(28px,4vw,40px)/1.1 var(--display);margin:0;text-wrap:balance}
+h2{font:600 22px/1.2 var(--display);margin:0 0 4px;text-wrap:balance}
+p{margin:0}
+.lede{color:var(--muted)}
+.legend{display:flex;flex-wrap:wrap;gap:8px 18px;align-items:center;font-size:13px;color:var(--muted)}
+.chip{display:inline-flex;align-items:center;gap:6px;font:500 11px/1 var(--mono);letter-spacing:.04em;text-transform:uppercase;padding:4px 7px;border-radius:4px;white-space:nowrap}
+.chip::before{content:"";width:7px;height:7px;border-radius:50%;background:currentColor}
+.s{color:var(--strong);background:var(--strong-bg)} .m{color:var(--some);background:var(--some-bg)}
+.n{color:var(--none);background:var(--none-bg)} .x{color:var(--against);background:var(--against-bg)}
+.tablebox{overflow-x:auto;border:1px solid var(--line);border-radius:8px;background:var(--panel)}
+table{border-collapse:collapse;width:100%;min-width:1180px;font-size:13px;line-height:1.45}
+th,td{border-bottom:1px solid var(--line);border-right:1px solid var(--line);padding:10px 12px;vertical-align:top;text-align:left}
+th:last-child,td:last-child{border-right:0}
+tbody tr:last-child td,tbody tr:last-child th{border-bottom:0}
+thead th{position:sticky;top:0;background:var(--panel);font:600 13px/1.25 var(--display);letter-spacing:.01em;z-index:1}
+thead th small{display:block;font:400 11px/1.3 var(--mono);color:var(--muted);margin-top:3px;letter-spacing:0}
+tbody th{width:190px;background:var(--panel);font:600 14px/1.3 var(--display)}
+tbody th small{display:block;font:400 12px/1.4 var(--body);color:var(--muted);margin-top:4px}
+td .chip{margin-bottom:6px}
+td p{color:var(--fg)}
+td a{color:var(--muted);font-size:12px;text-decoration:underline;text-underline-offset:2px}
+td a:hover,td a:focus-visible{color:var(--accent)}
+tr.row-strong th{box-shadow:inset 3px 0 0 var(--accent)}
+.cols{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:16px}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:18px;display:grid;gap:10px;align-content:start;min-width:0}
+.card h3{font:600 16px/1.3 var(--display);margin:0;text-wrap:balance}
+.card .meta{display:flex;flex-wrap:wrap;gap:6px}
+.card ul{margin:0;padding-left:18px;display:grid;gap:4px}
+.small{font-size:13px;color:var(--muted)}
+.tag{font:500 11px/1 var(--mono);letter-spacing:.04em;text-transform:uppercase;color:var(--muted);border:1px solid var(--line);padding:4px 6px;border-radius:4px}
+.section{display:grid;gap:14px}
+.callout{border-left:3px solid var(--accent);padding:12px 16px;background:var(--panel);border-radius:0 8px 8px 0;max-width:80ch}
+dl{display:grid;grid-template-columns:max-content 1fr;gap:6px 14px;margin:0;font-size:13px}
+dt{font:500 12px/1.5 var(--mono);color:var(--muted)}
+dd{margin:0}
+a:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+@media (max-width:640px){tbody th{width:150px}}
+</style>
+
+<div class="wrap">
+  <header>
+    <span class="eyebrow">Kimchi PMM exercise · synthesis · 23 Oct 2026</span>
+    <h1>Kimchi evidence matrix</h1>
+    <p class="lede">Every public source, side by side, per theme. Read across a row to see whether a signal holds up in more than one type of source. A theme only counts as a pattern when it shows up in at least three different source types. The assumptions at the bottom come from the patterns, not from any single source.</p>
+    <div class="legend" aria-label="Legend">
+      <span class="chip s">Strong</span><span>clear, direct signal</span>
+      <span class="chip m">Some</span><span>partial or indirect</span>
+      <span class="chip n">None found</span><span>looked, found nothing</span>
+      <span class="chip x">Against</span><span>points the other way</span>
+    </div>
+  </header>
+
+  <section class="section" aria-labelledby="matrix-h">
+    <h2 id="matrix-h">Themes × sources</h2>
+    <p class="small">Scroll sideways on small screens. Rows with an orange edge are the patterns that hold across three or more source types.</p>
+    <div class="tablebox"><table id="matrix"></table></div>
+  </section>
+
+  <section class="section" aria-labelledby="pat-h">
+    <h2 id="pat-h">Patterns</h2>
+    <div class="cols" id="patterns"></div>
+  </section>
+
+  <section class="section" aria-labelledby="as-h">
+    <h2 id="as-h">Assumptions to test</h2>
+    <p class="small">Each one is a belief we act on until a test says otherwise. "Breaks if" is the result that would make us drop it.</p>
+    <div class="cols" id="assumptions"></div>
+  </section>
+
+  <section class="section" aria-labelledby="gap-h">
+    <h2 id="gap-h">Gaps and exclusions</h2>
+    <div class="cols">
+      <div class="card">
+        <h3>Not checked yet</h3>
+        <ul>
+          <li><b>Reddit, partly covered:</b> Islam searched 2 subreddits by hand and picked 6 threads; 4 were readable, 2 had been removed by moderators. r/devops and r/ClaudeAI not checked.</li>
+          <li><b>Slack communities:</b> login only, with no public archive (Platform Engineering, Rands).</li>
+          <li><b>LinkedIn Ad Library:</b> not indexed. Search "Kimchi" and "Cast AI" by hand.</li>
+          <li><b>G2 reviews</b> of Copilot, Tabnine and Cursor: only thin aggregator data so far.</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>Not counted as evidence</h3>
+        <ul>
+          <li>Anything said in the first-round interview.</li>
+          <li>Islam's own experience: a Copilot-only employer, and Kimchi onboarding friction. Can be mentioned in discussion, labelled as personal.</li>
+        </ul>
+        <p class="small">The brief asks for public sources only. The bet has to stand without these.</p>
+      </div>
+      <div class="card">
+        <h3>Source quality</h3>
+        <dl>
+          <dt>High</dt><dd>Kimchi's own site, docs, Discord and GitHub; job postings; Hacker News threads read in full</dd>
+          <dt>Medium</dt><dd>Gartner via The Register; press coverage of the Kimchi GA; Reddit threads (anonymous, and some replies are vendor plugs, which were ignored)</dd>
+          <dt>Low</dt><dd>Vendor and aggregator blogs (gateways, shadow-AI vendors, Tabnine review sites)</dd>
+        </dl>
+      </div>
+    </div>
+  </section>
+</div>
+
+<script>
+const SOURCES = [
+  {k:"own", name:"Kimchi site & press", sub:"kimchi.dev, docs, GA coverage"},
+  {k:"com", name:"Kimchi community", sub:"Discord (1.8k), GitHub issues"},
+  {k:"job", name:"Job postings", sub:"Parsons, ServiceNow, Warsaw"},
+  {k:"for", name:"Practitioner forums", sub:"Hacker News, Blind"},
+  {k:"red", name:"Reddit", sub:"r/EngineeringManagers, r/ExperiencedDevs"},
+  {k:"ana", name:"Analysts", sub:"Gartner, Waehner"},
+  {k:"cmp", name:"Competitors & reviews", sub:"Tabnine, IBM Bob, gateways"},
+  {k:"reg", name:"Regulation", sub:"DORA, GDPR commentary"}
+];
+const L = {
+  kimchi:"https://kimchi.dev/", ent:"https://kimchi.dev/enterprise", price:"https://kimchi.dev/pricing", launch:"https://kimchi.dev/blog/say-hello-to-kimchi",
+  press:"https://itbrief.co.uk/story/cast-ai-launches-kimchi-coding-with-production-support", docs:"https://docs.kimchi.dev/docs",
+  gh:"https://github.com/getkimchi/kimchi/issues", discord:"https://discord.com/invite/getkimchi",
+  parsons:"https://www.wearedevelopers.com/jobs/ext/7367549/ai-platform-engineer", snow:"https://careers.servicenow.com/jobs/744000141430384/principal-systems-engineer/",
+  warsaw:"https://justjoin.it/job-offer/hirexa-gen-ai-enablement-lead-warszawa-ai", spectro:"https://spectrocloud.com/blog/ai-agents-are-production-workloads",
+  augspec:"https://www.augmentcode.com/guides/ai-platform-engineering-leader-job-spec",
+  hn1:"https://news.ycombinator.com/item?id=49673825", hn2:"https://news.ycombinator.com/item?id=47484203", blind:"https://www.teamblind.com/post/companies-that-allow-usage-of-ai-gn674gks",
+  gartner:"https://www.theregister.com/ai-and-ml/2026/06/24/ai-coding-agents-could-soon-cost-more-than-the-developers-using-them/5260864",
+  waehner:"https://www.kai-waehner.de/blog/2026/08/04/trusted-agentic-ai-landscape-q3-2026-enterprise-vendor-selection-sovereignty-and-lock-in/",
+  tabnine:"https://aicodereview.cc/tool/tabnine", ibm:"https://newsroom.ibm.com/2026-10-01-ibm-introduces-self-hosted-deployment-for-ibm-bob-to-help-enterprises-advance-ai-sovereignty-and-governance",
+  gateways:"https://futureagi.com/blog/portkey-alternatives-2026", shadow:"https://www.getmaxim.ai/articles/shadow-ai-coding-tools/", pointfive:"https://www.pointfive.co/blog/how-to-track-coding-agent-spend-across-your-team",
+  devin:"https://en.wikipedia.org/wiki/Cognition_AI", dora1:"https://www.getdynamiq.ai/post/think-global-act-local-how-data-residency-regulations-influence-banks-llm-use",
+  dora2:"https://digiwit.ai/blog/dora-onpremise-ai", virtus:"https://virtuslab.com/blog/ai/how-banks-govern-autonomous-ai-software-development",
+  red1:"https://www.reddit.com/r/EngineeringManagers/comments/1uai5wa/is_ai_token_spend_becoming_a_real_problem_inside/",
+  red2:"https://www.reddit.com/r/EngineeringManagers/comments/1vgract/whats_been_the_most_frustrating_or_expensive/",
+  red3:"https://www.reddit.com/r/ExperiencedDevs/comments/1v6n7d7/2yrs_at_current_company_new_project_is_99_ai/",
+  red4:"https://www.reddit.com/r/ExperiencedDevs/comments/1vg0cx8/what_do_you_do_when_a_developer_submits_ai/",
+  getdx:"https://getdx.com/blog/ai-coding-assistant-pricing/"
+};
+// [strength, note, [[label, linkKey], ...]]  strength: s | m | n | x
+const THEMES = [
+ {t:"Agent spend is unpredictable and unattributed", d:"Bills grow with agent work, not headcount, and nobody can say who spent what.", pattern:true, c:{
+  own:["s","Lead features: hard caps per user, team, key and model; attribution per developer, team, model and tag. Press: auto-stops \"runaway agentic loops\".",[["kimchi.dev","kimchi"],["GA press","press"]]],
+  com:["m","Oct release notes add org usage reporting and /session-costs per session, model and workspace. A dev on an enterprise Claude plan: $200 personal cap, then \"back to manual coding\" (29 May).",[["Discord","discord"]]],
+  job:["m","ServiceNow role: agent guardrails on privacy and cost for 200+ engineers.",[["ServiceNow","snow"]]],
+  for:["s","HN: hard monthly caps just shift spend to the last week; one engineer uses 10x fewer tokens than teammates and can't explain why. Self-reported spend runs from $40/mo to $15k in one month.",[["HN cost control","hn1"],["HN spend","hn2"]]],
+  red:["s","EM thread (Jun): a large US financial firm now holds \"tokenomics\" meetings; a mid-size fintech found one workflow had run up nearly $4,000 in a week unnoticed and its CTO joined #llm-costs; another firm's bill doubled monthly for 5 months to about $60k; finance flagged $40k/month of shadow spend from team-owned keys. Some replies are vendor plugs and are ignored.",[["Token spend thread","red1"]]],
+  ana:["s","Gartner: bills moving from $20–100 to $2,000–5,000 per developer per month; leaders lack insight into token billing.",[["Gartner via The Register","gartner"]]],
+  cmp:["s","A whole category sells this already: AI gateways (Portkey, LiteLLM, Bifrost) and spend trackers (Vantage, pointfive). Real pain, crowded answer.",[["Gateways","gateways"],["pointfive","pointfive"]]],
+  reg:["n","Nothing relevant.",[]]}},
+ {t:"Control over what agents may do", d:"Policy, permissions, approved tools and models, audit.", pattern:true, c:{
+  own:["s","Enterprise page: SSO, SCIM, RBAC, prompt-level audit to SIEM, scoped secrets, approved skills and MCP registry.",[["Enterprise","ent"]]],
+  com:["m","Release notes: \"org policy enforced end-to-end\". A user asks to see full commands before approving them. But individual users barely raise governance (2 search hits).",[["Discord","discord"]]],
+  job:["s","New roles exist to roll out coding agents with guardrails: Parsons (calls routed through company cloud), ServiceNow, a Warsaw GenAI enablement lead.",[["Parsons","parsons"],["ServiceNow","snow"],["Warsaw","warsaw"]]],
+  for:["m","Blind: companies differ; some allow several tools, Google restricts external AI. The HN cost thread never mentions security or approved tools.",[["Blind","blind"],["HN","hn1"]]],
+  red:["m","\"Code generation scaled much faster than the engineering controls around it.\" Managers describe review overload, AI-written PRs nobody understands (339 upvotes) and new team rules to rein it in.",[["Frustrations thread","red2"],["AI PR thread","red4"],["AI MVP thread","red3"]]],
+  ana:["m","Analysts frame governance and exit rights as central to 2026 agentic AI vendor choice.",[["Waehner Q3","waehner"]]],
+  cmp:["m","Shadow-AI vendors: blocking pushes use to personal devices, so offer a governed alternative. Gateways govern the model call, not what the agent does.",[["Shadow AI","shadow"],["Gateways","gateways"]]],
+  reg:["m","DORA reaches AI vendors through contracts: register of information, exit strategy, data locations.",[["DORA","dora1"]]]}},
+ {t:"Proving AI spend pays off", d:"After \"what are we spending\" comes \"is it worth it\". The brief names this: the value the AI investment generates.", pattern:true, c:{
+  own:["m","Console tracks adoption, usage, cost and productivity for managers and finance; enterprise page lists adoption and agent reports. No outcome numbers published.",[["Docs","docs"],["Enterprise","ent"]]],
+  com:["n","Individual users don't raise it.",[["Discord","discord"]]],
+  job:["m","Enablement roles are framed around developer productivity, not just access.",[["Warsaw","warsaw"],["ServiceNow","snow"]]],
+  for:["m","HN: someone suggests measuring cost per shipped feature; another can't explain a 10x usage gap between teammates.",[["HN spend","hn2"],["HN cost control","hn1"]]],
+  red:["s","\"What I cannot do is point at commensurate cash flow\" for a $60k/month bill; they're running POCs of vendors to measure value. \"The number nobody tracks and should: cost per accepted change, not cost per developer.\"",[["Token spend thread","red1"]]],
+  ana:["s","Gartner: \"no direct relation between the increase in token consumption and an increase in productivity gains\".",[["Gartner","gartner"]]],
+  cmp:["m","Trackers sell cost per feature; productivity platforms benchmark AI ROI. Nobody owns the link between spend and value yet.",[["pointfive","pointfive"],["DX","getdx"]]],
+  reg:["n","Nothing relevant.",[]]}},
+ {t:"Code and data must stay inside", d:"Sovereignty, VPC and on-prem, air-gapped.", c:{
+  own:["s","Open models inside the customer's VPC, no outbound calls by default; dedicated GPUs option.",[["Enterprise","ent"],["GA press","press"]]],
+  com:["n","\"self-host\" 7 hits, \"privacy\" 1. No user asks for VPC or on-prem.",[["Discord","discord"]]],
+  job:["m","Parsons: model calls routed through company-controlled cloud environments.",[["Parsons","parsons"]]],
+  for:["n","No practitioner thread found that raises it.",[]],
+  red:["m","First buyer-side signals: a repo where AI tools are banned \"because of IP concerns\", and a dev used them anyway (339 upvotes). An engineer uses only the corporate provider for sensitive data. A CTO pushes back on AI-built tools with \"where do we store our data\".",[["AI PR thread","red4"],["Token spend thread","red1"],["Frustrations thread","red2"]]],
+  ana:["m","Sovereign-AI guides push self-hosted runtimes and open models; vendor-adjacent.",[["Waehner Q3","waehner"]]],
+  cmp:["s","Tabnine gets approved \"where competitors get blocked\" thanks to air-gapped deployment. IBM launched self-hosted Bob on 1 Oct 2026.",[["Tabnine","tabnine"],["IBM Bob","ibm"]]],
+  reg:["m","Banks often self-host to keep the model provider off the DORA register. But no blanket EU-residency rule, so don't overclaim.",[["DORA","dora2"],["Bank pattern","virtus"]]]}},
+ {t:"No lock-in, free choice of model", d:"Route each task to the right open or flagship model.", pattern:true, c:{
+  own:["s","\"Many models. One coding agent.\" Routing across open and flagship models.",[["kimchi.dev","kimchi"]]],
+  com:["m","Staff answer to \"why not Claude Code?\" (13 Jul): \"you're not locked into one model provider\". Users judge Kimchi on how fast new models arrive.",[["Discord","discord"]]],
+  job:["m","Platform leader specs converge on model catalogs and golden paths.",[["Spec","augspec"]]],
+  for:["n","One HN comment about switching to a cheaper model; nothing on lock-in.",[["HN","hn1"]]],
+  red:["n","Not raised. One company routes all big models through its own internal gateway, which is choice by design, but nobody frames it as lock-in.",[["Token spend thread","red1"]]],
+  ana:["s","Gartner's main recommendation is model routing: small models for routine work, frontier for complex. Waehner: lock-in is a top vendor-selection issue.",[["Gartner","gartner"],["Waehner","waehner"]]],
+  cmp:["m","Gateways also offer multi-provider routing, so choice alone doesn't set Kimchi apart.",[["Gateways","gateways"]]],
+  reg:["m","DORA expects an exit strategy for ICT providers.",[["DORA","dora1"]]]}},
+ {t:"Cheaper than the alternatives", d:"Price-led message.", c:{
+  own:["m","Launch post led with per-token prices and \"2.5x cheaper\"; the enterprise page no longer leads with price.",[["Launch post","launch"],["GA press","press"]]],
+  com:["x","Price-led users churned when free credits ended: \"feeling betrayed\", \"if it costs the same as Claude Code, I'll buy Claude Code\", moved to a $5 plan.",[["Discord","discord"]]],
+  job:["n","Not a theme in the roles.",[]],
+  for:["m","Individuals compare plan prices; no team buying on price alone.",[["HN spend","hn2"]]],
+  red:["n","Managers talk about visibility and payback, not unit price. One notes model prices are now going up, not down.",[["Token spend thread","red1"]]],
+  ana:["m","Gartner: more tokens don't mean more productivity, so control matters more than unit price.",[["Gartner","gartner"]]],
+  cmp:["x","Cheaper harnesses on Chinese models and $5 plans keep appearing. Price is a race Kimchi can't own.",[["Discord","discord"]]],
+  reg:["n","Nothing relevant.",[]]}},
+ {t:"Who actually shows up as the buyer", d:"Individual devs or the people rolling out AI across engineering?", pattern:true, c:{
+  own:["m","The site speaks to platform, developers, security and finance at once; pricing runs from $20 to Enterprise. Many audiences, one page.",[["Pricing","price"],["Docs","docs"]]],
+  com:["x","About 140 Discord intros: almost all hobbyists and solo devs. Search: \"credits\" 526 vs \"enterprise\" 3. The bottom-up crowd isn't the buyer.",[["Discord","discord"]]],
+  job:["s","A new role with a mandate: AI platform or AI enablement lead.",[["Parsons","parsons"],["Warsaw","warsaw"],["Coder data","spectro"]]],
+  for:["m","Engineering managers at startups asking how to cap spend across vendors.",[["HN cost control","hn1"]]],
+  red:["s","The people with the problem are CTOs, engineering managers and finance: senior leaders split in \"tokenomics\" meetings, a fintech CTO in #llm-costs, finance flagging shadow spend. Two of the named cases are in financial services.",[["Token spend thread","red1"]]],
+  ana:["m","Tech leaders own budgets of $200–500 per developer per month in tokens.",[["Gartner","gartner"]]],
+  cmp:["m","Air-gapped tools win approval from security teams, who act as gatekeepers.",[["Tabnine","tabnine"]]],
+  reg:["m","In finance, compliance and procurement gate any AI vendor.",[["DORA","dora1"]]]}},
+ {t:"Delegating work to autonomous agents", d:"The core promise in Kimchi's brief: describe a task, let it run, review the PR.", c:{
+  own:["s","Ferment (plan then run), Teleport, Workspaces, Studio.",[["kimchi.dev","kimchi"]]],
+  com:["m","/ferment is the most praised feature. One team wants scheduled long-running agent jobs before the workday (19 Oct).",[["Discord","discord"]]],
+  job:["m","61% of 100 engineering orgs already run agents of some kind (Coder data).",[["Spectro Cloud","spectro"]]],
+  for:["m","HN: agents loop; retries burn most tokens.",[["HN","hn1"]]],
+  red:["m","\"Are agents looping/retrying and quietly burning tokens?\" A workflow ran up $4,000 in a week because nobody knew it was still running. A whole MVP generated by Claude, with reviewers unable to keep up.",[["Token spend thread","red1"],["AI MVP thread","red3"]]],
+  ana:["m","Gartner ties the cost jump to agentic, consumption-priced use.",[["Gartner","gartner"]]],
+  cmp:["s","Crowded: Devin (Cognition), Codex cloud, OpenHands, IBM Bob.",[["Devin","devin"],["IBM Bob","ibm"]]],
+  reg:["n","Nothing relevant.",[]]}},
+ {t:"Trust and onboarding", d:"Can a buyer trust Kimchi with keys, code and billing?", c:{
+  own:["n","No customer stories or outcome numbers anywhere on the site.",[["Enterprise","ent"]]],
+  com:["x","Credit glitches, pricing changes, outages; Discord removed from Server Discovery for low activity. GitHub #1242: setup-tools exposes credentials and changes Claude/Codex config without backups.",[["Discord","discord"],["GitHub","gh"]]],
+  job:["n","Nothing relevant.",[]],
+  for:["n","No independent reviews found; 0 ratings on Software Advice.",[]],
+  red:["n","Kimchi not mentioned in the threads read.",[]],
+  ana:["n","Nothing relevant.",[]],
+  cmp:["m","The LiteLLM supply-chain incident shows buyers now vet AI tooling hard.",[["Gateways","gateways"]]],
+  reg:["n","Nothing relevant.",[]]}}
+];
+const PATTERNS = [
+ {h:"Spend and control is the pain that shows up everywhere", tags:["6 of 8 source types","Buyers say it in their own words"], body:"Analysts, Hacker News, Reddit, job postings, Kimchi's own product moves and the competitor landscape all point at agent spend that grows unpredictably and can't be attributed or governed. On Reddit it's CTOs, managers and finance saying it, and two of the named cases are financial services firms.", note:"Watch out: gateways and trackers already sell the spend half. Control on its own is crowded; control plus agent runtime plus model choice is not."},
+ {h:"Proving value is the question right after spend", tags:["Reddit + analysts strong","New theme"], body:"Once the bill is visible, leaders ask whether it pays off. Reddit managers can't link $60k a month to output; Gartner says more tokens don't mean more productivity. The brief itself lists understanding the value of the AI investment as part of Kimchi's job.", note:"A message that moves from \"see and cap spend\" to \"know what your agents deliver per dollar\" is less crowded than spend tracking alone."},
+ {h:"Price-led individual developers are the wrong first audience", tags:["Against in 2 source types"], body:"Kimchi's own Discord shows the bottom-up wave: free credits pulled people in, pricing changes pushed them out, and activity fell until Discord delisted the server. Competitors keep undercutting on price.", note:"This is the clearest exclusion, and it's backed by Kimchi's own public channels."},
+ {h:"Sovereignty is mostly a supply-side story", tags:["Vendors and analysts say it","First buyer signals on Reddit"], body:"Kimchi, Tabnine, IBM and analysts all sell keep-it-inside, and regulation supports it for EU finance. Buyers raise it only indirectly: a repo banned from AI over IP concerns, sensitive data kept to the corporate provider.", note:"Treat it as a test angle and a qualifier, not the headline, until a test shows it pulls."},
+ {h:"The buyer is a new role you won't find in communities", tags:["Jobs strong","Communities silent"], body:"Job postings show a platform or AI-enablement lead with a mandate to roll out coding agents safely. That person doesn't appear in Kimchi's Discord or in public threads.", note:"So the test has to reach them directly: outbound, Cast AI accounts, events. Not community or self-serve."},
+ {h:"Model choice is Kimchi's own counter-argument", tags:["Own + analysts","Weak from users"], body:"When users ask \"why not Claude Code?\", staff answer with no lock-in. Gartner recommends routing. But users only care in the form of \"add the newest model faster\".", note:"Good as proof inside a control message; unproven as a lead."}
+];
+const ASSUMPTIONS = [
+ {id:"A1", h:"The first buyer is the person accountable for rolling out coding agents across engineering", conf:"m", c:"Medium", why:"Job postings, Kimchi's org-policy releases, Discord showing devs aren't it.", breaks:"Replies come mostly from individual devs, or only from security."},
+ {id:"A2", h:"Their trigger is the move from AI assistants to autonomous agents, when spend becomes variable", conf:"s", c:"Medium-high", why:"Gartner, HN, Coder adoption data, Kimchi's own feature direction.", breaks:"Targets say spend is fine and the blocker is something else (quality, security approval)."},
+ {id:"A3", h:"\"Control\" beats \"cheaper\" as the lead message", conf:"m", c:"Medium", why:"Price-led users churned; Gartner says tokens don't equal productivity; price is a race to the bottom.", breaks:"The cost-savings angle clearly outperforms the control angle in the test."},
+ {id:"A4", h:"Sovereignty is a qualifier for regulated buyers, not the headline for everyone", conf:"n", c:"Low", why:"Strong supply-side signal, no demand-side voice found.", breaks:"The sovereignty angle wins outside regulated sectors too."},
+ {id:"A5", h:"Model choice works as proof inside the control message, not as the lead", conf:"n", c:"Low", why:"Kimchi staff and analysts use it; practitioners rarely raise it.", breaks:"Buyers name lock-in as their main worry in calls."},
+ {id:"A6", h:"This buyer must be reached directly, not through community or self-serve", conf:"m", c:"Medium", why:"Absent from Discord and public threads; present in job postings.", breaks:"Inbound from content or community brings in qualified platform leads."},
+ {id:"A8", h:"The economic buyer needs to prove AI spend pays off, not just cap it", conf:"m", c:"Medium", why:"Reddit managers can't link spend to output; Gartner; the brief names value as part of Kimchi's promise.", breaks:"Prospects only ask for caps or lower prices and ignore value reporting."},
+ {id:"A7", h:"Onboarding trust must be fixed before a governance-led message can scale", conf:"m", c:"Medium", why:"GitHub #1242, Discord credit and billing complaints, no case studies.", breaks:"Prospects in the test don't raise trust or proof at all."}
+];
+const label = {s:"Strong", m:"Some", n:"None found", x:"Against"};
+const esc = s => s.replace(/[&<>]/g, ch => ({"&":"&amp;","<":"&lt;",">":"&gt;"}[ch]));
+const head = "<thead><tr><th scope=\"col\">Theme</th>" + SOURCES.map(s => `<th scope="col">${s.name}<small>${s.sub}</small></th>`).join("") + "</tr></thead>";
+const rows = THEMES.map(r => `<tr class="${r.pattern ? "row-strong" : ""}"><th scope="row">${esc(r.t)}<small>${esc(r.d)}</small></th>` + SOURCES.map(s => {
+  const [st, note, links] = r.c[s.k];
+  const ls = links.map(([lb, k]) => `<a href="${L[k]}" target="_blank" rel="noopener">${lb}</a>`).join(" · ");
+  return `<td><span class="chip ${st}">${label[st]}</span><p>${esc(note)}</p>${ls ? `<div>${ls}</div>` : ""}</td>`;
+}).join("") + "</tr>").join("");
+document.getElementById("matrix").innerHTML = head + "<tbody>" + rows + "</tbody>";
+document.getElementById("patterns").innerHTML = PATTERNS.map(p => `<article class="card"><div class="meta">${p.tags.map(t => `<span class="tag">${esc(t)}</span>`).join("")}</div><h3>${esc(p.h)}</h3><p>${esc(p.body)}</p><p class="small">${esc(p.note)}</p></article>`).join("");
+document.getElementById("assumptions").innerHTML = ASSUMPTIONS.map(a => `<article class="card"><div class="meta"><span class="tag">${a.id}</span><span class="chip ${a.conf}">Confidence: ${a.c}</span></div><h3>${esc(a.h)}</h3><dl><dt>Based on</dt><dd>${esc(a.why)}</dd><dt>Breaks if</dt><dd>${esc(a.breaks)}</dd></dl></article>`).join("");
+</script>

@@ -1,0 +1,13 @@
+## Second acceptance review — REJECT
+
+| Must-fix | Status | Evidence |
+|---|---|---|
+| 1. Confine and neutralize served files | **PARTIAL** | The shared gate checks linked paths and allowed types (`apps/marketing-hq/lib/projects.ts:242–309`); local reads check real paths (`lib/store.ts:100–112`); Markdown escapes raw HTML (`app/source/[...path]/page.tsx:28–38`); raw responses exclude HTML/SVG and set `nosniff` (`app/raw/[...path]/route.ts:7–25`). **GitHub mode has a bypass risk:** `lib/store.ts:73–80,157–159` accepts a Contents API response as a file without checking a symlink’s target. [GitHub documents that the API returns the target file’s content for in-repo symlinks](https://docs.github.com/en/rest/repos/contents). A linked symlink in an allowed directory could therefore expose a file outside it through `/source` or `/raw`. |
+| 2. Keep unrun steps clearly planned | **PARTIAL** | “What I will do” and the planned banner are in place (`steps/[n]/page.tsx:69–83`); steps 5–7 use future actions and criteria (`kimchi.json:280–307,328–354,375–402`). The loop now labels actions **“Then”** (`loop/page.tsx:88–89`), while the PRD requires **“Then I”** (`PRD-slice1.md:37`). |
+| 3. Repair source fidelity | **CLOSED** | Eight searches, qualified product and buyer claims, and the statistical limitation appear at `kimchi.json:37,44,100,227–230,249`; the budget inference is qualified at `:72,127`. |
+| 4. Source quantified claims where shown | **PARTIAL** | Metric sources render (`steps/[n]/page.tsx:117–125`), but measured findings still lack adjacent attribution, for example `kimchi.json:42,46,106`; other numbered prose remains unattributed at `:117,229–230`. |
+| 5. Separate empty data from read failures | **PARTIAL** | Read errors reach Home (`lib/projects.ts:218–237`; `app/page.tsx:30–43`), and hosted deployment without a token errors (`lib/store.ts:21–25`). A **missing local project directory** still becomes `status: "missing"` (`lib/store.ts:120–124`) and then “No projects yet” (`lib/projects.ts:225`; `app/page.tsx:37–43`). |
+
+**Failed stories re-run:** **6 FAIL** (unsourced measured prose); **9 PASS** (planned work and results are distinguishable); **11 FAIL** (missing directory can appear empty). The changed loop label also regresses the PRD’s loop screen requirement. Read-only type-check passed; this was a code and data review, not a live browser review.
+
+**Remaining fixes:** reject GitHub symlink targets outside the allowed directories; restore **“Then I”** and make each action read grammatically after it; add sources beside quantified prose; treat a missing local project directory as a load error.
