@@ -1,0 +1,11 @@
+{
+  "id": "run-20261101T141716-research-njyp",
+  "agentId": "research",
+  "trigger": "schedule",
+  "startedAt": "2026-11-01T14:17:30Z",
+  "endedAt": "2026-11-01T14:26:30Z",
+  "requestId": "r-20261029-summer-campain",
+  "taskId": "t1",
+  "outcome": "ok",
+  "summary": "Found LATAM mid-size finance ICPs from 180 public LinkedIn job cards in Brazil, Mexico and Colombia; 10 ads read in full (after one send-back, 8 were read at first). Tier 1: dLocal, Konfío, EBANX. Confidence low to medium; fit with coding-agent rollout is not shown."
+}

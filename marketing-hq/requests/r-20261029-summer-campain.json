@@ -20,7 +20,7 @@
         "title": "Find and rank mid-size finance ICPs in LATAM from public job ads",
         "dependsOn": [],
         "outputAssetId": "r-20261029-summer-campain--t1",
-        "status": "in_progress",
+        "status": "in_review",
         "note": "Added: the product file has no LATAM evidence; the brief names LATAM mid-size finance."
       },
       {
@@ -34,7 +34,7 @@
           "t1"
         ],
         "outputAssetId": "r-20261029-summer-campain--t2",
-        "status": "pending"
+        "status": "in_progress"
       },
       {
         "id": "t3",
@@ -47,7 +47,7 @@
           "t1"
         ],
         "outputAssetId": "r-20261029-summer-campain--t3",
-        "status": "pending",
+        "status": "in_progress",
         "note": "Added: the campaign plan needs messages from a positioning asset; the existing positioning covers UK/EU only and is not approved."
       },
       {
@@ -72,5 +72,5 @@
     "url": "https://app.notion.com/p/40b265ea4dd881aa8645e2975f686fbf",
     "syncedAt": "2026-11-01T14:20:00Z"
   },
-  "updatedAt": "2026-11-01T14:20:00Z"
+  "updatedAt": "2026-11-01T14:26:30Z"
 }
