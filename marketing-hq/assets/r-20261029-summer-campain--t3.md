@@ -6,10 +6,10 @@ title: Positioning: Kimchi for LATAM mid-size fintech AI platform owners
 agentId: strategy
 skillIds: positioning
 version: 1
-status: draft
-notionPageId:
-notionUrl:
-updatedAt: 2026-11-01T14:26:58Z
+status: in_review
+notionPageId: 40b265ea-4dd8-8115-b3ea-e3d9d65f6393
+notionUrl: https://app.notion.com/p/40b265ea4dd88115b3eae3d9d65f6393
+updatedAt: 2026-11-01T14:31:30Z
 ---
 # Positioning: Kimchi for mid-size fintech and payments firms in Mexico and Brazil
 
