@@ -107,7 +107,7 @@ When every task of a request is `approved` or `skipped`:
 For each `marketing-hq/campaigns/*.json`, create or update its Notion Campaigns page (`notion-sync`, campaign section). Keep the ids in `marketing-hq/state/notion-campaigns.json` as `{ "<campaignId>": { "pageId": "...", "url": "...", "syncedAt": "..." } }`. Skip a campaign whose `updatedAt` is not newer than its `syncedAt`. Never edit a campaign file.
 
 ### 8. Run file for the pass
-Write `marketing-hq/runs/run-<UTC YYYYMMDDTHHMMSS>-orchestrator-<rand4>.json` with `agentId: "orchestrator"`, the trigger, start and end times, `outcome`, and a one-paragraph `summary` (requests planned, tasks run, decisions applied, requests closed, errors). Use `outcome: "skipped"` when there was nothing to do. Mirror each run to the Notion Agent runs database (`notion-sync`, run section). Run pages are written once and never duplicated.
+Write `marketing-hq/runs/run-<UTC YYYYMMDDTHHMMSS>-orchestrator-<rand4>.json` with `agentId: "orchestrator"`, the trigger, start and end times, `outcome`, and a one-paragraph `summary` (requests planned, tasks run, decisions applied, requests closed, errors). **If the pass found nothing to do** (no new requests, no runnable tasks, no unapplied decisions, no changed campaigns), write no run file, make no commit and stop quietly; an hourly schedule must not fill the repo with empty runs. Mirror each run to the Notion Agent runs database (`notion-sync`, run section). Run pages are written once and never duplicated.
 
 ### 9. Commit and push
 Run `git status --porcelain marketing-hq`. If nothing changed, do not commit. Otherwise:
