@@ -34,7 +34,7 @@
           "t1"
         ],
         "outputAssetId": "r-20261029-summer-campain--t2",
-        "status": "in_progress"
+        "status": "in_review"
       },
       {
         "id": "t3",
@@ -72,5 +72,5 @@
     "url": "https://app.notion.com/p/40b265ea4dd881aa8645e2975f686fbf",
     "syncedAt": "2026-11-01T14:20:00Z"
   },
-  "updatedAt": "2026-11-01T14:26:30Z"
+  "updatedAt": "2026-11-01T14:29:00Z"
 }
