@@ -2,6 +2,9 @@
 
 Weekly summaries from the LinkedIn analytics exports Islam forwards to the Telegram bot. Newest first.
 
+## 2026-11-02
+- No analytics export received this week. Nothing to summarise yet.
+
 ## 2026-10-26
 - No analytics export received this week. Nothing to summarise yet.
 
