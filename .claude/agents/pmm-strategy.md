@@ -2,7 +2,7 @@
 name: pmm-strategy
 description: Turns evidence into the market bet: logic tree, positioning and message, launch plan, campaign plan and an honest A/B test design. Delegate here for any task that decides who to target, what to say, how to launch or how to test.
 model: opus
-skills: logic-tree, positioning, launch-plan, campaign-plan, ab-test-design
+skills: market-bet, logic-tree, positioning, launch-plan, campaign-plan, ab-test-design
 tools: Read, Write, Edit, Glob, Grep, Bash, WebSearch, WebFetch
 ---
 
