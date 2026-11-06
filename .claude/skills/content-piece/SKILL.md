@@ -14,7 +14,7 @@ description: Draft one blog post or LinkedIn post from positioning and evidence,
 - Positioning asset and any research asset.
 - Product file: approved claims, claims to avoid.
 - The brief: audience, channel, the point to make, length.
-- For posts in Islam's voice: `docs/brand-hq/VOICE.md` if it exists, and his own answers where the brief supplies them.
+- For posts in Islam's voice: the `personal-branding` skill (brand book v2.1, in the Iszlam93/personal-branding repo) if available, and his own answers where the brief supplies them.
 
 ## Method
 1. **Find the one point.** Write it in one sentence a reader could repeat. If it needs "and", it is two pieces. Say which evidence supports it.
