@@ -1,30 +1,54 @@
 ---
 name: market-bet
-description: Turn an open go-to-market question ("who should we go after first, and how do we prove it?") into one evidence-backed bet (segment, buyer, trigger, message) plus a pre-registered test with a decision for win, lose and inconclusive. Use for a new product or market with no agreed segment, a focus decision between several segments, or any GTM case that must survive a sceptical reader. Not for writing a single asset or reporting results.
+description: For the moment a product marketer is asked "where do we start?" or "who should we go after first?" and the page is blank. Takes them from that open question to one evidence-backed bet (segment, buyer, trigger, message) and a test that ends in a decision whether it wins, loses or is unclear. Use for a new product, a new market, a stalled pipeline that needs a new focus, or a choice between several segments. Uses the CRM, prospecting, company-data and web connectors when available; works with web search alone. Not for writing a single asset or reporting results.
 license: MIT
 ---
 
-# Market bet
+# Market bet: where do I start?
 
-One bet, the evidence behind it, who is out, and a test that ends in a decision whatever the result.
+**The moment:** someone asks "where do we start?", "who should we go after first?" or "build me the go-to-market plan", and there is no agreed answer yet. Every product marketer hits this, usually with little time, little budget and a sceptical audience.
+
+**What you get:** one bet, the evidence behind it, who is out, and a test that ends in a decision whatever the result.
 
 The method runs in five steps: **Brief → Listen → Narrow → Count → Learn**. Each step produces something the next step needs. If a step has no output, stop and fix it before moving on.
 
 ## When to use
-- The question is open: "where should we focus", "find our first segment", "build the GTM bet for X", "what would you test first".
+- The question is open: "where do we start", "where should we focus", "find our first segment", "pipeline is flat, who do we go after now", "what would you test first".
 - There is a product and a goal, but no agreed segment, message or test.
-- The answer must survive a sceptical reader (a leadership team, a board, a sales leader), often under a page or time limit.
+- The answer must survive a sceptical reader (a leadership team, a founder, a sales leader), often under a page or time limit.
 
 **Not for:** a single asset for a segment you have already chosen (write positioning or the asset directly); reporting campaign results; forecasting revenue.
+
+**What comes next:** this skill ends with one chosen segment and a test. Turning that segment into a full customer profile and an account list, and then into leads, are the next two moments ("who exactly is the customer?" and "how do I get leads from them?"). If skills for those are installed, hand over to them with the outputs of Steps 3 and 4.
 
 ## Inputs
 - The brief, word for word.
 - Product facts: what the product does **today**, the claims you can prove, and the claims you must not make. If no product facts exist, write them first. Every message claim must trace back to them.
+- **Your own customers, if any:** won and lost deals, current customers, trials, sign-ups. This is the strongest evidence you have. A company with no customers yet skips it and says so.
 - Hard limits: pages, hours, budget, regions, which sources you may use.
 - Anything already agreed: an existing ICP, positioning, data.
 
+## Connectors (optional: each one makes a step stronger)
+The skill works with web search alone. At the start, check which connectors are available, list them in the brief box, and use them at the steps below. Never fail or stall because one is missing: fall back and note the gap.
+
+| Step | If connected | Use it for | Without it |
+|---|---|---|---|
+| 2. Your own customers | **CRM** (HubSpot, Salesforce or similar) | Won vs lost deals by industry, size, region; deal length; who signed | Ask the user for a short export or a list of their best 10 customers |
+| 2. Your own customers | **Product analytics** (Amplitude, Fullstory or similar) | Which accounts activate and stay | Skip, mark `[MISSING]` |
+| 2. Trigger search | **Prospecting / company data** (Apollo.io, ZoomInfo, Crunchbase, Clay or similar) | Job postings, hiring and funding signals, company counts by size and industry | Search public job boards and news by hand |
+| 2. Market interest | **Search and web data** (Semrush, Ahrefs, Similarweb or similar) | Search demand for the problem, competitor traffic and sources | Web search; mark demand as **Assumes** |
+| 2. Competitors | **Web extraction** (Firecrawl or similar) | Read competitor sites and pricing pages in bulk | Read the key pages by hand |
+| 3. Sizing | **Company data** (as above) | Number of firms per candidate segment | Estimate from public lists; mark as **Assumes** |
+| 1-5. Record | **Docs / notes** (Notion, Google Drive, Microsoft 365 or similar) | Keep the evidence log, the bet and test results in one place the team can see | A single document |
+
+**Connector rules:**
+- **Ask before spending credits.** Many prospecting and data tools charge per lookup. Estimate the cost first and get the user's OK.
+- **Read only.** Never create, update or delete records in a CRM or any tool during this skill.
+- **Personal data:** use company-level data for the bet. If contact data is pulled, keep it out of the shared document and follow the user's data rules (for example GDPR for EU contacts).
+- **Record the source of every number:** "CRM export, 6 Nov" or "Apollo search, filters X, 6 Nov", the same as a web link.
+
 ## Rules that apply to every step
-- **Public sources only**, unless the brief allows more. Never log in to read gated data, scrape against a site's terms, or contact people as part of the research.
+- **Your own data first, then public sources.** Use internal data the user gives you or a connector reads. Never log in to read gated data you were not given, scrape against a site's terms, or contact people as part of the research.
 - **Shows / Assumes.** Every finding is one line, tagged **Shows** (what the source says, with link and access date) or **Assumes** (your inference). A vendor page shows only what the vendor claims.
 - **Fix it before you look.** Searches, source types, the scoring rubric and its weights, and the test's winner rule are written down before you see the results they apply to. Changing them afterwards means choosing the answer.
 - **Denominators always.** "11 firms" means nothing without "of 73".
@@ -38,26 +62,30 @@ The method runs in five steps: **Brief → Listen → Narrow → Count → Learn
 2. Write the **goal** as one measurable sentence with a date: "3 qualified first meetings from 3 different firms within 7 weeks". If the brief has no goal, propose one and mark it `[PROPOSED]`. A bet without a goal cannot be tested.
 3. Write **Not evidence**: things you may mention but the bet must not rest on (your own experience, a private conversation, a competitor's claim about itself, last year's anecdote). Write it before collecting anything.
 
-**Output:** the brief box (deliverables, limits, judged on, goal, not evidence).
+4. **Check the tools.** List which connectors are available (see "Connectors") and whether the user has customer data to share. Ask for it once if it is not connected; do not wait on it.
+
+**Output:** the brief box (deliverables, limits, judged on, goal, not evidence, connectors and data available).
 
 ## Step 2. Listen: collect before you conclude
 1. Choose the **source types** to check and write them down before searching. Skip a type only with a reason.
 
    | Source type | What it tells you | Example sources |
    |---|---|---|
+   | Your own customers | who already buys, stays and churns | CRM won/lost deals, customer list, trials, product usage |
    | Buyer behaviour | who has the problem **now** | job ads, hiring pages, procurement notices, public spend |
    | Buyer voice | the buyer's words, pains, objections | forums, reviews, community threads, conference talks |
    | Market and rules | reasons to act, deadlines | regulations, analyst notes, news |
    | Competitors | what is already claimed, what nobody claims | product pages, pricing, ad libraries, docs |
    | The product's own audience | who is already showing up, and whether they are the buyer | community, reviews, GitHub issues |
 
-2. **Buyer behaviour first: the trigger search.** Name the trigger in one sentence: "A company that is hiring for / buying / subject to `<X>` has `<problem>` now." Fix 3 to 5 searches in the buyer's words (the job or the event, never the product's name), one region and one time window (90 days is a good default). Collect to a fixed depth, then count each filter step. Read at least 10 items in full and count how often each problem theme appears.
-3. **Buyer voice.** Read threads where practitioners describe the problem. Quote under 15 words per quote, with a link. Check **who is speaking**: a loud community can be the audience you should exclude, not the buyer.
-4. **Competitors.** List what each one claims in its headline and proof. Write the claim **nobody** makes that your product can prove.
-5. **Disconfirm.** Write the strongest case for the segment you are leaning **against**, and search specifically for evidence that your favoured view is wrong. Record what you found, including "searched X and Y, found nothing".
-6. **What is missing.** List what you could not check and how that limits the bet.
+2. **Your own customers first, if you have any.** Group won and lost deals (or current customers) by industry, size, region and buyer role. For each group write: count, win rate with its denominator, and typical deal length. Look for the pattern you did not expect. Small numbers (under about 10 deals in a group) are a hint, not proof: tag them **Assumes**. With no customers yet, write "no customer data: the bet rests on public evidence" and carry on.
+3. **Buyer behaviour: the trigger search.** Name the trigger in one sentence: "A company that is hiring for / buying / subject to `<X>` has `<problem>` now." Fix 3 to 5 searches in the buyer's words (the job or the event, never the product's name), one region and one time window (90 days is a good default). Collect to a fixed depth, then count each filter step. Read at least 10 items in full and count how often each problem theme appears.
+4. **Buyer voice.** Read threads where practitioners describe the problem. Quote under 15 words per quote, with a link. Check **who is speaking**: a loud community can be the audience you should exclude, not the buyer.
+5. **Competitors.** List what each one claims in its headline and proof. Write the claim **nobody** makes that your product can prove.
+6. **Disconfirm.** Write the strongest case for the segment you are leaning **against**, and search specifically for evidence that your favoured view is wrong. Record what you found, including "searched X and Y, found nothing".
+7. **What is missing.** List what you could not check and how that limits the bet.
 
-**Output:** the evidence log (one line per finding, tagged Shows or Assumes, with link and date), the trigger funnel, the disconfirm note and the gaps.
+**Output:** the customer pattern (or "no customer data"), the evidence log (one line per finding, tagged Shows or Assumes, with link and date), the trigger funnel, the disconfirm note and the gaps.
 
 ## Step 3. Narrow: choose one, and show the rejects
 1. List **3 to 5 candidate segments** (industry × size × region × buyer role). Do not stop at the first plausible one.
@@ -69,7 +97,7 @@ The method runs in five steps: **Brief → Listen → Narrow → Count → Learn
    | Reason to act | Is there a deadline, rule, incident or budget cycle? | source |
    | Can pay | Is there a budget owner and the size to buy? | size band, budget signal |
    | Reachable | Can I name the buyer role and reach it on my channels? | role seen in the evidence, channel |
-   | Right to win | Does the product do what this segment needs **today**, and can I prove it? | product fact |
+   | Right to win | Does the product do what this segment needs **today**, and can I prove it? | product fact, or won deals in this segment |
 
    Equal weights unless you write a reason for different ones **before** scoring. Every score must cite its proof. A score without proof is a 1.
 3. Show the **trigger funnel** on one line: `A collected → B truly the trigger → C in segment → D right size`, with each percentage and its denominator.
@@ -143,9 +171,11 @@ The method runs in five steps: **Brief → Listen → Narrow → Count → Learn
 - Judged on:
 - Goal: <measurable, dated>
 - Not evidence:
+- Connectors available: <list, or "none: web search only">
 
 ## Evidence
-| # | Source type | Finding | Shows / Assumes | Link | Accessed |
+Customer pattern: <groups, counts, win rates with denominators, or "no customer data">
+| # | Source type | Finding | Shows / Assumes | Link or connector + filters | Accessed |
 Trigger funnel: A → B → C → D (with % and denominators)
 Disconfirm: <what I searched for against my view, what I found>
 Missing: <what I could not check, and the effect>
@@ -189,7 +219,9 @@ Pre-mortem:
 ## Quality checks
 - [ ] The goal is measurable and dated; every limit in the brief is met.
 - [ ] "Not evidence", the source types, the searches, the rubric weights and the winner rule were all written down **before** the results they apply to.
-- [ ] Every finding is tagged Shows or Assumes, with a link and an access date.
+- [ ] Own customer data was used first, or its absence is stated.
+- [ ] Connectors used are listed in the brief box; credits were approved before spending; nothing was written to any tool.
+- [ ] Every finding is tagged Shows or Assumes, with a link (or connector and filters) and an access date.
 - [ ] Every percentage has its denominator.
 - [ ] A disconfirm search was run and its result recorded.
 - [ ] At least three segments were scored; every score cites proof.
@@ -201,7 +233,7 @@ Pre-mortem:
 - [ ] The decision table has Win, Lose, Inconclusive and Broken rows, each with an action.
 - [ ] The business outcome is labelled reported, not caused.
 - [ ] Three hard questions, a pre-mortem and owners are present.
-- [ ] Nobody was contacted, nothing was posted or sent, no gated data was used.
+- [ ] Nobody was contacted, nothing was posted or sent, no gated data was used, no contact data sits in the shared document.
 
 ## Common mistakes
 - **Choosing the segment, then collecting evidence for it.** Fix the searches and rubric first.
@@ -216,6 +248,8 @@ Pre-mortem:
 ## Worked example (fictional, for illustration only)
 **Product:** a scheduling and dispatch tool for small field-service firms. **Brief:** first focused segment in the UK; about £3,000; 6 weeks; public sources; 2 pages. **Goal:** 15 booked demos from firms of 5 to 50 staff within 6 weeks.
 
+- **Own customers:** 22 current customers (fictional). 14 of 22 are heating and plumbing firms; their win rate is 9 of 20 deals vs 5 of 31 elsewhere. Small numbers, so tagged **Assumes**, but it points the search.
+- **Connectors:** CRM for the deal export; a company-data tool to count UK trade firms by size (credits approved first). Without them: a customer list from the founder and public trade directories.
 - **Trigger:** "A firm hiring a dispatcher or scheduling coordinator has outgrown spreadsheets and phone calls."
 - **Funnel (fictional):** 600 job ads collected → 140 truly a dispatch or scheduling role (23%) → 55 at trade firms (39% of 140) → 30 at firms of 5 to 50 staff (55% of 55).
 - **Candidates scored:** heating and plumbing, electrical contractors, cleaning services, pest control. Heating and plumbing wins on **reason to act** (seasonal demand peaks before winter); cleaning services scores higher on problem now but lower on can pay.
