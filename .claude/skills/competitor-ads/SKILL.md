@@ -1,128 +1,76 @@
 ---
 name: competitor-ads
-description: For the moment a product marketer asks "what are our competitors running in ads right now?", "what do they promise?" or "what is nobody saying?". Collects competitors' live ads from the free public ad libraries (Meta, Google, LinkedIn, TikTok and others), reads each ad with one checklist, and turns them into one page: what everyone says, what one competitor owns, what nobody says, and what to do about it. Use before positioning, a launch, a campaign, a battlecard, or when a competitor seems to be pushing hard. Works with Claude in Chrome, with screenshots the user pastes, or with a scraping connector.
+description: Use when someone says "check <competitor> ads", "what is <competitor> advertising?", "show me <competitor>'s ads" or "what are our competitors running?". Asks which platforms to check (Meta, Google, LinkedIn, TikTok and others), reads the competitor's live ads in the free public ad libraries, and comes back with a short summary of what they advertise about. Then offers to save every ad, to the user's computer or to Notion. Use before positioning, a launch, a campaign or a battlecard.
 license: MIT
 ---
 
 # Competitor ads
 
-**The moment:** "What are our competitors running right now?", "What do they promise?", "Are they pushing something new?", "What is nobody saying?".
+**How it runs:** the user says "check HubSpot ads". You ask which platforms, check them, come back with what HubSpot is advertising about, then offer to save every ad.
 
-**Why ads:** a website says what a company wants to be. Ads show what it is **paying** to say, to whom, right now. An ad that keeps running for months is probably working, because nobody keeps paying for a bad ad.
+Keep it quick and conversational. Ask only the questions below; use sensible defaults for everything else.
 
-**What you get:** one page with what everyone says, what one competitor owns, what nobody says, the offers they use, the signals (testing, launches, long runners), and what to do next. The template is in `reference/one-page-output.md`.
+## Step 1. Ask which platforms
+When the user names a competitor, ask **one** question: which platforms to check. If your tools allow a multiple-choice question, use it. Offer:
 
-## The 6 steps
+- **LinkedIn** (best for B2B)
+- **Google** (Search, YouTube, Display)
+- **Meta** (Facebook and Instagram)
+- **TikTok** (ads shown in Europe and the UK only)
+- **Other, Europe only:** Microsoft (Bing), X, Pinterest, Snapchat
 
-| Step | In plain words | Detail lives in |
-|---|---|---|
-| 1. Pick the competitors | 3 to 6 names, including the one customers mention most | this file |
-| 2. Pick the channels | Where your buyers see ads | `reference/channels.md` |
-| 3. Collect the ads | One of three routes, below | this file |
-| 4. Read each ad | The same checklist for every ad | `reference/ad-checklist.md` |
-| 5. Read the signals | Long runners, testing, launches, gaps | this file |
-| 6. Write the one page | Everyone says / one owns / nobody says / what to do | `reference/one-page-output.md` |
+Defaults, so you do not need to ask:
+- **Country:** the user's own country if you know it, otherwise United Kingdom. Say which one you used.
+- **Ads:** all active ads, or the 25 most recent if there are more.
+- **Competitor name:** search the company name, its product names and its website domain, because ads often run under a different name.
 
----
+Links and limits for each platform are in `reference/channels.md`.
 
-## Step 1. Pick the competitors
-1. List 3 to 6 competitors: the one customers mention most (from lost deals or sales), 1 to 2 direct rivals, and 1 newer or fast-growing one.
-2. For each, write the exact names they advertise under: company name, product name, website domain. Ad libraries search by these, and they are often different (a product brand vs the legal company name).
-3. Write the **country** you care about. Libraries show different ads per country.
+## Step 2. Collect the ads
+Ad libraries block automated visitors, so pick the first route that works:
 
-**Done when:** the list has names, advertiser names, domains and the country.
+1. **Claude in Chrome** (if available): open each library in the user's browser, set the country, search the competitor, and read every active ad. Tested: Meta and LinkedIn open this way.
+2. **The user's screenshots** (if there is no browser access): give the user the direct links from `reference/channels.md` and ask them to paste screenshots or the ad text. Say it takes about 5 minutes per platform.
+3. **A scraping connector** (for example Apify), only if the user has one and says yes: estimate the cost first.
 
-## Step 2. Pick the channels
-Check where **your buyers** see ads. Start with two; add more only if they matter.
+For every ad, note the fields in `reference/ad-checklist.md`. Keep going without asking more questions. If a platform needs a login, shows nothing or blocks you, say so in the findings and move on.
 
-| You sell to | Start with | Then |
-|---|---|---|
-| Businesses (B2B software, services) | LinkedIn, Google | Meta, Microsoft (Bing) |
-| Small businesses and trades | Meta, Google | TikTok |
-| Consumers | Meta, TikTok | Google, Pinterest, Snapchat |
+## Step 3. Come back with the findings
+Keep it short: the user should read it in one minute. Use this shape (full template in `reference/output.md`):
 
-`reference/channels.md` lists every library, its link, what it shows, and its limits.
+1. **One line:** what they mostly advertise about.
+2. **What they talk about:** the 3 to 5 main themes, each with how many ads ("6 of 18 ads") and one short example headline.
+3. **Their offers:** demo, free trial, download, webinar, event, other, with counts.
+4. **What stands out:**
+   - **long runners** (running for 3 months or more): probably working
+   - **new push** (many new ads in the last 4 weeks)
+   - **testing** (several versions of one idea)
+   - **differences between platforms** (for example, LinkedIn is all demos, Meta is all free trials)
+5. **What nobody in their ads mentions** that buyers care about, if it is clear from the ads. Keep it to one or two lines.
 
-**Done when:** you have 2 to 4 channels, each with a reason.
+Then a short line of what was checked: platforms, country, date, number of ads read, and any platform that could not be read.
 
-## Step 3. Collect the ads: pick a route
-Ad libraries are built for people, not bots. Many block automated visitors, so pick the route that fits your setup.
+## Step 4. Offer to save all the ads
+End with one question: **"Do you want to see all the ads? I can save them to your computer or to Notion."**
 
-**Route A: Claude in Chrome (recommended if you have it)**
-Claude works inside your own browser, where the libraries load as normal. Tested: the Meta and LinkedIn libraries open this way. Ask Claude to open each library, set the country, search each competitor, and fill the checklist in `reference/ad-checklist.md` for every active ad (or the 15 most recent, if there are many). Claude must say when a page needs a login, a click it cannot make, or shows nothing, instead of guessing.
+- **Computer:** create a folder `competitor-ads/<competitor>-<date>/` with:
+  - `ads.csv`: one row per ad, with the columns in `reference/output.md`
+  - `summary.md`: the findings from Step 3
+  - the screenshots, if you have them
 
-**Route B: you collect, Claude analyses (free, works for everyone)**
-Open each library yourself (about 10 minutes per competitor per channel). For each ad, take a screenshot that shows the text and the start date, or copy the text and the date. Paste them into the chat with the competitor and channel name. Claude fills the checklist from what you pasted.
+  If you cannot write to the user's computer directly, create the files and hand them over to download.
+- **Notion:** if Notion is connected, create (or reuse) one database called **Competitor ads** with the columns in `reference/output.md`, add one row per ad, and add a page **"<Competitor> ads, <date>"** with the findings. Link it back to the user. If Notion is not connected, say so and offer the computer option.
+- **No:** stop there.
 
-**Route C: a scraping connector (for volume)**
-Tools such as Apify have ready-made collectors for ad libraries. Use them when you need hundreds of ads or a repeat every month. They cost money past a small free allowance: estimate the cost and get an OK first, and check that the use fits the library's terms.
-
-Whatever the route:
-- Record the **date you collected** and the **country** for every ad. Libraries change daily.
-- Record **how many active ads** each competitor has on each channel, even if you only read some of them.
-- Never log in to someone else's account, and never click on or interact with competitors' ads.
-
-**Done when:** every competitor and channel has an ad count, and each collected ad has its text, start date, channel, country and collection date.
-
-## Step 4. Read each ad
-Use `reference/ad-checklist.md` for every ad, so the comparison is fair. In short, for each ad note:
-- the **main promise** (headline or first line)
-- the **problem** it names and **who** it speaks to
-- the **proof** (numbers, logos, awards)
-- the **offer** (demo, free trial, download, webinar, discount)
-- the **format** (image, video, carousel, text)
-- the **start date** and whether it is still running
-- the **theme**, using the same short list of themes for every ad
-
-**Done when:** every collected ad has a filled checklist row.
-
-## Step 5. Read the signals
-Look across the rows and write what each signal shows. Always give counts ("4 of 11 ads").
-
-| Signal | What to look for | What it usually means |
-|---|---|---|
-| Long runner | an ad running for 3 months or more | probably working; study its promise and offer |
-| Testing | several versions of one idea with small changes | they are still looking for what works |
-| Launch | a burst of new ads in the last 2 to 4 weeks | a launch, a new market or a new push |
-| Offer pattern | the same offer in most ads | how they turn interest into leads |
-| Silence | a competitor with no ads on a channel | they are not investing there, or they stopped |
-
-Then sort the themes:
-- **Everyone says:** a theme in most competitors' ads. Crowded; saying it too gets you lost.
-- **One owns:** a theme one competitor repeats, with proof. Hard to take from them.
-- **Nobody says:** a theme that matters to buyers but appears in no ads. Your opening, if your product can prove it.
-
-To know whether "nobody says" matters to buyers, check it against what buyers say (reviews, forums, sales calls). A gap nobody cares about is not an opening.
-
-**Done when:** each signal has a count and a meaning, and every theme sits in one of the three groups.
-
-## Step 6. Write the one page
-Fill `reference/one-page-output.md`. End with three recommendations, each tied to a finding: what to say, what to avoid, and what to test.
-
-**Done when:** the page is filled and every claim points to ad rows.
-
----
+Never save anything before the user picks an option.
 
 ## Rules
-- **Report what you saw, not what you guess.** No spend figures: no library shows them for normal ads. Never invent targeting or results.
-- **Absence is limited.** "No ads found" only holds for that library, country and date.
-- **Date everything.** Every finding carries the collection date and country.
-- **Quote briefly.** Under 15 words per quote, and attribute it to the competitor, channel and date.
-- **Be fair.** Credit what competitors do well before saying where they are weak.
-- **Never interact** with competitors' ads, accounts or pages, and never use someone else's login.
-- **Read only.** Nothing is posted, sent or bought.
-
-## Connectors and tools (optional)
-| Tool | Helps with | Notes |
-|---|---|---|
-| Claude in Chrome | Step 3, Route A | Uses your own browser; tested to open Meta and LinkedIn |
-| Apify or similar scrapers | Step 3, Route C | Volume and repeat runs; paid past a free allowance |
-| Search and web data (Semrush, Similarweb) | Step 5 | Adds search-ad keywords and traffic sources |
-| Docs and notes (Notion, Google Drive, Microsoft 365) | Step 6 | One shared place for the page and the ad rows |
+- **Report what you saw.** Never guess targeting or results.
+- **Date everything:** every ad and every finding carries the platform, country and date checked.
+- **Quote briefly:** headlines under 15 words, word for word.
+- **Be fair:** say what the competitor does well.
+- **Read only:** never click, like or comment on ads, never use someone else's login, and never post anything.
 
 ## Works with
-- **where-to-start:** this page feeds Step 2d (competitors) and the message in Step 3.
-- **Positioning, battlecards and launches:** use the "nobody says" and "do not say" lists.
-
-## Why this works
-Ads are the most honest public view of a competitor's strategy: they cost money, so they show what the company believes will work, today. Reading every ad with the same checklist turns a scroll through screenshots into a fair comparison, and the "nobody says" list turns it into a decision.
+- **where-to-start:** these findings feed the competitor step and the message.
+- **Positioning, battlecards and launches:** use "what they talk about" and "what nobody mentions".
