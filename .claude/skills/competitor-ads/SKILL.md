@@ -10,31 +10,30 @@ license: MIT
 
 Keep it quick and conversational. Ask only the questions below; use sensible defaults for everything else.
 
-## Step 1. Ask three questions, together
-When the user names a competitor, ask these three in **one** message. If your tools allow multiple-choice questions, use them.
+## Step 1. Ask what to check (two short rounds)
+Never promise what a platform cannot show. Ask in this order, so every option you offer is real.
 
-1. **Which platforms?** (pick one or more)
-   - **LinkedIn** (best for B2B)
-   - **Google** (Search, YouTube, Display)
-   - **Meta** (Facebook and Instagram)
-   - **TikTok** (ads shown in Europe and the UK only)
-   - **Other, Europe only:** Microsoft (Bing), X, Pinterest, Snapchat
-2. **Which country?** Offer the user's own country first if you know it, then United Kingdom, United States, and "another country". Ads differ by country, so this matters.
-3. **Which time period?**
-   - **Running now** (active ads only)
-   - **Last 30 days**
-   - **Last 90 days**
-   - **Last 12 months**
+**Round 1: platforms and country, in one message.** If your tools allow multiple-choice questions, use them.
+1. **Which platforms?** (one or more): LinkedIn, Google, Meta, TikTok, Microsoft (Bing), X, Pinterest, Snapchat.
+2. **Which country?** The user's own country first if you know it, then United Kingdom, United States, another country.
 
-   Some libraries only show what is running now, or keep a short history (see `reference/channels.md`). If a platform cannot cover the chosen period, say so in the findings and show what it does have.
+**Before Round 2, check the platforms against the country** using the table "What each platform can show" in `reference/channels.md`:
+- If a chosen platform has **no library for that country** (for example TikTok in the United States), tell the user now, in one line, and drop it: "TikTok only shows ads in Europe and the UK, so I can't check it for the US."
+- Then tell the user, in one line per platform, **what they will get**: "Meta, US: only ads running today." "LinkedIn, US: ads from the last 12 months."
 
-If the user already gave any of these in their message ("check HubSpot ads on LinkedIn in Germany this month"), do not ask again; ask only for what is missing.
+**Round 2: the time period.** Offer **only** periods that every remaining platform can cover for that country:
+- **Running now** (always offered)
+- **Last 30 days**, **Last 90 days**, **Last 12 months** (offered only if every remaining platform keeps that much history for that country)
+
+If the platforms differ (for example Meta in the US shows only ads running now, LinkedIn shows 12 months), say so and offer: "Running now on all of them" or "the most each one has: Meta running now, LinkedIn 12 months".
+
+If the user already gave any of these in their message ("check HubSpot ads on LinkedIn in Germany, last 90 days"), do not ask again. Still run the check above, and correct anything a platform cannot do before you start.
+
+**At run time, confirm with the library itself.** When you open each library, look at its own date filter and what it actually returns. If it shows less than the table says, tell the user before the findings: "Google only returned ads from the last 30 days." The library on the day beats the table.
 
 Without asking:
 - **Competitor name:** search the company name, its product names and its website domain, because ads often run under a different name.
 - **How many ads:** read every ad in the chosen period, up to 50 per platform. If there are more, read the 50 most recent and say so.
-
-Links and limits for each platform are in `reference/channels.md`.
 
 ## Step 2. Collect the ads
 Ad libraries block automated visitors, so pick the first route that works:
