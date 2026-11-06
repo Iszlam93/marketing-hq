@@ -21,7 +21,7 @@ Short enough to read in one minute.
 
 **What nobody mentions:** <one or two lines, or leave out>
 
-Checked: <platforms>, <country>, <date>. Read <N> ads. <Platform that could not be read, and why.>
+Checked: <platforms>, <country>, <time period>, on <date>. Read <N> ads. <Platform that could not be read or could not cover the period, and why.>
 
 Do you want to see all the ads? I can save them to your computer or to Notion.
 ```
@@ -30,7 +30,7 @@ Do you want to see all the ads? I can save them to your computer or to Notion.
 Folder `competitor-ads/<competitor>-<YYYY-MM-DD>/`:
 - `summary.md`: the findings above
 - `ads.csv`: one row per ad, with these columns:
-  `competitor, platform, country, checked_on, ad_link, format, headline, about, problem, speaks_to, proof, offer, call_to_action, started, still_running, versions`
+  `competitor, platform, country, period, checked_on, ad_link, format, headline, about, problem, speaks_to, proof, offer, call_to_action, started, still_running, versions`
 - `screenshots/`: one image per ad, named `<platform>-<number>.png`, if you have them
 
 ## 3. Saved to Notion
@@ -42,6 +42,7 @@ One database, reused for every competitor, called **Competitor ads**:
 | Competitor | select |
 | Platform | select: LinkedIn, Google, Meta, TikTok, Microsoft, X, Pinterest, Snapchat |
 | Country | select |
+| Period | select: Running now, Last 30 days, Last 90 days, Last 12 months |
 | Checked on | date |
 | About | select (the theme label) |
 | Offer | select: Demo, Free trial, Download, Webinar, Event, Discount, Other |

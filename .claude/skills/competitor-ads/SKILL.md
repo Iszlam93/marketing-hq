@@ -10,19 +10,29 @@ license: MIT
 
 Keep it quick and conversational. Ask only the questions below; use sensible defaults for everything else.
 
-## Step 1. Ask which platforms
-When the user names a competitor, ask **one** question: which platforms to check. If your tools allow a multiple-choice question, use it. Offer:
+## Step 1. Ask three questions, together
+When the user names a competitor, ask these three in **one** message. If your tools allow multiple-choice questions, use them.
 
-- **LinkedIn** (best for B2B)
-- **Google** (Search, YouTube, Display)
-- **Meta** (Facebook and Instagram)
-- **TikTok** (ads shown in Europe and the UK only)
-- **Other, Europe only:** Microsoft (Bing), X, Pinterest, Snapchat
+1. **Which platforms?** (pick one or more)
+   - **LinkedIn** (best for B2B)
+   - **Google** (Search, YouTube, Display)
+   - **Meta** (Facebook and Instagram)
+   - **TikTok** (ads shown in Europe and the UK only)
+   - **Other, Europe only:** Microsoft (Bing), X, Pinterest, Snapchat
+2. **Which country?** Offer the user's own country first if you know it, then United Kingdom, United States, and "another country". Ads differ by country, so this matters.
+3. **Which time period?**
+   - **Running now** (active ads only)
+   - **Last 30 days**
+   - **Last 90 days**
+   - **Last 12 months**
 
-Defaults, so you do not need to ask:
-- **Country:** the user's own country if you know it, otherwise United Kingdom. Say which one you used.
-- **Ads:** all active ads, or the 25 most recent if there are more.
+   Some libraries only show what is running now, or keep a short history (see `reference/channels.md`). If a platform cannot cover the chosen period, say so in the findings and show what it does have.
+
+If the user already gave any of these in their message ("check HubSpot ads on LinkedIn in Germany this month"), do not ask again; ask only for what is missing.
+
+Without asking:
 - **Competitor name:** search the company name, its product names and its website domain, because ads often run under a different name.
+- **How many ads:** read every ad in the chosen period, up to 50 per platform. If there are more, read the 50 most recent and say so.
 
 Links and limits for each platform are in `reference/channels.md`.
 
@@ -48,7 +58,7 @@ Keep it short: the user should read it in one minute. Use this shape (full templ
    - **differences between platforms** (for example, LinkedIn is all demos, Meta is all free trials)
 5. **What nobody in their ads mentions** that buyers care about, if it is clear from the ads. Keep it to one or two lines.
 
-Then a short line of what was checked: platforms, country, date, number of ads read, and any platform that could not be read.
+Then a short line of what was checked: platforms, country, time period, date checked, number of ads read, and any platform that could not be read or could not cover the period.
 
 ## Step 4. Offer to save all the ads
 End with one question: **"Do you want to see all the ads? I can save them to your computer or to Notion."**

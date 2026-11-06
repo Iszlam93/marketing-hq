@@ -5,6 +5,7 @@
 | Competitor | name |
 | Platform | LinkedIn / Google / Meta / TikTok / other |
 | Country | the country the library was set to |
+| Period | the time period chosen (running now, last 30 days, last 90 days, last 12 months) |
 | Checked on | date |
 | Ad link | the library's link to this ad, if shown |
 | Format | image / video / carousel / text / other |
