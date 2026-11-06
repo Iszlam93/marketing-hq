@@ -248,7 +248,7 @@ Pre-mortem:
 ## Worked example (fictional, for illustration only)
 **Product:** a scheduling and dispatch tool for small field-service firms. **Brief:** first focused segment in the UK; about £3,000; 6 weeks; public sources; 2 pages. **Goal:** 15 booked demos from firms of 5 to 50 staff within 6 weeks.
 
-- **Own customers:** 22 current customers (fictional). 14 of 22 are heating and plumbing firms; their win rate is 9 of 20 deals vs 5 of 31 elsewhere. Small numbers, so tagged **Assumes**, but it points the search.
+- **Own customers:** 22 current customers (fictional). 14 of 22 are heating and plumbing firms; they came from 14 wins in 30 heating and plumbing deals (47%), vs 8 wins in 40 deals elsewhere (20%). Small numbers, so tagged **Assumes**, but it points the search.
 - **Connectors:** CRM for the deal export; a company-data tool to count UK trade firms by size (credits approved first). Without them: a customer list from the founder and public trade directories.
 - **Trigger:** "A firm hiring a dispatcher or scheduling coordinator has outgrown spreadsheets and phone calls."
 - **Funnel (fictional):** 600 job ads collected → 140 truly a dispatch or scheduling role (23%) → 55 at trade firms (39% of 140) → 30 at firms of 5 to 50 staff (55% of 55).
