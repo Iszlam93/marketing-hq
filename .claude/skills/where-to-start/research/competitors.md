@@ -16,7 +16,7 @@ The useful finding is rarely "who is best". It is the claim that is true for you
 
    With a **web extraction connector** (for example Firecrawl), read the pages in bulk. With a **search and web data connector** (for example Semrush or Similarweb), add traffic and top search terms. Otherwise read the key pages by hand.
 3. **Check the pages are current.** Note redirects, rebrands and acquisitions. If you only saw a summary or a search snippet, say so.
-4. **Check their ads.** Search public ad libraries (for example LinkedIn's or Meta's) for each competitor and for key phrases. Record what they promise and what none of them says. Not finding something only counts for that library and date.
+4. **Check their ads.** Ads show what competitors are paying to say right now, which is often more honest than their website. If the **competitor-ads** skill is installed, run it and bring back its one page. Otherwise: open the free ad libraries (Meta, Google, LinkedIn, and TikTok for Europe) in your own browser, record each competitor's number of active ads, the oldest start date and the main promise of 5 to 10 ads. Not finding something only counts for that library, country and date. Claude's plain web reader usually cannot load these libraries; use your own browser or Claude in Chrome.
 5. **Build the grid:** competitors down, problem themes across, each cell headline / mentioned / absent.
 6. **Find the open ground:**
    - **Crowded:** many competitors, same words.
