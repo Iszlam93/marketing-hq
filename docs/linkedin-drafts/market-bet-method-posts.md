@@ -45,7 +45,7 @@ What signal do you use to know a company has your problem right now?
 2. **The idea:** "A company hiring for a role has the problem today." Below: "Dated. Public. Written by the buyer's own company."
 3. **Step 1, the trigger:** "A company hiring for ____ has ____ now." Example: "A company hiring a 'data privacy lead' has a rule it can't yet meet."
 4. **Step 2, fix the searches first:** 3 searches, one region, one time window. "If I change them after I see results, I'm choosing the answer."
-5. **Step 3, count the funnel:** `1,000 postings → 70 really the role → 20 in my industry → 10 the right size` (**example numbers**). "Every number needs the one before it."
+5. **Step 3, count the funnel:** `600 postings → 140 really the role → 55 in my industry → 30 the right size` (**example numbers**). "Every number needs the one before it."
 6. **The prompt:**
    > Here are job ads for [role] from [region], last 90 days. For each one, tell me: is it truly the role (yes/no, why), the industry, the company size, and the exact words it uses for the problem (under 15 words, with the link). Then count: all ads → role fits → in [industry] → under [size]. Show every percentage with its denominator. Do not invent ads. If a field is missing, write "not stated".
 7. **Your turn:** "What's the one public signal that tells you a company has your problem?" Footer: "Product marketing, rebuilt with AI."
@@ -87,12 +87,12 @@ Which row does your last test fall into, and did you plan for it?
 1. **Cover:** "Your test has 3 possible endings. Most plans cover 2."
 2. **The problem:** "Small tests usually end in the middle. Then someone picks the winner they like."
 3. **The table:** Win / Lose / Can't tell, each with "what I saw" and "what I do next."
-4. **Set the rule before you launch:** "How many people? What gap counts as real? Write it down now." Example: "Each ad needs about 15,000 views to spot a gap of 0.2 points (**example**)." Show the working in mono type.
+4. **Set the rule before you launch:** "How many people? What gap counts as real? Write it down now." Example: "To tell a 0.5% click rate from 0.7%, each ad needs about 23,000 views (**example**: 95% confidence, 80% power)." Show the working in mono type.
 5. **A control that teaches:** "Show the same message to a group I excluded. Now I learn whether the group mattered, or only the words."
 6. **Keep the outcome honest:** "Calls booked is a result I report. It isn't proof the ad caused it."
 7. **Your turn:** "Does your test plan have a 'can't tell' row?" Footer: "Product marketing, rebuilt with AI."
 
-**Sample-size note for Islam:** the 15,000-view figure is an illustration. Before posting, run the real calculation with the `ab-test-design` skill and replace it with sourced numbers.
+**Sample-size note for Islam:** the 23,000-view figure is calculated (0.5% vs 0.7%, 95% confidence two-sided, 80% power gives 23,402). Keep the assumptions on the slide.
 
 ---
 
@@ -122,9 +122,9 @@ Try it on your last positioning doc. How many lines are really "Assumes"?
 #ProductMarketing #AIinMarketing
 
 **Card text:**
-> Shows: Job ads for this role mention "spend limits" in 5 of 15 (**example**). [link, date]
-> Assumes: Buyers care most about control.
-> → Check next: read 15 more ads, or ask in a forum.
+> Shows: Job ads for this role mention "missed call-outs" in 6 of 20 (**example**). [link, date]
+> Assumes: Buyers care most about dispatch speed.
+> → Check next: read 20 more ads, or ask in a trade forum.
 
 ---
 
